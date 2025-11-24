@@ -1,0 +1,285 @@
+table 'Agenti (Clienti)'
+	lineageTag: 2ef13014-ef60-45e2-bc01-7795471bac44
+
+	measure 'Agenti (Clienti) - Profondità gerarchia attuale' =
+			+ ISINSCOPE ( 'Agenti (Clienti)'[Agente (Cliente) - L1] )
+			    + ISINSCOPE ( 'Agenti (Clienti)'[Agente (Cliente) - L2] )
+			    + ISINSCOPE ( 'Agenti (Clienti)'[Agente (Cliente) - L3] )
+			    + ISINSCOPE ( 'Agenti (Clienti)'[Agente (Cliente) - L4] )
+			    + ISINSCOPE ( 'Agenti (Clienti)'[Agente (Cliente) - L5] )
+		formatString: 0
+		isHidden
+		lineageTag: e883a8af-de1e-4b34-96e9-c677f7cb8faf
+
+	measure 'Agenti (Clienti) - Profondità gerarchia massima' = MAX ( 'Agenti (Clienti)'[Agenti (Clienti) - Profondità gerarchia] )
+		formatString: 0
+		isHidden
+		lineageTag: 6151391a-69cb-4914-a283-90b56b67224e
+
+	measure 'Agenti (Clienti) - Profondità gerarchica rimanente' = [Agenti (Clienti) - Profondità gerarchia massima] - [Agenti (Clienti) - Profondità gerarchia attuale]
+		isHidden
+		lineageTag: c3233077-1238-4a8d-bdfc-56916c3eaa31
+
+	column K_CodAgenteRuolo
+		dataType: string
+		isHidden
+		lineageTag: df168e7c-acf8-4902-96f5-590b8db64528
+		summarizeBy: none
+		sourceColumn: K_CodAgenteRuolo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgente
+		dataType: string
+		isHidden
+		lineageTag: 30ebc616-c25e-444a-8ade-876d435568ab
+		summarizeBy: none
+		sourceColumn: K_CodAgente
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgenteCapoArea
+		dataType: string
+		isHidden
+		lineageTag: 0580800f-f251-4818-b9a0-182561d979da
+		summarizeBy: none
+		sourceColumn: K_CodAgenteCapoArea
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agenti (Clienti) - Percorso' = PATH([K_CodAgente],[K_CodAgenteCapoArea])
+		isHidden
+		lineageTag: dd63b8e6-cb29-4c19-b33c-e12fc3da2abc
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agenti (Clienti) - Profondità gerarchia' = PATHLENGTH([Agenti (Clienti) - Percorso])
+		isHidden
+		formatString: 0
+		lineageTag: c0f33447-d92e-433f-a103-9e6d77582a77
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - L1' = ```
+			
+			    LOOKUPVALUE(
+			        [Agente (Cliente) - Descrizione],
+			        [K_CodAgente],
+			        PATHITEM([Agenti (Clienti) - Percorso],1)
+			    )
+			```
+		lineageTag: e30bb98f-d221-4f1f-9b05-a61aafc29114
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - L2' =
+			
+			IF([Agenti (Clienti) - Profondità gerarchia]>=2,
+			    LOOKUPVALUE(
+			        [Agente (Cliente) - Descrizione],
+			        [K_CodAgente],
+			        PATHITEM([Agenti (Clienti) - Percorso],2)
+			    )
+			, [Agente (Cliente) - L1])
+		lineageTag: ccbcfdd4-c38d-4f94-8e58-b6aa56eacbf7
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - L3' =
+			
+			IF([Agenti (Clienti) - Profondità gerarchia]>=3,
+			    LOOKUPVALUE(
+			        [Agente (Cliente) - Descrizione],
+			        [K_CodAgente],
+			        PATHITEM([Agenti (Clienti) - Percorso],3)
+			    )
+			, [Agente (Cliente) - L2])
+		lineageTag: 26f1fc76-05c9-45c2-ae2d-e834a3bdc51f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - L4' =
+			
+			IF([Agenti (Clienti) - Profondità gerarchia]>=4,
+			    LOOKUPVALUE(
+			        [Agente (Cliente) - Descrizione],
+			        [K_CodAgente],
+			        PATHITEM([Agenti (Clienti) - Percorso],4)
+			    )
+			, [Agente (Cliente) - L3])
+		lineageTag: 40eb6d12-f972-4eef-a7c5-9dba920175ac
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - L5' =
+			
+			IF([Agenti (Clienti) - Profondità gerarchia]>=5,
+			    LOOKUPVALUE(
+			        [Agente (Cliente) - Descrizione],
+			        [K_CodAgente],
+			        PATHITEM([Agenti (Clienti) - Percorso],5)
+			    )
+			, [Agente (Cliente) - L4])
+		lineageTag: 17abc1e7-e0a7-4793-a2f6-246929cd2ebf
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - Ditta'
+		dataType: string
+		lineageTag: e424c8d5-af43-4e3b-b54e-36a7595c158a
+		summarizeBy: none
+		sourceColumn: Agente (Cliente) - Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - Codice'
+		dataType: int64
+		formatString: 0
+		lineageTag: b78b0751-0e28-4cb6-9b33-d98e51119882
+		summarizeBy: sum
+		sourceColumn: Agente (Cliente) - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - Descrizione'
+		dataType: string
+		lineageTag: dec3f17a-6532-43ef-87a7-c24ca22da844
+		summarizeBy: none
+		sourceColumn: Agente (Cliente) - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente)'
+		dataType: string
+		lineageTag: b76e593a-5bdf-41cb-ba47-90a8476d93ff
+		summarizeBy: none
+		sourceColumn: Agente (Cliente)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - Capo area'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4eb95e60-1624-433e-946b-2a431436531e
+		summarizeBy: sum
+		sourceColumn: Agente (Cliente) - Capo area
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - Ruolo'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a4de2f5-0c30-4312-a94c-86c4a8e67862
+		summarizeBy: none
+		sourceColumn: Agente (Cliente) - Ruolo
+
+		annotation SummarizationSetBy = User
+
+	column 'Agente (Cliente) - Ruolo e agente'
+		dataType: string
+		lineageTag: 9e6ea8d3-6af9-4e77-aded-16a82179932f
+		summarizeBy: none
+		sourceColumn: Agente (Cliente) - Ruolo e agente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - Data inizio validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6af194cc-5993-40f6-8fa9-efbb71394b49
+		summarizeBy: none
+		sourceColumn: Agente (Cliente) - Data inizio validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - Data fine validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 69bdd648-6d76-4208-b5d6-909b1559b503
+		summarizeBy: none
+		sourceColumn: Agente (Cliente) - Data fine validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - Valido in data estrazione'
+		dataType: string
+		lineageTag: e23733b5-ea7b-47aa-977d-d9157ca2aecd
+		summarizeBy: none
+		sourceColumn: Agente (Cliente) - Valido in data estrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente) - Desrizione Capo Area'
+		dataType: string
+		lineageTag: f22ed99d-c494-4706-a6a0-3ae258dd52d6
+		summarizeBy: none
+		sourceColumn: Agente (Cliente) - Desrizione Capo Area
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_Account
+		dataType: string
+		lineageTag: 45ec0a08-c053-4740-95ba-06174ffb0866
+		summarizeBy: none
+		sourceColumn: K_Account
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_Account_CA
+		dataType: string
+		lineageTag: 789b36a9-94ba-4e47-911e-64644c2b15bf
+		summarizeBy: none
+		sourceColumn: K_Account_CA
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Agenti (Clienti) - Gerarchia'
+		lineageTag: 29b16104-af4b-4f85-8df8-01548cbbd237
+
+		level 'Agente (Cliente) - L1'
+			lineageTag: 14ee4dda-448b-4ae4-82bd-d5ab2dfad678
+			column: 'Agente (Cliente) - L1'
+
+		level 'Agente (Cliente) - L2'
+			lineageTag: 3e49f7ee-2091-4180-a230-7bec141f8cc4
+			column: 'Agente (Cliente) - L2'
+
+		level 'Agente (Cliente) - L3'
+			lineageTag: 6c2563c9-9a7c-46fc-809d-63a969c33939
+			column: 'Agente (Cliente) - L3'
+
+		level 'Agente (Cliente) - L4'
+			lineageTag: cdacc0c2-ef90-47be-969f-bb5e19569080
+			column: 'Agente (Cliente) - L4'
+
+		level 'Agente (Cliente) - L5'
+			lineageTag: cbc4a26f-c81f-4283-8d7f-dc2d70ef639e
+			column: 'Agente (Cliente) - L5'
+
+	partition 'Agenti (Clienti)-cdef5b46-6ade-4599-8d3a-a97bcb63cae2' = m
+		mode: import
+		queryGroup: Dimensioni
+		source =
+				let
+				    Origine = Agenti,
+				    Specializzazione_Nome_Breve = Table.TransformColumnNames(Origine, each if Text.StartsWith(_, "K_") then _ else Text.Replace(_, "Agente", "Agente (Cliente)"))
+				in
+				    Specializzazione_Nome_Breve
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

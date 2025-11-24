@@ -1,0 +1,421 @@
+table Agenti
+	lineageTag: 403969a7-324e-4ee2-bc92-2f9543c8eb16
+
+	measure 'Profondità gerarchia massima' = MAX ( Agenti[Profondità gerarchia] )
+		formatString: 0
+		isHidden
+		lineageTag: 63fda386-10e0-4572-a108-f9d21d275bc6
+
+	measure 'Profondità gerarchia attuale' =
+			+ ISINSCOPE ( Agenti[Agente - L1] ) + ISINSCOPE ( Agenti[Agente - L2] )
+			    + ISINSCOPE ( Agenti[Agente - L3] )
+			    + ISINSCOPE ( Agenti[Agente - L4] )
+			    + ISINSCOPE ( Agenti[Agente - L5] )
+		formatString: 0
+		isHidden
+		lineageTag: d8a5ddea-9f12-453c-bef9-e7b813f9af69
+
+	measure 'Profondità gerarchica rimanente' = [Profondità gerarchia massima] - [Profondità gerarchia attuale]
+		formatString: 0
+		isHidden
+		lineageTag: 54296b6f-6128-4966-ac5b-4bc56a162a47
+
+	column K_CodAgente
+		dataType: string
+		isHidden
+		lineageTag: 91eee6c4-3126-4864-a60a-1d126d1ba177
+		summarizeBy: none
+		sourceColumn: K_CodAgente
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Agente
+		dataType: string
+		lineageTag: f0df111e-8d08-45ad-9b3c-e676a831835d
+		summarizeBy: none
+		sourceColumn: Agente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente - L1' = ```
+			
+			    LOOKUPVALUE(
+			        Agenti[Agente - Descrizione],
+			        Agenti[K_CodAgente],
+			        PATHITEM(Agenti[Percorso],1)
+			    )
+			```
+		lineageTag: 7d900b83-d64f-43be-80e9-5c63da6b416a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente - L2' =
+			
+			IF(Agenti[Profondità gerarchia]>=2,
+			    LOOKUPVALUE(
+			        Agenti[Agente - Descrizione],
+			        Agenti[K_CodAgente],
+			        PATHITEM(Agenti[Percorso],2)
+			    )
+			, Agenti[Agente - L1])
+		lineageTag: 926a7e20-7829-437d-b38e-2bfcd9c1a2cf
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente - L3' =
+			
+			IF(Agenti[Profondità gerarchia]>=3,
+			    LOOKUPVALUE(
+			        Agenti[Agente - Descrizione],
+			        Agenti[K_CodAgente],
+			        PATHITEM(Agenti[Percorso],3)
+			    )
+			, Agenti[Agente - L2])
+		lineageTag: 54e5eacd-0aed-44e7-8028-f015943db6eb
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Percorso = PATH(Agenti[K_CodAgente],Agenti[K_CodAgenteCapoArea])
+		isHidden
+		lineageTag: 3c8d34d2-ae65-47ae-949e-26662f1c1776
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Profondità gerarchia' = PATHLENGTH(Agenti[Percorso])
+		isHidden
+		formatString: 0
+		lineageTag: 61de3206-3032-43d3-a022-896c1b43a0ff
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente - L4' =
+			
+			IF(Agenti[Profondità gerarchia]>=4,
+			    LOOKUPVALUE(
+			        Agenti[Agente - Descrizione],
+			        Agenti[K_CodAgente],
+			        PATHITEM(Agenti[Percorso],4)
+			    )
+			, Agenti[Agente - L3])
+		lineageTag: 82f21214-2ad0-4036-8a41-4646a4d9ebfd
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgenteRuolo
+		dataType: string
+		isHidden
+		lineageTag: 328b7dd2-5486-460a-aa0a-57f9536f5076
+		summarizeBy: none
+		sourceColumn: K_CodAgenteRuolo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgenteCapoArea
+		dataType: string
+		isHidden
+		lineageTag: b5b59e27-80bf-44df-858d-94d1081ecc1e
+		summarizeBy: none
+		sourceColumn: K_CodAgenteCapoArea
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente - L5' =
+			
+			IF(Agenti[Profondità gerarchia]>=5,
+			    LOOKUPVALUE(
+			        Agenti[Agente - Descrizione],
+			        Agenti[K_CodAgente],
+			        PATHITEM(Agenti[Percorso],5)
+			    )
+			, Agenti[Agente - L4])
+		lineageTag: 697a1450-09d1-4d1f-87c9-a3f4f7bd1bfc
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente - Ditta'
+		dataType: string
+		lineageTag: 28efe6f4-410a-422c-975a-237bfb6d73fb
+		summarizeBy: none
+		sourceColumn: Agente - Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente - Codice'
+		dataType: int64
+		formatString: 0
+		lineageTag: e13f8154-9784-414b-ad2d-e8d53bb5f7e1
+		summarizeBy: none
+		sourceColumn: Agente - Codice
+
+		annotation SummarizationSetBy = User
+
+	column 'Agente - Descrizione'
+		dataType: string
+		lineageTag: e7c6c5e4-2b7f-405a-bbac-82b00bae0181
+		summarizeBy: none
+		sourceColumn: Agente - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente - Capo area'
+		dataType: int64
+		formatString: 0
+		lineageTag: ef2058a9-c08b-4349-af01-b7f9c469308f
+		summarizeBy: none
+		sourceColumn: Agente - Capo area
+
+		annotation SummarizationSetBy = User
+
+	column 'Agente - Ruolo'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d1ee172-8039-45f9-b320-85285f81e7df
+		summarizeBy: none
+		sourceColumn: Agente - Ruolo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente - Ruolo e agente'
+		dataType: string
+		lineageTag: 8eedf165-7964-4b61-ba7b-ba2cda53bc5e
+		summarizeBy: none
+		sourceColumn: Agente - Ruolo e agente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente - Data inizio validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 58bcc9e7-3e99-4028-ac5c-77c1631fc71b
+		summarizeBy: none
+		sourceColumn: Agente - Data inizio validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente - Data fine validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1cdd517c-98ef-4e1f-ae74-96bce6c1179a
+		summarizeBy: none
+		sourceColumn: Agente - Data fine validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente - Valido in data estrazione'
+		dataType: string
+		lineageTag: 1dea3aa0-40d0-413e-ae1d-e9de0476bb7b
+		summarizeBy: none
+		sourceColumn: Agente - Valido in data estrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente - Desrizione Capo Area'
+		dataType: string
+		lineageTag: dfee0e98-1ed3-4e65-a912-6a36617b2e10
+		summarizeBy: none
+		sourceColumn: Agente - Desrizione Capo Area
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_Account
+		dataType: string
+		lineageTag: dde3895c-bb9e-4524-a83e-0d8470c50da6
+		summarizeBy: none
+		sourceColumn: K_Account
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_Account_CA
+		dataType: string
+		lineageTag: c6ed69bc-f7ea-4b86-8a77-4f5dbd87103d
+		summarizeBy: none
+		sourceColumn: K_Account_CA
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Agenti - Gerarchia'
+		lineageTag: f5db6530-c7b3-4397-a0cf-feab3bcff454
+
+		level 'Agente - L1'
+			lineageTag: 064c140b-2167-4b68-ad13-dd5650120498
+			column: 'Agente - L1'
+
+		level 'Agente - L2'
+			lineageTag: b15465af-a272-4a60-bcaa-5458ca683031
+			column: 'Agente - L2'
+
+		level 'Agente - L3'
+			lineageTag: 6a3b3539-50a9-42b9-bdae-f60d9f198776
+			column: 'Agente - L3'
+
+		level 'Agente - L4'
+			lineageTag: 7d0daf62-bdc6-42cb-a4e4-65152b0408b5
+			column: 'Agente - L4'
+
+		level 'Agente - L5'
+			lineageTag: 0b7d918a-fb38-4dba-a19b-c2dd4549e738
+			column: 'Agente - L5'
+
+	partition Agenti-58ac2a2f-4987-4565-973d-7bedcb2235ac = m
+		mode: import
+		queryGroup: Dimensioni\Agenti
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " WHERE ESBI_AGE.DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " WHERE ESBI_AGE.DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    StringaFiltroRuoloAgenteIN = if #"Filtro - Ruoli Agente" = "" then "" else " AND T1.RuoloAgente IN (" & RuoliAgenti & ")",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+					SELECT DISTINCT
+							ESBI_AGE.DBGruppo + '_' + CONVERT(VARCHAR(255), ESBI_AGE.CodAgente) + '_' + CONVERT(VARCHAR(255), ISNULL(qAgentiContratti.RuoloAgente, 0)) AS K_CodAgenteRuolo
+				            , ESBI_AGE.K_CodAgente AS [K_CodAgente]
+							, CASE WHEN qAgenteCodice.CodAgeCapoArea >0 THEN ESBI_AGE.DBGruppo + '_' + CONVERT(VARCHAR(255), qAgenteCodice.CodAgeCapoArea) ELSE ESBI_AGE.DBGruppo + '_' + CONVERT(VARCHAR(255), ESBI_AGE.CodAgente) END AS [K_CodAgenteCapoArea]  
+				            ,ESBI_AGE.DBGruppo AS [Agente - Ditta]
+				            ,ESBI_AGE.CodAgente AS [Agente - Codice]
+				            ,ESBI_AGE.DesAgente AS [Agente - Descrizione]
+				            ,Agente AS [Agente]
+							, CASE WHEN qAgenteCodice.CodAgeCapoArea >0 THEN qAgenteCodice.CodAgeCapoArea WHEN qAgentiContratti.RuoloAgente=2 THEN ESBI_AGE.CodAgente ELSE 0 END AS [Agente - Capo area]  
+				            --,qAgenteCodice.CodAgeCapoArea AS [Agente - Capo area]
+							,qAgentiContratti.RuoloAgente AS  [Agente - Ruolo]
+							,RuoliAgente.Descrizione AS [Agente - Ruolo e agente]
+				            ,DataInizioValidita AS [Agente - Data inizio validità]
+				            ,DataFineValidita As [Agente - Data fine validità]
+				            ,ValidoInDataEstraz AS [Agente - Valido in data estrazione]
+							, CASE WHEN qAgenteCodice.CodAgeCapoArea >0 THEN qCapoArea.DesAgente WHEN qAgentiContratti.RuoloAgente=2 THEN ESBI_AGE.DesAgente ELSE '' END AS [Agente - Desrizione Capo Area]
+							--TEST FILTRO CAPOAREA
+							--, CASE WHEN qCapoArea.K_Account='ng@lodes.com' THEN 'fiorita.sacco@wintech.it' ELSE ISNULL(qCapoArea.K_Account,'') END AS K_Account_CA
+							--PRODUZIONE FILTRO CAPOAREA
+							, ISNULL(qCapoArea.K_Account,'') AS K_Account_CA
+							, ISNULL(ESBI_INTESTAT_CODEST.K_Account,'') AS [K_Account] 
+				        FROM 
+				            [dbo].[ESBI_AGE] WITH (NOLOCK)
+							INNER JOIN [dbo].[ClientiFornitori]
+							ON ESBI_AGE.DBGruppo=ClientiFornitori.DBGruppo
+							AND ESBI_AGE.CodAgente=ClientiFornitori.CodCliFor
+							AND ClientiFornitori.TipoAnagrafica=2
+							INNER JOIN 
+							(
+								SELECT  
+									T1.DBGruppo AS [DBGruppo],
+									T1.TipoAnagrafica AS [TipoAnagrafica], 
+									T1.CodFornitore AS [CodFornitore], 
+									T1.RuoloAgente AS [RuoloAgente], 
+									MAX(T1.DataDecorrContrAg) AS [DataDecorrContrAg]
+								FROM AgentiContrattiAg AS T1
+								WHERE ((T1.DataDecorrContrAg <= CONVERT(datetime, CONVERT(VARCHAR(10),GETDATE(),120),120))"
+									&StringaFiltroRuoloAgenteIN&
+									") 
+								GROUP BY 
+									T1.DBGruppo
+									, T1.TipoAnagrafica
+									, T1.CodFornitore
+									, T1.RuoloAgente
+							)qAgentiContratti 
+							ON qAgentiContratti.DBGruppo=ESBI_AGE.DBGruppo 
+							AND qAgentiContratti.TipoAnagrafica=2 
+							AND qAgentiContratti.CodFornitore=ESBI_AGE.CodAgente 
+							INNER JOIN
+							RuoliAgente
+							ON qAgentiContratti.RuoloAgente=RuoliAgente.RuoloAgente
+							INNER JOIN
+							( 
+								SELECT 
+									DBGruppo
+									, CodAgente
+									, CodAgeCapoArea 
+								FROM ESBI_AGE
+								/*01-08-2024 disabilitazione agenti su report su indicazione del cliente*/
+								WHERE CodAgente NOT IN 
+								(SELECT ContNumerico FROM SchedeTecValAmm WHERE DBGruppo='XS' AND IdEtichetta=12 AND CodTipoSchedaTecnica='CODVEN')
+								/*
+								(
+									31/*LAMPEFEBER A/S*/
+									, 80/*STINGERS SRL*/
+									, 86/*RO SERVICES DI ROSALYN SMITH*/
+									--, 207/*YEGHIA ABOUHANIAN NON ATTIVO*/
+									, 237/*BRANDO PAOLO RENATO ARCHITETTO*/
+									--, 252/*RAMONLIA LTD NON ATTIVO*/
+									--, 336/*BRUGER srls NON ATTIVO*/
+									, 354/*ZUBOVA MARINA  ANATOLJEVNA*/
+									, 432/*MOI VALENTINA*/
+									, 453/*SNOHETTA DESIGN AS*/
+									, 487 /*YESCA LTD*/
+									, 578 /*ANAYIS PACKLAYAN*/
+									, 618/*BUONGIORNO DESIGN LIMITED*/
+									, 631/*OY DECO SPOT AB*/
+									, 743/*AGENTE / CLIENTE DA VERIFICARE*/
+									, 764/*TIRABASSI VINCENZO*/
+									, 778/*YESCA DIRETTI*/
+									, 779/*ZUBOVA MARINA DIRETTI NON ATTIVO*/
+									--, 799/*SHOWROOM MILANO DIRETTI NON ATTIVO*/
+									, 780/*ERIC DIRETTI*/
+									, 852/*ANAYIS PACKLAYAN DIRETTI*/
+									, 1048/*IDM Srls*/
+									, 1069/*AGENTE DI PROVA PER TEST*/
+									, 1190/*MAZZILLI VITO **** SOLO PER PROVVIGIONI*/
+								)
+								*/
+								GROUP BY 
+									DBGruppo
+									, CodAgente
+									, CodAgeCapoArea
+							)qAgenteCodice
+							ON ESBI_AGE.DBGruppo=qAgenteCodice.DBGruppo
+							AND ESBI_AGE.CodAgente=qAgenteCodice.CodAgente
+							LEFT OUTER JOIN
+							( 
+								SELECT 
+									ESBI_AGE.DBGruppo
+									, CodAgente
+									, DesAgente 
+									, ISNULL(ESBI_INTESTAT_CODEST.K_Account,'') as K_Account
+								FROM 
+								ESBI_AGE
+								LEFT OUTER JOIN
+								ESBI_INTESTAT_CODEST 
+								ON ESBI_AGE.K_CodAgente=ESBI_INTESTAT_CODEST.K_CodAgente
+								AND ESBI_INTESTAT_CODEST.TipoAnagrafica=2
+								AND ESBI_INTESTAT_CODEST.CodCliForEsterno like 'CA%'
+							)qCapoArea
+							ON qAgenteCodice.DBGruppo=qCapoArea.DBGruppo
+							AND qAgenteCodice.CodAgeCapoArea=qCapoArea.CodAgente
+							LEFT OUTER JOIN
+							ESBI_INTESTAT_CODEST 
+							ON ESBI_AGE.K_CodAgente=ESBI_INTESTAT_CODEST.K_CodAgente
+							AND ESBI_INTESTAT_CODEST.TipoAnagrafica=2
+							AND ESBI_INTESTAT_CODEST.CodCliForEsterno like 'AG%'
+							"
+				
+				        & StringaFiltroGruppoIN
+				        & StringaFiltroGruppoNOTIN
+				        & " AND ClientiFornitori.StatoAnagrafica=0
+						;"
+				    ,CreateNavigationProperties=false]),
+				    #"Filtrate righe" = Table.SelectRows(Origine, each true)
+				in
+				    #"Filtrate righe"
+				```
+
+	annotation PBI_Id = 54948a33-cfd3-455c-881c-4fb21238321d
+
+	annotation LinkedQueryName = Agenti
+
+	annotation PBI_QueryRelationships = {"columnCount":13,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Agenti/Origine.{K_CodAgenteRuolo,0}","Section1/Agenti/Origine.{K_CodAgente,1}","Section1/Agenti/Origine.{K_CodAgenteCapoArea,2}","Section1/Agenti/Origine.{Agente - Ditta,3}","Section1/Agenti/Origine.{Agente - Codice,4}","Section1/Agenti/Origine.{Agente - Descrizione,5}","Section1/Agenti/Origine.{Agente,6}","Section1/Agenti/Origine.{Agente - Capo area,7}","Section1/Agenti/Origine.{Agente - Ruolo,8}","Section1/Agenti/Origine.{Agente - Ruolo e agente,9}","Section1/Agenti/Origine.{Agente - Data inizio validità,10}","Section1/Agenti/Origine.{Agente - Data fine validità,11}","Section1/Agenti/Origine.{Agente - Valido in data estrazione,12}"],"ColumnCount":13,"KeyColumnNames":[],"ColumnIdentities":["Section1/Agenti/Origine.{K_CodAgenteRuolo,0}","Section1/Agenti/Origine.{K_CodAgente,1}","Section1/Agenti/Origine.{K_CodAgenteCapoArea,2}","Section1/Agenti/Origine.{Agente - Ditta,3}","Section1/Agenti/Origine.{Agente - Codice,4}","Section1/Agenti/Origine.{Agente - Descrizione,5}","Section1/Agenti/Origine.{Agente,6}","Section1/Agenti/Origine.{Agente - Capo area,7}","Section1/Agenti/Origine.{Agente - Ruolo,8}","Section1/Agenti/Origine.{Agente - Ruolo e agente,9}","Section1/Agenti/Origine.{Agente - Data inizio validità,10}","Section1/Agenti/Origine.{Agente - Data fine validità,11}","Section1/Agenti/Origine.{Agente - Valido in data estrazione,12}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

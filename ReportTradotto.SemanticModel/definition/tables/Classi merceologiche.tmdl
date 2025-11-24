@@ -1,0 +1,104 @@
+table 'Classi merceologiche'
+	lineageTag: fb0c000d-e895-4b05-85c8-e7bdc0be1b34
+
+	column K_CodClasseMerceologica
+		dataType: string
+		isHidden
+		lineageTag: d1fd0f7b-7812-481a-b020-f6a2fccab773
+		summarizeBy: none
+		sourceColumn: K_CodClasseMerceologica
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classe merceologica - Ditta'
+		dataType: string
+		lineageTag: b5a84063-566c-4c5a-b36a-ddbcb762e45f
+		summarizeBy: none
+		sourceColumn: Classe merceologica - Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classe merceologica - Codice'
+		dataType: string
+		lineageTag: bcbe24f8-c020-4d26-b871-6b404346da3a
+		summarizeBy: none
+		sourceColumn: Classe merceologica - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classe merceologica - Descrizione'
+		dataType: string
+		lineageTag: 28b0e09c-cf4f-4137-9c8f-7923ccc77570
+		summarizeBy: none
+		sourceColumn: Classe merceologica - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classe merceologica - Data inizio validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bf5ddea2-b07d-4d26-9cc6-3bbdbd9890d6
+		summarizeBy: none
+		sourceColumn: Classe merceologica - Data inizio validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classe merceologica - Data fine validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b7bd743e-ccf6-4aac-8354-04a6c0dbb1cb
+		summarizeBy: none
+		sourceColumn: Classe merceologica - Data fine validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classe merceologica - Valida in data estrazione'
+		dataType: string
+		lineageTag: f204e07e-d3b4-43e6-8e12-dd5d9b17fee6
+		summarizeBy: none
+		sourceColumn: Classe merceologica - Valida in data estrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Classi merceologiche-82fe772f-62ec-44a2-94ad-c044661016f9' = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then "WHERE DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then "WHERE DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				        SELECT
+					         K_CodClasseMerceolog AS [K_CodClasseMerceologica]
+					        ,DBGruppo AS [Classe merceologica - Ditta]
+					        ,CodClasseMerceolog AS [Classe merceologica - Codice]
+					        ,DesClasseMerceolog AS [Classe merceologica - Descrizione]
+					        ,DataInizioValidita AS [Classe merceologica - Data inizio validità]
+					        ,DataFineValidita AS [Classe merceologica - Data fine validità]
+				            ,ValidoInDataEstraz AS [Classe merceologica - Valida in data estrazione]
+				        
+				        FROM 
+				            [dbo].[ESBI_CLASMERC] WITH (NOLOCK)"
+				
+				        & StringaFiltroGruppoIN
+				        & StringaFiltroGruppoNOTIN
+				        & ";
+				    "
+				    ,CreateNavigationProperties=false])
+				in 
+				    Origine
+				```
+
+	annotation PBI_Id = f3df16bc-49fd-45ca-a942-ea290ef83a17
+
+	annotation LinkedQueryName = Classi merceologiche
+
+	annotation PBI_QueryRelationships = {"columnCount":7,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Classi merceologiche/Origine.{K_CodClasseMerceologica,0}","Section1/Classi merceologiche/Origine.{Classe merceologica - Ditta,1}","Section1/Classi merceologiche/Origine.{Classe merceologica - Codice,2}","Section1/Classi merceologiche/Origine.{Classe merceologica - Descrizione,3}","Section1/Classi merceologiche/Origine.{Classe merceologica - Data inizio validità,4}","Section1/Classi merceologiche/Origine.{Classe merceologica - Data fine validità,5}","Section1/Classi merceologiche/Origine.{Classe merceologica - Valida in data estrazione,6}"],"ColumnCount":7,"KeyColumnNames":[],"ColumnIdentities":["Section1/Classi merceologiche/Origine.{K_CodClasseMerceologica,0}","Section1/Classi merceologiche/Origine.{Classe merceologica - Ditta,1}","Section1/Classi merceologiche/Origine.{Classe merceologica - Codice,2}","Section1/Classi merceologiche/Origine.{Classe merceologica - Descrizione,3}","Section1/Classi merceologiche/Origine.{Classe merceologica - Data inizio validità,4}","Section1/Classi merceologiche/Origine.{Classe merceologica - Data fine validità,5}","Section1/Classi merceologiche/Origine.{Classe merceologica - Valida in data estrazione,6}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

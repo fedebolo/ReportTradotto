@@ -1,0 +1,91 @@
+table 'Vendite per agente'
+	isHidden
+	lineageTag: 516b23ef-c2c3-4a3a-aaa5-6b1248dc3d99
+
+	column K_MovimentoStatistico
+		dataType: string
+		isHidden
+		lineageTag: a427bad5-f432-4224-9ff9-690cb7daa002
+		summarizeBy: none
+		sourceColumn: K_MovimentoStatistico
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Importo provvigione'
+		dataType: double
+		isHidden
+		lineageTag: 2dc61d95-ef78-44fc-a3fb-314ab2918d73
+		summarizeBy: sum
+		sourceColumn: Importo provvigione
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importo provvigione UdC'
+		dataType: double
+		isHidden
+		lineageTag: 05286375-88bd-4441-aa91-b4df0fd16074
+		summarizeBy: sum
+		sourceColumn: Importo provvigione UdC
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column K_CodAgenteRuolo
+		dataType: string
+		isHidden
+		lineageTag: e9f21fb3-998a-4227-b606-502467e357a5
+		summarizeBy: none
+		sourceColumn: K_CodAgenteRuolo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Vendite per agente-558d33e0-c560-4d49-92f5-75a963a650cc' = m
+		mode: import
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " AND DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " AND DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query=
+				    "
+				        SELECT
+				             K_MovimStatistico AS [K_MovimentoStatistico]
+				            --,K_MovimStatisticoAge AS [K_MovimentoStatisticoAgente]
+				            ,K_CodAgenteRuolo AS [K_CodAgenteRuolo]
+				            ,ProvvigioneCalcVal AS [Importo provvigione]
+				            ,ProvvigioneCalcUdc AS [Importo provvigione UdC]
+					
+				        FROM         
+				            [dbo].[ESBI_MOVSTAT_AGE] WITH (NOLOCK)
+				        
+				        WHERE
+				            K_DataRegistraz BETWEEN { D " & DataDa & " } AND { D " & DataA & " }"
+				            & StringaFiltroGruppoIN
+				            & StringaFiltroGruppoNOTIN
+				            & ";
+				    "
+				    ,CreateNavigationProperties=false])
+				in 
+				    Origine
+				```
+
+	annotation PBI_Id = 0caf24dc-3999-4b2f-9982-f97ac02fcf47
+
+	annotation LinkedQueryName = Vendite per agente
+
+	annotation PBI_QueryRelationships = {"columnCount":4,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Vendite per agente/Origine.{K_MovimentoStatistico,0}","Section1/Vendite per agente/Origine.{K_CodAgenteRuolo,1}","Section1/Vendite per agente/Origine.{Importo provvigione,2}","Section1/Vendite per agente/Origine.{Importo provvigione UdC,3}"],"ColumnCount":4,"KeyColumnNames":[],"ColumnIdentities":["Section1/Vendite per agente/Origine.{K_MovimentoStatistico,0}","Section1/Vendite per agente/Origine.{K_CodAgenteRuolo,1}","Section1/Vendite per agente/Origine.{Importo provvigione,2}","Section1/Vendite per agente/Origine.{Importo provvigione UdC,3}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

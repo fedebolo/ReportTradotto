@@ -1,0 +1,11 @@
+role CapoArea
+	modelPermission: read
+
+	tablePermission 'Agenti (Clienti)' = 'Agenti (Clienti)'[K_Account_CA] = USERPRINCIPALNAME()
+
+	tablePermission Agenti = 'Agenti'[K_Account_CA] = USERPRINCIPALNAME()
+
+	tablePermission 'Agenti (Clienti spedizione)' = 'Agenti (Clienti spedizione)'[K_Account_CA] = USERPRINCIPALNAME()
+
+	annotation PBI_Id = 080d8ba39bd044b6a9688b6a74e0c2ba
+

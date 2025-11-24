@@ -1,0 +1,203 @@
+table 'Agenti - Agenti visibili (RLS)'
+	isHidden
+	lineageTag: 66cce6c8-a0d4-405c-a0ab-d795e62e7ed7
+
+	column K_CodAgenteVisibile
+		dataType: string
+		isHidden
+		lineageTag: 590082b8-1074-4a5d-a447-aee3c2504edf
+		summarizeBy: none
+		sourceColumn: K_CodAgenteVisibile
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgenteAccount
+		dataType: string
+		isHidden
+		lineageTag: 7dccf09d-4033-4795-b801-2bd78082531a
+		summarizeBy: none
+		sourceColumn: K_CodAgenteAccount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Agenti - Agenti visibili (RLS)-d69d9c16-ff61-4035-af5e-0d555a7befd7' = m
+		mode: import
+		queryGroup: Dimensioni\Agenti
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " AND L0.DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " AND L0.DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				            SELECT
+				                L0.K_CodAgenteAccount AS [K_CodAgenteAccount],
+				                L0.K_CodAgenteVisibile AS [K_CodAgenteVisibile]
+				
+				            FROM 
+				                [dbo].[ESBI_INTESTATARI] L0 WITH (NOLOCK)
+				            
+				            WHERE
+				                L0.TipoAnagrafica = 2
+				                AND L0.AnagAgente = 1"
+				
+				            & StringaFiltroGruppoIN
+				            & StringaFiltroGruppoNOTIN
+				            & "
+				            
+				            UNION ALL
+				
+				            SELECT
+				                L1.K_CodAgenteAccount AS [K_CodAgenteAccount],
+				                L0.K_CodAgenteVisibile AS [K_CodAgenteVisibile]
+				
+				            FROM 
+				                [dbo].[ESBI_INTESTATARI] L0 WITH (NOLOCK)
+				
+				            LEFT JOIN 
+				                [dbo].[ESBI_INTESTATARI] L1 WITH (NOLOCK)
+				            ON
+				                L0.CodCapoAreaRif = L1.CodIntestatario 
+				                AND L0.DBGruppo = L1.DBGruppo
+				            
+				            WHERE
+				                L0.CodCapoAreaRif <> 0
+				                AND L1.TipoAnagrafica = 2
+				                AND L1.AnagAgente = 1"
+				
+				            & StringaFiltroGruppoIN
+				            & StringaFiltroGruppoNOTIN
+				            & "
+				            
+				            UNION ALL
+				  
+				            SELECT
+				                L2.K_CodAgenteAccount AS [K_CodAgenteAccount],
+				                L0.K_CodAgenteVisibile AS [K_CodAgenteVisibile]
+				
+				            FROM 
+				                [dbo].[ESBI_INTESTATARI] L0 WITH (NOLOCK)
+				            
+				            LEFT JOIN 
+				                [dbo].[ESBI_INTESTATARI] L1 WITH (NOLOCK)
+				            ON
+				                L0.CodCapoAreaRif = L1.CodIntestatario AND
+				                L0.DBGruppo = L1.DBGruppo
+				
+				            LEFT JOIN 
+				                [dbo].[ESBI_INTESTATARI] L2 WITH (NOLOCK)
+				            ON
+				                L1.CodCapoAreaRif = L2.CodIntestatario AND
+				                L1.DBGruppo = L2.DBGruppo
+				            
+				            WHERE
+				                L0.CodCapoAreaRif <> 0
+				                AND L1.CodCapoAreaRif <> 0
+				                AND L2.TipoAnagrafica = 2
+				                AND L2.AnagAgente = 1"
+				
+				            & StringaFiltroGruppoIN
+				            & StringaFiltroGruppoNOTIN
+				            & "
+				
+				            UNION ALL
+				
+				            SELECT
+				                L3.K_CodAgenteAccount AS [K_CodAgenteAccount],
+				                L0.K_CodAgenteVisibile AS [K_CodAgenteVisibile]
+				
+				            FROM 
+				                [dbo].[ESBI_INTESTATARI] L0 WITH (NOLOCK)
+				            
+				            LEFT JOIN
+				                [dbo].[ESBI_INTESTATARI] L1 WITH (NOLOCK)
+				            ON
+				                L0.CodCapoAreaRif = L1.CodIntestatario AND
+				                L0.DBGruppo = L1.DBGruppo
+				
+				            LEFT JOIN 
+				                [dbo].[ESBI_INTESTATARI] L2 WITH (NOLOCK)
+				            ON
+				                L1.CodCapoAreaRif = L2.CodIntestatario AND 
+				                L1.DBGruppo = L2.DBGruppo
+				
+				            LEFT JOIN 
+				                [dbo].[ESBI_INTESTATARI] L3 WITH (NOLOCK)
+				            ON
+				                L2.CodCapoAreaRif = L3.CodIntestatario AND
+				                L2.DBGruppo = L3.DBGruppo                       
+				            
+				            WHERE
+				                L0.CodCapoAreaRif <> 0
+				                AND L1.CodCapoAreaRif <> 0
+				                AND L2.CodCapoAreaRif <> 0
+				                AND L3.TipoAnagrafica = 2
+				                AND L3.AnagAgente = 1"
+				
+				            & StringaFiltroGruppoIN
+				            & StringaFiltroGruppoNOTIN
+				            & "
+				            
+				            UNION ALL
+				
+				            SELECT
+				                L4.K_CodAgenteAccount AS [K_CodAgenteAccount],
+				                L0.K_CodAgenteVisibile AS [K_CodAgenteVisibile]
+				
+				            FROM 
+				                [dbo].[ESBI_INTESTATARI] L0 WITH (NOLOCK)
+				            
+				            LEFT JOIN 
+				                [dbo].[ESBI_INTESTATARI] L1 WITH (NOLOCK)
+				            ON
+				                L0.CodCapoAreaRif = L1.CodIntestatario AND
+				                L0.DBGruppo = L1.DBGruppo
+				
+				            LEFT JOIN 
+				                [dbo].[ESBI_INTESTATARI] L2 WITH (NOLOCK)
+				            ON
+				                L1.CodCapoAreaRif = L2.CodIntestatario AND
+				                L1.DBGruppo = L2.DBGruppo
+				
+				            LEFT JOIN 
+				                [dbo].[ESBI_INTESTATARI] L3 WITH (NOLOCK)
+				            ON
+				                L2.CodCapoAreaRif = L3.CodIntestatario AND
+				                L2.DBGruppo = L3.DBGruppo
+				
+				            LEFT JOIN 
+				                [dbo].[ESBI_INTESTATARI] L4 WITH (NOLOCK)
+				            ON
+				                L3.CodCapoAreaRif = L4.CodIntestatario AND
+				                L3.DBGruppo = L4.DBGruppo
+				            
+				            WHERE
+				                L0.CodCapoAreaRif <> 0
+				                AND L1.CodCapoAreaRif <> 0
+				                AND L2.CodCapoAreaRif <> 0
+				                AND L3.CodCapoAreaRif <> 0
+				                AND L4.TipoAnagrafica = 2
+				                AND L4.AnagAgente = 1"
+				
+				            & StringaFiltroGruppoIN
+				            & StringaFiltroGruppoNOTIN
+				            & ";
+				    "
+				    ,CreateNavigationProperties=false])
+				in 
+				    Origine
+				```
+
+	annotation PBI_Id = 9501aa7f-face-4d5e-bac1-279877bc6b6b
+
+	annotation LinkedQueryName = Agenti - Agenti visibili (RLS)
+
+	annotation PBI_QueryRelationships = {"columnCount":2,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Account agenti - Agenti visibili (RLS - Agente storico)/Origine.{K_CodAgenteAccount,0}","Section1/Account agenti - Agenti visibili (RLS - Agente storico)/Origine.{K_CodAgenteVisibile,1}"],"ColumnCount":2,"KeyColumnNames":[],"ColumnIdentities":["Section1/Account agenti - Agenti visibili (RLS - Agente storico)/Origine.{K_CodAgenteAccount,0}","Section1/Account agenti - Agenti visibili (RLS - Agente storico)/Origine.{K_CodAgenteVisibile,1}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

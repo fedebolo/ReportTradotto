@@ -1,0 +1,92 @@
+table _Bridge_ClientiIntestatari_Agenti
+	isHidden
+	lineageTag: 25d9deb2-af65-48f0-8cba-9bab78a8940b
+
+	column K_CodCli
+		dataType: string
+		isHidden
+		lineageTag: 3fbe5db9-e7d6-40e2-937c-f4826cd2c0ad
+		summarizeBy: none
+		sourceColumn: K_CodCli
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgenteRuolo
+		dataType: string
+		isHidden
+		lineageTag: 07cc10a4-4010-454e-8233-11567dad73a7
+		summarizeBy: none
+		sourceColumn: K_CodAgenteRuolo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Condiz. comm. (Cliente) - Agente principale/secondario'
+		dataType: string
+		isHidden
+		lineageTag: 4ba900dd-df6b-494c-966d-d80cb27cdc83
+		summarizeBy: none
+		sourceColumn: Condiz. comm. (Cliente) - Agente principale/secondario
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgente
+		dataType: string
+		lineageTag: 1a68bfa4-08fc-48bf-931a-b333a3a9b483
+		summarizeBy: none
+		sourceColumn: K_CodAgente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ditta
+		dataType: string
+		lineageTag: 26f20ad3-040b-4b06-aa5a-187ae47191f1
+		summarizeBy: none
+		sourceColumn: Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Bridge_ClientiIntestatari_Agenti-37ccc252-d9d9-42a7-a9fc-6be03c9e6571 = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " AND [ESBI_COND_COMM_AGE].DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " AND [ESBI_COND_COMM_AGE].DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				        SELECT
+				             [K_CodCliFor] AS [K_CodCli]
+				            ,[ESBI_COND_COMM_AGE].[K_CodAgenteRuolo] AS [K_CodAgenteRuolo]
+				            ,[TipoAgenteCondComm] AS [Condiz. comm. (Cliente) - Agente principale/secondario]
+							,[K_CodAgente]
+				            ,[ESBI_COND_COMM_AGE].DBGruppo as [Ditta]
+				            
+				        FROM 
+				            [dbo].[ESBI_COND_COMM_AGE] WITH (NOLOCK) 
+							INNER JOIN
+							[dbo].[ESBI_AGE] WITH (NOLOCK) 
+							ON [ESBI_COND_COMM_AGE].[K_CodAgenteRuolo]=[ESBI_AGE].[K_CodAgenteRuolo]
+				            
+				        WHERE 
+				            ProgrCondComm = 0
+				            AND TipoAgenteCondComm='Principale'"
+				
+				        & StringaFiltroGruppoIN
+				        & StringaFiltroGruppoNOTIN
+				        & ";
+				    "
+				    ,CreateNavigationProperties=false])
+				in
+				    Origine
+				```
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

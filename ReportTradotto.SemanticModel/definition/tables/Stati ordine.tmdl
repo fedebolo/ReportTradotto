@@ -1,0 +1,33 @@
+table 'Stati ordine'
+	lineageTag: 733855ae-aa10-4ebe-a00a-2719f3d2344f
+
+	column K_RigaOrdAnnullata
+		dataType: string
+		isHidden
+		lineageTag: f37164e6-cb0d-4f2c-bec0-acf55092d2f8
+		summarizeBy: none
+		sourceColumn: K_RigaOrdAnnullata
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Stato ordine - Riga annullata (Si/No)'
+		dataType: string
+		lineageTag: a370289d-329a-42ff-8e54-c5d799070188
+		summarizeBy: none
+		sourceColumn: Stato ordine - Riga annullata (Si/No)
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Stati ordine-8e8652fd-aa70-411b-9172-2e234eaa6927' = m
+		mode: import
+		queryGroup: Dimensioni
+		source =
+				let
+				    Origine = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlDSUfLLV4rViVYyBDKDM5ViYwE=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [K_RigaOrdAnnullata = _t, #"Stato ordine - Riga annullata (Si/No)" = _t])
+				in
+				    Origine
+
+	annotation PBI_ResultType = Table
+

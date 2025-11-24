@@ -1,0 +1,206 @@
+relationship cc2b7630-6c18-4043-a051-4918b84e737b
+	fromColumn: Vendite.K_CodMagazzino
+	toColumn: Magazzini.K_CodMagazzino
+
+relationship 58b20b43-6b3f-4409-babf-27451e234213
+	fromColumn: Vendite.K_CodDivisione
+	toColumn: Divisioni.K_CodDivisione
+
+relationship ff2822d1-18ed-4858-8549-e0f71b1e636e
+	fromColumn: Vendite.K_CodCli
+	toColumn: 'Clienti intestatari'.K_CodCli
+
+relationship ce464c74-a7d8-4541-88d3-07fb87bc1e66
+	isActive: false
+	fromColumn: Vendite.K_CodBudget
+	toColumn: 'Budget (versioni)'.K_CodBudget
+
+relationship 8775024b-4f5e-4bc1-a6c1-9dc645a58c9a
+	fromColumn: Vendite.K_CodPromozione
+	toColumn: Promozioni.K_CodPromozione
+
+relationship 209f3d4b-1216-4974-bf84-a09984425b1b
+	fromColumn: Vendite.K_CodDitta
+	toColumn: Ditte.K_CodDitta
+
+relationship 9b20eaab-fe25-43d8-a259-931f794046e0
+	fromColumn: Vendite.K_CodCategCliente
+	toColumn: 'Categorie clienti'.K_CodCategCliente
+
+relationship b6464505-7ca9-4ce5-a118-debf4c4a2d7d
+	fromColumn: Vendite.K_CodCentroImputazione
+	toColumn: 'Centri imputazione'.K_CodCentroImputazione
+
+relationship d0290b6e-43e6-438a-937a-7ba0ee65f60d
+	fromColumn: Vendite.K_CodClasseAffidamento
+	toColumn: 'Classi affidamento'.K_CodClasseAffidamento
+
+relationship fd072c0d-0afc-4605-90d7-1a0020addeea
+	fromColumn: Vendite.K_CodClasseMerceologica
+	toColumn: 'Classi merceologiche'.K_CodClasseMerceologica
+
+relationship 9947bc57-97d1-4f8d-9934-ddf85f0d7497
+	fromColumn: Vendite.K_CodClassifStat
+	toColumn: 'Classificazioni statistiche'.K_CodClassifStat
+
+relationship d5ffc90c-3a23-41d6-94a2-e7a0f826d0d4
+	fromColumn: Vendite.K_CodZona
+	toColumn: Zone.K_CodZona
+
+relationship 3e4ae6d2-5193-4f23-8eca-a328f27949df
+	fromColumn: Vendite.K_CodMarca
+	toColumn: Marche.K_CodMarca
+
+relationship 05f2a40b-b511-47f7-b36f-68d52ea70511
+	fromColumn: Vendite.K_CodTipologiaComm
+	toColumn: 'Tipologie commerciali'.K_CodTipologiaComm
+
+relationship 0eb5b595-aaeb-4f90-9bcd-469f4319d457
+	fromColumn: Vendite.K_CodFamiglia
+	toColumn: Famiglie.K_CodFamiglia
+
+relationship 64dba0df-2574-4893-984e-4b522f16cbd2
+	fromColumn: Vendite.K_CodMacroFamiglia
+	toColumn: Macrofamiglie.K_CodMacroFamiglia
+
+relationship eecf7451-1344-4be7-9d40-aaaf874f9108
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	fromColumn: 'Vendite per agente'.K_MovimentoStatistico
+	toColumn: Vendite.K_MovimentoStatistico
+
+relationship db520056-6223-422e-b1fe-a8d1b2e2b480
+	fromColumn: 'Vendite per agente'.K_CodAgenteRuolo
+	toColumn: Agenti.K_CodAgenteRuolo
+
+relationship 51866a54-e1c8-4691-ab93-024e5910db63
+	fromColumn: 'Agenti - Agenti visibili (RLS)'.K_CodAgenteAccount
+	toColumn: 'Agenti - Account (RLS)'.K_CodAgente
+
+relationship 0116305e-6195-4f84-954e-df07d5bc545f
+	isActive: false
+	fromColumn: Vendite.K_CodCliIndCuiSped
+	toColumn: 'Clienti e luoghi di spedizione'.K_CodCliInd
+
+relationship 0f27d2f9-36ef-49e9-b4e5-04307d04f6bc
+	fromColumn: Vendite.K_CodClasseContabile
+	toColumn: 'Classi contabili'.K_CodClasseContabile
+
+relationship b9b98964-53e1-4780-9cc7-50752981e46f
+	fromColumn: Vendite.K_CodTipoMovimento
+	toColumn: 'Tipi movimento'.K_CodTipoMovimento
+
+relationship 6796ab3b-30d1-4d3b-9fea-7ab228fbf9f7
+	fromColumn: Vendite.K_CodUnitaMisura
+	toColumn: 'Unità di misura'.K_CodUnitaMisura
+
+relationship 465b7156-badc-425d-8b77-dd1ca6f8a67a
+	fromColumn: Vendite.K_GruClaTipDoc
+	toColumn: 'Tipologie documenti'.K_GruClaTipDoc
+
+relationship ea36a614-b756-4af3-ad5b-b7bacc2a8def
+	fromColumn: Vendite.K_StatoGestionale
+	toColumn: 'Stati gestionali'.K_StatoGestionale
+
+relationship 8f8f2c09-6d5d-42cc-a94f-789fd22c40d2
+	fromColumn: Vendite.K_CodCommessa
+	toColumn: Commesse.K_CodCommessa
+
+relationship 1a1de6d0-07fa-4503-a8f9-18974c2a77cd
+	fromColumn: Vendite.K_CodArtVar
+	toColumn: 'Articoli / Servizi'.K_CodArtVar
+
+relationship 8cc6cfe9-b5f7-4e33-9adb-3ed1266a67f0
+	fromColumn: Vendite.K_CodConto
+	toColumn: Conti.K_CodConto
+
+relationship b34221f1-b168-4e6a-b32d-8256cc258bce
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	fromColumn: _Bridge_ClientiIntestatari_Agenti.K_CodCli
+	toColumn: 'Clienti intestatari'.K_CodCli
+
+relationship ed57d5c0-82db-42b8-ab79-9496e7e238cc
+	fromColumn: _Bridge_ClientiIntestatari_Agenti.K_CodAgenteRuolo
+	toColumn: 'Agenti (Clienti)'.K_CodAgenteRuolo
+
+relationship 4146716f-7594-44cf-90c6-e0fdcb4a2f15
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: _Bridge_ClientiSpedizione_Agenti.K_CodCli
+	toColumn: 'Clienti e luoghi di spedizione'.K_CodCli
+
+relationship 8fce8367-2e6b-4972-a7c1-be42f4fe1bd5
+	isActive: false
+	fromColumn: _Bridge_ClientiSpedizione_Agenti.K_CodAgenteRuolo
+	toColumn: 'Agenti (Clienti spedizione)'.K_CodAgenteRuolo
+
+relationship b5f1ea2c-1e36-4703-b669-f9967ff45536
+	fromColumn: Vendite.K_TipoRiga
+	toColumn: 'Tipi riga'.K_TipoRiga
+
+relationship 62468415-cc89-4e32-9dca-66ab28cc3f6e
+	fromColumn: Vendite.K_IdListVers
+	toColumn: Listini.K_IdListVers
+
+relationship 8717db87-4e81-4185-8583-da42d2e37c01
+	fromColumn: Vendite.K_RigaOrdAnnullata
+	toColumn: 'Stati ordine'.K_RigaOrdAnnullata
+
+relationship 54ed9630-395a-437a-9ab2-348ed0634b32
+	fromColumn: Vendite.K_CondPag
+	toColumn: 'Condizioni pagamento'.K_CondPag
+
+relationship 2143a23d-fe74-4ea2-b7fa-4c12a5f6501a
+	isActive: false
+	fromColumn: 'Clienti e luoghi di spedizione'.K_CodCli
+	toColumn: 'Clienti intestatari'.K_CodCli
+
+relationship 2446f23c-02e9-423b-9ed9-e23e45ad22d6
+	isActive: false
+	fromColumn: _Bridge_ClientiSpedizione_Agenti.K_CodCli
+	toColumn: 'Clienti intestatari'.K_CodCli
+
+relationship c983a9ff-9a44-43db-b531-443cc93506e2
+	fromColumn: Vendite.K_NonSaldato
+	toColumn: 'Situazione saldo movimento'.K_SituazioneSaldo
+
+relationship f1390f5f-41f2-499c-b5f0-debd7fb6daae
+	fromColumn: 'Clienti intestatari'.K_CodCategScontiCliente
+	toColumn: 'Categorie sconti'.K_CodCategScontiCliente
+
+relationship a57defe7-9813-c34f-845c-26b821dfded9
+	fromColumn: Target.'Ditta - Codice'
+	toColumn: Ditte.'Ditta - Codice'
+
+relationship 362a2083-b497-b163-c747-e4a21e1a33d2
+	fromColumn: Target.Articolo
+	toColumn: 'Articoli / Servizi'.K_CodArtVar
+
+relationship c9f3e2b1-743b-b191-8803-e7ceadea9e67
+	isActive: false
+	fromColumn: _Bridge_ClientiIntestatari_Agenti.Ditta
+	toColumn: Ditte.K_CodDitta
+
+relationship fda1cab2-9682-cc94-f055-0b17c3c9a122
+	fromColumn: 'Articoli / Servizi'.'Articolo - Codice con Variante'
+	toColumn: 'Articoli in lingua'.'Articolo - Codice con Variante'
+
+relationship 77055bce-dfa0-921f-8674-742734e18f6d
+	fromColumn: 'Agenti (Clienti)'.'Agente (Cliente) - Ditta'
+	toColumn: Ditte.K_CodDitta
+
+relationship 75a530fd-07e4-49a1-940e-755c110375e9
+	fromColumn: Vendite.K_DataRegistraz
+	toColumn: Calendario.Date
+
+relationship 764d61d0-d7bf-1efc-bdb0-a38bea676add
+	fromColumn: Target.Date
+	toColumn: Calendario.Date
+
+relationship d197dae1-771f-4549-7970-6db46b197e99
+	toCardinality: many
+	fromColumn: Target.K_CodAgente
+	toColumn: _Bridge_ClientiIntestatari_Agenti.K_CodAgente
+

@@ -1,0 +1,67 @@
+table 'Agenti - Account (RLS)'
+	isHidden
+	lineageTag: ae724ab9-a366-4555-8308-ef08c9d6aaac
+
+	column K_Account
+		dataType: string
+		isHidden
+		lineageTag: 730886a4-9bc9-474f-8bdc-fe1f81469ad1
+		summarizeBy: none
+		sourceColumn: K_Account
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgente
+		dataType: string
+		isHidden
+		lineageTag: 1f0bf3d9-84e7-48e4-9229-06b59d962c48
+		summarizeBy: none
+		sourceColumn: K_CodAgente
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Agenti - Account (RLS)-6bb16565-cfce-4a09-aa7d-ccc31d56f65f' = m
+		mode: import
+		queryGroup: Dimensioni\Agenti
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " AND DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " AND DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				        SELECT
+				            K_CodAgente AS [K_CodAgente],
+				            K_Account AS [K_Account]
+				
+				        FROM 
+				            [dbo].[ESBI_INTESTAT_CODEST] WITH (NOLOCK)
+				            
+						WHERE
+							TipoAnagrafica = 2
+				            AND CodCliForEsterno LIKE 'CA%'
+				            --= CONVERT(VARCHAR(255), CodCliForEsolver) + '_LOGIN_PBI'
+				            "
+				                    
+				            & StringaFiltroGruppoIN
+				            & StringaFiltroGruppoNOTIN
+				            & ";
+				    "
+				    ,CreateNavigationProperties=false])
+				in 
+				    Origine
+				```
+
+	annotation PBI_Id = 3dd449bf-4981-4118-86ff-fd88e53d7bb0
+
+	annotation LinkedQueryName = Agenti - Account (RLS)
+
+	annotation PBI_QueryRelationships = {"columnCount":2,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Account agenti (RLS - Agente storico)/Origine.{K_CodAgente,0}","Section1/Account agenti (RLS - Agente storico)/Origine.{K_Account,1}"],"ColumnCount":2,"KeyColumnNames":[],"ColumnIdentities":["Section1/Account agenti (RLS - Agente storico)/Origine.{K_CodAgente,0}","Section1/Account agenti (RLS - Agente storico)/Origine.{K_Account,1}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

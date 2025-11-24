@@ -1,0 +1,196 @@
+table Conti
+	lineageTag: d0a82455-0370-4a8a-a3e8-18e715b143ec
+
+	column K_CodConto
+		dataType: string
+		isHidden
+		lineageTag: 8e94a47d-560c-4a8c-ae7a-d7be1a3b678d
+		summarizeBy: none
+		sourceColumn: K_CodConto
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Piano dei conti - Codice'
+		dataType: string
+		lineageTag: 1b690aa4-ca68-4a1b-841d-b2cc4e195bfa
+		summarizeBy: none
+		sourceColumn: Piano dei conti - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto - Codice'
+		dataType: string
+		lineageTag: a677ea30-40ac-46c8-8c5b-1f5e297cba98
+		summarizeBy: none
+		sourceColumn: Conto - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto - Codice L1'
+		dataType: string
+		lineageTag: f08fef31-df9d-4f2f-aba1-6626b358e3c6
+		summarizeBy: none
+		sourceColumn: Conto - Codice L1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto - Codice L2'
+		dataType: string
+		lineageTag: f78b30b7-aad1-4d43-8c4f-207f559ce2bc
+		summarizeBy: none
+		sourceColumn: Conto - Codice L2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto - Codice L3'
+		dataType: string
+		lineageTag: 1924eeb0-cb23-4027-8249-ccf200c36284
+		summarizeBy: none
+		sourceColumn: Conto - Codice L3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto - Codice L4'
+		dataType: string
+		lineageTag: 7fca4197-1859-4524-b056-0e5e3600277d
+		summarizeBy: none
+		sourceColumn: Conto - Codice L4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto - Descrizione L1'
+		dataType: string
+		lineageTag: fe2d49cd-9696-4e0c-bd0e-4124797aac7f
+		summarizeBy: none
+		sourceColumn: Conto - Descrizione L1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto - Descrizione L2'
+		dataType: string
+		lineageTag: 7c005da1-2d14-40ed-aef3-b4375d68fd76
+		summarizeBy: none
+		sourceColumn: Conto - Descrizione L2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto - Descrizione L3'
+		dataType: string
+		lineageTag: 8861aea4-77ec-4648-9722-225f6ee63199
+		summarizeBy: none
+		sourceColumn: Conto - Descrizione L3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto - Descrizione L4'
+		dataType: string
+		lineageTag: beac9720-3f35-4412-886f-138dd74ce9b9
+		summarizeBy: none
+		sourceColumn: Conto - Descrizione L4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto L1'
+		dataType: string
+		lineageTag: e1f4b0e0-e9d8-433f-857e-cb8de19c112e
+		summarizeBy: none
+		sourceColumn: Conto L1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto L2'
+		dataType: string
+		lineageTag: 85c1ca89-452b-43bc-8ec9-41e89ca57fcb
+		summarizeBy: none
+		sourceColumn: Conto L2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto L3'
+		dataType: string
+		lineageTag: 9555b1f6-a2c9-45f8-bd31-81363678f217
+		summarizeBy: none
+		sourceColumn: Conto L3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto L4'
+		dataType: string
+		lineageTag: 76af74fe-1260-4e19-8e86-36a43edadf4c
+		summarizeBy: none
+		sourceColumn: Conto L4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto - Tipo partitario'
+		dataType: string
+		lineageTag: 84f131cb-5338-4750-aa11-cadd3683ba4b
+		summarizeBy: none
+		sourceColumn: Conto - Tipo partitario
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto - Sezione'
+		dataType: string
+		lineageTag: 581f6916-e48d-487e-91fa-c93661a37804
+		summarizeBy: none
+		sourceColumn: Conto - Sezione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto - SP/CE'
+		dataType: string
+		lineageTag: 9f1fcb53-21a9-4524-bf76-26ed48e3b350
+		summarizeBy: none
+		sourceColumn: Conto - SP/CE
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conto - Descrizione'
+		dataType: string
+		lineageTag: 0ad13279-0861-4b0a-8602-2490f4a22f88
+		summarizeBy: none
+		sourceColumn: Conto - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column Conto
+		dataType: string
+		lineageTag: a8c51394-ebd2-4659-abf6-c15aa480fcd0
+		summarizeBy: none
+		sourceColumn: Conto
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Piano dei conti - Albero'
+		lineageTag: d083b2c6-5b5d-4c2f-9b95-670b21af0b7a
+
+		level 'Conto L1'
+			lineageTag: d9af9ffd-7b04-4e8b-ba23-5ec6cad2f4aa
+			column: 'Conto L1'
+
+		level 'Conto L2'
+			lineageTag: ddb4780c-22f1-44a5-aec6-09e93bbedbe8
+			column: 'Conto L2'
+
+		level 'Conto L3'
+			lineageTag: d396f74f-7d42-4096-bcec-1930c76b05f8
+			column: 'Conto L3'
+
+		level 'Conto L4'
+			lineageTag: 4e79b41d-ed5a-44a7-8b96-c5e035d97708
+			column: 'Conto L4'
+
+	partition Conti-286ea5bc-0ba6-4a18-8c3c-bd9597a47f94 = m
+		mode: import
+		queryGroup: Dimensioni
+		source =
+				let
+				    Origine = Sql.Database("WTCNB0021\SISTEMI1", "ESOLVER42", [Query="#(lf)        SELECT#(lf)             K_CodConto AS [K_CodConto]#(lf)            ,CodPdc AS [Piano dei conti - Codice]#(lf)            ,CodConto AS [Conto - Codice]#(lf)            ,CodContoL1 AS [Conto - Codice L1]#(lf)            ,CodContoL2 AS [Conto - Codice L2]#(lf)            ,CodContoL3 AS [Conto - Codice L3]#(lf)            ,CodContoL4 AS [Conto - Codice L4]#(lf)            ,DesContoL1 AS [Conto - Descrizione L1]#(lf)            ,DesContoL2 AS [Conto - Descrizione L2]#(lf)            ,DesContoL3 AS [Conto - Descrizione L3]#(lf)            ,DesContoL4 AS [Conto - Descrizione L4]#(lf)            ,ContoL1 AS [Conto L1]#(lf)            ,ContoL2 AS [Conto L2]#(lf)            ,ContoL3 AS [Conto L3]#(lf)            ,ContoL4 AS [Conto L4]#(lf)            ,DesContoPartit AS [Conto - Tipo partitario]#(lf)            ,DesSezione AS [Conto - Sezione]#(lf)            ,DesTipoConto AS [Conto - SP/CE]#(lf)            ,DesConto AS [Conto - Descrizione]#(lf)            ,Conto AS [Conto]#(lf)#(lf)        FROM #(lf)            [dbo].[ESBI_PDC_PIVOT] WITH (NOLOCK)#(lf)        ;#(lf)    ", CreateNavigationProperties=false])
+				in
+				    Origine
+
+	annotation PBI_ResultType = Table
+

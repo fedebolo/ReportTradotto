@@ -1,0 +1,285 @@
+table 'Agenti (Clienti spedizione)'
+	lineageTag: ab6fe52e-b643-4e86-839e-84ba96c6c538
+
+	measure 'Agenti (Clienti sped.) - Profondità gerarchia attuale' =
+			+ ISINSCOPE ( 'Agenti (Clienti spedizione)'[Agente (Cliente sped.) - L1] )
+			    + ISINSCOPE ( 'Agenti (Clienti spedizione)'[Agente (Cliente sped.) - L2] )
+			    + ISINSCOPE ( 'Agenti (Clienti spedizione)'[Agente (Cliente sped.) - L3] )
+			    + ISINSCOPE ( 'Agenti (Clienti spedizione)'[Agente (Cliente sped.) - L4] )
+			    + ISINSCOPE ( 'Agenti (Clienti spedizione)'[Agente (Cliente sped.) - L5] )
+		isHidden
+		lineageTag: 59e41fa8-6162-42db-9d64-5b0765183da0
+
+	measure 'Agenti (Clienti sped.) - Profondità gerarchia massima' = MAX ( 'Agenti (Clienti spedizione)'[Agenti (Clienti sped.) - Profondità gerarchia] )
+		formatString: 0
+		isHidden
+		lineageTag: f9c3f638-01d6-4ce1-a45a-2718e24cc51d
+
+	measure 'Agenti (Clienti sped.) - Profondità gerarchica rimanente' = [Agenti (Clienti sped.) - Profondità gerarchia massima] - [Agenti (Clienti sped.) - Profondità gerarchia attuale]
+		formatString: 0
+		isHidden
+		lineageTag: d9274dd4-3db6-4d81-8810-77cab7fc0d3c
+
+	column K_CodAgenteRuolo
+		dataType: string
+		isHidden
+		lineageTag: c7a50e84-f140-448b-9fa8-969146886ce0
+		summarizeBy: none
+		sourceColumn: K_CodAgenteRuolo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgente
+		dataType: string
+		isHidden
+		lineageTag: 63721858-1814-4138-94fa-052619ec450e
+		summarizeBy: none
+		sourceColumn: K_CodAgente
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgenteCapoArea
+		dataType: string
+		isHidden
+		lineageTag: c2990e59-7f59-472c-aee8-77e7bc981c2b
+		summarizeBy: none
+		sourceColumn: K_CodAgenteCapoArea
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agenti (Clienti sped.) - Percorso' = PATH([K_CodAgente],[K_CodAgenteCapoArea])
+		isHidden
+		lineageTag: ddc89437-7e4b-494a-8cd2-c2076c9fcdce
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agenti (Clienti sped.) - Profondità gerarchia' = PATHLENGTH([Agenti (Clienti sped.) - Percorso])
+		isHidden
+		formatString: 0
+		lineageTag: b90e636a-675d-43a3-af6c-55886f9d845d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - L1' = ```
+			
+			    LOOKUPVALUE(
+			        [Agente (Cliente sped.) - Descrizione],
+			        [K_CodAgente],
+			        PATHITEM([Agenti (Clienti sped.) - Percorso],1)
+			    )
+			```
+		lineageTag: 20aaedc2-cbc9-4b2b-9502-00e1ac01ea3c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - L2' =
+			
+			IF([Agenti (Clienti sped.) - Profondità gerarchia]>=2,
+			    LOOKUPVALUE(
+			        [Agente (Cliente sped.) - Descrizione],
+			        [K_CodAgente],
+			        PATHITEM([Agenti (Clienti sped.) - Percorso],2)
+			    )
+			, [Agente (Cliente sped.) - L1])
+		lineageTag: 107414cf-b44c-4324-9250-29c33c7dbec0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - L3' =
+			
+			IF([Agenti (Clienti sped.) - Profondità gerarchia]>=3,
+			    LOOKUPVALUE(
+			        [Agente (Cliente sped.) - Descrizione],
+			        [K_CodAgente],
+			        PATHITEM([Agenti (Clienti sped.) - Percorso],3)
+			    )
+			, [Agente (Cliente sped.) - L2])
+		lineageTag: 039eecfb-6b7a-4c5f-8db2-30e065b0db20
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - L4' =
+			
+			IF([Agenti (Clienti sped.) - Profondità gerarchia]>=4,
+			    LOOKUPVALUE(
+			        [Agente (Cliente sped.) - Descrizione],
+			        [K_CodAgente],
+			        PATHITEM([Agenti (Clienti sped.) - Percorso],4)
+			    )
+			, [Agente (Cliente sped.) - L3])
+		lineageTag: 5de9fdd8-b8dc-4401-96f9-f128890410f2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - L5' =
+			
+			IF([Agenti (Clienti sped.) - Profondità gerarchia]>=5,
+			    LOOKUPVALUE(
+			        [Agente (Cliente sped.) - Descrizione],
+			        [K_CodAgente],
+			        PATHITEM([Agenti (Clienti sped.) - Percorso],5)
+			    )
+			, [Agente (Cliente sped.) - L4])
+		lineageTag: baaec56c-9359-46bd-a927-1934e07bc0b4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - Ditta'
+		dataType: string
+		lineageTag: 1ec7af0b-0012-4ce7-b8e2-78a03c0b532c
+		summarizeBy: none
+		sourceColumn: Agente (Cliente sped.) - Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - Codice'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e41b723-eaae-4cd1-b0ef-ed658f75f1c1
+		summarizeBy: sum
+		sourceColumn: Agente (Cliente sped.) - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - Descrizione'
+		dataType: string
+		lineageTag: 538b2a15-8fba-4c6d-aa58-5acc4a4e83c8
+		summarizeBy: none
+		sourceColumn: Agente (Cliente sped.) - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.)'
+		dataType: string
+		lineageTag: cf30fe5d-4528-42c2-aa00-2ea451163f08
+		summarizeBy: none
+		sourceColumn: Agente (Cliente sped.)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - Capo area'
+		dataType: int64
+		formatString: 0
+		lineageTag: 54cb363c-dd07-4ed0-a936-4cb6e0e8ced1
+		summarizeBy: sum
+		sourceColumn: Agente (Cliente sped.) - Capo area
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - Ruolo'
+		dataType: int64
+		formatString: 0
+		lineageTag: da53e01a-ca1c-41dc-91e1-ad7ae6a9a1fa
+		summarizeBy: sum
+		sourceColumn: Agente (Cliente sped.) - Ruolo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - Ruolo e agente'
+		dataType: string
+		lineageTag: f5f55227-b7a4-4e62-992a-59272c9c30b5
+		summarizeBy: none
+		sourceColumn: Agente (Cliente sped.) - Ruolo e agente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - Data inizio validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 05029e13-0aaa-47d2-9d5b-44ea52828985
+		summarizeBy: none
+		sourceColumn: Agente (Cliente sped.) - Data inizio validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - Data fine validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3459a97c-4514-4f2d-ad93-9e502927f376
+		summarizeBy: none
+		sourceColumn: Agente (Cliente sped.) - Data fine validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - Valido in data estrazione'
+		dataType: string
+		lineageTag: 6e123d34-d60e-4c1f-a837-9092e4f3a4b7
+		summarizeBy: none
+		sourceColumn: Agente (Cliente sped.) - Valido in data estrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Agente (Cliente sped.) - Desrizione Capo Area'
+		dataType: string
+		lineageTag: d54cfdfc-be35-471b-ae1d-792cdb2eddb4
+		summarizeBy: none
+		sourceColumn: Agente (Cliente sped.) - Desrizione Capo Area
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_Account
+		dataType: string
+		lineageTag: 91395aeb-9896-47ab-8efd-0c43efc89973
+		summarizeBy: none
+		sourceColumn: K_Account
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_Account_CA
+		dataType: string
+		lineageTag: ccadd03c-d5fc-422d-9b6b-b6900fd973a5
+		summarizeBy: none
+		sourceColumn: K_Account_CA
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Agenti (Clienti sped.) - Gerarchia'
+		lineageTag: 08e2b8c6-3877-427a-a463-84e61a19fe24
+
+		level 'Agente (Cliente sped.) - L1'
+			lineageTag: 1a7b9c7c-a805-44c6-9183-04d2d3a20ea8
+			column: 'Agente (Cliente sped.) - L1'
+
+		level 'Agente (Cliente sped.) - L5'
+			lineageTag: 14a1e89b-90d1-4c7f-b8bc-ffac12c3b69e
+			column: 'Agente (Cliente sped.) - L5'
+
+		level 'Agente (Cliente sped.) - L4'
+			lineageTag: 8f6a607e-5098-457e-91ef-68a6f4de60bb
+			column: 'Agente (Cliente sped.) - L4'
+
+		level 'Agente (Cliente sped.) - L3'
+			lineageTag: 62b65e93-16f5-46d0-b820-fdd2dba966f6
+			column: 'Agente (Cliente sped.) - L3'
+
+		level 'Agente (Cliente sped.) - L2'
+			lineageTag: b51b0751-0afa-46db-bd53-002aea52f098
+			column: 'Agente (Cliente sped.) - L2'
+
+	partition 'Agenti (Clienti spedizione)-3090e219-11c1-410c-a61e-e08ff888da96' = m
+		mode: import
+		queryGroup: Dimensioni
+		source =
+				let
+				    Origine = Agenti,
+				    Specializzazione_Nome_Breve = Table.TransformColumnNames(Origine, each if Text.StartsWith(_, "K_") then _ else Text.Replace(_, "Agente", "Agente (Cliente sped.)"))
+				in
+				    Specializzazione_Nome_Breve
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

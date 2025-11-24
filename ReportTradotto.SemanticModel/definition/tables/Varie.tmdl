@@ -1,0 +1,501 @@
+table Varie
+	lineageTag: 968bf45a-8f78-406f-9cb6-cc19357db3bc
+
+	measure 'Data prima vendita' =
+			VAR PrimaData =
+			    CALCULATE (
+			        FIRSTDATE ( 'Vendite'[K_DataRegistraz] ),
+			            'Tipi movimento'[Flag rilevanza budget] = "No"
+			    )
+			RETURN
+			    FORMAT ( PrimaData, "DD/MM/YYYY" )
+		lineageTag: ceaf877f-5d08-4fc2-80ad-127a0ffb2ad5
+
+	measure 'Data ultima vendita' =
+			VAR UltimaData =
+			    CALCULATE (
+			        LASTDATE ( 'Vendite'[K_DataRegistraz] ),
+			            'Tipi movimento'[Flag rilevanza budget] = "No"
+			    )
+			RETURN
+			    FORMAT ( UltimaData, "DD/MM/YYYY" )
+		lineageTag: 0f41bcbc-fc58-471c-8ee1-6e0638397e2b
+
+	measure 'Data primo budget' =
+			VAR PrimaData =
+			    CALCULATE (
+			        FIRSTDATE ( 'Vendite'[K_DataRegistraz] ),
+			            'Tipi movimento'[Flag rilevanza budget] = "Sì"
+			    )
+			RETURN
+			    FORMAT ( PrimaData, "DD/MM/YYYY" )
+		lineageTag: 4c238a5e-fa17-4963-ade8-adaf4ec300b9
+
+	measure 'Data ultimo budget' =
+			VAR UltimaData =
+			    CALCULATE (
+			        LASTDATE ( 'Vendite'[K_DataRegistraz] ),
+			            'Tipi movimento'[Flag rilevanza budget] = "Sì"
+			    )
+			RETURN
+			    FORMAT ( UltimaData, "DD/MM/YYYY" )
+		lineageTag: 32dd582d-1291-4a2f-8c79-8dcea452e3f5
+
+	measure 'Data e ora ultimo reload' = VALUES ( 'Diagnostica'[Ultimo reload] )
+		formatString: General Date
+		lineageTag: b6f8ee14-7751-45e8-8ae0-748b375d8b8a
+
+	measure 'Clienti con fatturato' =
+			VAR VenditeFatturate =
+			    CALCULATETABLE (
+			        'Vendite',
+			            'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			    )
+			RETURN
+			    COUNTROWS (
+			        SUMMARIZE ( VenditeFatturate, 'Clienti intestatari'[Cliente - Descrizione] )
+			    )
+		formatString: #,0
+		lineageTag: a24b6efc-111b-484b-9eb7-59e7d34ff114
+
+	measure 'Articoli con fatturato' =
+			
+			VAR VenditeFatturate =
+			    CALCULATETABLE (
+			        'Vendite',
+			        'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			    )
+			RETURN
+			    COUNTROWS (
+			        SUMMARIZE ( VenditeFatturate, 'Articoli / Servizi'[Articolo - Descrizione] )
+			    )
+		formatString: #,0
+		lineageTag: 37f84f2b-6abb-488f-8e5a-c32e24305a67
+
+	measure 'Nuovi clienti (per fatturato)' =
+			VAR DataRiferimento =
+			    MIN ( Calendario[Data] )
+			VAR ClientiConFattureNelPeriodo =
+			    SUMMARIZE (
+			        CALCULATETABLE (
+			            Vendite,
+			            'Tipi movimento'[Flag rilevanza fatturato] = "Sì",
+			            NOT ISBLANK ( 'Clienti intestatari'[Cliente - Descrizione] )
+			        ),
+			        'Clienti intestatari'[Cliente - Descrizione]
+			    )
+			VAR ClientiConFattureNeiPeriodiPrecedenti =
+			    SUMMARIZE (
+			        CALCULATETABLE (
+			            Vendite,
+			            'Tipi movimento'[Flag rilevanza fatturato] = "Sì",
+			            NOT ISBLANK ( 'Clienti intestatari'[Cliente - Descrizione] ),
+			            ALL ( Calendario ),
+			            Calendario[Data] < DataRiferimento
+			        ),
+			        'Clienti intestatari'[Cliente - Descrizione]
+			    )
+			RETURN
+			    CALCULATE (
+			        COUNTROWS (
+			            EXCEPT ( ClientiConFattureNelPeriodo, ClientiConFattureNeiPeriodiPrecedenti )
+			        )
+			    )
+		formatString: #,0
+		lineageTag: 72435d92-c592-4632-8786-665606062faa
+
+	measure 'Utente collegato' = USERPRINCIPALNAME ()
+		lineageTag: f38f31c7-d062-494d-b3bf-d8ef91793a36
+
+	measure 'Nuovi articoli (per fatturato)' =
+			VAR DataRiferimento =
+			    MIN ( Calendario[Data] )
+			VAR ArticoliConFattureNelPeriodo =
+			    SUMMARIZE (
+			        CALCULATETABLE (
+			            Vendite,
+			            'Tipi movimento'[Flag rilevanza fatturato] = "Sì",
+			            NOT ISBLANK ( 'Articoli / Servizi'[Articolo - Descrizione] )
+			        ),
+			        'Articoli / Servizi'[Articolo - Descrizione]
+			    )
+			VAR ArticoliConFattureNeiPeriodiPrecedenti =
+			    SUMMARIZE (
+			        CALCULATETABLE (
+			            Vendite,
+			            'Tipi movimento'[Flag rilevanza fatturato] = "Sì",
+			            NOT ISBLANK ( 'Articoli / Servizi'[Articolo - Descrizione] ),
+			            ALL ( Calendario ),
+			            Calendario[Data] < DataRiferimento
+			        ),
+			        'Articoli / Servizi'[Articolo - Descrizione]
+			    )
+			RETURN
+			    CALCULATE (
+			        COUNTROWS (
+			            EXCEPT ( ArticoliConFattureNelPeriodo, ArticoliConFattureNeiPeriodiPrecedenti )
+			        )
+			    )
+		formatString: #,0
+		lineageTag: f2e04c2b-4936-4be4-9a55-748154fa9af4
+
+	measure 'Nuovi clienti su base mensile (per fatturato)' = SUMX ( VALUES ( Calendario[Mese/anno] ), [Nuovi clienti (per fatturato)] )
+		formatString: #,0
+		lineageTag: dd0d8d3c-8a6c-493f-a74e-228009dc300e
+
+		changedProperty = FormatString
+
+	measure 'Nuovi articoli su base mensile (per fatturato)' = SUMX ( VALUES ( Calendario[Mese/anno] ), [Nuovi articoli (per fatturato)] )
+		formatString: #,0
+		lineageTag: ab628718-75b8-4585-9f2d-848f4e9ed7bb
+
+		changedProperty = FormatString
+
+	measure 'ABC Categoria clienti - Importo (no omaggi) - Fatturato' = ```
+			
+			VAR ImportoPerCategoriaClienti =                                                    -- Per salvare l'importo fatturato per articolo (Importo utilizzato per costruire l'analisi ABC)
+			    ADDCOLUMNS (
+			        ALLSELECTED ('Categorie clienti'[Categoria cliente - Descrizione]),         -- Dimensione oggetto di analisi, da inserire anche come asse nell'oggetto grafico (es. Matrice) 
+			        "@Importo", [Importo (no omaggi) - Fatturato]       
+			    )
+			
+			VAR ImportoTotale =                                                                 -- Per salvare l'importo totale (da rapportare all'importo cumulato per la creazione delle classi di analisi)
+			    CALCULATE ([Importo (no omaggi) - Fatturato] , ALLSELECTED ( 'Categorie clienti' ) )
+			
+			VAR CumulataPctPerCategoriaClienti =                                                -- Costruzione degli importi cumulati per importo decrescente
+			    ADDCOLUMNS (
+			        ImportoPerCategoriaClienti,
+			        "@CumulataPct",
+			            VAR ImportoCorrente = [@Importo]
+			            VAR TabImportoCumulato =
+			                FILTER ( ImportoPerCategoriaClienti, [@Importo] >= ImportoCorrente )
+			            VAR ImportoCumulato =
+			                SUMX ( TabImportoCumulato, [@Importo] )
+			            RETURN
+			                DIVIDE ( ImportoCumulato, ImportoTotale )
+			    )
+			VAR CategoriaClientiInClassi =                                                             --Join tra classi ABC e percentuale dell'importo cumulato su totale
+			    FILTER (
+			        CROSSJOIN ( CumulataPctPerCategoriaClienti, 'Classi ABC' ),
+			        [@CumulataPct] >= 'Classi ABC'[ABC - Limite inferiore]
+			            && [@CumulataPct] < 'Classi ABC'[ABC - Limite superiore]
+			    )
+			VAR Risultato =
+			    CALCULATE (                                     
+			        [Importo (no omaggi) - Fatturato],                      
+			        KEEPFILTERS ( CategoriaClientiInClassi )
+			    )
+			RETURN
+			Risultato                                                                           -- La logica dovrebbe essere la stessa su tutte le altre misure
+			
+			//Per replicare la misura su altri assi o su altri importi è necessario modificare l'asse di analisi (sia sulla misura che sull'esposizione - es. Clienti) e la misura oggetto di analisi (es. Importo - Ordinato)
+			
+			```
+		formatString: #,0
+		lineageTag: 568005ed-7db8-41a9-b5e0-e2b4d3cf6dc9
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'ABC Categoria clienti - Importo (no omaggi) Cum. - Fatturato' = ```
+			
+			--Parte di misura eseguita per l'esposizione di Classe-CategoriaCliente
+			VAR TabSelezioneTutteCategorie =
+			    ALLSELECTED('Categorie clienti'[Categoria cliente - Descrizione])
+			VAR ImportoTutteCategorie =
+			    ADDCOLUMNS ( TabSelezioneTutteCategorie, "@Importo", CALCULATE([ABC Categoria clienti - Importo (no omaggi) - Fatturato],ALL('Classi ABC')))
+			VAR ImportoCategorie =
+			    FILTER ( ImportoTutteCategorie, NOT ISBLANK ( [@Importo] ) )
+			    
+			VAR ImportoCategoriaCorrente = [ABC Categoria clienti - Importo (no omaggi) - Fatturato]
+			VAR CategoriaCorrente =
+			    SELECTEDVALUE('Categorie clienti'[Categoria cliente - Descrizione] )
+			VAR TabImportiInferioriCategoriaCorrete =
+			    FILTER ( ImportoCategorie, [@Importo] > ImportoCategoriaCorrente && NOT ISBLANK(ImportoCategoriaCorrente) )
+			
+			VAR TabImportiPariCategoriaCorrete =
+			    FILTER (
+			        ImportoCategorie,
+			        [@Importo] = ImportoCategoriaCorrente
+			            && ISONORAFTER( 'Categorie clienti'[Categoria cliente - Descrizione], CategoriaCorrente, DESC )
+			            && NOT ISBLANK([@Importo])
+			    )
+			    
+			VAR TabImportoCumulClienti = 
+			    UNION ( TabImportiInferioriCategoriaCorrete, TabImportiPariCategoriaCorrete )
+			VAR ImportoCumulatoCategoria =
+			    SUMX ( TabImportoCumulClienti, [@Importo]  )
+			
+			-----------------------------------------------------------------------------------------------------------------------------------
+			
+			--Parte di misura eseguita per l'esposizione di Classe
+			VAR TabSelezioneTutteClassi =
+			    ALL('Classi ABC')
+			VAR ImportoTutteClassi =
+			    ADDCOLUMNS ( TabSelezioneTutteClassi, "@Importo",[ABC clienti - Importo (no omaggi) - Fatturato])
+			VAR ImportoClassi =
+			    FILTER ( ImportoTutteClassi, NOT ISBLANK ( [@Importo] ) )
+			    
+			VAR ImportoClasseCorrente = [ABC clienti - Importo (no omaggi) - Fatturato]
+			
+			VAR TabImportiInferioriClasseCorrente =
+			    FILTER ( ImportoClassi, [@Importo] >= ImportoClasseCorrente && NOT ISBLANK(ImportoClasseCorrente) )
+			
+			VAR ImportoCumulatoClassi =
+			    SUMX ( TabImportiInferioriClasseCorrente, [@Importo]  )
+			
+			
+			RETURN
+			    IF(ISFILTERED('Categorie clienti'),ImportoCumulatoCategoria, ImportoCumulatoClassi)
+			```
+		formatString: #,0
+		lineageTag: dac176ec-bb6e-4f58-8107-d5b6236da284
+
+	measure 'ABC Categoria clienti - Importo (no omaggi) Cum.% - Fatturato' =
+			
+			VAR ImportoTot =
+			    CALCULATE ( [Importo (no omaggi) - Fatturato], ALLSELECTED('Categorie clienti'),ALL('Classi ABC') )
+			VAR PercentualeCumulata =
+			    DIVIDE ( [ABC Categoria clienti - Importo (no omaggi) Cum. - Fatturato], ImportoTot )
+			RETURN
+			    PercentualeCumulata
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: cc8dc730-bff1-4bca-84e5-584f01e64a14
+
+	measure 'ABC Clienti - Importo (no omaggi) - Fatturato' = ```
+			
+			VAR ImportoPerClienti =                                     -- Per salvare l'importo fatturato per articolo (Importo utilizzato per costruire l'analisi ABC)
+			    ADDCOLUMNS (
+			        ALLSELECTED ('Clienti intestatari'[Cliente]),       -- Dimensione oggetto di analisi, da inserire anche come asse nell'oggetto grafico (es. Matrice) 
+			        "@Importo", [Importo (no omaggi) - Fatturato]       
+			    )
+			
+			VAR ImportoTotale =                                         -- Per salvare l'importo totale (da rapportare all'importo cumulato per la creazione delle classi di analisi)
+			    CALCULATE ([Importo (no omaggi) - Fatturato] , ALLSELECTED ( 'Clienti intestatari' ) )
+			
+			VAR CumulataPctPerClienti =                                 -- Costruzione degli importi cumulati per importo decrescente
+			    ADDCOLUMNS (
+			        ImportoPerClienti,
+			        "@CumulataPct",
+			            VAR ImportoCorrente = [@Importo]
+			            VAR TabImportoCumulato =
+			                FILTER ( ImportoPerClienti, [@Importo] >= ImportoCorrente )
+			            VAR ImportoCumulato =
+			                SUMX ( TabImportoCumulato, [@Importo] )
+			            RETURN
+			                DIVIDE ( ImportoCumulato, ImportoTotale )
+			    )
+			VAR DimensioneInClassi =                                    --Join tra classi ABC e percentuale dell'importo cumulato su totale
+			    FILTER (
+			        CROSSJOIN ( CumulataPctPerClienti, 'Classi ABC' ),
+			        [@CumulataPct] >= 'Classi ABC'[ABC - Limite inferiore]
+			            && [@CumulataPct] < 'Classi ABC'[ABC - Limite superiore]
+			    )
+			VAR Risultato =
+			    CALCULATE (                                     
+			        [Importo (no omaggi) - Fatturato],                      
+			        KEEPFILTERS ( DimensioneInClassi )
+			    )
+			RETURN
+			    Risultato                                               -- La logica dovrebbe essere la stessa su tutte le altre misure
+			
+			
+			```
+		formatString: #,0
+		lineageTag: 1e3fd381-585e-4005-8ff6-11d30f68079b
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'ABC Clienti - Importo (no omaggi) Cum. - Fatturato' = ```
+			
+			--Parte di misura eseguita per l'esposizione di Classe-Cliente
+			VAR TabSelezioneTuttiClienti =
+			    ALLSELECTED('Clienti intestatari'[Cliente])
+			VAR ImportoTuttiClienti =
+			    ADDCOLUMNS ( TabSelezioneTuttiClienti, "@Importo", CALCULATE([ABC clienti - Importo (no omaggi) - Fatturato],ALL('Classi ABC')))
+			VAR ImportoClienti =
+			    FILTER ( ImportoTuttiClienti, NOT ISBLANK ( [@Importo] ) )
+			    
+			VAR ImportoClienteCorrente = [ABC clienti - Importo (no omaggi) - Fatturato]
+			VAR RagSocClienteCorrente =
+			    SELECTEDVALUE('Clienti intestatari'[Cliente] )
+			VAR TabImportiInferioriClienteCorrente =
+			    FILTER ( ImportoClienti, [@Importo] > ImportoClienteCorrente && NOT ISBLANK(ImportoClienteCorrente) )
+			
+			VAR TabImportoPariClienteCorrente =
+			    FILTER (
+			        ImportoClienti,
+			        [@Importo] = ImportoClienteCorrente
+			            && ISONORAFTER( 'Clienti intestatari'[Cliente], RagSocClienteCorrente, DESC )
+			    )
+			    
+			VAR TabImportoClienti = 
+			    UNION ( TabImportiInferioriClienteCorrente, TabImportoPariClienteCorrente )
+			VAR ImportoCumulatoClienti =
+			    SUMX ( TabImportoClienti, [@Importo]  )
+			
+			-----------------------------------------------------------------------------------------------------------------------------------
+			
+			--Parte di misura eseguita per l'esposizione di Classe
+			VAR TabSelezioneTutteClassi =
+			    ALL('Classi ABC')
+			VAR ImportoTutteClassi =
+			    ADDCOLUMNS ( TabSelezioneTutteClassi, "@Importo",[ABC clienti - Importo (no omaggi) - Fatturato])
+			VAR ImportoClassi =
+			    FILTER ( ImportoTutteClassi, NOT ISBLANK ( [@Importo] ) )
+			    
+			VAR ImportoClasseCorrente = [ABC clienti - Importo (no omaggi) - Fatturato]
+			
+			VAR TabImportiInferioriClasseCorrente =
+			    FILTER ( ImportoClassi, [@Importo] >= ImportoClasseCorrente && NOT ISBLANK(ImportoClasseCorrente) )
+			
+			VAR ImportoCumulatoClassi =
+			    SUMX ( TabImportiInferioriClasseCorrente, [@Importo]  )
+			
+			
+			RETURN
+			    IF(ISFILTERED('Clienti intestatari'),ImportoCumulatoClienti, ImportoClasseCorrente)
+			```
+		formatString: #,0
+		lineageTag: 1fc9ef74-05b5-4267-b023-c2b312ea15a8
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'ABC Clienti - Importo (no omaggi) Cum.% - Fatturato' =
+			
+			VAR ImportoTot =
+			    CALCULATE ( [Importo (no omaggi) - Fatturato], ALLSELECTED('Clienti intestatari'),ALL('Classi ABC'))
+			VAR PercentualeCumulata =
+			    DIVIDE ( [ABC Clienti - Importo (no omaggi) Cum. - Fatturato], ImportoTot )
+			RETURN
+			    PercentualeCumulata
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 42a8a284-15cd-4966-b2d0-262bc9a1ecd7
+
+	measure 'Giorni trascorsi da ultima fatturazione' = ```
+			
+			MINX(
+			    CALCULATETABLE(Vendite,'Tipi movimento'[Flag rilevanza fatturato]="Sì"),
+			    DATEDIFF(Vendite[K_DataRegistraz],TODAY(),DAY)
+			)
+			
+			```
+		formatString: 0
+		lineageTag: b9ab69cc-65eb-4f85-8982-a811f47e9cf1
+
+	measure 'Numero di fatture' = CALCULATE(DISTINCTCOUNT(Vendite[K_IdDocumento]),'Tipi movimento'[Flag rilevanza fatturato]="Sì")
+		formatString: 0
+		lineageTag: 59641a3e-dd1a-47c7-b9a0-88626495627b
+
+	measure 'Data prima fatturazione' = ```
+			
+			CALCULATE(MIN(Vendite[K_DataRegistraz]),'Tipi movimento'[Flag rilevanza fatturato]="Sì")
+			
+			```
+		formatString: Short Date
+		lineageTag: f458eeb6-0c7a-4820-813a-095528b39d15
+
+	measure 'Data ultima fatturazione' = ```
+			
+			CALCULATE(MAX(Vendite[K_DataRegistraz]),'Tipi movimento'[Flag rilevanza fatturato]="Sì")
+			
+			```
+		formatString: Short Date
+		lineageTag: da5e577a-8163-4dbd-b774-129009c022ad
+
+	measure 'Giorni medi di fatturazione' =
+			
+			DIVIDE(
+			    DATEDIFF([Data prima fatturazione],[Data ultima fatturazione],DAY) + 1,
+			    [Numero di fatture]
+			)
+		lineageTag: 33f929f8-e006-400f-b257-96034692e8e6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Situazione clienti abituali' =
+			
+			SWITCH(
+			    TRUE(),
+			    [Giorni trascorsi da ultima fatturazione] = BLANK() || [Giorni medi di fatturazione] = BLANK(), BLANK(),
+			    [Giorni trascorsi da ultima fatturazione]<=[Giorni medi di fatturazione]*1.20,"🟢",
+			    [Giorni trascorsi da ultima fatturazione]<=[Giorni medi di fatturazione]*2,"🟡",
+			    "🔴"
+			)
+		lineageTag: 9e977e41-42f3-49d0-a07a-6bdd91cb3d2b
+
+	measure 'Stringa periodo di riferimento' =
+			
+			VAR Inizio = MIN(Calendario[Data])
+			VAR Fine = MAX(Calendario[Data])
+			
+			RETURN
+			"Informazioni relative al periodo " & Inizio & " - " & Fine
+		lineageTag: 72a5a6ec-c87d-47a3-a40b-1961d751d879
+
+	measure 'Articolo selezionato' = SELECTEDVALUE('Articoli / Servizi'[Articolo - Variante],"Più articoli selezionati")
+		lineageTag: 7e31d633-5075-4c0c-b7a9-20a15756a84c
+
+	measure 'Cliente selezionato' = SELECTEDVALUE('Clienti intestatari'[Cliente],"Più clienti selezionati")
+		lineageTag: 3600d92c-d2ee-4d50-be24-d648f49b2b60
+
+	measure 'Data primo budget XLS' =
+			VAR PrimaData =
+			    CALCULATE (
+			        FIRSTDATE ( 'Target'[Date] )
+			    )
+			RETURN
+			    FORMAT ( PrimaData, "DD/MM/YYYY" )
+		lineageTag: 7e23e2a4-1cab-457e-b187-cb3dda968f89
+
+	measure 'Data ultimo budget XLS' =
+			VAR UltimaData =
+			    CALCULATE (
+			        LASTDATE ( Target[Date] )
+			    )
+			RETURN
+			    FORMAT ( UltimaData, "DD/MM/YYYY" )
+		lineageTag: 8de5e223-9add-4200-8e29-227632e466bd
+
+	measure 'Stringa periodo di riferimento EN' =
+			
+			VAR Inizio = FORMAT(MIN(Calendario[Data]),"Short Date", "en-US")
+			VAR Fine = FORMAT(MAX(Calendario[Data]),"Short Date", "en-US")
+			VAR Stringa = "Information for the period " & Inizio & " - " & Fine
+			RETURN
+			Stringa
+		lineageTag: 03e98ada-4994-4bb6-9526-6715beda52ee
+
+	measure 'Agente Selezionato' = SELECTEDVALUE('Agenti (Clienti)'[Agente (Cliente) - Descrizione],"Più agenti selezionati")
+		lineageTag: dd875981-7763-4be5-954d-e9b3d99701ce
+
+	measure 'Agente Selezionato en' = SELECTEDVALUE('Agenti (Clienti)'[Agente (Cliente) - Descrizione],"More agents selected")
+		lineageTag: 490b815b-ff48-4508-b1bd-42b3543995ac
+
+	column Z_Dummy
+		dataType: string
+		isHidden
+		lineageTag: 6e25c401-7330-46fc-a25f-5d489c216c9e
+		summarizeBy: none
+		sourceColumn: Z_Dummy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Varie-a3622169-4a88-4cdf-92cd-0e8baa95f253 = m
+		mode: import
+		queryGroup: Misure
+		source =
+				let
+				    Origine = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Z_Dummy = _t])
+				in
+				    Origine
+
+	annotation PBI_Id = 3e2a2653-9246-4c10-99c0-e670116c7f2c
+
+	annotation LinkedQueryName = Varie
+
+	annotation PBI_QueryRelationships = {"columnCount":0,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":[],"ColumnCount":0,"KeyColumnNames":[],"ColumnIdentities":[],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

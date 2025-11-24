@@ -1,0 +1,97 @@
+table 'Consuntivo vs Budget'
+	lineageTag: 59416fa9-4b6d-4a48-b79b-0fae5676755a
+
+	measure 'Quantità - Fatturato - VCB' = [Quantità - Fatturato] - [Quantità - BDG]
+		formatString: #,0
+		displayFolder: Scostamenti correnti
+		lineageTag: 0fe48ff5-ff97-453b-baa9-71c22c16237a
+
+	measure 'Importo (no omaggi) - Fatturato - VCB' = [Importo (no omaggi) - Fatturato] - [Importo - BDG]
+		formatString: #,0
+		displayFolder: Scostamenti correnti
+		lineageTag: a16396ce-53e1-4fe2-99b7-9e0f94099be7
+
+	measure 'Quantità - Fatturato - VCB - YTD' = [Quantità - Fatturato - YTD] - [Quantità - BDG - YTD]
+		formatString: #,0
+		displayFolder: Scostamenti progressivo anno (YTD)
+		lineageTag: c133d74a-4853-4865-a968-cd8be5635131
+
+	measure 'Importo (no omaggi) - Fatturato - VCB - YTD' = [Importo (no omaggi) - Fatturato - YTD] - [Importo - BDG - YTD]
+		formatString: #,0
+		displayFolder: Scostamenti progressivo anno (YTD)
+		lineageTag: 1084bf20-58e8-495c-8cb6-3e063f45a612
+
+	measure 'Quantità - Fatturato - VCB%' = DIVIDE ( [Quantità - Fatturato - VCB], [Quantità - BDG] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Scostamenti % correnti
+		lineageTag: 34ff4cf7-8866-46b2-82d3-751c3d4c94ce
+
+	measure 'Importo (no omaggi) - Fatturato - VCB%' = DIVIDE ( [Importo (no omaggi) - Fatturato - VCB], [Importo - BDG] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Scostamenti % correnti
+		lineageTag: ad796eb8-ac2f-4add-803d-696169fe47f4
+
+	measure 'Quantità - Fatturato - VCB% - YTD' = DIVIDE ( [Quantità - Fatturato - VCB - YTD], [Quantità - BDG - YTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Scostamenti % progressivo anno (YTD)
+		lineageTag: 24610302-0b6a-4dd7-aa82-e19b0f481f17
+
+	measure 'Importo (no omaggi) - Fatturato - VCB% - YTD' = DIVIDE ( [Importo (no omaggi) - Fatturato - VCB - YTD], [Importo - BDG - YTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Scostamenti % progressivo anno (YTD)
+		lineageTag: de02c155-a51e-4044-b699-151a105dd334
+
+	measure 'Importo (no omaggi) - Ordinato - VCB' = [Importo (no omaggi) - Ordinato] - [Importo - BDG]
+		formatString: #,0
+		displayFolder: Ordinato - Scostamenti correnti
+		lineageTag: 22aa77aa-bb8b-4384-8bc3-f5125dcc148e
+
+	measure 'Quantità - Ordinato - VCB' = [Quantità - Ordinato] - [Quantità - BDG]
+		displayFolder: Ordinato - Scostamenti correnti
+		lineageTag: 6a904649-4427-4fb2-a2ea-7beb51782a08
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importo (no omaggi) - Ordinato - VCB%'
+		displayFolder: Scostamenti % correnti
+		lineageTag: 7fe01179-d6a7-4fb6-a352-ae348841a54b
+
+	measure 'Xls - Ordinato - VCB' = IF ( [Importo (no omaggi) - Ordinato] <=0, Blank(),[Importo (no omaggi) - Ordinato] - [Xls Importo - BDG])
+		displayFolder: Ordinato - Scostamenti correnti
+		lineageTag: fb2068f5-dc76-415e-9098-8193b818bac4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Xls - Ordinato - VCB%' = IF ( [Importo (no omaggi) - Ordinato] <=0, Blank(),DIVIDE ([Xls - Ordinato - VCB], [Xls Importo - BDG], 0 ))
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Scostamenti % correnti
+		lineageTag: dcaa564d-bc95-45de-935e-c11c040e4606
+
+	column Z_Dummy
+		dataType: string
+		isHidden
+		lineageTag: c82a32bc-309d-4044-a8b9-ee2cb8c30efd
+		summarizeBy: none
+		sourceColumn: Z_Dummy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Consuntivo vs Budget-595f8660-2f16-414b-a39c-0abb2cdc77de' = m
+		mode: import
+		queryGroup: Misure
+		source =
+				let
+				    Origine = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Z_Dummy = _t])
+				in
+				    Origine
+
+	annotation PBI_Id = bda11576-dd28-4212-aee6-37a15b0f1223
+
+	annotation LinkedQueryName = Consuntivo vs Budget
+
+	annotation PBI_QueryRelationships = {"columnCount":0,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":[],"ColumnCount":0,"KeyColumnNames":[],"ColumnIdentities":[],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

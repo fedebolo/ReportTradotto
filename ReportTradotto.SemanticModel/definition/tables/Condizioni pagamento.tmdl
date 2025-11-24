@@ -1,0 +1,76 @@
+table 'Condizioni pagamento'
+	lineageTag: e1faf525-8c1f-41fa-a100-ee8ebbf78b38
+
+	column K_CondPag
+		dataType: string
+		isHidden
+		lineageTag: 89ec3dee-fe01-42f4-9a22-35a4e9ea9f27
+		summarizeBy: none
+		sourceColumn: K_CondPag
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Condizione pagamento - Codice'
+		dataType: string
+		lineageTag: 70295fd2-e9e8-4cb4-9876-72c47d14fa7f
+		summarizeBy: none
+		sourceColumn: Condizione pagamento - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Condizione pagamento - Descrizione'
+		dataType: string
+		lineageTag: 673b199b-6724-450b-8b72-b2d1a2804df3
+		summarizeBy: none
+		sourceColumn: Condizione pagamento - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Condizione pagamento - Data inizio validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 55df8be0-755b-4e99-893b-b304a158a0d3
+		summarizeBy: none
+		sourceColumn: Condizione pagamento - Data inizio validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Condizione pagamento - Data fine validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cf82414b-2020-4b2b-b41f-c0ed1dc53833
+		summarizeBy: none
+		sourceColumn: Condizione pagamento - Data fine validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Condizione pagamento - Valida in data estrazione'
+		dataType: string
+		lineageTag: b8e85c38-5686-42fa-b010-c8b1ca2d9ab5
+		summarizeBy: none
+		sourceColumn: Condizione pagamento - Valida in data estrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Condizione pagamento'
+		dataType: string
+		lineageTag: fa12d7ee-c892-404f-bd62-6f754449633c
+		summarizeBy: none
+		sourceColumn: Condizione pagamento
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Condizioni pagamento-03bf1f55-0a05-4308-bd81-845f422ff3c8' = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    Origine = Sql.Database("WTCNB0021\SISTEMI1", "ESOLVER42", [Query="#(lf)        SELECT#(lf)             K_CondPag AS [K_CondPag]#(lf)            ,CodCondizPagamento AS [Condizione pagamento - Codice]#(lf)#(tab)        ,DesCondizPagamento AS [Condizione pagamento - Descrizione]#(lf)            ,CondizPagamento AS [Condizione pagamento]#(lf)            ,DataInizioValidita AS [Condizione pagamento - Data inizio validità]#(lf)#(tab)        ,DataFineValidita AS [Condizione pagamento - Data fine validità]#(lf)            ,ValidaInDataEstraz AS [Condizione pagamento - Valida in data estrazione]#(lf)#(lf)        FROM #(lf)            [dbo].[ESBI_CONDPAG] WITH (NOLOCK)#(lf)        ;#(lf)    ", CreateNavigationProperties=false])
+				in 
+				    Origine
+				```
+
+	annotation PBI_ResultType = Table
+

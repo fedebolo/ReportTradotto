@@ -1,0 +1,347 @@
+table Commesse
+	lineageTag: cb317362-cdc4-4b7d-bd63-5d751c9b6d76
+
+	column Commessa
+		dataType: string
+		lineageTag: dc477839-7900-411c-b3c2-a557a5ae3caf
+		summarizeBy: none
+		sourceColumn: Commessa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Codice'
+		dataType: string
+		lineageTag: 660a1876-d921-4761-8331-bd72ebb607eb
+		summarizeBy: none
+		sourceColumn: Commessa - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Descrizione'
+		dataType: string
+		lineageTag: 3f82c923-ccdc-4c51-828e-5ac751eb8595
+		summarizeBy: none
+		sourceColumn: Commessa - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Codice raggruppamento 1'
+		dataType: string
+		lineageTag: d6ecfa16-8972-4e78-85eb-364056e9e503
+		summarizeBy: none
+		sourceColumn: Commessa - Codice raggruppamento 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Codice raggruppamento 2'
+		dataType: string
+		lineageTag: 1531a141-05d8-4962-a367-27b757b73091
+		summarizeBy: none
+		sourceColumn: Commessa - Codice raggruppamento 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Codice raggruppamento 3'
+		dataType: string
+		lineageTag: d866b1bf-4319-4a23-a51c-142a71141bbf
+		summarizeBy: none
+		sourceColumn: Commessa - Codice raggruppamento 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Descrizione raggruppamento 1'
+		dataType: string
+		lineageTag: b99a9642-bacd-4bf9-8b21-ab05a8fbd785
+		summarizeBy: none
+		sourceColumn: Commessa - Descrizione raggruppamento 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Descrizione raggruppamento 2'
+		dataType: string
+		lineageTag: c691c9ac-6588-490c-9a1f-3a3831a6d8f2
+		summarizeBy: none
+		sourceColumn: Commessa - Descrizione raggruppamento 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Descrizione raggruppamento 3'
+		dataType: string
+		lineageTag: 621ddd84-fd12-4f53-a030-acf9f02fd822
+		summarizeBy: none
+		sourceColumn: Commessa - Descrizione raggruppamento 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Codice cliente'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f9cf9d1-5b34-4bab-86c4-ccae88687994
+		summarizeBy: none
+		sourceColumn: Commessa - Codice cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Codice centro imputazione'
+		dataType: int64
+		formatString: 0
+		lineageTag: fcfd33aa-caf2-4eda-b9d3-210db1e7e8c0
+		summarizeBy: none
+		sourceColumn: Commessa - Codice centro imputazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Descrizione centro imputazione'
+		dataType: string
+		lineageTag: 41ec402f-4bf8-49a8-918b-e743c6942cfd
+		summarizeBy: none
+		sourceColumn: Commessa - Descrizione centro imputazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Codice divisione'
+		dataType: int64
+		formatString: 0
+		lineageTag: ed9a03a7-4f64-4287-b710-b966c82b1b63
+		summarizeBy: none
+		sourceColumn: Commessa - Codice divisione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Descrizione divisione'
+		dataType: string
+		lineageTag: 64b749a5-2833-47f6-b0d4-e68767c2fd40
+		summarizeBy: none
+		sourceColumn: Commessa - Descrizione divisione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Data apertura'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1aa5b8d9-4884-4f44-ae3d-accbca516573
+		summarizeBy: none
+		sourceColumn: Commessa - Data apertura
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Data chiusura'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b4d65f19-6339-4576-bc37-b8131525ad3e
+		summarizeBy: none
+		sourceColumn: Commessa - Data chiusura
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Data fine prevista'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 869d2517-d0a3-46e1-af06-68316fe4977f
+		summarizeBy: none
+		sourceColumn: Commessa - Data fine prevista
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Data inizio'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1a1f3fc0-7b61-4de2-bfb7-ae60ea145c4e
+		summarizeBy: none
+		sourceColumn: Commessa - Data inizio
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Codice responsabile'
+		dataType: string
+		lineageTag: 25fc5677-564c-420d-a827-211684169773
+		summarizeBy: none
+		sourceColumn: Commessa - Codice responsabile
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Descrizione responsabile'
+		dataType: string
+		lineageTag: 39f0d81d-eea6-451d-bae5-f1124ad47fa7
+		summarizeBy: none
+		sourceColumn: Commessa - Descrizione responsabile
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Codice CdA assegnato'
+		dataType: string
+		lineageTag: 27d546c9-f4b9-44fb-876e-5818e9385e75
+		summarizeBy: none
+		sourceColumn: Commessa - Codice CdA assegnato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Descrizione CdA assegnato'
+		dataType: string
+		lineageTag: e9e0bf27-3b2f-4362-a5ab-9fb4d900949e
+		summarizeBy: none
+		sourceColumn: Commessa - Descrizione CdA assegnato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Raggruppamento 1'
+		dataType: string
+		lineageTag: a2e9c107-a4af-47ea-aea6-dc676eb664cb
+		summarizeBy: none
+		sourceColumn: Commessa - Raggruppamento 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Raggruppamento 2'
+		dataType: string
+		lineageTag: abb57582-6ef6-4f65-a7f1-92c299648e1c
+		summarizeBy: none
+		sourceColumn: Commessa - Raggruppamento 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Descrizione cliente'
+		dataType: string
+		lineageTag: 5391593f-a598-4892-b22f-fdd59540ded3
+		summarizeBy: none
+		sourceColumn: Commessa - Descrizione cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Cliente'
+		dataType: string
+		lineageTag: 26a7b028-852e-4560-b47a-d142c0d27306
+		summarizeBy: none
+		sourceColumn: Commessa - Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Centro imputazione'
+		dataType: string
+		lineageTag: 439a09db-a96a-4bda-a0ef-ff29d2e0d552
+		summarizeBy: none
+		sourceColumn: Commessa - Centro imputazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Divisione'
+		dataType: string
+		lineageTag: 3ee2029b-532f-4e05-a40d-25ababda1baa
+		summarizeBy: none
+		sourceColumn: Commessa - Divisione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Raggruppamento 3'
+		dataType: string
+		lineageTag: 4f315dff-57c5-4db2-8419-c603b631fe9f
+		summarizeBy: none
+		sourceColumn: Commessa - Raggruppamento 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Responsabile'
+		dataType: string
+		lineageTag: 428a0b2a-29e3-4b20-a5c2-156900888f8e
+		summarizeBy: none
+		sourceColumn: Commessa - Responsabile
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - CdA assegnato'
+		dataType: string
+		lineageTag: 5c474431-abc9-476e-903d-035538b73e5b
+		summarizeBy: none
+		sourceColumn: Commessa - CdA assegnato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commessa - Stato'
+		dataType: string
+		lineageTag: 1ce909f7-9ae1-45e7-8dde-6091f2ca9c83
+		summarizeBy: none
+		sourceColumn: Commessa - Stato
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodCommessa
+		dataType: string
+		isHidden
+		lineageTag: 6a30434c-46f5-4c73-81fb-2bccbef8a85c
+		summarizeBy: none
+		sourceColumn: K_CodCommessa
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Commesse-a699aaa6-6224-40e2-b5d4-bc176a18cf5e = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " AND DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " AND DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    StringaTop0 = if #"Dettagli aggiuntivi: informazioni dei documenti" = "Disattiva" then "TOP (0)" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				        SELECT " & StringaTop0 & "
+				            CodCommessa AS [Commessa - Codice]
+				            ,DesCommessa AS [Commessa - Descrizione]
+				            ,CodRaggrClasse1 AS [Commessa - Codice raggruppamento 1]
+				            ,CodRaggrClasse2 AS [Commessa - Codice raggruppamento 2]
+				            ,CodRaggrClasse3 AS [Commessa - Codice raggruppamento 3]
+				            ,DesRaggrClasse1 AS [Commessa - Descrizione raggruppamento 1]
+				            ,DesRaggrClasse2 AS [Commessa - Descrizione raggruppamento 2]
+				            ,DesRaggrClasse3 AS [Commessa - Descrizione raggruppamento 3]
+				            ,CodCliFor AS [Commessa - Codice cliente]
+				            ,CodCentroImputazione AS [Commessa - Codice centro imputazione]
+				            ,DesCentroImputazione AS [Commessa - Descrizione centro imputazione]
+				            ,CodDivisione AS [Commessa - Codice divisione]
+				            ,DesDivisione AS [Commessa - Descrizione divisione]
+				            ,DataAperturaComm AS [Commessa - Data apertura]
+				            ,DataChiusuraComm AS [Commessa - Data chiusura]
+				            ,DataFinePrevistaComm AS [Commessa - Data fine prevista]
+				            ,DataInizioComm AS [Commessa - Data inizio]
+				            ,CodRespPrimoLiv AS [Commessa - Codice responsabile]
+				            ,DesRespPrimoLiv AS [Commessa - Descrizione responsabile]
+				            ,CodCdAAssegnazione AS [Commessa - Codice CdA assegnato]
+				            ,DesCdAAssegnazione AS [Commessa - Descrizione CdA assegnato]
+				            ,K_CodCommessa AS [K_CodCommessa]
+				            ,Commessa AS [Commessa]
+				            ,RaggrClasse1 AS [Commessa - Raggruppamento 1]
+				            ,RaggrClasse2 AS [Commessa - Raggruppamento 2]
+				            ,DesCliente AS [Commessa - Descrizione cliente]
+				            ,Cliente AS [Commessa - Cliente]
+				            ,CentroImputazione AS [Commessa - Centro imputazione]
+				            ,Divisione AS [Commessa - Divisione]
+				            ,RaggrClasse3 AS [Commessa - Raggruppamento 3]
+				            ,RespPrimoLiv AS [Commessa - Responsabile]
+				            ,CdAAssegnazione AS [Commessa - CdA assegnato]
+				            ,DesStatoCommessa AS [Commessa - Stato]
+				
+				        FROM 
+				            [dbo].[ESBI_COMM] WITH (NOLOCK)
+				            
+				        WHERE 
+				            CodSottocommessa = ''
+				    "
+				        & StringaFiltroGruppoIN
+				        & StringaFiltroGruppoNOTIN
+				        & ";
+				    "
+				    ,CreateNavigationProperties=false])
+				in 
+				    Origine
+				```
+
+	annotation PBI_Id = be8623a8-f793-4e34-8cd3-b518489622f4
+
+	annotation LinkedQueryName = Commesse
+
+	annotation PBI_QueryRelationships = {"columnCount":33,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Commesse/Origine.{Commessa - Codice,0}","Section1/Commesse/Origine.{Commessa - Descrizione,1}","Section1/Commesse/Origine.{Commessa - Codice raggruppamento 1,2}","Section1/Commesse/Origine.{Commessa - Codice raggruppamento 2,3}","Section1/Commesse/Origine.{Commessa - Codice raggruppamento 3,4}","Section1/Commesse/Origine.{Commessa - Descrizione raggruppamento 1,5}","Section1/Commesse/Origine.{Commessa - Descrizione raggruppamento 2,6}","Section1/Commesse/Origine.{Commessa - Descrizione raggruppamento 3,7}","Section1/Commesse/Origine.{Commessa - Codice cliente,8}","Section1/Commesse/Origine.{Commessa - Codice centro imputazione,9}","Section1/Commesse/Origine.{Commessa - Descrizione centro imputazione,10}","Section1/Commesse/Origine.{Commessa - Codice divisione,11}","Section1/Commesse/Origine.{Commessa - Descrizione divisione,12}","Section1/Commesse/Origine.{Commessa - Data apertura,13}","Section1/Commesse/Origine.{Commessa - Data chiusura,14}","Section1/Commesse/Origine.{Commessa - Data fine prevista,15}","Section1/Commesse/Origine.{Commessa - Data inizio,16}","Section1/Commesse/Origine.{Commessa - Codice responsabile,17}","Section1/Commesse/Origine.{Commessa - Descrizione responsabile,18}","Section1/Commesse/Origine.{Commessa - Codice CdA assegnato,19}","Section1/Commesse/Origine.{Commessa - Descrizione CdA assegnato,20}","Section1/Commesse/Origine.{K_CodCommessa,21}","Section1/Commesse/Origine.{Commessa,22}","Section1/Commesse/Origine.{Commessa - Raggruppamento 1,23}","Section1/Commesse/Origine.{Commessa - Raggruppamento 2,24}","Section1/Commesse/Origine.{Commessa - Descrizione cliente,25}","Section1/Commesse/Origine.{Commessa - Cliente,26}","Section1/Commesse/Origine.{Commessa - Centro imputazione,27}","Section1/Commesse/Origine.{Commessa - Divisione,28}","Section1/Commesse/Origine.{Commessa - Raggruppamento 3,29}","Section1/Commesse/Origine.{Commessa - Responsabile,30}","Section1/Commesse/Origine.{Commessa - CdA assegnato,31}","Section1/Commesse/Origine.{Commessa - Stato,32}"],"ColumnCount":33,"KeyColumnNames":[],"ColumnIdentities":["Section1/Commesse/Origine.{Commessa - Codice,0}","Section1/Commesse/Origine.{Commessa - Descrizione,1}","Section1/Commesse/Origine.{Commessa - Codice raggruppamento 1,2}","Section1/Commesse/Origine.{Commessa - Codice raggruppamento 2,3}","Section1/Commesse/Origine.{Commessa - Codice raggruppamento 3,4}","Section1/Commesse/Origine.{Commessa - Descrizione raggruppamento 1,5}","Section1/Commesse/Origine.{Commessa - Descrizione raggruppamento 2,6}","Section1/Commesse/Origine.{Commessa - Descrizione raggruppamento 3,7}","Section1/Commesse/Origine.{Commessa - Codice cliente,8}","Section1/Commesse/Origine.{Commessa - Codice centro imputazione,9}","Section1/Commesse/Origine.{Commessa - Descrizione centro imputazione,10}","Section1/Commesse/Origine.{Commessa - Codice divisione,11}","Section1/Commesse/Origine.{Commessa - Descrizione divisione,12}","Section1/Commesse/Origine.{Commessa - Data apertura,13}","Section1/Commesse/Origine.{Commessa - Data chiusura,14}","Section1/Commesse/Origine.{Commessa - Data fine prevista,15}","Section1/Commesse/Origine.{Commessa - Data inizio,16}","Section1/Commesse/Origine.{Commessa - Codice responsabile,17}","Section1/Commesse/Origine.{Commessa - Descrizione responsabile,18}","Section1/Commesse/Origine.{Commessa - Codice CdA assegnato,19}","Section1/Commesse/Origine.{Commessa - Descrizione CdA assegnato,20}","Section1/Commesse/Origine.{K_CodCommessa,21}","Section1/Commesse/Origine.{Commessa,22}","Section1/Commesse/Origine.{Commessa - Raggruppamento 1,23}","Section1/Commesse/Origine.{Commessa - Raggruppamento 2,24}","Section1/Commesse/Origine.{Commessa - Descrizione cliente,25}","Section1/Commesse/Origine.{Commessa - Cliente,26}","Section1/Commesse/Origine.{Commessa - Centro imputazione,27}","Section1/Commesse/Origine.{Commessa - Divisione,28}","Section1/Commesse/Origine.{Commessa - Raggruppamento 3,29}","Section1/Commesse/Origine.{Commessa - Responsabile,30}","Section1/Commesse/Origine.{Commessa - CdA assegnato,31}","Section1/Commesse/Origine.{Commessa - Stato,32}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

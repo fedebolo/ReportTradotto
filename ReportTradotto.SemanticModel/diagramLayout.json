@@ -1,0 +1,1013 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 445.39800159109069,
+            "y": 293.62962075589883
+          },
+          "nodeIndex": "Agenti",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 55
+        },
+        {
+          "location": {
+            "x": 79.1005035051285,
+            "y": 31.596686482217436
+          },
+          "nodeIndex": "Agenti - Account (RLS)",
+          "size": {
+            "height": 132,
+            "width": 297
+          },
+          "zIndex": 58
+        },
+        {
+          "location": {
+            "x": 1.8911246802237307,
+            "y": 202.01985169301258
+          },
+          "nodeIndex": "Agenti - Agenti visibili (RLS)",
+          "size": {
+            "height": 151,
+            "width": 294
+          },
+          "zIndex": 57
+        },
+        {
+          "location": {
+            "x": 2330.3154947405778,
+            "y": 2048.3001144839773
+          },
+          "nodeIndex": "Articoli / Servizi",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 3274.5239957846575,
+            "y": 1303.6629374657207
+          },
+          "nodeIndex": "Budget",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1480.2500965220518,
+            "y": 531.45614049499216
+          },
+          "nodeIndex": "Budget (versioni)",
+          "size": {
+            "height": 213,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 951.00947498346193,
+            "y": 1337.6555729471813
+          },
+          "nodeIndex": "Calendario",
+          "size": {
+            "height": 215.04515892020981,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 199.14504915145039,
+            "y": 1026.8101820210413
+          },
+          "nodeIndex": "Categorie clienti",
+          "size": {
+            "height": 175,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 899.29165587248508,
+            "y": 1823.4602798612741
+          },
+          "nodeIndex": "Centri imputazione",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 1744.1278370033465,
+            "y": 2016.0132886236408
+          },
+          "nodeIndex": "Classi affidamento",
+          "size": {
+            "height": 175,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 1782.3154947405781,
+            "y": 1801.0132886236408
+          },
+          "nodeIndex": "Classi contabili",
+          "size": {
+            "height": 175,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 2452.4095142253414,
+            "y": 1744.8745959067912
+          },
+          "nodeIndex": "Classi merceologiche",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 17
+        },
+        {
+          "location": {
+            "x": 906.49252995749862,
+            "y": 335.80661533781495
+          },
+          "nodeIndex": "Classificazioni statistiche",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 1202.6367809933579,
+            "y": 1941.6439904409738
+          },
+          "nodeIndex": "Clienti e luoghi di spedizione",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 19
+        },
+        {
+          "location": {
+            "x": 1962.0346338791137,
+            "y": 565.00869914811847
+          },
+          "nodeIndex": "Clienti intestatari",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 20
+        },
+        {
+          "location": {
+            "x": 2173.4907542348169,
+            "y": 1115.3001144839773
+          },
+          "nodeIndex": "Commesse",
+          "size": {
+            "height": 425,
+            "width": 300
+          },
+          "zIndex": 21
+        },
+        {
+          "location": {
+            "x": 3910.19784355116,
+            "y": 1316.1356764320731
+          },
+          "nodeIndex": "Consuntivo vs Budget",
+          "size": {
+            "height": 340.3431837049543,
+            "width": 234
+          },
+          "zIndex": 22
+        },
+        {
+          "location": {
+            "x": 1600.1285420858317,
+            "y": 166.39036753457754
+          },
+          "nodeIndex": "Conti",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 23
+        },
+        {
+          "location": {
+            "x": 3549.5601144439906,
+            "y": 96.794561933319073
+          },
+          "nodeIndex": "Diagnostica",
+          "nodeLineageTag": "5cfd5e36-8470-4ab9-8ced-60afa6f889d2",
+          "size": {
+            "height": 193.32858559480775,
+            "width": 234
+          },
+          "zIndex": 24
+        },
+        {
+          "location": {
+            "x": 1899.4907542348169,
+            "y": 1084.1119771511092
+          },
+          "nodeIndex": "Ditte",
+          "size": {
+            "height": 175,
+            "width": 234
+          },
+          "zIndex": 25
+        },
+        {
+          "location": {
+            "x": 586.5715447720728,
+            "y": 1440.3048628014851
+          },
+          "nodeIndex": "Divisioni",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 26
+        },
+        {
+          "location": {
+            "x": 1180.4925299574986,
+            "y": 335.34570508336628
+          },
+          "nodeIndex": "Famiglie",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 27
+        },
+        {
+          "location": {
+            "x": 2839.7502589208207,
+            "y": 933.28121292695278
+          },
+          "nodeIndex": "Fatturato",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 28
+        },
+        {
+          "location": {
+            "x": 1136.6651502373277,
+            "y": 656.49356094759185
+          },
+          "nodeIndex": "Macrofamiglie",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 29
+        },
+        {
+          "location": {
+            "x": 519.4907542348169,
+            "y": 990.60989258109589
+          },
+          "nodeIndex": "Magazzini",
+          "size": {
+            "height": 289,
+            "width": 234
+          },
+          "zIndex": 30
+        },
+        {
+          "location": {
+            "x": 793.4907542348169,
+            "y": 1072.4411668458117
+          },
+          "nodeIndex": "Marche",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 31
+        },
+        {
+          "location": {
+            "x": 3160.0959640041865,
+            "y": 933.28121292695278
+          },
+          "nodeIndex": "Ordinato",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 49
+        },
+        {
+          "location": {
+            "x": 4069.0555852613697,
+            "y": 926.27390440107411
+          },
+          "nodeIndex": "Ordinato residuo",
+          "size": {
+            "height": 337,
+            "width": 252.5988064099065
+          },
+          "zIndex": 50
+        },
+        {
+          "location": {
+            "x": 873.62405434691686,
+            "y": 658.153495612935
+          },
+          "nodeIndex": "Promozioni",
+          "size": {
+            "height": 251,
+            "width": 234
+          },
+          "zIndex": 32
+        },
+        {
+          "location": {
+            "x": 3741.22525170095,
+            "y": 924.52207726960432
+          },
+          "nodeIndex": "Spedito",
+          "size": {
+            "height": 337,
+            "width": 284.17083216782066
+          },
+          "zIndex": 51
+        },
+        {
+          "location": {
+            "x": 3451.9351150328635,
+            "y": 921.01842300666488
+          },
+          "nodeIndex": "Spedito residuo",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 48
+        },
+        {
+          "location": {
+            "x": 1805.4555044431524,
+            "y": 1380.8964514225158
+          },
+          "nodeIndex": "Stati gestionali",
+          "size": {
+            "height": 137,
+            "width": 234
+          },
+          "zIndex": 33
+        },
+        {
+          "location": {
+            "x": 1969.1259443716513,
+            "y": 1666.3574921333436
+          },
+          "nodeIndex": "Tipi movimento",
+          "size": {
+            "height": 156,
+            "width": 234
+          },
+          "zIndex": 34
+        },
+        {
+          "location": {
+            "x": 1625.4907542348169,
+            "y": 887.6323026010557
+          },
+          "nodeIndex": "Tipologie commerciali",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 35
+        },
+        {
+          "location": {
+            "x": 577.34355874979929,
+            "y": 1712.3048628014851
+          },
+          "nodeIndex": "Tipologie documenti",
+          "size": {
+            "height": 175,
+            "width": 234
+          },
+          "zIndex": 36
+        },
+        {
+          "location": {
+            "x": 2056.3154947405783,
+            "y": 2048.3001144839773
+          },
+          "nodeIndex": "Unità di misura",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 37
+        },
+        {
+          "location": {
+            "x": 4357.3910820271049,
+            "y": 922.9855346402104
+          },
+          "nodeIndex": "Varie",
+          "size": {
+            "height": 339.47473717077219,
+            "width": 276.04385115527384
+          },
+          "zIndex": 38
+        },
+        {
+          "location": {
+            "x": 1321.9816198316557,
+            "y": 1193.7999038347989
+          },
+          "nodeIndex": "Vendite",
+          "size": {
+            "height": 474.06773838031472,
+            "width": 238.43787753003016
+          },
+          "zIndex": 53
+        },
+        {
+          "location": {
+            "x": 576.88058077088306,
+            "y": 711.87561388845563
+          },
+          "nodeIndex": "Vendite per agente",
+          "size": {
+            "height": 194,
+            "width": 234
+          },
+          "zIndex": 39
+        },
+        {
+          "location": {
+            "x": 53.533348333685637,
+            "y": 597.08509272519723
+          },
+          "nodeIndex": "VisibilitaAgenti",
+          "size": {
+            "height": 156,
+            "width": 234
+          },
+          "zIndex": 40
+        },
+        {
+          "location": {
+            "x": 1330.4569174375363,
+            "y": 0
+          },
+          "nodeIndex": "Zone",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 41
+        },
+        {
+          "location": {
+            "x": 1525.0426591966302,
+            "y": 2341.5267222047628
+          },
+          "nodeIndex": "Agenti (Clienti spedizione)",
+          "size": {
+            "height": 337,
+            "width": 254.12786704047312
+          },
+          "zIndex": 42
+        },
+        {
+          "location": {
+            "x": 2353.9583709892372,
+            "y": 613.64258023740183
+          },
+          "nodeIndex": "Agenti (Clienti)",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 43
+        },
+        {
+          "location": {
+            "x": 2117.3263706731727,
+            "y": 359.93025147027851
+          },
+          "nodeIndex": "_Bridge_ClientiIntestatari_Agenti",
+          "size": {
+            "height": 180.83561643835617,
+            "width": 290.35802771332465
+          },
+          "zIndex": 56
+        },
+        {
+          "location": {
+            "x": 1124.8375113522168,
+            "y": 2355.5501108202343
+          },
+          "nodeIndex": "_Bridge_ClientiSpedizione_Agenti",
+          "size": {
+            "height": 173.26055820917418,
+            "width": 300
+          },
+          "zIndex": 44
+        },
+        {
+          "location": {
+            "x": 928.20591488229354,
+            "y": 1627.9101614334656
+          },
+          "nodeIndex": "Tipi riga",
+          "size": {
+            "height": 160,
+            "width": 234
+          },
+          "zIndex": 45
+        },
+        {
+          "location": {
+            "x": 3170.0536542629397,
+            "y": 0
+          },
+          "nodeIndex": "Parametri",
+          "size": {
+            "height": 261.08039378466646,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1941.4589041095894,
+            "y": 0
+          },
+          "nodeIndex": "Listini",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 2513.4738918398971,
+            "y": 1020.1913770077002
+          },
+          "nodeIndex": "Stati ordine",
+          "size": {
+            "height": 136,
+            "width": 248.43553360529586
+          },
+          "zIndex": 46
+        },
+        {
+          "location": {
+            "x": 888.26434324118122,
+            "y": 2111.3558537291055
+          },
+          "nodeIndex": "Condizioni pagamento",
+          "size": {
+            "height": 249.03182886558079,
+            "width": 221.45729195804495
+          },
+          "zIndex": 47
+        },
+        {
+          "location": {
+            "x": 3311.7373437902024,
+            "y": 457.22688131358973
+          },
+          "nodeIndex": "Generale",
+          "size": {
+            "height": 414.80330382396892,
+            "width": 234
+          },
+          "zIndex": 52
+        },
+        {
+          "location": {
+            "x": 2561.4934212156431,
+            "y": 1552.7534474367908
+          },
+          "nodeIndex": "Situazione saldo movimento",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 4723.0683207360962,
+            "y": 166.99349095716414
+          },
+          "nodeIndex": "Classi ABC",
+          "nodeLineageTag": "b1fcd1c0-d348-4ba3-90fa-ee1ab36b7d97",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 54
+        },
+        {
+          "location": {
+            "x": 5056.9088753197766,
+            "y": 0
+          },
+          "nodeIndex": "Varie Ordinato",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 5339.017750639553,
+            "y": 0
+          },
+          "nodeIndex": "Categorie sconti",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 5621.1266259593294,
+            "y": 0
+          },
+          "nodeIndex": "ArticoliBudget",
+          "nodeLineageTag": "8c697d95-3d71-469b-b5b7-e368a31adbe2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 5903.2355012791058,
+            "y": 0
+          },
+          "nodeIndex": "Target",
+          "nodeLineageTag": "d94fe326-833d-42c3-9925-0eae9e1cf205",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 6185.3443765988823,
+            "y": 0
+          },
+          "nodeIndex": "Articoli in lingua",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 3
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 55.474187010652656,
+      "pinKeyFieldsToTop": true,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 2140.3205214550317,
+            "y": 739.06780594171562
+          },
+          "nodeIndex": "Agenti",
+          "size": {
+            "height": 654,
+            "width": 276
+          },
+          "zIndex": 23
+        },
+        {
+          "location": {
+            "x": 712.985766682002,
+            "y": 1554.2101789702078
+          },
+          "nodeIndex": "Articoli / Servizi",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1841.3205214550317,
+            "y": 866.87825725691073
+          },
+          "nodeIndex": "Budget (versioni)",
+          "size": {
+            "height": 208,
+            "width": 255
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1567.3205214550317,
+            "y": 1675.9879383949194
+          },
+          "nodeIndex": "Calendario",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1567.3205214550317,
+            "y": 2321.9879383949192
+          },
+          "nodeIndex": "Categorie clienti",
+          "size": {
+            "height": 175,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1841.3205214550317,
+            "y": 329.55606066663779
+          },
+          "nodeIndex": "Centri imputazione",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1841.3205214550317,
+            "y": 48.661873005497
+          },
+          "nodeIndex": "Classi affidamento",
+          "size": {
+            "height": 175,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 2115.3205214550317,
+            "y": 175.15096548196431
+          },
+          "nodeIndex": "Classi merceologiche",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1260.9857666820021,
+            "y": 1675.9879383949194
+          },
+          "nodeIndex": "Classificazioni statistiche",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 438.985766682002,
+            "y": 1366.3752422179095
+          },
+          "nodeIndex": "Clienti intestatari",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1567.3205214550317,
+            "y": 2052.9879383949192
+          },
+          "nodeIndex": "Ditte",
+          "size": {
+            "height": 229,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 986.985766682002,
+            "y": 1675.9879383949194
+          },
+          "nodeIndex": "Divisioni",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 1567.3205214550317,
+            "y": 113.9879383949195
+          },
+          "nodeIndex": "Famiglie",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 1534.9857666820021,
+            "y": 2536.9879383949192
+          },
+          "nodeIndex": "Magazzini",
+          "size": {
+            "height": 282,
+            "width": 262
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 164.985766682002,
+            "y": 1154.4679569740672
+          },
+          "nodeIndex": "Marche",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 953.32052145503167,
+            "y": 13.637246106531883
+          },
+          "nodeIndex": "Promozioni",
+          "size": {
+            "height": 251,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 405.32052145503172,
+            "y": 367.53285084587952
+          },
+          "nodeIndex": "Tipologie commerciali",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 131.32052145503172,
+            "y": 579.736692280863
+          },
+          "nodeIndex": "Zone",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 17
+        },
+        {
+          "location": {
+            "x": 1227.3205214550317,
+            "y": 385.98793839491952
+          },
+          "nodeIndex": "Vendite",
+          "size": {
+            "height": 1250,
+            "width": 354
+          },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 1841.3205214550317,
+            "y": 632.87825725691073
+          },
+          "nodeIndex": "Vendite per agente",
+          "size": {
+            "height": 194,
+            "width": 259
+          },
+          "zIndex": 19
+        },
+        {
+          "location": {
+            "x": 679.32052145503167,
+            "y": 158.67029925668939
+          },
+          "nodeIndex": "Macrofamiglie",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 20
+        },
+        {
+          "location": {
+            "x": 2389.3205214550317,
+            "y": 320.60900847150663
+          },
+          "nodeIndex": "Agenti - Account (RLS)",
+          "size": {
+            "height": 175,
+            "width": 234
+          },
+          "zIndex": 21
+        },
+        {
+          "location": {
+            "x": 2096.5981328240759,
+            "y": 455.87825725691079
+          },
+          "nodeIndex": "Agenti - Agenti visibili (RLS)",
+          "size": {
+            "height": 137,
+            "width": 234
+          },
+          "zIndex": 22
+        }
+      ],
+      "name": "Presentazione",
+      "zoomValue": 50.34689210282307,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Presentazione",
+  "defaultDiagram": "All tables"
+}

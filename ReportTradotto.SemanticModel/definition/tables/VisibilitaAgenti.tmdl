@@ -1,0 +1,59 @@
+table VisibilitaAgenti
+	isHidden
+	lineageTag: 9cbb53db-d740-41bc-95a3-f6cae495e5fe
+
+	column VisVendite
+		dataType: string
+		isHidden
+		lineageTag: 8f61fe6e-2ef2-458e-b1ec-b67fbafadff1
+		summarizeBy: none
+		sourceColumn: VisVendite
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VisClienti
+		dataType: string
+		isHidden
+		lineageTag: 3ce68ce9-7045-4bcd-8b86-392eed2c8a44
+		summarizeBy: none
+		sourceColumn: VisClienti
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VisClientiSped
+		dataType: string
+		isHidden
+		lineageTag: d44ab53e-2490-4d59-9d69-1e80b9c4c5e2
+		summarizeBy: none
+		sourceColumn: VisClientiSped
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VisibilitaAgenti-2f4ef7f9-c334-4005-8fe3-91472ce9b4d9 = m
+		mode: import
+		queryGroup: 'Parametri\Parametri utente trattati'
+		source =
+				let
+				    Origine = #table (
+				        type table [VisVendite = Text.Type, VisClienti = Text.Type, VisClientiSped = Text.Type],
+				        {
+				            {#"Agenti - Visibilità vendite di altri agenti", #"Agenti - Visibilità clienti di altri agenti", #"Filtro - Mese inizio calendario mobile"}
+				        }
+				    )
+				in
+				    Origine
+
+	annotation PBI_Id = b5fe9519-6e12-411d-9b9f-7daf6e4bf9ab
+
+	annotation LinkedQueryName = VisibilitaAgenti
+
+	annotation PBI_QueryRelationships = {"columnCount":3,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/VisbilitaAgenti/Origine.{VisVendite,0}","Section1/VisbilitaAgenti/Origine.{VisClienti,1}","Section1/VisbilitaAgenti/Origine.{VisClientiSped,2}"],"ColumnCount":3,"KeyColumnNames":[],"ColumnIdentities":["Section1/VisbilitaAgenti/Origine.{VisVendite,0}","Section1/VisbilitaAgenti/Origine.{VisClienti,1}","Section1/VisbilitaAgenti/Origine.{VisClientiSped,2}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

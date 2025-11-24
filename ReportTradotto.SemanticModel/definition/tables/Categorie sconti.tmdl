@@ -1,0 +1,127 @@
+table 'Categorie sconti'
+	lineageTag: 85ad7d3b-a053-4656-a53b-50bcafa8a537
+
+	column K_CodCategScontiCliente
+		dataType: string
+		lineageTag: e33cbf49-0985-47f2-96e3-4424ad037225
+		summarizeBy: none
+		sourceColumn: K_CodCategScontiCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Categoria sconti cliente - Ditta'
+		dataType: string
+		lineageTag: e28b0eea-225b-4645-b1b1-7dd9eb2db59a
+		summarizeBy: none
+		sourceColumn: Categoria sconti cliente - Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Categoria sconti cliente - Codice'
+		dataType: string
+		lineageTag: 7f07b490-30e9-47ac-93b6-97c34a479c46
+		summarizeBy: none
+		sourceColumn: Categoria sconti cliente - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Categoria sconti cliente - Descrizione'
+		dataType: string
+		lineageTag: 8f17a2c6-6887-4faa-86f1-aec5ea25dd40
+		summarizeBy: none
+		sourceColumn: Categoria sconti cliente - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column PercSconto1
+		dataType: double
+		formatString: 0
+		lineageTag: 353b7e02-3ac7-44d6-8935-8e755094fb81
+		summarizeBy: none
+		sourceColumn: PercSconto1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column PercSconto2
+		dataType: double
+		formatString: 0
+		lineageTag: cfff4789-03f8-4581-baa8-b9f655ad65b8
+		summarizeBy: none
+		sourceColumn: PercSconto2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column PercSconto3
+		dataType: double
+		lineageTag: e04250e0-ecaf-496a-85e4-476ce91dfabf
+		summarizeBy: none
+		sourceColumn: PercSconto3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PercSconto4
+		dataType: double
+		lineageTag: dd488aea-fafd-4b93-a40f-65025cee20d9
+		summarizeBy: none
+		sourceColumn: PercSconto4
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PercSconto5
+		dataType: double
+		lineageTag: 3da643fb-6bb3-4353-bff1-e080896820d0
+		summarizeBy: none
+		sourceColumn: PercSconto5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Categorie sconti' = m
+		mode: import
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " WHERE cat.DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " WHERE cat.DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				        SELECT
+				            DISTINCT
+							 --cat.DBGruppo+'_'+CodCategoriaSconti + ' - ' + ISNULL(Des, '') AS [K_CodCategScontiCliente]
+							 cat.DBGruppo+'_'+CodCategoriaSconti AS [K_CodCategScontiCliente]
+				            ,cat.DBGruppo AS [Categoria sconti cliente - Ditta]
+				            ,CodCategoriaSconti AS [Categoria sconti cliente - Codice] 	
+				            ,Des AS [Categoria sconti cliente - Descrizione]
+							,PercSconto1
+							,PercSconto2
+							,PercSconto3
+							,PercSconto4
+							,PercSconto5
+				        FROM 
+				            [dbo].[CategorieSconti] cat WITH (NOLOCK)
+							LEFT OUTER JOIN
+							[dbo].[PolScontiCritSconti] pol
+							ON 
+							cat.DBGruppo=pol.DBGruppo
+							AND cat.CodCategoriaSconti=pol.CodCategScontiCliFor
+				    "
+				    & StringaFiltroGruppoIN
+				    & StringaFiltroGruppoNOTIN
+				    & " AND TipoTabella=1;"
+				    ,CreateNavigationProperties=false])
+				in 
+				    Origine
+				```
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

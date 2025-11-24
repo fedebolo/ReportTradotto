@@ -1,0 +1,81 @@
+table Parametri
+	isHidden
+	lineageTag: becd8b8f-3fd6-471e-af25-226a3c95969b
+
+	column 'Importo - Aggiungi spese di piede'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3e40b1cd-80b8-43cf-a5a2-509823fc6259
+		summarizeBy: none
+		sourceColumn: Importo - Aggiungi spese di piede
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Importo - Sottrai provvigioni'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f6d1dd4a-3773-437c-9f2c-d000fb5eecb1
+		summarizeBy: none
+		sourceColumn: Importo - Sottrai provvigioni
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Importo - Sottrai sconti di pagamento'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: df44a420-f1f0-40d9-93ae-ec825e44f9c0
+		summarizeBy: none
+		sourceColumn: Importo - Sottrai sconti di pagamento
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Importo - Sottrai sconti incondizionati'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2a1c69ac-c895-4776-b11a-55068c3399b9
+		summarizeBy: none
+		sourceColumn: Importo - Sottrai sconti incondizionati
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	partition Parametri-9e1ab00e-518e-4546-85e2-4fdda3372a1c = m
+		mode: import
+		queryGroup: 'Parametri\Parametri utente trattati'
+		source = ```
+				let 
+				    Origine = 
+				        #table (
+				            type table [ 
+				                #"Importo - Aggiungi spese di piede" = Int64.Type, 
+				                #"Importo - Sottrai provvigioni" = Int64.Type,
+				                #"Importo - Sottrai sconti di pagamento" = Int64.Type,
+				                #"Importo - Sottrai sconti incondizionati" = Int64.Type                ],
+				            {
+				                {
+				                if #"Importo - Aggiungi spese di piede" = "Sì" then 1 else 0,
+				                if #"Importo - Sottrai provvigioni" = "Sì" then 1 else 0,
+				                if #"Importo - Sottrai sconti di pagamento" = "Sì" then 1 else 0,
+				                if #"Importo - Sottrai sconti incondizionati" = "Sì" then 1 else 0
+				                }
+				            }
+				        )
+				in
+				    Origine
+				```
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+

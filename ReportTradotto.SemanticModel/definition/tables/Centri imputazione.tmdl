@@ -1,0 +1,105 @@
+table 'Centri imputazione'
+	lineageTag: fafa8c44-668b-4c10-9de9-a7e40ac746bf
+
+	column K_CodCentroImputazione
+		dataType: string
+		isHidden
+		lineageTag: 2ccbe48d-a5b7-4fdf-b14b-cc005b8aea07
+		summarizeBy: none
+		sourceColumn: K_CodCentroImputazione
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Centro imputazione - Ditta'
+		dataType: string
+		lineageTag: dc27476c-cbe1-4cab-9a00-c5c52f24711f
+		summarizeBy: none
+		sourceColumn: Centro imputazione - Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Centro imputazione - Codice'
+		dataType: int64
+		formatString: 0
+		lineageTag: 537e250f-7f14-4269-8bdc-67244282c546
+		summarizeBy: none
+		sourceColumn: Centro imputazione - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Centro imputazione - Descrizione'
+		dataType: string
+		lineageTag: 6acbda41-54be-4d71-8a8d-a551f03c2495
+		summarizeBy: none
+		sourceColumn: Centro imputazione - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Centro imputazione - Data inizio validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 61c07555-6d78-4c1b-97c3-4ea1bf6f31df
+		summarizeBy: none
+		sourceColumn: Centro imputazione - Data inizio validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Centro imputazione - Data fine validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 226e45a5-102c-4ee0-904f-5965ee5d1e7f
+		summarizeBy: none
+		sourceColumn: Centro imputazione - Data fine validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Centro imputazione - Valido in data estrazione'
+		dataType: string
+		lineageTag: 98147feb-7473-499c-a581-7597add16e41
+		summarizeBy: none
+		sourceColumn: Centro imputazione - Valido in data estrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Centri imputazione-23d826ba-6a9a-4e23-b916-debc336917c7' = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " WHERE DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " WHERE DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				        SELECT 
+				             K_CodCentroImputaz AS [K_CodCentroImputazione]
+				            ,DBGruppo AS [Centro imputazione - Ditta]
+				            ,CodCentroImputazione AS [Centro imputazione - Codice]
+				            ,DesCentroImputazione AS [Centro imputazione - Descrizione]
+				            ,DataInizioValidita AS [Centro imputazione - Data inizio validità]
+				            ,DataFineValidita AS [Centro imputazione - Data fine validità]
+				            ,ValidoInDataEstraz AS [Centro imputazione - Valido in data estrazione]
+				        
+				        FROM 
+				            [dbo].[ESBI_CIMP] WITH (NOLOCK)"
+				
+				        & StringaFiltroGruppoIN
+				        & StringaFiltroGruppoNOTIN
+				        & ";
+				    "
+				    ,CreateNavigationProperties=false])
+				in 
+				    Origine
+				```
+
+	annotation PBI_Id = abfff576-14dc-4f64-aae4-8f5e61f15983
+
+	annotation LinkedQueryName = Centri imputazione
+
+	annotation PBI_QueryRelationships = {"columnCount":7,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Centri imputazione/Origine.{K_CodCentroImputazione,0}","Section1/Centri imputazione/Origine.{Centro imputazione - Ditta,1}","Section1/Centri imputazione/Origine.{Centro imputazione - Codice,2}","Section1/Centri imputazione/Origine.{Centro imputazione - Descrizione,3}","Section1/Centri imputazione/Origine.{Centro imputazione - Data inizio validità,4}","Section1/Centri imputazione/Origine.{Centro imputazione - Data fine validità,5}","Section1/Centri imputazione/Origine.{Centro imputazione - Valido in data estrazione,6}"],"ColumnCount":7,"KeyColumnNames":[],"ColumnIdentities":["Section1/Centri imputazione/Origine.{K_CodCentroImputazione,0}","Section1/Centri imputazione/Origine.{Centro imputazione - Ditta,1}","Section1/Centri imputazione/Origine.{Centro imputazione - Codice,2}","Section1/Centri imputazione/Origine.{Centro imputazione - Descrizione,3}","Section1/Centri imputazione/Origine.{Centro imputazione - Data inizio validità,4}","Section1/Centri imputazione/Origine.{Centro imputazione - Data fine validità,5}","Section1/Centri imputazione/Origine.{Centro imputazione - Valido in data estrazione,6}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

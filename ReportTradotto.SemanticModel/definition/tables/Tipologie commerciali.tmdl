@@ -1,0 +1,104 @@
+table 'Tipologie commerciali'
+	lineageTag: 9a3ce95f-18d7-4019-9971-51c78ad5952f
+
+	column K_CodTipologiaComm
+		dataType: string
+		isHidden
+		lineageTag: 37233377-1357-4632-a1ab-4f25ad62da8b
+		summarizeBy: none
+		sourceColumn: K_CodTipologiaComm
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipologia commerciale - Ditta'
+		dataType: string
+		lineageTag: 19e2ef3b-ea00-410a-8856-f4ecec7bdd3b
+		summarizeBy: none
+		sourceColumn: Tipologia commerciale - Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipologia commerciale - Codice'
+		dataType: string
+		lineageTag: cd5b4701-2995-4464-9d14-e690b41de75a
+		summarizeBy: none
+		sourceColumn: Tipologia commerciale - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipologia commerciale - Descrizione'
+		dataType: string
+		lineageTag: 28d0f466-b143-45a5-b747-a69c52a7c455
+		summarizeBy: none
+		sourceColumn: Tipologia commerciale - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipologia commerciale - Data inizio validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4300fcca-d655-4dba-9900-f5a9e6e0c94e
+		summarizeBy: none
+		sourceColumn: Tipologia commerciale - Data inizio validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipologia commerciale - Data fine validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e926de2b-0632-4220-80b8-03495f120f71
+		summarizeBy: none
+		sourceColumn: Tipologia commerciale - Data fine validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipologia commerciale - Valida in data estrazione'
+		dataType: string
+		lineageTag: 4565ad78-51b1-447c-bb23-51e307c5180f
+		summarizeBy: none
+		sourceColumn: Tipologia commerciale - Valida in data estrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tipologie commerciali-feb45c6e-62b9-42d0-ba59-aed3e1c767e3' = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " WHERE DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " WHERE DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				        SELECT
+				             K_CodTipologiaComm AS [K_CodTipologiaComm]
+				            ,DBGruppo AS [Tipologia commerciale - Ditta]
+						    ,CodTipologiaComm AS [Tipologia commerciale - Codice]
+						    ,DesTipologiaComm AS [Tipologia commerciale - Descrizione]
+						    ,DataInizioValidita AS [Tipologia commerciale - Data inizio validità]
+						    ,DataFineValidita AS [Tipologia commerciale - Data fine validità]
+				            ,ValidoInDataEstraz AS [Tipologia commerciale - Valida in data estrazione]
+				
+				        FROM 
+				            [dbo].[ESBI_TIPCOM] WITH (NOLOCK)"
+				
+				        & StringaFiltroGruppoIN
+				        & StringaFiltroGruppoNOTIN
+				        & ";
+				    "
+				    ,CreateNavigationProperties=false])
+				in 
+				    Origine
+				```
+
+	annotation PBI_Id = c5e7534e-2906-4ecc-a767-ed30ef895136
+
+	annotation LinkedQueryName = Tipologie commerciali
+
+	annotation PBI_QueryRelationships = {"columnCount":7,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Tipologie commerciali/Origine.{K_CodTipologiaComm,0}","Section1/Tipologie commerciali/Origine.{Tipologia commerciale - Ditta,1}","Section1/Tipologie commerciali/Origine.{Tipologia commerciale - Codice,2}","Section1/Tipologie commerciali/Origine.{Tipologia commerciale - Descrizione,3}","Section1/Tipologie commerciali/Origine.{Tipologia commerciale - Data inizio validità,4}","Section1/Tipologie commerciali/Origine.{Tipologia commerciale - Data fine validità,5}","Section1/Tipologie commerciali/Origine.{Tipologia commerciale - Valida in data estrazione,6}"],"ColumnCount":7,"KeyColumnNames":[],"ColumnIdentities":["Section1/Tipologie commerciali/Origine.{K_CodTipologiaComm,0}","Section1/Tipologie commerciali/Origine.{Tipologia commerciale - Ditta,1}","Section1/Tipologie commerciali/Origine.{Tipologia commerciale - Codice,2}","Section1/Tipologie commerciali/Origine.{Tipologia commerciale - Descrizione,3}","Section1/Tipologie commerciali/Origine.{Tipologia commerciale - Data inizio validità,4}","Section1/Tipologie commerciali/Origine.{Tipologia commerciale - Data fine validità,5}","Section1/Tipologie commerciali/Origine.{Tipologia commerciale - Valida in data estrazione,6}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

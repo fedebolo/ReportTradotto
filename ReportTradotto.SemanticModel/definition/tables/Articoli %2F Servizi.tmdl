@@ -1,0 +1,550 @@
+table 'Articoli / Servizi'
+	lineageTag: 182bc509-9ad0-4907-8d46-411b69f8fcfa
+
+	column Articolo
+		dataType: string
+		lineageTag: d7510a77-56e4-4ab5-b284-4367d0678df4
+		summarizeBy: none
+		sourceColumn: Articolo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Ditta'
+		dataType: string
+		lineageTag: 1d299439-449e-4509-8ad1-cac790f30740
+		summarizeBy: none
+		sourceColumn: Articolo - Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice'
+		dataType: string
+		lineageTag: 3edf904a-8088-4362-9151-a5ffa48d3ad2
+		summarizeBy: none
+		sourceColumn: Articolo - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice variante'
+		dataType: string
+		lineageTag: 70187c56-d5f0-4670-887e-8d54ec42a2e3
+		summarizeBy: none
+		sourceColumn: Articolo - Codice variante
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione'
+		dataType: string
+		lineageTag: b69a7969-1dfa-4684-91d0-10c04253616a
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Tipo anagrafica'
+		dataType: string
+		lineageTag: 08c14022-b640-4f0a-8f20-7f09327bbaea
+		summarizeBy: none
+		sourceColumn: Articolo - Tipo anagrafica
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Stato'
+		dataType: string
+		lineageTag: d6301dc0-155c-45fd-91e0-6aa5257263fa
+		summarizeBy: none
+		sourceColumn: Articolo - Stato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Tipo'
+		dataType: string
+		lineageTag: c435d1ee-b0e3-4218-a1f8-11bc17e5557f
+		summarizeBy: none
+		sourceColumn: Articolo - Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice macrofamiglia (A)'
+		dataType: string
+		lineageTag: 31f0997c-1505-4ace-9dc3-c19a9a7467ae
+		summarizeBy: none
+		sourceColumn: Articolo - Codice macrofamiglia (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione macrofamiglia (A)'
+		dataType: string
+		lineageTag: a4013f25-c46d-4d53-b0aa-9890b3d35e0c
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione macrofamiglia (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Macrofamiglia (A)'
+		dataType: string
+		lineageTag: 35c2f9e1-840f-4cc0-a963-f3baf300ee17
+		summarizeBy: none
+		sourceColumn: Articolo - Macrofamiglia (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice famiglia (A)'
+		dataType: string
+		lineageTag: 63cca749-d9c3-4289-a097-003c12e5b315
+		summarizeBy: none
+		sourceColumn: Articolo - Codice famiglia (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione famiglia (A)'
+		dataType: string
+		lineageTag: 40da288c-2ef1-417f-b7e8-717427027866
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione famiglia (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Famiglia (A)'
+		dataType: string
+		lineageTag: 061598c3-5c79-45dd-affd-0ab8f39c5f82
+		summarizeBy: none
+		sourceColumn: Articolo - Famiglia (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice marca (A)'
+		dataType: string
+		lineageTag: a0436e35-ffd5-4da9-be5d-a4057adb468b
+		summarizeBy: none
+		sourceColumn: Articolo - Codice marca (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione marca (A)'
+		dataType: string
+		lineageTag: ca079e23-f2a0-4194-aba0-9bfa26a7cd11
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione marca (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Marca (A)'
+		dataType: string
+		lineageTag: c6dcc78c-09f7-425f-ae23-0a8e09f51fba
+		summarizeBy: none
+		sourceColumn: Articolo - Marca (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice linea (A)'
+		dataType: string
+		lineageTag: 35bdd16e-0b89-4e7c-99fa-fe549237bb54
+		summarizeBy: none
+		sourceColumn: Articolo - Codice linea (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione linea (A)'
+		dataType: string
+		lineageTag: 341e06a1-1b73-4a64-b761-6ef7cd23dd82
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione linea (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Linea (A)'
+		dataType: string
+		lineageTag: fa28b910-4019-4654-9e50-dc2cfa672687
+		summarizeBy: none
+		sourceColumn: Articolo - Linea (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice settore (A)'
+		dataType: string
+		lineageTag: 80887a07-0570-43a5-b023-5bb0f0f1afe7
+		summarizeBy: none
+		sourceColumn: Articolo - Codice settore (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione settore (A)'
+		dataType: string
+		lineageTag: 76d65357-fd8a-4441-9d50-cadacaa9c9c2
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione settore (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Settore (A)'
+		dataType: string
+		lineageTag: c95dd1bc-4322-4c98-b415-a15aec282df0
+		summarizeBy: none
+		sourceColumn: Articolo - Settore (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice classe merceologica (A)'
+		dataType: string
+		lineageTag: e585442f-a5e0-46e2-b2c5-004479f19f01
+		summarizeBy: none
+		sourceColumn: Articolo - Codice classe merceologica (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione classe merceologica (A)'
+		dataType: string
+		lineageTag: ddf52918-df1a-444c-b239-44b41148b59a
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione classe merceologica (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Classe merceologica (A)'
+		dataType: string
+		lineageTag: bb3a731e-1054-463d-a2c7-3be561e006cd
+		summarizeBy: none
+		sourceColumn: Articolo - Classe merceologica (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice classe logistica (A)'
+		dataType: string
+		lineageTag: 9c377e11-b5f0-4179-b1c0-2b0cd42194d1
+		summarizeBy: none
+		sourceColumn: Articolo - Codice classe logistica (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione classe logistica (A)'
+		dataType: string
+		lineageTag: cf936094-ea08-467c-8185-649d6ec9af7c
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione classe logistica (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Classe logistica (A)'
+		dataType: string
+		lineageTag: fdc9b733-f8c4-48e4-bbf4-dd1c877a5c72
+		summarizeBy: none
+		sourceColumn: Articolo - Classe logistica (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice classificazione tecnica (A)'
+		dataType: string
+		lineageTag: 57838745-7e42-4a39-873f-4c690756cb72
+		summarizeBy: none
+		sourceColumn: Articolo - Codice classificazione tecnica (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione classificazione tecnica (A)'
+		dataType: string
+		lineageTag: 1ac80d95-aa8e-44c5-a6c2-55928db54a4b
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione classificazione tecnica (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Classificazione tecnica (A)'
+		dataType: string
+		lineageTag: 2896bb86-7877-4c70-8e9b-32b936f91106
+		summarizeBy: none
+		sourceColumn: Articolo - Classificazione tecnica (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice classe ABC (A)'
+		dataType: string
+		lineageTag: 4d2ba813-2f64-405c-af5f-f760487dbdff
+		summarizeBy: none
+		sourceColumn: Articolo - Codice classe ABC (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione classe ABC (A)'
+		dataType: string
+		lineageTag: 9c5fb955-063a-43b3-8463-ea9838cbc42e
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione classe ABC (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Classe ABC (A)'
+		dataType: string
+		lineageTag: 9b79d031-fe9c-4ab2-afe9-6d7949457d91
+		summarizeBy: none
+		sourceColumn: Articolo - Classe ABC (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Data inizio validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d715cace-8409-4841-8873-8480b4a53227
+		summarizeBy: none
+		sourceColumn: Articolo - Data inizio validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Data fine validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 001b2196-14ad-4f21-bc4d-b3443d16e93e
+		summarizeBy: none
+		sourceColumn: Articolo - Data fine validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Valido in data estrazione'
+		dataType: string
+		lineageTag: 1e3ea655-ade9-4779-99fe-70d0a0c06966
+		summarizeBy: none
+		sourceColumn: Articolo - Valido in data estrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice fornitore abituale'
+		dataType: string
+		lineageTag: 6bf7a898-e877-48b4-8677-530c47759e2d
+		summarizeBy: none
+		sourceColumn: Articolo - Codice fornitore abituale
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione fornitore abituale'
+		dataType: string
+		lineageTag: 52645497-4478-405b-8631-24385306d4d2
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione fornitore abituale
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodArtVar
+		dataType: string
+		isHidden
+		lineageTag: bb4f32c6-583a-4d95-bf1a-d8ab27cc505d
+		summarizeBy: none
+		sourceColumn: K_CodArtVar
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice microfamiglia (A)'
+		dataType: string
+		lineageTag: a8200f6e-d7b3-442e-bd53-98841d70f7e6
+		summarizeBy: none
+		sourceColumn: Articolo - Codice microfamiglia (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione microfamiglia (A)'
+		dataType: string
+		lineageTag: 265307b9-cd2e-4eca-b58f-e44daec00a44
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione microfamiglia (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Microfamiglia (A)'
+		dataType: string
+		lineageTag: 2ed6c222-9245-43d5-aef8-78150f94369c
+		summarizeBy: none
+		sourceColumn: Articolo - Microfamiglia (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Categoria fiscale'
+		dataType: string
+		lineageTag: c4622d80-aa70-492f-b80c-50e732e980f6
+		summarizeBy: none
+		sourceColumn: Articolo - Categoria fiscale
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Variante'
+		dataType: string
+		lineageTag: 5580078e-d894-4bcd-a087-5ea28f504a4b
+		summarizeBy: none
+		sourceColumn: Articolo - Variante
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione variante'
+		dataType: string
+		lineageTag: 47af3bed-893c-43c7-bfb3-03b6e00a9eaa
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione variante
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Descrizione articolo'
+		dataType: string
+		lineageTag: da9ceeac-2bb2-4874-b585-7b85f1e443dd
+		summarizeBy: none
+		sourceColumn: Articolo - Descrizione articolo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo - Codice con Variante'
+		dataType: string
+		lineageTag: ff909295-fecc-46ca-be2d-06d514c6fb7e
+		summarizeBy: none
+		sourceColumn: Articolo - Codice con Variante
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articolo e variante in inglese'
+		dataType: string
+		lineageTag: 84ad2559-7968-45b1-993a-2647b474e094
+		summarizeBy: none
+		sourceColumn: Articolo e variante in inglese
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codice e descrizione variante in inglese'
+		dataType: string
+		lineageTag: 02965970-a70d-4907-9d8d-fd8a3d64d200
+		summarizeBy: none
+		sourceColumn: Codice e descrizione variante in inglese
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Variante in inglese'
+		dataType: string
+		lineageTag: d2635e66-3045-4dbc-8f97-602d524fccf2
+		summarizeBy: none
+		sourceColumn: Variante in inglese
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Articoli / Servizi-b4199bd9-681b-4367-884e-b482e62bdeb0' = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " WHERE ESBI_ARTVAR.DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " WHERE ESBI_ARTVAR.DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    StringaFiltroTipoArticoli = if #"Filtro - Tipo articolo" = "" then "" else " AND ArtAnagrafica.TipoArt IN (" & TipiArticolo & ")",
+				    
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				        SELECT
+				             ESBI_ARTVAR.K_CodArtVar AS [K_CodArtVar]
+				            ,ESBI_ARTVAR.DBGruppo AS [Articolo - Ditta]
+				            ,ESBI_ARTVAR.CodArticolo AS [Articolo - Codice]
+				            ,ESBI_ARTVAR.CodVariante AS [Articolo - Codice variante]
+				            ,ESBI_ARTVAR.DesArticoloVariante AS [Articolo - Descrizione]
+				            ,ESBI_ARTVAR.Articolo AS [Articolo]
+				            ,ESBI_ARTVAR.TipoAnagrArticolo AS [Articolo - Tipo anagrafica]
+				            ,ESBI_ARTVAR.StatoArticolo AS [Articolo - Stato]
+				            ,CASE WHEN ESBI_ARTVAR.CodArticolo='GENERICO' THEN 'Prodotto finito' ELSE ESBI_ARTVAR.TipoArticolo END AS [Articolo - Tipo]
+				            ,ESBI_ARTVAR.CodMacrofamiglia AS [Articolo - Codice macrofamiglia (A)]
+				            ,ESBI_ARTVAR.DesMacrofamiglia AS [Articolo - Descrizione macrofamiglia (A)]
+				            ,ESBI_ARTVAR.Macrofamiglia AS [Articolo - Macrofamiglia (A)]
+				            ,ESBI_ARTVAR.CodMicrofamiglia AS [Articolo - Codice microfamiglia (A)]
+				            ,ESBI_ARTVAR.DesMicrofamiglia AS [Articolo - Descrizione microfamiglia (A)]
+				            ,ESBI_ARTVAR.Microfamiglia AS [Articolo - Microfamiglia (A)]
+				            ,ESBI_ARTVAR.CodFamiglia AS [Articolo - Codice famiglia (A)]
+				            ,ESBI_ARTVAR.DesFamiglia AS [Articolo - Descrizione famiglia (A)]
+				            ,ESBI_ARTVAR.Famiglia AS [Articolo - Famiglia (A)]
+				            ,ESBI_ARTVAR.CodMarca AS [Articolo - Codice marca (A)]
+				            ,ESBI_ARTVAR.DesMarca AS [Articolo - Descrizione marca (A)]
+				            ,ESBI_ARTVAR.Marca AS [Articolo - Marca (A)]
+				            --Se non c'è la linea prodotto metto Linea 1 - Lodes 
+				            --,ESBI_ARTVAR.CodLinea AS [Articolo - Codice linea (A)]
+				            --,ESBI_ARTVAR.DesLinea AS [Articolo - Descrizione linea (A)]
+				            --,ESBI_ARTVAR.Linea AS [Articolo - Linea (A)]
+				            ,CASE WHEN ESBI_ARTVAR.CodLinea='' THEN 1 ELSE ESBI_ARTVAR.CodLinea END AS [Articolo - Codice linea (A)]
+				            ,CASE WHEN ESBI_ARTVAR.CodLinea='' THEN 'Linea di default' ELSE ESBI_ARTVAR.DesLinea END AS [Articolo - Descrizione linea (A)]
+				            ,CASE WHEN ESBI_ARTVAR.CodLinea='' THEN '1 - Linea di default' ELSE ESBI_ARTVAR.Linea END AS [Articolo - Linea (A)]
+				
+				            ,ESBI_ARTVAR.CodSettore AS [Articolo - Codice settore (A)]
+				            ,ESBI_ARTVAR.DesSettore AS [Articolo - Descrizione settore (A)]
+				            ,ESBI_ARTVAR.Settore AS [Articolo - Settore (A)]
+				            ,ESBI_ARTVAR.CodClasseMerceolog AS [Articolo - Codice classe merceologica (A)]
+				            ,ESBI_ARTVAR.DesClasseMerceolog AS [Articolo - Descrizione classe merceologica (A)]
+				            ,ESBI_ARTVAR.ClasseMerceologica AS [Articolo - Classe merceologica (A)]
+				            ,ESBI_ARTVAR.CodClasseLogistica AS [Articolo - Codice classe logistica (A)]
+				            ,ESBI_ARTVAR.DesClasseLogistica AS [Articolo - Descrizione classe logistica (A)]
+				            ,ESBI_ARTVAR.ClasseLogistica AS [Articolo - Classe logistica (A)]
+				            ,ESBI_ARTVAR.CodClassifTecnica AS [Articolo - Codice classificazione tecnica (A)]
+				            ,ESBI_ARTVAR.DesClassifTecnica AS [Articolo - Descrizione classificazione tecnica (A)]
+				            ,ESBI_ARTVAR.ClassifTecnica AS [Articolo - Classificazione tecnica (A)]
+				            ,ESBI_ARTVAR.CodClasseAbc AS [Articolo - Codice classe ABC (A)]
+				            ,ESBI_ARTVAR.DesClasseAbc AS [Articolo - Descrizione classe ABC (A)]
+				            ,ESBI_ARTVAR.ClasseAbc AS [Articolo - Classe ABC (A)]
+				            ,ESBI_ARTVAR.DataInizioValidita AS [Articolo - Data inizio validità]
+				            ,ESBI_ARTVAR.DataFineValidita AS [Articolo - Data fine validità]
+				            ,ESBI_ARTVAR.ValidoInDataEstraz AS [Articolo - Valido in data estrazione]
+				            ,ESBI_ARTVAR.AcqCodForAbituale AS [Articolo - Codice fornitore abituale]
+				            ,ESBI_ARTVAR.DesForAbituale AS [Articolo - Descrizione fornitore abituale]
+				            ,ESBI_ARTVAR.CategoriaFiscale as [Articolo - Categoria fiscale]
+				   			,ESBI_ARTVAR.CodArticolo+' - '+ArtAnagrafica.DesArt as [Articolo - Descrizione articolo]
+				            ,ESBI_ARTVAR.CodArticolo+CASE WHEN ISNULL(ESBI_ARTVAR.CodVariante, '') <> '' THEN '_'+ESBI_ARTVAR.CodVariante ELSE '' END +' - '+DesArticoloVariante as [Articolo - Variante]
+							,CASE WHEN ISNULL(ESBI_ARTVAR.CodVariante, '') <> '' THEN ESBI_ARTVAR.CodVariante+' - '+ESBI_ARTVAR.DesArticoloVariante ELSE '' END as [Articolo - Descrizione variante]
+				            ,ESBI_ARTVAR.CodArticolo+CASE WHEN ISNULL(ESBI_ARTVAR.CodVariante, '') <> '' THEN '_'+ESBI_ARTVAR.CodVariante ELSE '' END  as [Articolo - Codice con Variante]
+							--In Inglese
+							, ESBI_ARTVAR.CodArticolo+'_'+ISNULL(ESBI_ARTVAR.CodVariante, '')+' - '+ISNULL(qArtInglese.[Articolo - Variante in lingua], ESBI_ARTVAR.DesArticoloVariante) AS [Articolo e variante in inglese]
+							, CASE WHEN ISNULL(ESBI_ARTVAR.CodVariante, '') <> '' THEN ESBI_ARTVAR.CodVariante+' - '+ISNULL(qArtInglese.[Articolo - Variante in lingua], ESBI_ARTVAR.DesArticoloVariante) ELSE '' END as [Codice e descrizione variante in inglese]
+							, ISNULL(qArtInglese.[Articolo - Variante in lingua], ESBI_ARTVAR.DesArticoloVariante) AS [Variante in inglese]
+				
+				        FROM 
+				            [dbo].[ESBI_ARTVAR] WITH (NOLOCK)
+							INNER JOIN 
+				            ArtAnagrafica
+							ON 
+							ESBI_ARTVAR.DBGruppo=ArtAnagrafica.DBGruppo
+							AND ESBI_ARTVAR.CodArticolo=ArtAnagrafica.CodArt
+							LEFT OUTER JOIN
+							(
+								SELECT 
+								Art.CodArticolo
+								, Art.CodVariante
+								, MAX(ArtLin.DesEstesa) AS [Articolo - Variante in lingua]
+								FROM
+								ESBI_ARTVAR Art
+								INNER JOIN
+								ArtDatiInLingua ArtLin
+								ON
+								Art.DBGruppo=ArtLin.DBGruppo
+								AND Art.CodArticolo=ArtLin.CodArt
+								AND Art.CodVariante=ArtLin.VarianteArt
+								INNER JOIN
+								CodiciLingua Lin
+								ON ArtLin.DBGruppo=Lin.DBGruppo
+								AND ArtLin.CodLingua=Lin.CodLingua
+								WHERE 
+								Lin.SiglaCodifInternaz='EN'
+								GROUP BY
+								Art.CodArticolo
+								, Art.CodVariante
+							)qArtInglese
+							ON ESBI_ARTVAR.CodArticolo=qArtInglese.CodArticolo
+							AND ESBI_ARTVAR.CodVariante=qArtInglese.CodVariante
+				        "
+				        & StringaFiltroGruppoIN
+				        & StringaFiltroGruppoNOTIN
+				        & " AND ArtAnagrafica.CodArt NOT IN (SELECT ContAlfanumerico FROM SchedeTecValAmm WHERE DBGruppo='XS' AND IdEtichetta=11 AND CodTipoSchedaTecnica='CODVEN')"
+				        & StringaFiltroTipoArticoli
+				         & ";"
+				    ,CreateNavigationProperties=false]),
+				    #"Query accodata" = Table.Combine({Origine, ArticoliBudget})
+				in
+				    #"Query accodata"
+				```
+
+	annotation PBI_Id = 20537c35-94b4-40a7-a4bf-bbc178290935
+
+	annotation LinkedQueryName = Articoli / Servizi
+
+	annotation PBI_QueryRelationships = {"columnCount":41,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Articoli \\/ Servizi/Origine.{K_CodArtVar,0}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Ditta,1}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice,2}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice variante,3}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione,4}","Section1/Articoli \\/ Servizi/Origine.{Articolo,5}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Tipo anagrafica,6}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Stato,7}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Tipo,8}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice macrofamiglia (A),9}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione macrofamiglia (A),10}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Macrofamiglia (A),11}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice famiglia (A),12}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione famiglia (A),13}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Famiglia (A),14}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice marca (A),15}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione marca (A),16}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Marca (A),17}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice linea (A),18}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione linea (A),19}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Linea (A),20}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice settore (A),21}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione settore (A),22}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Settore (A),23}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice classe merceologica (A),24}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione classe merceologica (A),25}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Classe merceologica (A),26}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice classe logistica (A),27}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione classe logistica (A),28}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Classe logistica (A),29}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice classificazione tecnica (A),30}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione classificazione tecnica (A),31}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Classificazione tecnica (A),32}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice classe ABC (A),33}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione classe ABC (A),34}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Classe ABC (A),35}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Data inizio validità,36}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Data fine validità,37}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Valido in data estrazione,38}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice fornitore abituale,39}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione fornitore abituale,40}"],"ColumnCount":41,"KeyColumnNames":[],"ColumnIdentities":["Section1/Articoli \\/ Servizi/Origine.{K_CodArtVar,0}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Ditta,1}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice,2}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice variante,3}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione,4}","Section1/Articoli \\/ Servizi/Origine.{Articolo,5}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Tipo anagrafica,6}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Stato,7}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Tipo,8}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice macrofamiglia (A),9}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione macrofamiglia (A),10}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Macrofamiglia (A),11}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice famiglia (A),12}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione famiglia (A),13}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Famiglia (A),14}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice marca (A),15}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione marca (A),16}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Marca (A),17}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice linea (A),18}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione linea (A),19}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Linea (A),20}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice settore (A),21}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione settore (A),22}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Settore (A),23}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice classe merceologica (A),24}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione classe merceologica (A),25}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Classe merceologica (A),26}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice classe logistica (A),27}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione classe logistica (A),28}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Classe logistica (A),29}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice classificazione tecnica (A),30}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione classificazione tecnica (A),31}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Classificazione tecnica (A),32}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice classe ABC (A),33}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione classe ABC (A),34}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Classe ABC (A),35}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Data inizio validità,36}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Data fine validità,37}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Valido in data estrazione,38}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Codice fornitore abituale,39}","Section1/Articoli \\/ Servizi/Origine.{Articolo - Descrizione fornitore abituale,40}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

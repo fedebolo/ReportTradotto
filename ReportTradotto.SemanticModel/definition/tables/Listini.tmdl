@@ -1,0 +1,159 @@
+table Listini
+	lineageTag: 3bfdc08c-dc34-46b1-8bd3-c893c06bde98
+
+	column Listino
+		dataType: string
+		lineageTag: fd4204b9-70f0-4104-b036-1c2c3e0e45b2
+		summarizeBy: none
+		sourceColumn: Listino
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_IdListVers
+		dataType: string
+		isHidden
+		lineageTag: 98fc4667-849a-4eea-b4e3-c6020e48a157
+		summarizeBy: none
+		sourceColumn: K_IdListVers
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Listino - Codice'
+		dataType: string
+		lineageTag: 976b2b07-101d-46c0-87a6-8d6de09858f7
+		summarizeBy: none
+		sourceColumn: Listino - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Listino - Codice classe'
+		dataType: int64
+		formatString: 0
+		lineageTag: 244cc830-6dfc-4251-a632-8e11cf626de5
+		summarizeBy: none
+		sourceColumn: Listino - Codice classe
+
+		annotation SummarizationSetBy = User
+
+	column 'Listino - Descrizione classe'
+		dataType: string
+		lineageTag: ead307be-e1c6-4daf-9b6e-4ceccb93d59a
+		summarizeBy: none
+		sourceColumn: Listino - Descrizione classe
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Listino - Codice tipo intestatario'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e88a90f-322d-4ad8-829b-5a323249bf50
+		summarizeBy: none
+		sourceColumn: Listino - Codice tipo intestatario
+
+		annotation SummarizationSetBy = User
+
+	column 'Listino - Descrizione tipo intestatario'
+		dataType: string
+		lineageTag: 1a4daa10-ed87-44f5-bdbb-f472d4328c17
+		summarizeBy: none
+		sourceColumn: Listino - Descrizione tipo intestatario
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Listino - Codice intestatario'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c296d19-5f2f-4815-ae91-82f737c8d460
+		summarizeBy: none
+		sourceColumn: Listino - Codice intestatario
+
+		annotation SummarizationSetBy = User
+
+	column 'Listino - Descrizione intestatario'
+		dataType: string
+		lineageTag: f94319fa-dc69-428c-b8ef-225e89278da4
+		summarizeBy: none
+		sourceColumn: Listino - Descrizione intestatario
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Listino - Descrizione (vers.)'
+		dataType: string
+		lineageTag: f038a86b-008b-43bb-9e53-e51c2305d3da
+		summarizeBy: none
+		sourceColumn: Listino - Descrizione (vers.)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Listino - Data inizio validità (vers.)'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2d811715-225c-4a2c-8e62-d66389940407
+		summarizeBy: none
+		sourceColumn: Listino - Data inizio validità (vers.)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Listino - Data fine validità (vers.)'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 07b57408-e2bf-4a76-9367-b7c76bf870ec
+		summarizeBy: none
+		sourceColumn: Listino - Data fine validità (vers.)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Listino - Valido in data estrazione (vers.)'
+		dataType: string
+		lineageTag: 10257ba0-89f0-4178-b800-31c8fb370b43
+		summarizeBy: none
+		sourceColumn: Listino - Valido in data estrazione (vers.)
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Listini-36550089-580d-4770-8099-3e8c17f94c8e = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " AND DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " AND DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				        SELECT
+				             K_IdListVers AS [K_IdListVers]
+				            ,CodListino AS [Listino - Codice]
+				            ,DesListino AS [Listino - Descrizione (vers.)]
+					        ,Listino AS [Listino]
+				            ,DataInizioValidita AS [Listino - Data inizio validità (vers.)]
+					        ,DataFineValidita AS [Listino - Data fine validità (vers.)]
+				            ,ValidoInDataEstraz AS [Listino - Valido in data estrazione (vers.)]
+					        ,ClasseListino AS [Listino - Codice classe]
+				            ,DesClasseListino AS [Listino - Descrizione classe]
+				            ,TipoAnagrafica AS [Listino - Codice tipo intestatario]
+				            ,DesTipoAnagrafica AS [Listino - Descrizione tipo intestatario]
+					        ,CodIntestatario AS [Listino - Codice intestatario]
+					        ,DesIntestatario AS [Listino - Descrizione intestatario]
+				        
+				        FROM 
+				            [dbo].[ESBI_LISTVERS] WITH (NOLOCK)
+				        
+				        WHERE
+				            DataInizioValidita <= { D " & DataA & "} 
+				            AND DataFineValidita >= { D " & DataDa & "}"
+				
+				        & StringaFiltroGruppoIN
+				        & StringaFiltroGruppoNOTIN
+				        & ";
+				    "
+				    ,CreateNavigationProperties=false])
+				in 
+				    Origine
+				```
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

@@ -1,0 +1,1780 @@
+table 'Ordinato residuo'
+	lineageTag: a4d34f6a-bd08-4fc6-b05f-e6b072ef93a2
+
+	measure 'Costo medio - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Costo medio - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 438922c0-4939-43e4-9087-500db4f38575
+
+	measure 'Costo medio progressivo - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 5c1d3c52-9572-44ae-9f94-24794439b963
+
+	measure 'Costo movimento - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Costo movimento - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: abe2970d-0c17-4a58-9796-cb213f85abc5
+
+	measure 'Costo standard - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Costo standard - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 01e9355f-0467-4e12-bd38-c50a5f93cb7d
+
+	measure 'Costo unitario medio - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: 54f74f3f-abe8-498e-bf92-4b4d63b5cea0
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo' =
+			
+			CALCULATE (
+			    [costo unitario medio progressivo - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: bca60c7b-c723-411c-aa57-41e1f58d1a1e
+
+	measure 'Costo unitario movimento - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: bc783ab7-7e54-4c62-ab77-6b5c7ee7b5d7
+
+	measure 'Costo unitario standard - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: d95d88a9-9517-4280-a821-5de9d8b2c442
+
+	measure 'Importo (no omaggi) - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Importo (no omaggi) - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 95811824-c3df-4f36-85e5-9f3a4756d871
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Importo omaggi - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Importo omaggi - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		displayFolder: Corrente
+		lineageTag: 40b9d819-f2b6-441e-84ab-dd339ff6cdf2
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importo lordo - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Importo lordo - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 468bd187-c876-426e-a201-a32b98a7ac0c
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Importo sconti di riga - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Importo sconti di riga - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 96c957e9-da64-4fce-9f65-5aa41f14feb0
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Importo sconti incondizionati - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Importo sconti incondizionati - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: b78d551b-01c2-4c48-bfca-e9db5af21aee
+
+		changedProperty = FormatString
+
+	measure 'Importo sconti pagamento - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Importo sconti pagamento - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 292122d0-2b49-4320-9211-6e244431aeeb
+
+		changedProperty = FormatString
+
+	measure 'Importo spese piede - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Importo spese piede - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		displayFolder: Corrente
+		lineageTag: 56cd1f35-6ac4-46e2-bf77-0c35e5d0d8a5
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importo unitario - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Importo unitario - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: c7846e1f-29bf-4607-876d-f8d13f444d77
+
+	measure 'Margine costo medio - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Margine costo medio - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 62decdff-9aaa-45bf-9540-d516877f261f
+
+	measure 'Margine costo medio progressivo - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 816e4fd5-adf2-4af3-8d34-28485ef7d1fe
+
+	measure 'Margine costo movimento - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: bc394700-a8cb-46db-96ac-a165a357d37c
+
+	measure 'Margine costo standard - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Margine costo standard - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 5dda1ff4-a91b-438c-9c1f-9f7e23f3bc85
+
+	measure 'Quantità - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Quantità - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 49fd8b7c-3d44-48c4-843a-a2d89096fda9
+
+	measure 'Sconti di riga % - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Sconti di riga % - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		formatString: #,0.00%;-#,0.00%;#,0.00%
+		displayFolder: Corrente
+		lineageTag: f1204dda-7ad0-4961-8c89-40d1c9e9c1d7
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Costo medio - Ordinato residuo - PM' =
+			
+			CALCULATE (
+			    [Costo medio - Ordinato residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 70007586-a6aa-4619-8289-8a37592307d6
+
+	measure 'Costo medio progressivo - Ordinato residuo - PM' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Ordinato residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: a3d3fb3b-6b94-467e-b97a-2bb243901cd9
+
+	measure 'Costo movimento - Ordinato residuo - PM' =
+			
+			CALCULATE (
+			    [Costo movimento - Ordinato residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 70584406-b812-4206-bd83-5c6e79668d96
+
+	measure 'Costo standard - Ordinato residuo - PM' =
+			
+			CALCULATE (
+			    [Costo standard - Ordinato residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 9d4ed964-deb0-45c4-aa8a-df252f3496fa
+
+	measure 'Quantità - Ordinato residuo - PM' = CALCULATE ( [Quantità - Ordinato residuo], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 214e3623-bf23-486a-ac3f-f3d6e5a2d7c6
+
+	measure 'Importo (no omaggi) - Ordinato residuo - PM' = CALCULATE ( [Importo (no omaggi) - Ordinato residuo], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 17669ee4-dcd6-4a0c-92eb-16c09a6a1d62
+
+	measure 'Costo unitario standard - Ordinato residuo - PM' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Ordinato residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 3d23620d-d470-447f-beb9-8b1e8acb8edf
+
+	measure 'Costo unitario medio - Ordinato residuo - PM' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Ordinato residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 9b4f5934-f3c1-4b46-a628-ae52f9aab563
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo - PM' =
+			
+			CALCULATE (
+			    [Costo unitario medio progressivo - Ordinato residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 939dfe3b-9f07-4770-99e6-858acd274fbd
+
+	measure 'Costo unitario movimento - Ordinato residuo - PM' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Ordinato residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 33e20573-8bd6-48b5-85a8-d0aaaf726d74
+
+	measure 'Importo unitario - Ordinato residuo - PM' =
+			
+			CALCULATE (
+			    [Importo unitario - Ordinato residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 3cbc250e-b7a4-4f02-910f-3cdac981a4d0
+
+	measure 'Margine costo movimento - Ordinato residuo - PM' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Ordinato residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 132972fb-96ea-4376-9b0d-d3dd1780adb1
+
+	measure 'Margine costo medio progressivo - Ordinato residuo - PM' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Ordinato residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 957b505a-7dc2-4bc4-a9ac-4f49d27a2bbc
+
+	measure 'Margine costo medio - Ordinato residuo - PM' =
+			
+			CALCULATE (
+			    [Margine costo medio - Ordinato residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 425673a0-27d5-41bc-86ed-14fe9da828a8
+
+	measure 'Margine costo standard - Ordinato residuo - PM' =
+			
+			CALCULATE (
+			    [Margine costo standard - Ordinato residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 0b009656-a6cf-4e9c-a5fc-1fc175a736b0
+
+	measure 'Costo medio - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Costo medio - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 1e25c3f4-7340-4e7e-8608-dd0547fe5ffb
+
+	measure 'Costo medio progressivo - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: a91909f5-60ce-4d64-bd1d-0202ee6255a9
+
+	measure 'Costo movimento - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Costo movimento - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 869c0812-7a32-4310-96b7-f801248dc4c9
+
+	measure 'Costo standard - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Costo standard - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 8c1be484-9fcb-4692-9a6d-c057c82d989c
+
+	measure 'Quantità - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Quantità - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 023a2aa5-def0-4e89-b410-25b30970938a
+
+	measure 'Importo (no omaggi) - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Importo (no omaggi) - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 6fa19224-c9df-4d0c-9945-cff19fbfff23
+
+	measure 'Costo unitario standard - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: 35442471-3458-43de-9f42-89d313c65600
+
+	measure 'Costo unitario medio - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: bfe803f4-a78e-4e3e-85c6-8fadaac4e9fa
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Costo unitario medio progressivo - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: bc09a1aa-3bf9-418d-b411-093c5c2b6833
+
+	measure 'Costo unitario movimento - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: e1af9b22-445b-4a1f-b1b2-8e4e275def6c
+
+	measure 'Importo unitario - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Importo unitario - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: 07c34c8b-d541-45e3-a932-0554ba05113b
+
+	measure 'Margine costo movimento - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 75c026c6-0dab-4b83-8caa-ffefa6ab6b5f
+
+	measure 'Margine costo medio progressivo - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: f656e754-b2db-4a93-85e8-4df553dee2aa
+
+	measure 'Margine costo medio - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Margine costo medio - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 714b6348-4551-4e16-85f1-8b705e603681
+
+	measure 'Margine costo standard - Ordinato residuo - PY' =
+			
+			CALCULATE (
+			    [Margine costo standard - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 56d9bdfa-400e-4a50-ab68-9b0d7c43b61c
+
+	measure 'Costo medio - Ordinato residuo - YTD' = TOTALYTD ( [Costo medio - Ordinato residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 3b326586-9e08-46cf-ad66-8fa720fb8bb9
+
+	measure 'Costo medio progressivo - Ordinato residuo - YTD' = TOTALYTD ( [Costo medio progressivo - Ordinato residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 191f0a27-17f6-45ff-ab99-9dbc544c8b17
+
+	measure 'Costo movimento - Ordinato residuo - YTD' = TOTALYTD ( [Costo movimento - Ordinato residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: c0dadb16-0caf-441f-8ebf-27a2a58311be
+
+	measure 'Costo standard - Ordinato residuo - YTD' = TOTALYTD ( [Costo standard - Ordinato residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 81751dce-c5b3-4893-ab3d-98045fdd9e88
+
+	measure 'Quantità - Ordinato residuo - YTD' = TOTALYTD ( [Quantità - Ordinato residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: e7aacc89-1664-4282-8c40-295203b7dbe4
+
+	measure 'Importo (no omaggi) - Ordinato residuo - YTD' = TOTALYTD ( [Importo (no omaggi) - Ordinato residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 0df52990-86da-46b9-8a85-6704679f1d7d
+
+	measure 'Costo unitario standard - Ordinato residuo - YTD' = TOTALYTD ( [Costo unitario standard - Ordinato residuo], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 747c097c-939b-4c32-bd88-6f16aa80d2cb
+
+	measure 'Costo unitario medio - Ordinato residuo - YTD' = TOTALYTD ( [Costo unitario medio - Ordinato residuo], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: e7228196-a0c9-438b-b4e4-01380c949939
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo - YTD' =
+			TOTALYTD (
+			    [Costo unitario medio progressivo - Ordinato residuo],
+			    Calendario[Data]
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 1151e798-ec29-415e-9e1a-499fdaa9e122
+
+	measure 'Costo unitario movimento - Ordinato residuo - YTD' = TOTALYTD ( [Costo unitario movimento - Ordinato residuo], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 7d49cc6b-f80e-474e-af0e-8eff7b68da8e
+
+	measure 'Importo unitario - Ordinato residuo - YTD' = TOTALYTD ( [Importo unitario - Ordinato residuo], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 98c05fb6-f625-4096-9a63-fd5e0ab69482
+
+	measure 'Margine costo movimento - Ordinato residuo - YTD' = TOTALYTD ( [Margine costo movimento - Ordinato residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 4be7672d-09ec-42c7-985c-be55cb15653a
+
+	measure 'Margine costo medio progressivo - Ordinato residuo - YTD' =
+			TOTALYTD (
+			    [Margine costo medio progressivo - Ordinato residuo],
+			    Calendario[Data]
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: c7d389d2-1e00-44e5-a6b6-f06638b662a8
+
+	measure 'Margine costo medio - Ordinato residuo - YTD' = TOTALYTD ( [Margine costo medio - Ordinato residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 23d1094f-c314-4e85-8921-d2672d8ee6e4
+
+	measure 'Margine costo standard - Ordinato residuo - YTD' = TOTALYTD ( [Margine costo standard - Ordinato residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: b3c1c761-5137-44f6-8c0d-83fc6eaf505e
+
+	measure 'Costo medio - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Costo medio - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: ef42a8be-b3d5-4372-a012-8da2d0f573a0
+
+	measure 'Costo medio progressivo - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Costo medio progressivo - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 895de0e5-1c8a-4fa5-8606-1d2aedbbf43b
+
+	measure 'Costo movimento - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Costo movimento - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: ee8403a0-7a46-4636-8333-27e8c2e9a2c0
+
+	measure 'Costo standard - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Costo standard - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 1369f3fc-4cfb-4d02-a660-500f4413f761
+
+	measure 'Quantità - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Quantità - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: df0d04b4-5812-4269-a6bb-19220d18e68a
+
+	measure 'Importo (no omaggi) - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Importo (no omaggi) - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 12c7cde6-62d4-4b52-9921-8daf8af2e911
+
+	measure 'Costo unitario standard - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Costo unitario standard - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: adc45f7f-20ec-4a0f-aed1-cc4efb38e2e4
+
+	measure 'Costo unitario medio - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Costo unitario medio - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 08c26ed5-742c-49ea-9815-1323d6d7ef1b
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Costo unitario medio progressivo - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 2a754f00-6202-4ff7-b2b3-4b211a42031d
+
+	measure 'Costo unitario movimento - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Costo unitario movimento - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: c005a7d8-447d-4576-8a3a-2543511f48a1
+
+	measure 'Importo unitario - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Importo unitario - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 2f09ffc9-b8f2-4166-bcf9-1c2c9d963b3a
+
+	measure 'Margine costo movimento - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Margine costo movimento - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 6a80ff67-e449-41a9-b019-06d37c105181
+
+	measure 'Margine costo medio progressivo - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Margine costo medio progressivo - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 68355035-4b92-46d8-a13b-ab81f3cf0ed7
+
+	measure 'Margine costo medio - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Margine costo medio - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: b2d3d82b-3f8b-4f03-9bf5-be8a61586be2
+
+	measure 'Margine costo standard - Ordinato residuo - PYTD' =
+			TOTALYTD (
+			    [Margine costo standard - Ordinato residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: bc7174da-ba29-4194-906b-93d9fd36cdf5
+
+	measure 'Costo medio - Ordinato residuo - YOY' = [Costo medio - Ordinato residuo] - [Costo medio - Ordinato residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 63057a66-44d9-4188-abc0-00cd1728c58e
+
+	measure 'Costo medio progressivo - Ordinato residuo - YOY' = [Costo medio progressivo - Ordinato residuo] - [Costo medio progressivo - Ordinato residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: afcbd9ae-801e-47c2-b7d8-57aaea3a527a
+
+	measure 'Costo movimento - Ordinato residuo - YOY' = [Costo movimento - Ordinato residuo] - [Costo movimento - Ordinato residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 581ca54e-3b7e-4daf-8f31-3f87de88f6ce
+
+	measure 'Costo standard - Ordinato residuo - YOY' = [Costo standard - Ordinato residuo] - [Costo standard - Ordinato residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 33911ff2-f2cc-424f-aaaf-184bf36ae8d2
+
+	measure 'Quantità - Ordinato residuo - YOY' = [Quantità - Ordinato residuo] - [Quantità - Ordinato residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 4c0bd858-9189-43bb-838f-fc0012f78995
+
+	measure 'Importo (no omaggi) - Ordinato residuo - YOY' = [Importo (no omaggi) - Ordinato residuo] - [Importo (no omaggi) - Ordinato residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 7e5c32a2-356f-418d-b5c5-2e2d44c22541
+
+	measure 'Costo unitario standard - Ordinato residuo - YOY' = [Costo unitario standard - Ordinato residuo] - [Costo unitario standard - Ordinato residuo - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 6b8481b4-82e0-4a1b-89e0-ce5e92e7c046
+
+	measure 'Costo unitario medio - Ordinato residuo - YOY' = [Costo unitario medio - Ordinato residuo] - [Costo unitario medio - Ordinato residuo - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: e9bafe16-7bf3-43b5-960f-4e8c4ee6c302
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo - YOY' = [Costo unitario medio progressivo - Ordinato residuo] - [Costo unitario medio progressivo - Ordinato residuo - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 35d54f63-9242-475d-894e-16035388f2a8
+
+	measure 'Costo unitario movimento - Ordinato residuo - YOY' = [Costo unitario movimento - Ordinato residuo] - [Costo unitario movimento - Ordinato residuo - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 2fce21d6-6d26-4b12-b7f1-c8529c3f2b39
+
+	measure 'Importo unitario - Ordinato residuo - YOY' = [Importo unitario - Ordinato residuo] - [Importo unitario - Ordinato residuo - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 33f21160-c700-44e5-b42e-214ade21db1c
+
+	measure 'Margine costo movimento - Ordinato residuo - YOY' = [Margine costo movimento - Ordinato residuo] - [Margine costo movimento - Ordinato residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: f437e72b-319a-493a-9206-5c9386ee6e7b
+
+	measure 'Margine costo medio progressivo - Ordinato residuo - YOY' = [Margine costo medio progressivo - Ordinato residuo] - [Margine costo medio progressivo - Ordinato residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 570c0e39-8393-42f4-9d60-1db93a46ed44
+
+	measure 'Margine costo medio - Ordinato residuo - YOY' = [Margine costo medio - Ordinato residuo] - [Margine costo medio - Ordinato residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 905c2dca-ebaa-4160-b0dd-317cca349b6b
+
+	measure 'Margine costo standard - Ordinato residuo - YOY' = [Margine costo standard - Ordinato residuo] - [Margine costo standard - Ordinato residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: fd3ca63d-b324-48c4-bb43-b4c29d1ea2a1
+
+	measure 'Costo medio - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Costo medio - Ordinato residuo - YOY],
+			    [Costo medio - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: e2039e47-00e4-481b-8db8-6676c0f1e6c7
+
+	measure 'Costo medio progressivo - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Costo medio progressivo - Ordinato residuo - YOY],
+			    [Costo medio progressivo - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: a1a036ae-bfd7-4d91-a4b5-a0b0e549d2cc
+
+	measure 'Costo movimento - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Costo movimento - Ordinato residuo - YOY],
+			    [Costo movimento - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 6b344318-d72c-4064-b731-4d1a7b2f30bb
+
+	measure 'Costo standard - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Costo standard - Ordinato residuo - YOY],
+			    [Costo standard - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: e7cf7436-9d9e-4fd9-af90-fd93839ef5a4
+
+	measure 'Quantità - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Quantità - Ordinato residuo - YOY],
+			    [Quantità - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 05f81333-ccae-4fcc-b380-2e7aa716535a
+
+	measure 'Importo (no omaggi) - Ordinato residuo - YOY%' = DIVIDE ( [Importo (no omaggi) - Ordinato residuo - YOY], [Importo (no omaggi) - Ordinato residuo - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: f2ef9899-766f-4188-9b54-548e94558192
+
+	measure 'Costo unitario standard - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Costo unitario standard - Ordinato residuo - YOY],
+			    [Costo unitario standard - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 1f1633f5-86d0-4b25-a843-87d7b58469e2
+
+	measure 'Costo unitario medio - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Costo unitario medio - Ordinato residuo - YOY],
+			    [Costo unitario medio - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: b72a8783-99eb-40c1-9854-0264320f9190
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Ordinato residuo - YOY],
+			    [Costo unitario medio progressivo - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: abd9e197-083d-4ba0-91ab-07b0711f2efa
+
+	measure 'Costo unitario movimento - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Costo unitario movimento - Ordinato residuo - YOY],
+			    [Costo unitario movimento - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 96b6b9ae-af9a-4414-8d7e-a5772628fff9
+
+	measure 'Importo unitario - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Importo unitario - Ordinato residuo - YOY],
+			    [Importo unitario - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 90e0bb93-1764-4ea4-8e03-3052cb5635fc
+
+	measure 'Margine costo movimento - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Margine costo movimento - Ordinato residuo - YOY],
+			    [Margine costo movimento - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 724c2e89-551f-4e44-bfcd-49120dd8632f
+
+	measure 'Margine costo medio progressivo - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Ordinato residuo - YOY],
+			    [Margine costo medio progressivo - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: e7c9b59f-7768-4385-a4aa-01e2c460d80d
+
+	measure 'Margine costo medio - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Margine costo medio - Ordinato residuo - YOY],
+			    [Margine costo medio - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: a4c490d3-284e-4a9f-bb79-f952c04321e8
+
+	measure 'Margine costo standard - Ordinato residuo - YOY%' =
+			DIVIDE (
+			    [Margine costo standard - Ordinato residuo - YOY],
+			    [Margine costo standard - Ordinato residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 4d3c1742-d479-4ea2-b2c6-91251fc94aae
+
+	measure 'Costo medio - Ordinato residuo - YOYTD' = [Costo medio - Ordinato residuo - YTD] - [Costo medio - Ordinato residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 93d41254-f034-4d0c-98e0-ddffd8624406
+
+	measure 'Costo medio progressivo - Ordinato residuo - YOYTD' = [Costo medio progressivo - Ordinato residuo - YTD] - [Costo medio progressivo - Ordinato residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 24e345f6-baae-4c57-bad5-4836de4f5013
+
+	measure 'Costo movimento - Ordinato residuo - YOYTD' = [Costo movimento - Ordinato residuo - YTD] - [Costo movimento - Ordinato residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: e3f23934-f97d-4352-bb89-5d4578b6de97
+
+	measure 'Costo standard - Ordinato residuo - YOYTD' = [Costo standard - Ordinato residuo - YTD] - [Costo standard - Ordinato residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 5b0c93bb-5264-4627-af4b-575bb53b44e6
+
+	measure 'Quantità - Ordinato residuo - YOYTD' = [Quantità - Ordinato residuo - YTD] - [Quantità - Ordinato residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 4bb642ad-ca07-4d17-9608-b54121db5a0f
+
+	measure 'Importo (no omaggi) - Ordinato residuo - YOYTD' = [Importo (no omaggi) - Ordinato residuo - YTD] - [Importo (no omaggi) - Ordinato residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: ac471068-a067-4c00-8411-b2e5e3b0fc8d
+
+	measure 'Costo unitario standard - Ordinato residuo - YOYTD' = [Costo unitario standard - Ordinato residuo - YTD] - [Costo unitario standard - Ordinato residuo - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 3b4efc91-bb8d-4eef-8235-a4774c0f316a
+
+	measure 'Costo unitario medio - Ordinato residuo - YOYTD' = [Costo unitario medio - Ordinato residuo - YTD] - [Costo unitario medio - Ordinato residuo - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 67208bbe-0168-4999-82ee-081c134fc8d5
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo - YOYTD' = [Costo unitario medio progressivo - Ordinato residuo - YTD] - [Costo unitario medio progressivo - Ordinato residuo - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 14c3a7bb-31af-4402-ae47-65c10dc7a3b0
+
+	measure 'Costo unitario movimento - Ordinato residuo - YOYTD' = [Costo unitario movimento - Ordinato residuo - YTD] - [Costo unitario movimento - Ordinato residuo - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: be430c8c-8201-4e24-8abc-b5a30339051c
+
+	measure 'Importo unitario - Ordinato residuo - YOYTD' = [Importo unitario - Ordinato residuo - YTD] - [Importo unitario - Ordinato residuo - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 673f67f6-ea4c-441b-ad18-8dc9f25a6a28
+
+	measure 'Margine costo movimento - Ordinato residuo - YOYTD' = [Margine costo movimento - Ordinato residuo - YTD] - [Margine costo movimento - Ordinato residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: dac3e26e-5fd1-4340-b000-ceeb278b56e2
+
+	measure 'Margine costo medio progressivo - Ordinato residuo - YOYTD' = [Margine costo medio progressivo - Ordinato residuo - YTD] - [Margine costo medio progressivo - Ordinato residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 1446ab0b-bdaa-43e9-9194-cbac89e251de
+
+	measure 'Margine costo medio - Ordinato residuo - YOYTD' = [Margine costo medio - Ordinato residuo - YTD] - [Margine costo medio - Ordinato residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 61a623b1-7226-4d4c-8481-339918ddd9de
+
+	measure 'Margine costo standard - Ordinato residuo - YOYTD' = [Margine costo standard - Ordinato residuo - YTD] - [Margine costo standard - Ordinato residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: dd72a78b-507e-470c-93ff-78a56159d8a9
+
+	measure 'Costo medio - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo medio - Ordinato residuo - YOYTD],
+			    [Costo medio - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: afe3770c-6780-43a0-84e2-5cbdb23d14c3
+
+	measure 'Costo medio progressivo - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo medio progressivo - Ordinato residuo - YOYTD],
+			    [Costo medio progressivo - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 2e9083d5-cfb1-4104-9e53-5edf67e9bf13
+
+	measure 'Costo movimento - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo movimento - Ordinato residuo - YOYTD],
+			    [Costo movimento - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 62221aa9-8aff-4b0c-8692-dde89c409527
+
+	measure 'Costo standard - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo standard - Ordinato residuo - YOYTD],
+			    [Costo standard - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: d969b4cd-687d-40f2-b9ef-613cdafdd490
+
+	measure 'Quantità - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Quantità - Ordinato residuo - YOYTD],
+			    [Quantità - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 3c633f81-4b65-4551-9698-5c94b44a2c35
+
+	measure 'Importo (no omaggi) - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Importo (no omaggi) - Ordinato residuo - YOYTD],
+			    [Importo (no omaggi) - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 253d8772-4b38-4440-87cf-65558a92285c
+
+	measure 'Costo unitario standard - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario standard - Ordinato residuo - YOYTD],
+			    [Costo unitario standard - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 8f2f0855-9ce1-47b7-b088-6f14a63b464c
+
+	measure 'Costo unitario medio - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario medio - Ordinato residuo - YOYTD],
+			    [Costo unitario medio - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 6814fd4f-1dc5-487a-aa00-4c55d3752d0c
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Ordinato residuo - YOYTD],
+			    [Costo unitario medio progressivo - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 48133380-57fc-43fb-be6f-24acaee90b61
+
+	measure 'Costo unitario movimento - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario movimento - Ordinato residuo - YOYTD],
+			    [Costo unitario movimento - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 2cf4e487-3d71-41e2-af31-d4228bfcff52
+
+	measure 'Importo unitario - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Importo unitario - Ordinato residuo - YOYTD],
+			    [Importo unitario - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 4d107d31-0065-43ec-834f-cb5e8b88659d
+
+	measure 'Margine costo movimento - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Margine costo movimento - Ordinato residuo - YOYTD],
+			    [Margine costo movimento - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 79c0c432-21b3-4ab8-a817-91015991e2a1
+
+	measure 'Margine costo medio progressivo - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Ordinato residuo - YOYTD],
+			    [Margine costo medio progressivo - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 4a5f80fc-d27b-423a-bdca-8cd8ff1ab9ed
+
+	measure 'Margine costo medio - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Margine costo medio - Ordinato residuo - YOYTD],
+			    [Margine costo medio - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 6b8d8ba8-2586-4aa0-998b-b60119526134
+
+	measure 'Margine costo standard - Ordinato residuo - YOYTD%' =
+			DIVIDE (
+			    [Margine costo standard - Ordinato residuo - YOYTD],
+			    [Margine costo standard - Ordinato residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 881d2b7f-5486-4b22-aff9-9602801b9b6a
+
+	measure 'Costo medio - Ordinato residuo - MOM' = [Costo medio - Ordinato residuo] - [Costo medio - Ordinato residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: e823e61f-2bfa-430e-a273-f56bb4a8dcfb
+
+	measure 'Costo medio progressivo - Ordinato residuo - MOM' = [Costo medio progressivo - Ordinato residuo] - [Costo medio progressivo - Ordinato residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: d0072983-afc9-45b5-9546-1e426a1485f6
+
+	measure 'Costo movimento - Ordinato residuo - MOM' = [Costo movimento - Ordinato residuo] - [Costo movimento - Ordinato residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 5781ed63-f198-4743-a950-9baff47f80dd
+
+	measure 'Costo standard - Ordinato residuo - MOM' = [Costo standard - Ordinato residuo] - [Costo standard - Ordinato residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: d517d1d9-d974-4f1e-8120-14f7051372c8
+
+	measure 'Quantità - Ordinato residuo - MOM' = [Quantità - Ordinato residuo] - [Quantità - Ordinato residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 830e45d4-947c-4c6a-bd55-b1bc5b900552
+
+	measure 'Importo (no omaggi) - Ordinato residuo - MOM' = [Importo (no omaggi) - Ordinato residuo] - [Importo (no omaggi) - Ordinato residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: f8b22665-2662-4a8d-b99c-fbdff101f906
+
+	measure 'Costo unitario standard - Ordinato residuo - MOM' = [Costo unitario standard - Ordinato residuo] - [Costo unitario standard - Ordinato residuo - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: f48f3cc0-1328-42e9-bcf3-dbd703dc310c
+
+	measure 'Costo unitario medio - Ordinato residuo - MOM' = [Costo unitario medio - Ordinato residuo] - [Costo unitario medio - Ordinato residuo - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 73b98f75-d3cd-40d4-a547-01d9f2ed9072
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo - MOM' = [Costo unitario medio progressivo - Ordinato residuo] - [Costo unitario medio progressivo - Ordinato residuo - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: fa773f26-6546-4b1a-9658-61565e14e72e
+
+	measure 'Costo unitario movimento - Ordinato residuo - MOM' = [Costo unitario movimento - Ordinato residuo] - [Costo unitario movimento - Ordinato residuo - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 7f8e111a-69f2-4b04-ae3c-4143ee1fada4
+
+	measure 'Importo unitario - Ordinato residuo - MOM' = [Importo unitario - Ordinato residuo] - [Importo unitario - Ordinato residuo - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: e19af421-0704-48b6-95f1-560e10399964
+
+	measure 'Margine costo movimento - Ordinato residuo - MOM' = [Margine costo movimento - Ordinato residuo] - [Margine costo movimento - Ordinato residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: a6599cde-6819-41f2-8eac-fd25abc5c758
+
+	measure 'Margine costo medio progressivo - Ordinato residuo - MOM' = [Margine costo medio progressivo - Ordinato residuo] - [Margine costo medio progressivo - Ordinato residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 801d259e-fdec-48bd-bcbd-712a7e2664f1
+
+	measure 'Margine costo medio - Ordinato residuo - MOM' = [Margine costo medio - Ordinato residuo] - [Margine costo medio - Ordinato residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: df914444-4d4b-4b89-a0a3-2655f02753e0
+
+	measure 'Margine costo standard - Ordinato residuo - MOM' = [Margine costo standard - Ordinato residuo] - [Margine costo standard - Ordinato residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: ce59d43b-c3b7-4dd6-b3db-be878f085f28
+
+	measure 'Costo medio - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Costo medio - Ordinato residuo - MOM],
+			    [Costo medio - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: fea36317-83ea-4ed3-8933-9715bb4620a8
+
+	measure 'Costo medio progressivo - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Costo medio progressivo - Ordinato residuo - MOM],
+			    [Costo medio progressivo - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: b512cc80-3952-4646-be40-0c610eeb83d8
+
+	measure 'Costo movimento - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Costo movimento - Ordinato residuo - MOM],
+			    [Costo movimento - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: dac11a1e-ad57-4064-b857-10e150497667
+
+	measure 'Costo standard - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Costo standard - Ordinato residuo - MOM],
+			    [Costo standard - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 591518dc-3d7e-4086-9f6a-51059799de03
+
+	measure 'Quantità - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Quantità - Ordinato residuo - MOM],
+			    [Quantità - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 5f5b66a6-917e-47bb-8ad4-bf655353799e
+
+	measure 'Importo (no omaggi) - Ordinato residuo - MOM%' = DIVIDE ( [Importo (no omaggi) - Ordinato residuo - MOM], [Importo (no omaggi) - Ordinato residuo - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 05903dd4-5104-4b54-a5c7-13fb0767b2b5
+
+	measure 'Costo unitario standard - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Costo unitario standard - Ordinato residuo - MOM],
+			    [Costo unitario standard - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 494d09b7-f089-44ee-926b-31491c345e7f
+
+	measure 'Costo unitario medio - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Costo unitario medio - Ordinato residuo - MOM],
+			    [Costo unitario medio - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 950d3171-7d45-48c3-b9df-5812c408dce2
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Ordinato residuo - MOM],
+			    [Costo unitario medio progressivo - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: bf194c89-9c95-4347-810e-d21a0fe8ea26
+
+	measure 'Costo unitario movimento - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Costo unitario movimento - Ordinato residuo - MOM],
+			    [Costo unitario movimento - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 9d921b95-4991-4e78-966d-1463facee032
+
+	measure 'Importo unitario - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Importo unitario - Ordinato residuo - MOM],
+			    [Importo unitario - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: fd1743d0-403d-449e-af84-689e6b683fd0
+
+	measure 'Margine costo movimento - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Margine costo movimento - Ordinato residuo - MOM],
+			    [Margine costo movimento - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: b2e9c1d8-27a3-4798-9356-37d719fc4f42
+
+	measure 'Margine costo medio progressivo - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Ordinato residuo - MOM],
+			    [Margine costo medio progressivo - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 67647cb6-2739-4d0d-b76e-4e16d19f0d33
+
+	measure 'Margine costo medio - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Margine costo medio - Ordinato residuo - MOM],
+			    [Margine costo medio - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 1356bf67-d879-407a-9ab5-435a2419249d
+
+	measure 'Margine costo standard - Ordinato residuo - MOM%' =
+			DIVIDE (
+			    [Margine costo standard - Ordinato residuo - MOM],
+			    [Margine costo standard - Ordinato residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 4f30df1f-45d4-4194-9379-bdc57cf70d8e
+
+	measure 'Quantità - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Quantità - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 85f506ea-3cb4-4cb8-845d-15d593af27f3
+
+	measure 'Costo medio - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo medio - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: e2c81668-34cb-4b56-928d-5090cd4cbdeb
+
+	measure 'Costo medio progressivo - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 90ecda0e-6234-4c54-8cbc-bb2c071e0af0
+
+	measure 'Costo movimento - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo movimento - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 7f20b0d3-4e78-47a6-b022-77bc5b6da996
+
+	measure 'Costo standard - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo standard - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: b1173b2b-8811-43fa-9a9b-dd3842aa52fb
+
+	measure 'Importo (no omaggi) - Ordinato residuo - PQ' = CALCULATE ( [Importo (no omaggi) - Ordinato residuo], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 650b2dac-ebb1-4d3f-b89f-6ce6c73627e2
+
+	measure 'Costo unitario standard - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: f02d0f42-055c-4cfb-888f-f5732720bd3d
+
+	measure 'Costo unitario medio - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: e9bf2368-d6cd-4694-9386-23227ecb514c
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario medio progressivo - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 2b274b82-35b3-4532-afcf-427b530f14d6
+
+	measure 'Costo unitario movimento - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: d077ffc7-aae3-4d24-87f3-3bb353c86fc6
+
+	measure 'Importo unitario - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Importo unitario - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: eed40169-16ab-471c-b1dc-13b491c16444
+
+	measure 'Margine costo movimento - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: a0ee0368-0bdf-486e-9e6b-acd5ff514ce6
+
+	measure 'Margine costo medio progressivo - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 2e26b475-d15b-4f70-bbad-dc4cab817f9e
+
+	measure 'Margine costo medio - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Margine costo medio - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 7dfeb5c0-10bf-4dbf-ad34-c6bdab15d1b8
+
+	measure 'Margine costo standard - Ordinato residuo - PQ' =
+			
+			CALCULATE (
+			    [Margine costo standard - Ordinato residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: d3a5e03d-59a3-4d82-90f3-dbdfb01752fc
+
+	measure 'Quantità - Ordinato residuo - QOQ' = [Quantità - Ordinato residuo] - [Quantità - Ordinato residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 1733f2e4-645b-46f1-a79e-ab3bf453fac5
+
+	measure 'Costo medio - Ordinato residuo - QOQ' = [Costo medio - Ordinato residuo] - [Costo medio - Ordinato residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: a2217b45-cd68-4e5d-b90b-4a80d21104d2
+
+	measure 'Costo medio progressivo - Ordinato residuo - QOQ' = [Costo medio progressivo - Ordinato residuo] - [Costo medio progressivo - Ordinato residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 3f33b584-8246-4538-813b-79d82d54ad29
+
+	measure 'Costo movimento - Ordinato residuo - QOQ' = [Costo movimento - Ordinato residuo] - [Costo movimento - Ordinato residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 4a0a2dcd-bf6b-433a-905a-618fcca0e08e
+
+	measure 'Costo standard - Ordinato residuo - QOQ' = [Costo standard - Ordinato residuo] - [Costo standard - Ordinato residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 91fea37f-82c9-4cff-9773-5843bd9e6500
+
+	measure 'Importo (no omaggi) - Ordinato residuo - QOQ' = [Importo (no omaggi) - Ordinato residuo] - [Importo (no omaggi) - Ordinato residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: ce77e85f-fd8d-4947-8865-b00ee00a30ea
+
+	measure 'Costo unitario standard - Ordinato residuo - QOQ' = [Costo unitario standard - Ordinato residuo] - [Costo unitario standard - Ordinato residuo - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: a50cf1d1-e164-4500-9305-253288718fd8
+
+	measure 'Costo unitario medio - Ordinato residuo - QOQ' = [Costo unitario medio - Ordinato residuo] - [Costo unitario medio - Ordinato residuo - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 07cba902-d96d-4108-9ea4-18d1ab12191e
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo - QOQ' = [Costo unitario medio progressivo - Ordinato residuo] - [Costo unitario medio progressivo - Ordinato residuo - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 9d236923-143e-4ad8-8421-46ca872664f8
+
+	measure 'Costo unitario movimento - Ordinato residuo - QOQ' = [Costo unitario movimento - Ordinato residuo] - [Costo unitario movimento - Ordinato residuo - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 91a96ed7-7204-46bf-af0c-b97da7d92120
+
+	measure 'Importo unitario - Ordinato residuo - QOQ' = [Importo unitario - Ordinato residuo] - [Importo unitario - Ordinato residuo - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: e17bf16f-3711-41b2-ba81-d5bd93c48db3
+
+	measure 'Margine costo movimento - Ordinato residuo - QOQ' = [Margine costo movimento - Ordinato residuo] - [Margine costo movimento - Ordinato residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: f769be15-1a76-4429-9d89-2f9d0cde3538
+
+	measure 'Margine costo medio progressivo - Ordinato residuo - QOQ' = [Margine costo medio progressivo - Ordinato residuo] - [Margine costo medio progressivo - Ordinato residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 2fa90133-1878-4b8b-ad80-37cbc908c5ac
+
+	measure 'Margine costo medio - Ordinato residuo - QOQ' = [Margine costo medio - Ordinato residuo] - [Margine costo medio - Ordinato residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 9098ef33-0da9-40f6-940e-976023ef5108
+
+	measure 'Margine costo standard - Ordinato residuo - QOQ' = [Margine costo standard - Ordinato residuo] - [Margine costo standard - Ordinato residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 44b4d5d8-1b36-418d-b0d7-41e5d11784d8
+
+	measure 'Quantità - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Quantità - Ordinato residuo - QOQ],
+			    [Quantità - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 9c9c8bf0-431b-4f72-81d1-880c0fb5d4ed
+
+	measure 'Costo medio - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Costo medio - Ordinato residuo - QOQ],
+			    [Costo medio - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: b452d690-2224-48b2-af29-cf1c49f891e6
+
+	measure 'Costo medio progressivo - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Costo medio progressivo - Ordinato residuo - QOQ],
+			    [Costo medio progressivo - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 9745e041-f114-4dd2-bd86-6ca4bb139697
+
+	measure 'Costo movimento - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Costo movimento - Ordinato residuo - QOQ],
+			    [Costo movimento - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 6540ca79-c29c-44a2-8ffe-935f5bc29ea6
+
+	measure 'Costo standard - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Costo standard - Ordinato residuo - QOQ],
+			    [Costo standard - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 4a99f374-e635-4d79-9f35-58b83dfcd612
+
+	measure 'Importo (no omaggi) - Ordinato residuo - QOQ%' = DIVIDE ( [Importo (no omaggi) - Ordinato residuo - QOQ], [Importo (no omaggi) - Ordinato residuo - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: ebabc30c-6854-42a1-836b-f9446b74a24c
+
+	measure 'Costo unitario standard - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Costo unitario standard - Ordinato residuo - MOM],
+			    [Costo unitario standard - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: faff3bec-6a66-4f43-9d85-6721ad5d5756
+
+	measure 'Costo unitario medio - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Costo unitario medio - Ordinato residuo - MOM],
+			    [Costo unitario medio - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 04e47f55-d3e3-4f16-98c9-31774fdf816b
+
+	measure 'Costo unitario medio progressivo - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Ordinato residuo - MOM],
+			    [Costo unitario medio progressivo - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: fd47f5eb-da40-4923-8212-5158fc339576
+
+	measure 'Costo unitario movimento - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Costo unitario movimento - Ordinato residuo - MOM],
+			    [Costo unitario movimento - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 21343953-2fd4-47f5-ba41-1c7061801537
+
+	measure 'Importo unitario - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Importo unitario - Ordinato residuo - MOM],
+			    [Importo unitario - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 5cee74b8-f61f-41a3-bcf9-c4db23cfe0f3
+
+	measure 'Margine costo movimento - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Margine costo movimento - Ordinato residuo - QOQ],
+			    [Margine costo movimento - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 23fae5d1-ee54-4e90-9b9e-317f7605b99f
+
+	measure 'Margine costo medio progressivo - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Ordinato residuo - QOQ],
+			    [Margine costo medio progressivo - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 65ec1de3-82a8-4658-b819-021cd93e6da8
+
+	measure 'Margine costo medio - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Margine costo medio - Ordinato residuo - QOQ],
+			    [Margine costo medio - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: abe42b0b-67bd-4354-8fb9-485d55c6e1e4
+
+	measure 'Margine costo standard - Ordinato residuo - QOQ%' =
+			DIVIDE (
+			    [Margine costo standard - Ordinato residuo - QOQ],
+			    [Margine costo standard - Ordinato residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 225c3678-ad0b-44cb-8ac2-cd4336ae24e3
+
+	measure 'Importo - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Importo - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		displayFolder: Corrente
+		lineageTag: 58e734ce-6787-48d5-90ef-0904713a40eb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Quantità omaggi - Ordinato residuo' =
+			
+			CALCULATE (
+			    [Quantità omaggi - Residuo],
+			    'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			)
+		displayFolder: Corrente
+		lineageTag: f6e1b6e8-b97b-4234-b96b-d3e3c97e4c0f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Z_Dummy
+		dataType: string
+		isHidden
+		lineageTag: ca0dba34-19f7-4f11-add3-329d161af063
+		summarizeBy: none
+		sourceColumn: Z_Dummy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Ordinato residuo-f7ce718b-db30-4cc9-b886-fd276c4e8b58' = m
+		mode: import
+		queryGroup: Misure
+		source =
+				let
+				    Origine = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Z_Dummy = _t])
+				in
+				    Origine
+
+	annotation PBI_Id = 707a75d1-89c0-4b5b-8c29-99cb01d23bef
+
+	annotation LinkedQueryName = Ordinato residuo
+
+	annotation PBI_QueryRelationships = {"columnCount":0,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":[],"ColumnCount":0,"KeyColumnNames":[],"ColumnIdentities":[],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

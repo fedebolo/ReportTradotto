@@ -1,0 +1,126 @@
+table 'Tipi movimento'
+	lineageTag: fb9f3795-84db-4ee0-a8f3-96dacf3d557e
+
+	column K_CodTipoMovimento
+		dataType: string
+		isHidden
+		lineageTag: 5c3f9ae8-3489-4c61-8a1f-de8718afca2f
+		summarizeBy: none
+		sourceColumn: K_CodTipoMovimento
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo movimento'
+		dataType: string
+		lineageTag: df9a768b-d0b5-427e-8149-34bcac2a4db0
+		summarizeBy: none
+		sourceColumn: Tipo movimento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo movimento - Descrizione'
+		dataType: string
+		lineageTag: 199e5660-5c34-42a2-896e-02689f6fcff5
+		summarizeBy: none
+		sourceColumn: Tipo movimento - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo movimento - Macro ambito'
+		dataType: string
+		lineageTag: d06ab1ed-7b78-4372-90df-2e6ef80eac56
+		summarizeBy: none
+		sourceColumn: Tipo movimento - Macro ambito
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo movimento - Ambito'
+		dataType: string
+		lineageTag: ad78c6e7-2052-47c2-a0a6-dfbb8eea97c1
+		summarizeBy: none
+		sourceColumn: Tipo movimento - Ambito
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo movimento - Fattura accompagnatoria (Sì/No)'
+		dataType: string
+		lineageTag: 35862be8-03d3-477b-a8ca-8936a7d9578e
+		summarizeBy: none
+		sourceColumn: Tipo movimento - Fattura accompagnatoria (Sì/No)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Flag rilevanza spedito'
+		dataType: string
+		lineageTag: 36b2d016-aa95-49a5-9b88-7e4ef9995ddb
+		summarizeBy: none
+		sourceColumn: Flag rilevanza spedito
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Flag rilevanza fatturato'
+		dataType: string
+		lineageTag: d5d4decf-20c9-4611-884e-8163a3b50793
+		summarizeBy: none
+		sourceColumn: Flag rilevanza fatturato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Flag rilevanza preventivo'
+		dataType: string
+		lineageTag: 1c35383d-d071-4926-985d-dccb68de997f
+		summarizeBy: none
+		sourceColumn: Flag rilevanza preventivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Flag rilevanza budget'
+		dataType: string
+		lineageTag: 3bc1028f-d12f-4f83-8450-1f47e15e02b5
+		summarizeBy: none
+		sourceColumn: Flag rilevanza budget
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Flag rilevanza ordinato'
+		dataType: string
+		lineageTag: 2ec0193e-d47d-4dc5-a456-5651c9d385f1
+		summarizeBy: none
+		sourceColumn: Flag rilevanza ordinato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo movimento EN' = ```
+			SWITCH('Tipi movimento'[Tipo movimento - Ambito], 
+			"Fatturato", "Sales", 
+			"Preventivo", "Portfolio",
+			"Budget", "Target",
+			"Ordinato", "Ordered",
+			"Spedito", "Shipped"
+			)
+			
+			```
+		lineageTag: 0559b26d-de6d-47d3-99f0-afbf8416d216
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tipi movimento-d99eeb74-34d5-4c3f-a28c-efda67a95c95' = m
+		mode: import
+		queryGroup: Dimensioni
+		source =
+				let
+				    Origine = Sql.Database("WTCNB0021\SISTEMI1", "ESOLVER42", [Query="#(lf)#(lf)        SELECT#(lf)            CONVERT(VARCHAR(5),K_CodTipoMov) + '_0' AS [K_CodTipoMovimento]#(lf)            ,DesTipoMov AS [Tipo movimento - Descrizione]#(lf)            ,TipoMov AS [Tipo movimento]         #(lf)            ,MacroAmbito as [Tipo movimento - Macro ambito]#(lf)            ,Ambito AS [Tipo movimento - Ambito]#(lf)            ,'No' as [Tipo movimento - Fattura accompagnatoria (Sì/No)]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Spedito' THEN 'Sì' else 'No' END as [Flag rilevanza spedito]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Fatturato' THEN 'Sì' else 'No' END as [Flag rilevanza fatturato]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Preventivo' THEN 'Sì' else 'No' END as [Flag rilevanza preventivo]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Budget' THEN 'Sì' else 'No' END as [Flag rilevanza budget]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Ordinato' THEN 'Sì' else 'No' END as [Flag rilevanza ordinato]#(lf)#(lf)        FROM #(lf)            ESBI_TIPMOVSTAT WITH (NOLOCK)#(lf)        WHERE#(lf)            MacroAmbito = 'Vendite'#(lf)#(lf)        UNION#(lf)#(lf)        SELECT#(lf)            CONVERT(VARCHAR(5),K_CodTipoMov) + '_1' AS [K_CodTipoMovimento]#(lf)            ,DesTipoMov AS [Tipo movimento - Descrizione]#(lf)            ,TipoMov AS [Tipo movimento]         #(lf)            ,MacroAmbito as [Tipo movimento - Macro ambito]#(lf)            ,Ambito AS [Tipo movimento - Ambito]#(lf)            ,'Sì' as [Tipo movimento - Fattura accompagnatoria (Sì/No)]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Fatturato' or Ambito='Spedito' THEN 'Sì' else 'No' END as [Flag rilevanza spedito]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Fatturato' THEN 'Sì' else 'No' END as [Flag rilevanza fatturato]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Preventivo' THEN 'Sì' else 'No' END as [Flag rilevanza preventivo]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Budget' THEN 'Sì' else 'No' END as [Flag rilevanza budget]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Ordinato' THEN 'Sì' else 'No' END as [Flag rilevanza ordinato]#(lf)            #(lf)        FROM #(lf)            ESBI_TIPMOVSTAT WITH (NOLOCK)#(lf)#(lf)        WHERE#(lf)            MacroAmbito = 'Vendite'#(lf)#(lf)        #(lf)        ;#(lf)    ", CreateNavigationProperties=false])
+				in
+				    Origine
+
+	annotation PBI_Id = 7ef92802-c6ff-4056-b07a-69dc3056a133
+
+	annotation LinkedQueryName = Tipi movimento
+
+	annotation PBI_QueryRelationships = {"columnCount":3,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Tipi movimento/Origine.{K_CodTipoMovimento,0}","Section1/Tipi movimento/Origine.{Tipo movimento - Descrizione,1}","Section1/Tipi movimento/Origine.{Tipo movimento,2}"],"ColumnCount":3,"KeyColumnNames":[],"ColumnIdentities":["Section1/Tipi movimento/Origine.{K_CodTipoMovimento,0}","Section1/Tipi movimento/Origine.{Tipo movimento - Descrizione,1}","Section1/Tipi movimento/Origine.{Tipo movimento,2}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

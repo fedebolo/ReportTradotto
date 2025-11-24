@@ -1,0 +1,40 @@
+role Agenti
+	modelPermission: read
+
+	tablePermission Agenti =
+			IF (
+			    SELECTEDVALUE ( 'VisibilitaAgenti'[VisVendite] ) = "Non visibili",
+			    [K_CodAgente]
+			        IN CALCULATETABLE (
+			            VALUES ( 'Agenti - Agenti visibili (RLS)'[K_CodAgenteVisibile] ),
+			            'Agenti - Account (RLS)'[K_Account] = USERPRINCIPALNAME ()
+			        ),
+			    TRUE ()
+			)
+
+	tablePermission 'Agenti - Account (RLS)' = [K_Account] = USERPRINCIPALNAME ()
+
+	tablePermission 'Agenti (Clienti spedizione)' =
+			IF (
+			    SELECTEDVALUE ( 'VisibilitaAgenti'[VisClientiSped] ) = "Non visibili",
+			    [K_CodAgente]
+			        IN CALCULATETABLE (
+			            VALUES ( 'Agenti - Agenti visibili (RLS)'[K_CodAgenteVisibile] ),
+			            'Agenti - Account (RLS)'[K_Account] = USERPRINCIPALNAME ()
+			        ),
+			    TRUE ()
+			)
+
+	tablePermission 'Agenti (Clienti)' =
+			IF (
+			    SELECTEDVALUE ( 'VisibilitaAgenti'[VisClienti] ) = "Non visibili",
+			    [K_CodAgente]
+			        IN CALCULATETABLE (
+			            VALUES ( 'Agenti - Agenti visibili (RLS)'[K_CodAgenteVisibile] ),
+			            'Agenti - Account (RLS)'[K_Account] = USERPRINCIPALNAME ()
+			        ),
+			    TRUE ()
+			)
+
+	annotation PBI_Id = 62ddb33e4d2441aa91eb86a1656b14ad
+

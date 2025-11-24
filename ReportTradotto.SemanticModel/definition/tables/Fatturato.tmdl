@@ -1,0 +1,2078 @@
+table Fatturato
+	lineageTag: e7e93885-2b1f-4ce3-882c-44a4f46e6115
+
+	measure 'Costo medio - Fatturato' =
+			
+			CALCULATE (
+			    [Costo medio - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 8d84efd6-21b7-4f28-9900-b0c01c0ece3a
+
+		changedProperty = FormatString
+
+	measure 'Costo medio progressivo - Fatturato' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 004987fd-d947-4b03-95a6-70ad9e939964
+
+		changedProperty = FormatString
+
+	measure 'Costo movimento - Fatturato' =
+			
+			CALCULATE (
+			    [Costo movimento - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 1cae37f2-ef23-4d3e-baad-a904655134d8
+
+		changedProperty = FormatString
+
+	measure 'Costo standard - Fatturato' =
+			
+			CALCULATE (
+			    [Costo standard - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 7983d1f1-5435-4434-97d2-f244e9b2e8fc
+
+		changedProperty = FormatString
+
+	measure 'Costo unitario medio - Fatturato' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: 74fbc43a-e375-4019-8970-86367d6e9858
+
+		changedProperty = FormatString
+
+	measure 'Costo unitario medio progressivo - Fatturato' =
+			
+			CALCULATE (
+			    [costo unitario medio progressivo - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: c39e48d2-9743-4695-834c-484807a5a893
+
+		changedProperty = FormatString
+
+	measure 'Costo unitario movimento - Fatturato' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: f3aceecb-f171-4831-aeac-fa42cb728352
+
+		changedProperty = FormatString
+
+	measure 'Costo unitario standard - Fatturato' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: 5cb817e0-0ea7-481c-b201-c66ecaec462b
+
+		changedProperty = FormatString
+
+	measure 'Importo (no omaggi) - Fatturato' =
+			
+			CALCULATE (
+			    [Importo (no omaggi) - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 23bb0295-bbce-4593-8524-9ff835128892
+
+		changedProperty = FormatString
+
+	measure 'Importo - Fatturato' =
+			
+			CALCULATE (
+			    [Importo - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 63853d95-f059-406b-807c-204949a0fee1
+
+		changedProperty = FormatString
+
+	measure 'Importo lordo - Fatturato' =
+			
+			CALCULATE (
+			    [Importo lordo - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: dfa77338-dcbb-4503-b356-3345e815ebca
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Importo sconti di riga - Fatturato' =
+			
+			CALCULATE (
+			    [Importo sconti di riga - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: f805e1f4-5e0e-4f24-8a21-8cb1f6de83a9
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Importo sconti incondizionati - Fatturato' =
+			
+			CALCULATE (
+			    [Importo sconti incondizionati - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 0e416785-878a-42bd-99e5-c379ffd8d08b
+
+		changedProperty = FormatString
+
+	measure 'Importo sconti pagamento - Fatturato' =
+			
+			CALCULATE (
+			    [Importo sconti pagamento - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 80c16f5e-1072-4b07-aa14-ef3952efb25e
+
+		changedProperty = FormatString
+
+	measure 'Importo spese piede - Fatturato' =
+			
+			CALCULATE (
+			    [Importo spese piede - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: eae951e9-6c2a-427e-a20a-3d1fa44db3e8
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Importo unitario - Fatturato' =
+			
+			CALCULATE (
+			    [Importo unitario - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: 88faa70b-7102-4fde-b716-6e05260cc221
+
+		changedProperty = FormatString
+
+	measure 'Margine costo medio - Fatturato' =
+			
+			CALCULATE (
+			    [Margine costo medio - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 908062af-0f75-4275-9d70-27bfee6b0649
+
+		changedProperty = FormatString
+
+	measure 'Margine costo medio progressivo - Fatturato' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: d9586417-df3d-488a-ba17-6be76feaf35d
+
+		changedProperty = FormatString
+
+	measure 'Margine costo movimento - Fatturato' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 6917437e-211f-477d-86ea-2b5e1806b0e8
+
+		changedProperty = FormatString
+
+	measure 'Margine costo standard - Fatturato' =
+			
+			CALCULATE (
+			    [Margine costo standard - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 9db6012f-e759-4db8-b32c-fbb29f9f5f6c
+
+		changedProperty = FormatString
+
+	measure 'Provvigione - Fatturato' =
+			
+			CALCULATE (
+			    [Provvigione - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: b2fdda3b-785b-48e9-b59e-61d170dac08a
+
+		changedProperty = FormatString
+
+	measure 'Provvigione unitaria - Fatturato' =
+			
+			CALCULATE (
+			    [Provvigione unitaria - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: 11501d2f-03e0-400f-a666-1f08f15f4317
+
+		changedProperty = FormatString
+
+	measure 'Quantità - Fatturato' =
+			
+			CALCULATE (
+			    [Quantità - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 4859d254-6434-4e73-8785-f79476f5ef25
+
+		changedProperty = FormatString
+
+	measure 'Sconti di riga % - Fatturato' =
+			
+			CALCULATE (
+			    [Sconti di riga % - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0.00%;-#,0.00%;#,0.00%
+		displayFolder: Corrente
+		lineageTag: 26184dda-ec7e-42a6-bf6e-5ff8d5f42e8c
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Importo (no omaggi) - Fatturato - YTD mobile' =
+			VAR MaxMeseMob =
+			    MAX ( Calendario[Mese mobile] )
+			VAR AnnoMob =
+			    SELECTEDVALUE ( Calendario[Anno mobile] )
+			VAR Risultato =
+			    CALCULATE (
+			        [Importo (no omaggi) - Fatturato],
+			        REMOVEFILTERS ( Calendario ),
+			        Calendario[Mese mobile] <= MaxMeseMob,
+			        IF ( NOT ISBLANK ( AnnoMob ), Calendario[Anno mobile] = AnnoMob, FALSE )
+			    )
+			RETURN
+			    Risultato
+		formatString: #,0
+		displayFolder: Periodi mobili (VARIE)
+		lineageTag: 9cfa5d45-dbfc-4061-9ffd-be60f42587b5
+
+		changedProperty = FormatString
+
+	measure 'Importo (no omaggi) - Fatturato - QTD mobile' =
+			VAR MaxMeseMob =
+			    MAX ( Calendario[Mese mobile] )
+			VAR TrimMob =
+			    SELECTEDVALUE ( Calendario[Trimestre mobile] )
+			VAR AnnoMob =
+			    SELECTEDVALUE ( Calendario[Anno mobile] )
+			VAR Risultato =
+			    CALCULATE (
+			        [Importo (no omaggi) - Fatturato],
+			        REMOVEFILTERS ( Calendario ),
+			        Calendario[Mese mobile] <= MaxMeseMob,
+			        IF ( NOT ISBLANK ( TrimMob ), Calendario[Trimestre mobile] = TrimMob, FALSE ),
+			        IF ( NOT ISBLANK ( AnnoMob ), Calendario[Anno mobile] = AnnoMob, FALSE )
+			    )
+			RETURN
+			    Risultato
+		formatString: #,0
+		displayFolder: Periodi mobili (VARIE)
+		lineageTag: c1d85420-b050-457d-ad9d-ec8c267c08b3
+
+		changedProperty = FormatString
+
+	measure 'Importo (no omaggi) - Fatturato - PY mobile' =
+			VAR AnnoCorrMob =
+			    SELECTEDVALUE ( Calendario[Anno mobile] )
+			VAR AnnoPrecMob = AnnoCorrMob - 1
+			VAR Risultato =
+			    CALCULATE (
+			        [Importo (no omaggi) - Fatturato],
+			        REMOVEFILTERS ( Calendario ),
+			        IF ( NOT ISBLANK ( AnnoCorrMob ), Calendario[Anno mobile] = AnnoPrecMob, FALSE ),
+			        VALUES ( Calendario[Mese mobile] )
+			    )
+			RETURN
+			    Risultato
+		formatString: #,0
+		displayFolder: Periodi mobili (VARIE)
+		lineageTag: 32baf92e-e34c-41d8-9ab6-707988f5ca77
+
+		changedProperty = FormatString
+
+	measure 'Importo (no omaggi) - Fatturato - PQ mobile' =
+			VAR TrimMob =
+			    SELECTEDVALUE ( Calendario[Trimestre mobile] )
+			VAR AnnoMob =
+			    SELECTEDVALUE ( Calendario[Anno mobile] )
+			VAR TestTrimMob = TrimMob = 1
+			VAR AnnoPrecMob =
+			    IF ( TestTrimMob, AnnoMob - 1, AnnoMob )
+			VAR TrimPrecMob =
+			    IF ( TestTrimMob, TrimMob + 4 - 1, TrimMob - 1 )
+			VAR Risultato =
+			    CALCULATE (
+			        [Importo (no omaggi) - Fatturato],
+			        REMOVEFILTERS ( Calendario ),
+			        IF ( NOT ISBLANK ( AnnoMob ), Calendario[Anno mobile] = AnnoPrecMob, TRUE ),
+			        IF (
+			            NOT ISBLANK ( TrimMob ),
+			            Calendario[Trimestre mobile] = TrimPrecMob,
+			            FALSE
+			        )
+			    )
+			RETURN
+			    Risultato
+		formatString: #,0
+		displayFolder: Periodi mobili (VARIE)
+		lineageTag: 2ac1fc3b-7eaf-437a-aa7e-b8ab85ed946d
+
+		changedProperty = FormatString
+
+	measure 'Importo (no omaggi) - Fatturato - PYTD mobile' =
+			VAR MaxMeseMob =
+			    MAX ( Calendario[Mese mobile] )
+			VAR AnnoMob =
+			    SELECTEDVALUE ( Calendario[Anno mobile] )
+			VAR AnnoPrecMob = AnnoMob - 1
+			VAR Risultato =
+			    CALCULATE (
+			        [Importo (no omaggi) - Fatturato],
+			        REMOVEFILTERS ( Calendario ),
+			        Calendario[Mese mobile] <= MaxMeseMob,
+			        IF ( NOT ISBLANK ( AnnoMob ), Calendario[Anno mobile] = AnnoPrecMob, FALSE )
+			    )
+			RETURN
+			    Risultato
+		formatString: #,0
+		displayFolder: Periodi mobili (VARIE)
+		lineageTag: 91f80651-d5e3-42b1-b9b7-f361be165d1f
+
+		changedProperty = FormatString
+
+	measure 'Importo (no omaggi) - Fatturato - PM mobile' =
+			VAR MeseMob =
+			    SELECTEDVALUE ( Calendario[Mese mobile] )
+			VAR AnnoMob =
+			    SELECTEDVALUE ( Calendario[Anno mobile] )
+			VAR TestMeseMob = MeseMob = 1
+			VAR AnnoPrecMob =
+			    IF ( TestMeseMob, AnnoMob - 1, AnnoMob )
+			VAR MesePrecMob =
+			    IF ( TestMeseMob, MeseMob + 12 - 1, MeseMob - 1 )
+			VAR Risultato =
+			    CALCULATE (
+			        [Importo (no omaggi) - Fatturato],
+			        REMOVEFILTERS ( Calendario ),
+			        IF ( NOT ISBLANK ( AnnoMob ), Calendario[Anno mobile] = AnnoPrecMob, TRUE ),
+			        IF ( NOT ISBLANK ( MeseMob ), Calendario[Mese mobile] = MesePrecMob, FALSE )
+			    )
+			RETURN
+			    Risultato
+		formatString: #,0
+		displayFolder: Periodi mobili (VARIE)
+		lineageTag: dc3d2dec-ed84-47a9-8169-4e24405a31f1
+
+		changedProperty = FormatString
+
+	measure 'Importo (no omaggi) - Fatturato - PQTD mobile' =
+			VAR MaxMeseMob =
+			    MAX ( Calendario[Mese mobile] )
+			VAR TrimMob =
+			    SELECTEDVALUE ( Calendario[Trimestre mobile] )
+			VAR AnnoMob =
+			    SELECTEDVALUE ( Calendario[Anno mobile] )
+			VAR TestTrimMob = TrimMob = 1
+			VAR AnnoPrecMob =
+			    IF ( TestTrimMob, AnnoMob - 1, AnnoMob )
+			VAR TrimPrecMob =
+			    IF ( TestTrimMob, TrimMob + 4 - 1, TrimMob - 1 )
+			VAR MaxMesePrecMob =
+			    IF ( TestTrimMob, MaxMeseMob + 12 - 3, MaxMeseMob - 3 )
+			VAR Risultato =
+			    CALCULATE (
+			        [Importo (no omaggi) - Fatturato],
+			        REMOVEFILTERS ( Calendario ),
+			        Calendario[Mese mobile] <= MaxMesePrecMob,
+			        IF (
+			            NOT ISBLANK ( TrimMob ),
+			            Calendario[Trimestre mobile] = TrimPrecMob,
+			            FALSE
+			        ),
+			        IF ( NOT ISBLANK ( AnnoMob ), Calendario[Anno mobile] = AnnoPrecMob, FALSE )
+			    )
+			RETURN
+			    Risultato
+		formatString: #,0
+		displayFolder: Periodi mobili (VARIE)
+		lineageTag: e6b5e8af-2a59-4085-a63a-223e404f7886
+
+		changedProperty = FormatString
+
+	measure 'Importo (no omaggi) - Fatturato - YOY mobile' = [Importo (no omaggi) - Fatturato] - [Importo (no omaggi) - Fatturato - PY mobile]
+		formatString: #,0
+		displayFolder: Periodi mobili (VARIE)
+		lineageTag: 253f9b5b-5f2d-40b8-a5c8-b11f1c33e5ad
+
+		changedProperty = FormatString
+
+	measure 'Importo (no omaggi) - Fatturato - YOY% mobile' = DIVIDE ( [Importo (no omaggi) - Fatturato - YOY mobile], [Importo (no omaggi) - Fatturato - PY mobile] )
+		formatString: #,0.00%;-#,0.00%;#,0.00%
+		displayFolder: Periodi mobili (VARIE)
+		lineageTag: 237bcb40-00cf-4d21-b9c5-35a11a9fcfee
+
+		changedProperty = FormatString
+
+	measure 'Importo (no omaggi) - Fatturato - MOM% mobile' = DIVIDE ( [Importo (no omaggi) - Fatturato - MOM mobile], [Importo (no omaggi) - Fatturato - PM mobile] )
+		formatString: #,0.00%;-#,0.00%;#,0.00%
+		displayFolder: Periodi mobili (VARIE)
+		lineageTag: 5cb27700-29c8-4457-9f90-a8504eafc94a
+
+		changedProperty = FormatString
+
+	measure 'Importo (no omaggi) - Fatturato - MOM mobile' = [Importo (no omaggi) - Fatturato] - [Importo (no omaggi) - Fatturato - PM mobile]
+		formatString: #,0
+		displayFolder: Periodi mobili (VARIE)
+		lineageTag: 89da073b-8490-40f9-b6db-ffd790dbe81f
+
+		changedProperty = FormatString
+
+	measure 'Quantità - Fatturato - PM' = CALCULATE ( [Quantità - Fatturato], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 7924191a-303d-423e-8520-37791a199a90
+
+	measure 'Importo (no omaggi) - Fatturato - PM' = CALCULATE ( [Importo (no omaggi) - Fatturato], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 52d59d20-60e0-4437-b626-a8a9d6b373ae
+
+	measure 'Costo medio - Fatturato - PM' = CALCULATE ( [Costo medio - Fatturato], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: dcd6e676-d111-4744-9145-f27dd6c692f2
+
+	measure 'Costo medio progressivo - Fatturato - PM' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Fatturato],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 7da8a5c0-2eab-4ac0-87fa-367642db0a62
+
+	measure 'Costo movimento - Fatturato - PM' = CALCULATE ( [Costo movimento - Fatturato], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: e3947303-a544-4478-9fe7-e79912d82e47
+
+	measure 'Costo standard - Fatturato - PM' = CALCULATE ( [Costo standard - Fatturato], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 0669f272-4fbe-4588-ad3d-0ed73bf61aa0
+
+	measure 'Importo unitario - Fatturato - PM' = CALCULATE ( [Importo unitario - Fatturato], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: c76cd74a-5b6c-4b49-97fc-4bbe97649e9a
+
+	measure 'Costo unitario standard - Fatturato - PM' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Fatturato],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 7d94251a-1031-45d4-af18-8d82f0cb12f0
+
+	measure 'Costo unitario medio - Fatturato - PM' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Fatturato],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 22ab4052-300f-432d-8945-08c492d975b6
+
+	measure 'Costo unitario medio progressivo - Fatturato - PM' =
+			
+			CALCULATE (
+			    [Costo unitario medio progressivo - Fatturato],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: ea3172fd-e4cd-48af-a84a-5487af58de64
+
+	measure 'Costo unitario movimento - Fatturato - PM' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Fatturato],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 42881f40-3d29-49c6-bf67-89ba45224a54
+
+	measure 'Margine costo movimento - Fatturato - PM' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Fatturato],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 87aa2e9a-9983-4fdb-b7bf-6014cfc6f320
+
+	measure 'Margine costo medio progressivo - Fatturato - PM' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Fatturato],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 34003456-e9ba-4746-a416-794cee6e1213
+
+	measure 'Margine costo medio - Fatturato - PM' =
+			
+			CALCULATE (
+			    [Margine costo medio - Fatturato],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 0460cd82-34d3-439f-9c20-c6a7757814df
+
+	measure 'Margine costo standard - Fatturato - PM' =
+			
+			CALCULATE (
+			    [Margine costo standard - Fatturato],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: c125631f-f7b8-49cc-b05d-0ea5735b190d
+
+	measure 'Provvigione - Fatturato - PM' = CALCULATE ( [Provvigione - Fatturato], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: f2f860dd-545d-4c6a-ac5e-94bf067fec67
+
+	measure 'Provvigione unitaria - Fatturato - PM' =
+			
+			CALCULATE (
+			    [Provvigione unitaria - Fatturato],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: af8ef319-aed9-471f-8409-bd5c24a12422
+
+	measure 'Quantità - Fatturato - PY' = CALCULATE ( [Quantità - Fatturato], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 54ef1dbb-11a7-454a-85f8-6fdc52f2a354
+
+	measure 'Importo (no omaggi) - Fatturato - PY' = CALCULATE ( [Importo (no omaggi) - Fatturato], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 5a254c66-cecc-41b4-9bd0-93054a1e792b
+
+	measure 'Costo medio - Fatturato - PY' = CALCULATE ( [Costo medio - Fatturato], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 26591579-853e-4e86-940b-327c43a5fd0b
+
+	measure 'Costo medio progressivo - Fatturato - PY' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 8e5506c0-5342-4533-95fc-fb7357a7524b
+
+	measure 'Costo movimento - Fatturato - PY' =
+			
+			CALCULATE (
+			    [Costo movimento - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 06c62756-e7cd-4b7b-a1af-8d77434508be
+
+	measure 'Costo standard - Fatturato - PY' =
+			
+			CALCULATE (
+			    [Costo standard - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: c5309d94-c84b-4080-ba4a-2365b5aba8f8
+
+	measure 'Importo unitario - Fatturato - PY' =
+			
+			CALCULATE (
+			    [Importo unitario - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: 84a99f4e-df7b-41fe-acfe-f708d736bff7
+
+	measure 'Costo unitario standard - Fatturato - PY' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: 2dea90b7-0d52-4276-828d-f761aa9390d6
+
+	measure 'Costo unitario medio - Fatturato - PY' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: 3e446f6d-49f7-4f6b-bcbc-ab684d0bfc3c
+
+	measure 'Costo unitario medio progressivo - Fatturato - PY' =
+			
+			CALCULATE (
+			    [Costo unitario medio progressivo - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: 90c35789-980e-4b52-86a1-9e0ea0195ba7
+
+	measure 'Costo unitario movimento - Fatturato - PY' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: e8f866a0-6efa-4c30-b0e7-128455ab2a53
+
+	measure 'Margine costo movimento - Fatturato - PY' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 2a5af249-13d3-45e9-ada7-f20a18cf0c78
+
+	measure 'Margine costo medio progressivo - Fatturato - PY' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 44d144d5-6c93-4884-94e7-f743e61f1d4f
+
+	measure 'Margine costo medio - Fatturato - PY' =
+			
+			CALCULATE (
+			    [Margine costo medio - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 0447adc1-63f1-43b9-be95-9fd75f452482
+
+	measure 'Margine costo standard - Fatturato - PY' =
+			
+			CALCULATE (
+			    [Margine costo standard - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 30b739ed-430b-4145-bd3a-87c1e614e141
+
+	measure 'Provvigione - Fatturato - PY' = CALCULATE ( [Provvigione - Fatturato], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 52e1e64c-540e-4f53-84f3-accfada1c9dc
+
+	measure 'Provvigione unitaria - Fatturato - PY' =
+			
+			CALCULATE (
+			    [Provvigione unitaria - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: 9f668046-8517-43dc-bab9-d664f38c8b62
+
+	measure 'Quantità - Fatturato - YTD' = TOTALYTD ( [Quantità - Fatturato], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 3bc809f6-82f5-466b-b6e9-84b7e07d6a15
+
+	measure 'Importo (no omaggi) - Fatturato - YTD' = TOTALYTD ( [Importo (no omaggi) - Fatturato], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 60ac9ae1-3994-4368-bdb1-b7961931afa7
+
+	measure 'Costo medio - Fatturato - YTD' = TOTALYTD ( [Costo medio - Fatturato], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 77b147d4-bbb9-4712-aa2e-9c5c6baedc7e
+
+	measure 'Costo medio progressivo - Fatturato - YTD' = TOTALYTD ( [Costo medio progressivo - Fatturato], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 9c19ad8f-254d-4d38-82fa-7904ebda8fbb
+
+	measure 'Costo movimento - Fatturato - YTD' = TOTALYTD ( [Costo movimento - Fatturato], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: c8b7bbe1-389b-45fb-bf6a-ce890d11a83d
+
+	measure 'Costo standard - Fatturato - YTD' = TOTALYTD ( [Costo standard - Fatturato], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: b077d5f6-f916-4f7b-94be-3dcd6559734c
+
+	measure 'Importo unitario - Fatturato - YTD' = TOTALYTD ( [Importo unitario - Fatturato], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 244a9765-506a-48fd-adb4-f25c9fac87fe
+
+	measure 'Costo unitario standard - Fatturato - YTD' = TOTALYTD ( [Costo unitario standard - Fatturato], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 97ebf39e-cfba-4b64-93fa-3c52a6431cad
+
+	measure 'Costo unitario medio - Fatturato - YTD' = TOTALYTD ( [Costo unitario medio - Fatturato], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 2506a7fb-258f-4e44-a537-1b23ae525a63
+
+	measure 'Costo unitario medio progressivo - Fatturato - YTD' = TOTALYTD ( [Costo unitario medio progressivo - Fatturato], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: b8f4e15d-fcff-49ed-99bc-aaff0b391ec9
+
+	measure 'Costo unitario movimento - Fatturato - YTD' = TOTALYTD ( [Costo unitario movimento - Fatturato], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 4c3c48df-55b8-468d-accd-247e9088fdf8
+
+	measure 'Margine costo movimento - Fatturato - YTD' = TOTALYTD ( [Margine costo movimento - Fatturato], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 6c20acb6-b372-454b-8c91-938f3260bb95
+
+	measure 'Margine costo medio progressivo - Fatturato - YTD' = TOTALYTD ( [Margine costo medio progressivo - Fatturato], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 3bce9440-a2da-49ec-a3b6-c92e3b5d8a20
+
+	measure 'Margine costo medio - Fatturato - YTD' = TOTALYTD ( [Margine costo medio - Fatturato], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: a940a528-70e1-4a8f-bc2d-5aa1be68345f
+
+	measure 'Margine costo standard - Fatturato - YTD' = TOTALYTD ( [Margine costo standard - Fatturato], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: c3ffac94-e0aa-4189-b1e4-2ea480814d82
+
+	measure 'Provvigione - Fatturato - YTD' = TOTALYTD ( [Provvigione - Fatturato], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 8d3ea64c-769e-4626-8a36-d123dc9d7638
+
+	measure 'Provvigione unitaria - Fatturato - YTD' = TOTALYTD ( [Provvigione unitaria - Fatturato], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: c4f2fc8c-dc93-4b4a-a34b-fa8e191638b3
+
+	measure 'Quantità - Fatturato - PYTD' = TOTALYTD ( [Quantità - Fatturato], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: b56c76eb-982e-480f-9b38-91e97796350b
+
+	measure 'Importo (no omaggi) - Fatturato - PYTD' = TOTALYTD ( [Importo (no omaggi) - Fatturato], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: d04b70ef-2a09-4e40-a5d7-685bf9bf56db
+
+	measure 'Costo medio - Fatturato - PYTD' = TOTALYTD ( [Costo medio - Fatturato], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: f63c03c1-e374-48bb-8f6f-7359b04e26eb
+
+	measure 'Costo medio progressivo - Fatturato - PYTD' =
+			TOTALYTD (
+			    [Costo medio progressivo - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: c7afb080-d4da-42d7-bb55-ec0866b46ce5
+
+	measure 'Costo movimento - Fatturato - PYTD' =
+			TOTALYTD (
+			    [Costo movimento - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: c691da9c-81eb-487b-9ff5-91a8d555417c
+
+	measure 'Costo standard - Fatturato - PYTD' =
+			TOTALYTD (
+			    [Costo standard - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 86a589fd-e4c7-4b8a-8e4e-de449073a11a
+
+	measure 'Importo unitario - Fatturato - PYTD' =
+			TOTALYTD (
+			    [Importo unitario - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 39628ea7-a0d2-4f65-8cb1-22a97cf69d2b
+
+	measure 'Costo unitario standard - Fatturato - PYTD' =
+			TOTALYTD (
+			    [Costo unitario standard - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: b90b974b-f88f-4510-a04d-d307276ad688
+
+	measure 'Costo unitario medio - Fatturato - PYTD' =
+			TOTALYTD (
+			    [Costo unitario medio - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: c2d66644-8c77-45fe-aced-3a22f242b71d
+
+	measure 'Costo unitario medio progressivo - Fatturato - PYTD' =
+			TOTALYTD (
+			    [Costo unitario medio progressivo - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: ec36996c-93b0-4436-bad7-926d8f1f628c
+
+	measure 'Costo unitario movimento - Fatturato - PYTD' =
+			TOTALYTD (
+			    [Costo unitario movimento - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 11c08678-a968-4725-9298-aa89951f624a
+
+	measure 'Margine costo movimento - Fatturato - PYTD' =
+			TOTALYTD (
+			    [Margine costo movimento - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 2c9d9e10-9ae5-469e-b71f-1553cb050142
+
+	measure 'Margine costo medio progressivo - Fatturato - PYTD' =
+			TOTALYTD (
+			    [Margine costo medio progressivo - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: f3955de1-08d7-4c84-9672-7fe90d1f89fc
+
+	measure 'Margine costo medio - Fatturato - PYTD' =
+			TOTALYTD (
+			    [Margine costo medio - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: bbe4b84a-bf1f-4a5d-a5f2-8ef17f089436
+
+	measure 'Margine costo standard - Fatturato - PYTD' =
+			TOTALYTD (
+			    [Margine costo standard - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 55e8b3ce-8a5d-4117-8e53-4b2d1ff15984
+
+	measure 'Provvigione - Fatturato - PYTD' = TOTALYTD ( [Provvigione - Fatturato], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: c8b6b0cd-59e2-4292-b23b-e34d4668fe70
+
+	measure 'Provvigione unitaria - Fatturato - PYTD' =
+			TOTALYTD (
+			    [Provvigione unitaria - Fatturato],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: d08d0869-cd66-44c8-8d17-a8ec5974f7e2
+
+	measure 'Quantità - Fatturato - YOY' = [Quantità - Fatturato] - [Quantità - Fatturato - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 47ef1860-203e-4ff7-9492-82fdd9b45747
+
+	measure 'Importo (no omaggi) - Fatturato - YOY' = [Importo (no omaggi) - Fatturato] - [Importo (no omaggi) - Fatturato - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 20f16404-bc2e-474a-b77e-6a76a7fe6626
+
+	measure 'Costo medio - Fatturato - YOY' = [Costo medio - Fatturato] - [Costo medio - Fatturato - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 0efc634c-ae45-459d-82a0-45eb776d95d4
+
+	measure 'Costo medio progressivo - Fatturato - YOY' = [Costo medio progressivo - Fatturato] - [Costo medio progressivo - Fatturato - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 48c48529-0c45-4800-b60a-0f8c336c2bcd
+
+	measure 'Costo movimento - Fatturato - YOY' = [Costo movimento - Fatturato] - [Costo movimento - Fatturato - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: cc48d3a0-0926-48d0-9632-c36e63c0efbf
+
+	measure 'Costo standard - Fatturato - YOY' = [Costo standard - Fatturato] - [Costo standard - Fatturato - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 8570ac14-9362-4f90-b022-0a5720999d6b
+
+	measure 'Importo unitario - Fatturato - YOY' = [Importo unitario - Fatturato] - [Importo unitario - Fatturato - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: e1c91826-d1c3-4d63-97a6-48e861d50472
+
+	measure 'Costo unitario standard - Fatturato - YOY' = [Costo unitario standard - Fatturato] - [Costo unitario standard - Fatturato - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 3142950c-24ac-4292-8edd-8d7f05de0085
+
+	measure 'Costo unitario medio - Fatturato - YOY' = [Costo unitario medio - Fatturato] - [Costo unitario medio - Fatturato - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 4fa8d6ed-ef0f-4bef-b3cd-f3a3ecfb23a9
+
+	measure 'Costo unitario medio progressivo - Fatturato - YOY' = [Costo unitario medio progressivo - Fatturato] - [Costo unitario medio progressivo - Fatturato - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 222b00b6-294d-4622-aea3-22b9bd851ab0
+
+	measure 'Costo unitario movimento - Fatturato - YOY' = [Costo unitario movimento - Fatturato] - [Costo unitario movimento - Fatturato - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 97f4d04e-d3ff-48ce-88ca-cab50f669bff
+
+	measure 'Margine costo movimento - Fatturato - YOY' = [Margine costo movimento - Fatturato] - [Margine costo movimento - Fatturato - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 7aeba2de-ee13-4f4b-b91b-b656772594ad
+
+	measure 'Margine costo medio progressivo - Fatturato - YOY' = [Margine costo medio progressivo - Fatturato] - [Margine costo medio progressivo - Fatturato - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: bb87e4cc-391c-4169-baa6-452b358189a1
+
+	measure 'Margine costo medio - Fatturato - YOY' = [Margine costo medio - Fatturato] - [Margine costo medio - Fatturato - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 76e382a1-7add-4d5f-8dc5-e19317105d69
+
+	measure 'Margine costo standard - Fatturato - YOY' = [Margine costo standard - Fatturato] - [Margine costo standard - Fatturato - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: d29b59d6-dfc0-43b9-9013-86aab8e8b6df
+
+	measure 'Provvigione - Fatturato - YOY' = [Provvigione - Fatturato] - [Provvigione - Fatturato - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 03835ae6-4879-4ac2-801b-6fa4606d2ea5
+
+	measure 'Provvigione unitaria - Fatturato - YOY' = [Provvigione unitaria - Fatturato] - [Provvigione unitaria - Fatturato - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: e15e05e8-487d-44d1-b535-e9fd432f97bf
+
+	measure 'Quantità - Fatturato - YOY%' = DIVIDE ( [Quantità - Fatturato - YOY], [Quantità - Fatturato - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 5e24343c-ebaa-48f7-92d3-68148865d526
+
+	measure 'Importo (no omaggi) - Fatturato - YOY%' = DIVIDE ( [Importo (no omaggi) - Fatturato - YOY], [Importo (no omaggi) - Fatturato - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 0d601bc1-5afc-4529-ac62-6b10e2f83466
+
+	measure 'Costo medio - Fatturato - YOY%' = DIVIDE ( [Costo medio - Fatturato - YOY], [Costo medio - Fatturato - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: eb88aa24-48fb-4a5b-ab51-b101e69b3893
+
+	measure 'Costo medio progressivo - Fatturato - YOY%' =
+			DIVIDE (
+			    [Costo medio progressivo - Fatturato - YOY],
+			    [Costo medio progressivo - Fatturato - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 747e7a58-52a5-4d1e-8c32-4b6f10547833
+
+	measure 'Costo movimento - Fatturato - YOY%' =
+			DIVIDE (
+			    [Costo movimento - Fatturato - YOY],
+			    [Costo movimento - Fatturato - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: b290b529-66fa-47d7-b3d0-770a2d643d2a
+
+	measure 'Costo standard - Fatturato - YOY%' = DIVIDE ( [Costo standard - Fatturato - YOY], [Costo standard - Fatturato - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: d22a45c0-3020-4e4d-a144-60b7a05ac25f
+
+	measure 'Importo unitario - Fatturato - YOY%' =
+			DIVIDE (
+			    [Importo unitario - Fatturato - YOY],
+			    [Importo unitario - Fatturato - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 680548dd-4572-45ce-ab11-eaf3236da4df
+
+	measure 'Costo unitario standard - Fatturato - YOY%' =
+			DIVIDE (
+			    [Costo unitario standard - Fatturato - YOY],
+			    [Costo unitario standard - Fatturato - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: d7898c51-dd4e-4edb-9130-c5a7f1447fef
+
+	measure 'Costo unitario medio - Fatturato - YOY%' =
+			DIVIDE (
+			    [Costo unitario medio - Fatturato - YOY],
+			    [Costo unitario medio - Fatturato - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 04ef25c7-e81d-4d5e-af87-d082181f28ca
+
+	measure 'Costo unitario medio progressivo - Fatturato - YOY%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Fatturato - YOY],
+			    [Costo unitario medio progressivo - Fatturato - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: a70b9e9e-cf90-405e-af5b-88bf8d352808
+
+	measure 'Costo unitario movimento - Fatturato - YOY%' =
+			DIVIDE (
+			    [Costo unitario movimento - Fatturato - YOY],
+			    [Costo unitario movimento - Fatturato - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 0fc4fc07-2c18-4572-a72f-7ea1ba8b9410
+
+	measure 'Margine costo movimento - Fatturato - YOY%' =
+			DIVIDE (
+			    [Margine costo movimento - Fatturato - YOY],
+			    [Margine costo movimento - Fatturato - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: bd523ee2-fef8-4c14-9980-8dadc58e6162
+
+	measure 'Margine costo medio progressivo - Fatturato - YOY%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Fatturato - YOY],
+			    [Margine costo medio progressivo - Fatturato - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: a852cea8-0fe7-45ac-bf52-8b3d873a0b04
+
+	measure 'Margine costo medio - Fatturato - YOY%' =
+			DIVIDE (
+			    [Margine costo medio - Fatturato - YOY],
+			    [Margine costo medio - Fatturato - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: c4cf022a-3bdd-48c0-9e27-0cc8e52b24ba
+
+	measure 'Margine costo standard - Fatturato - YOY%' =
+			DIVIDE (
+			    [Margine costo standard - Fatturato - YOY],
+			    [Margine costo standard - Fatturato - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 60275804-35f0-404f-bb48-deaa5ef54c9e
+
+	measure 'Provvigione - Fatturato - YOY%' = DIVIDE ( [Provvigione - Fatturato - YOY], [Provvigione - Fatturato - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: a68f157a-f28b-4739-b61e-7e584e5228b5
+
+	measure 'Provvigione unitaria - Fatturato - YOY%' =
+			DIVIDE (
+			    [Provvigione unitaria - Fatturato - YOY],
+			    [Provvigione unitaria - Fatturato - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 305207a7-0971-4195-8458-89fa40c4ebeb
+
+	measure 'Quantità - Fatturato - YOYTD' = [Quantità - Fatturato - YTD] - [Quantità - Fatturato - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 090915e7-cb92-41cb-ba41-c44793cdb685
+
+	measure 'Importo (no omaggi) - Fatturato - YOYTD' = [Importo (no omaggi) - Fatturato - YTD] - [Importo (no omaggi) - Fatturato - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: b02df73b-e72b-432f-bdf5-e400e6f3f09d
+
+	measure 'Costo medio - Fatturato - YOYTD' = [Costo medio - Fatturato - YTD] - [Costo medio - Fatturato - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: c02a5f21-35eb-485f-823c-2d942c3b49d5
+
+	measure 'Costo medio progressivo - Fatturato - YOYTD' = [Costo medio progressivo - Fatturato - YTD] - [Costo medio progressivo - Fatturato - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 1458a92f-3083-41a6-9912-58a4b5471396
+
+	measure 'Costo movimento - Fatturato - YOYTD' = [Costo movimento - Fatturato - YTD] - [Costo movimento - Fatturato - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 9f892981-de11-4e93-af7f-0957805119b9
+
+	measure 'Costo standard - Fatturato - YOYTD' = [Costo standard - Fatturato - YTD] - [Costo standard - Fatturato - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 4ccfd85e-b147-49f9-81a9-7bd1f1f9c3fd
+
+	measure 'Importo unitario - Fatturato - YOYTD' = [Importo unitario - Fatturato - YTD] - [Importo unitario - Fatturato - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 174e2a25-22eb-4fd5-9ed8-dc88da62165b
+
+	measure 'Costo unitario standard - Fatturato - YOYTD' = [Costo unitario standard - Fatturato - YTD] - [Costo unitario standard - Fatturato - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 481e5a9e-d1b0-4b10-a433-2f73a6230953
+
+	measure 'Costo unitario medio - Fatturato - YOYTD' = [Costo unitario medio - Fatturato - YTD] - [Costo unitario medio - Fatturato - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: e3332c42-4fc9-4f46-b0c0-b116efafc965
+
+	measure 'Costo unitario medio progressivo - Fatturato - YOYTD' = [Costo unitario medio progressivo - Fatturato - YTD] - [Costo unitario medio progressivo - Fatturato - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 60965580-6628-485b-98cf-90784aa7ae91
+
+	measure 'Costo unitario movimento - Fatturato - YOYTD' = [Costo unitario movimento - Fatturato - YTD] - [Costo unitario movimento - Fatturato - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 0c747c90-8836-45ef-8956-7acf39e4c6ca
+
+	measure 'Margine costo movimento - Fatturato - YOYTD' = [Margine costo movimento - Fatturato - YTD] - [Margine costo movimento - Fatturato - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 279c1abe-8e63-4db7-a28e-48ce0516a9df
+
+	measure 'Margine costo medio progressivo - Fatturato - YOYTD' = [Margine costo medio progressivo - Fatturato - YTD] - [Margine costo medio progressivo - Fatturato - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 05181502-4fb3-4be4-bd60-e0f7c326d507
+
+	measure 'Margine costo medio - Fatturato - YOYTD' = [Margine costo medio - Fatturato - YTD] - [Margine costo medio - Fatturato - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: ab31c4d0-fb7b-40e5-ad19-57dc0b5c14a8
+
+	measure 'Margine costo standard - Fatturato - YOYTD' = [Margine costo standard - Fatturato - YTD] - [Margine costo standard - Fatturato - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 97cb9f85-0702-4674-b7d0-238f11b13ee5
+
+	measure 'Provvigione - Fatturato - YOYTD' = [Provvigione - Fatturato - YTD] - [Provvigione - Fatturato - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 6c64ffee-a46a-4972-8026-228239cee568
+
+	measure 'Provvigione unitaria - Fatturato - YOYTD' = [Provvigione unitaria - Fatturato - YTD] - [Provvigione unitaria - Fatturato - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 3eb855c0-e65a-4cb7-8a68-460d5db77f72
+
+	measure 'Quantità - Fatturato - YOYTD%' = DIVIDE ( [Quantità - Fatturato - YOYTD], [Quantità - Fatturato - PYTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: e1f0acce-406d-4918-af57-51796bd0a270
+
+	measure 'Importo (no omaggi) - Fatturato - YOYTD%' = DIVIDE ( [Importo (no omaggi) - Fatturato - YOYTD], [Importo (no omaggi) - Fatturato - PYTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 8afe862e-4b58-45a5-bcdf-dc6c6b8aabac
+
+	measure 'Costo medio - Fatturato - YOYTD%' = DIVIDE ( [Costo medio - Fatturato - YOYTD], [Costo medio - Fatturato - PYTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: b1d2a613-dabc-41aa-80af-c9a2c942acc5
+
+	measure 'Costo medio progressivo - Fatturato - YOYTD%' =
+			DIVIDE (
+			    [Costo medio progressivo - Fatturato - YOYTD],
+			    [Costo medio progressivo - Fatturato - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: b38a4f70-37c4-4f11-b524-7330ac9c5930
+
+	measure 'Costo movimento - Fatturato - YOYTD%' =
+			DIVIDE (
+			    [Costo movimento - Fatturato - YOYTD],
+			    [Costo movimento - Fatturato - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 2aba22b3-5531-4eea-abae-d5f7451dd9cd
+
+	measure 'Costo standard - Fatturato - YOYTD%' =
+			DIVIDE (
+			    [Costo standard - Fatturato - YOYTD],
+			    [Costo standard - Fatturato - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 11536781-5b46-4f46-a908-ae2f63efc3b6
+
+	measure 'Importo unitario - Fatturato - YOYTD%' =
+			DIVIDE (
+			    [Importo unitario - Fatturato - YOYTD],
+			    [Importo unitario - Fatturato - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 1a0f8edb-07b3-4424-972a-6822299cdcf3
+
+	measure 'Costo unitario standard - Fatturato - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario standard - Fatturato - YOYTD],
+			    [Costo unitario standard - Fatturato - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 4297d779-0d69-414e-887d-9f095d25a93e
+
+	measure 'Costo unitario medio - Fatturato - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario medio - Fatturato - YOYTD],
+			    [Costo unitario medio - Fatturato - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 34cb4ac7-28bc-4beb-95e0-d66c2d423005
+
+	measure 'Costo unitario medio progressivo - Fatturato - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Fatturato - YOYTD],
+			    [Costo unitario medio progressivo - Fatturato - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 08495496-70d7-4837-8d56-49af4d87d7a5
+
+	measure 'Costo unitario movimento - Fatturato - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario movimento - Fatturato - YOYTD],
+			    [Costo unitario movimento - Fatturato - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: e16ea056-59f1-4139-9a3b-736601ea1b4e
+
+	measure 'Margine costo movimento - Fatturato - YOYTD%' =
+			DIVIDE (
+			    [Margine costo movimento - Fatturato - YOYTD],
+			    [Margine costo movimento - Fatturato - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 5fe2bb45-69dd-4e9f-93e5-239543bba1fe
+
+	measure 'Margine costo medio progressivo - Fatturato - YOYTD%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Fatturato - YOYTD],
+			    [Margine costo medio progressivo - Fatturato - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 4c89cad4-5ac9-4818-b1f2-9d99e5180628
+
+	measure 'Margine costo medio - Fatturato - YOYTD%' =
+			DIVIDE (
+			    [Margine costo medio - Fatturato - YOYTD],
+			    [Margine costo medio - Fatturato - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 50624e26-5559-4721-a994-1c912fe84f62
+
+	measure 'Margine costo standard - Fatturato - YOYTD%' =
+			DIVIDE (
+			    [Margine costo standard - Fatturato - YOYTD],
+			    [Margine costo standard - Fatturato - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 69f1421a-0a8d-46eb-9385-36a4d03c6f0c
+
+	measure 'Provvigione - Fatturato - YOYTD%' = DIVIDE ( [Provvigione - Fatturato - YOYTD], [Provvigione - Fatturato - PYTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: c9f81f79-4f16-4b82-a0ba-e3cbfb3f2111
+
+	measure 'Provvigione unitaria - Fatturato - YOYTD%' =
+			DIVIDE (
+			    [Provvigione unitaria - Fatturato - YOYTD],
+			    [Provvigione unitaria - Fatturato - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: cafbc797-e077-4c74-b4f1-6b75cf0db4d3
+
+	measure 'Quantità - Fatturato - MOM' = [Quantità - Fatturato] - [Quantità - Fatturato - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 4077c3cd-626e-4065-9163-3e14c73c3041
+
+	measure 'Importo (no omaggi) - Fatturato - MOM' = [Importo (no omaggi) - Fatturato] - [Importo (no omaggi) - Fatturato - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 2588fb42-9986-4b7d-a6b2-f0ff2cc1c428
+
+	measure 'Costo medio - Fatturato - MOM' = [Costo medio - Fatturato] - [Costo medio - Fatturato - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: a7bad755-5ca3-4b75-9030-0fcc88023f7c
+
+	measure 'Costo medio progressivo - Fatturato - MOM' = [Costo medio progressivo - Fatturato] - [Costo medio progressivo - Fatturato - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 799472ac-b039-4736-a3eb-8c04bed4482f
+
+	measure 'Costo movimento - Fatturato - MOM' = [Costo movimento - Fatturato] - [Costo movimento - Fatturato - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: db8ddfda-45e1-46cc-b93d-40f6f4d01594
+
+	measure 'Costo standard - Fatturato - MOM' = [Costo standard - Fatturato] - [Costo standard - Fatturato - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: dd8e7c93-1b8d-4e88-8458-08a68e8fbef4
+
+	measure 'Importo unitario - Fatturato - MOM' = [Importo unitario - Fatturato] - [Importo unitario - Fatturato - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 47ff6207-da54-4055-9bc7-5b954f3f35d5
+
+	measure 'Costo unitario standard - Fatturato - MOM' = [Costo unitario standard - Fatturato] - [Costo unitario standard - Fatturato - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 054d6261-02ea-4c22-bc94-cb4d1e4b44c0
+
+	measure 'Costo unitario medio - Fatturato - MOM' = [Costo unitario medio - Fatturato] - [Costo unitario medio - Fatturato - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: a309eadb-0612-4d7f-89e3-e234e5a56549
+
+	measure 'Costo unitario medio progressivo - Fatturato - MOM' = [Costo unitario medio progressivo - Fatturato] - [Costo unitario medio progressivo - Fatturato - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 1eb8f22c-d116-4b47-bc44-8e3731e255fb
+
+	measure 'Costo unitario movimento - Fatturato - MOM' = [Costo unitario movimento - Fatturato] - [Costo unitario movimento - Fatturato - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 95858bcb-3f36-4231-8dec-a8b7f22c5f40
+
+	measure 'Margine costo movimento - Fatturato - MOM' = [Margine costo movimento - Fatturato] - [Margine costo movimento - Fatturato - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 1a370dbb-7ed3-4996-946a-e49de25a8473
+
+	measure 'Margine costo medio progressivo - Fatturato - MOM' = [Margine costo medio progressivo - Fatturato] - [Margine costo medio progressivo - Fatturato - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 3bfe5038-5dab-4c50-876b-01ea2fae48d7
+
+	measure 'Margine costo medio - Fatturato - MOM' = [Margine costo medio - Fatturato] - [Margine costo medio - Fatturato - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 4fc35546-b174-4ca2-b253-817d1fa807a8
+
+	measure 'Margine costo standard - Fatturato - MOM' = [Margine costo standard - Fatturato] - [Margine costo standard - Fatturato - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 2f22d346-eb5d-4575-a8a8-d6c98d5d3cb0
+
+	measure 'Provvigione - Fatturato - MOM' = [Provvigione - Fatturato] - [Provvigione - Fatturato - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 62a16d7e-4d9e-4db8-b8cf-dbf644accfba
+
+	measure 'Provvigione unitaria - Fatturato - MOM' = [Provvigione unitaria - Fatturato] - [Provvigione unitaria - Fatturato - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 0ee01157-3f6c-4033-a7b3-f26364c8c646
+
+	measure 'Quantità - Fatturato - MOM%' = DIVIDE ( [Quantità - Fatturato - MOM], [Quantità - Fatturato - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: a2fd4f54-0699-4544-ae6f-a1fa5ca2f70a
+
+	measure 'Importo (no omaggi) - Fatturato - MOM%' = DIVIDE ( [Importo (no omaggi) - Fatturato - MOM], [Importo (no omaggi) - Fatturato - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 12648a1a-1b15-4f51-a4b0-eb5a4de2e697
+
+	measure 'Costo medio - Fatturato - MOM%' = DIVIDE ( [Costo medio - Fatturato - MOM], [Costo medio - Fatturato - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 75ef7c96-c5a8-4364-9331-b47b5a230bbb
+
+	measure 'Costo medio progressivo - Fatturato - MOM%' =
+			DIVIDE (
+			    [Costo medio progressivo - Fatturato - MOM],
+			    [Costo medio progressivo - Fatturato - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 990e7b8d-bb44-496b-9f33-082ea0b61ed0
+
+	measure 'Costo movimento - Fatturato - MOM%' =
+			DIVIDE (
+			    [Costo movimento - Fatturato - MOM],
+			    [Costo movimento - Fatturato - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: d4cf9640-f26b-419b-9897-04ab0e818d55
+
+	measure 'Costo standard - Fatturato - MOM%' = DIVIDE ( [Costo standard - Fatturato - MOM], [Costo standard - Fatturato - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: ebf049cf-e389-46aa-b421-4743f199cfa8
+
+	measure 'Importo unitario - Fatturato - MOM%' =
+			DIVIDE (
+			    [Importo unitario - Fatturato - MOM],
+			    [Importo unitario - Fatturato - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: baa1243f-c024-4737-b1b1-aac46e5f1694
+
+	measure 'Costo unitario standard - Fatturato - MOM%' =
+			DIVIDE (
+			    [Costo unitario standard - Fatturato - MOM],
+			    [Costo unitario standard - Fatturato - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 13b04718-c8bb-4f75-bd14-cd8e5ff3e1dc
+
+	measure 'Costo unitario medio - Fatturato - MOM%' =
+			DIVIDE (
+			    [Costo unitario medio - Fatturato - MOM],
+			    [Costo unitario medio - Fatturato - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 4f256ca3-c630-45ac-8530-b99138acae88
+
+	measure 'Costo unitario medio progressivo - Fatturato - MOM%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Fatturato - MOM],
+			    [Costo unitario medio progressivo - Fatturato - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 3765f38d-8714-4cc3-a2b4-78fb17c3b195
+
+	measure 'Costo unitario movimento - Fatturato - MOM%' =
+			DIVIDE (
+			    [Costo unitario movimento - Fatturato - MOM],
+			    [Costo unitario movimento - Fatturato - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 8fdb373b-522a-4831-b0d4-20296be5c413
+
+	measure 'Margine costo movimento - Fatturato - MOM%' =
+			DIVIDE (
+			    [Margine costo movimento - Fatturato - MOM],
+			    [Margine costo movimento - Fatturato - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: d0b61f43-aec4-4d4f-9964-a9f95ad2bb59
+
+	measure 'Margine costo medio progressivo - Fatturato - MOM%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Fatturato - MOM],
+			    [Margine costo medio progressivo - Fatturato - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 9a54be03-2b02-4abc-91f7-3d25331aff5f
+
+	measure 'Margine costo medio - Fatturato - MOM%' =
+			DIVIDE (
+			    [Margine costo medio - Fatturato - MOM],
+			    [Margine costo medio - Fatturato - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: a90ee953-1f48-4c01-936d-cf273a2edf58
+
+	measure 'Margine costo standard - Fatturato - MOM%' =
+			DIVIDE (
+			    [Margine costo standard - Fatturato - MOM],
+			    [Margine costo standard - Fatturato - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 5b2141a9-2aa1-439d-8570-5e0af58b6178
+
+	measure 'Provvigione - Fatturato - MOM%' = DIVIDE ( [Provvigione - Fatturato - MOM], [Provvigione - Fatturato - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: b370f0c9-4117-4389-a1f4-b1a4f2fe7e3f
+
+	measure 'Provvigione unitaria - Fatturato - MOM%' =
+			DIVIDE (
+			    [Provvigione unitaria - Fatturato - MOM],
+			    [Provvigione unitaria - Fatturato - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: f587c0d3-d67e-4d68-9d00-4f103db0be98
+
+	measure 'Quantità - Fatturato - PQ' = CALCULATE ( [Quantità - Fatturato], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: b8b4057b-1044-4c67-bd39-4e245084d585
+
+	measure 'Importo (no omaggi) - Fatturato - PQ' = CALCULATE ( [Importo (no omaggi) - Fatturato], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: efe4b35d-b628-41d0-80e1-69d32293a76d
+
+	measure 'Costo medio - Fatturato - PQ' = CALCULATE ( [Costo medio - Fatturato], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 81ee2248-a332-49eb-88f5-59c3a191ac72
+
+	measure 'Costo medio progressivo - Fatturato - PQ' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Fatturato],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 6a1815ce-5084-4faa-a097-888ee995d0fc
+
+	measure 'Costo movimento - Fatturato - PQ' =
+			
+			CALCULATE (
+			    [Costo movimento - Fatturato],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 7a894039-7b47-4bb7-80e4-9576f8df1610
+
+	measure 'Costo standard - Fatturato - PQ' = CALCULATE ( [Costo standard - Fatturato], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: ca260bca-7289-48eb-bfb3-f8fffed28ca0
+
+	measure 'Importo unitario - Fatturato - PQ' =
+			
+			CALCULATE (
+			    [Importo unitario - Fatturato],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 9eade819-7db5-4526-be93-24c4a4622332
+
+	measure 'Costo unitario standard - Fatturato - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Fatturato],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: b791b29f-5920-41bc-906e-de6491fb5b2f
+
+	measure 'Costo unitario medio - Fatturato - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Fatturato],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 3b9b230b-fdec-4321-baac-82e77559494a
+
+	measure 'Costo unitario medio progressivo - Fatturato - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario medio progressivo - Fatturato],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 91157ac1-9a42-4d3d-b4f0-155add5c960b
+
+	measure 'Costo unitario movimento - Fatturato - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Fatturato],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 373d910e-ce52-47b0-9e18-b659395b0498
+
+	measure 'Margine costo movimento - Fatturato - PQ' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Fatturato],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 317402f8-8806-4975-9564-5c41a5d46a0a
+
+	measure 'Margine costo medio progressivo - Fatturato - PQ' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Fatturato],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 424ab949-1af6-4d0b-b2f1-fde7f275bd60
+
+	measure 'Margine costo medio - Fatturato - PQ' =
+			
+			CALCULATE (
+			    [Margine costo medio - Fatturato],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: e10e7714-c11c-49a0-92dc-c3404258daa1
+
+	measure 'Margine costo standard - Fatturato - PQ' =
+			
+			CALCULATE (
+			    [Margine costo standard - Fatturato],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 4ff37ea2-2b53-44f9-92e1-7ce8fdef7baa
+
+	measure 'Provvigione - Fatturato - PQ' = CALCULATE ( [Provvigione - Fatturato], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 4201ac0b-9b9b-423c-9dbd-a65818afc03f
+
+	measure 'Provvigione unitaria - Fatturato - PQ' =
+			
+			CALCULATE (
+			    [Provvigione unitaria - Fatturato],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: ef2679e8-0dc5-42d1-a77d-a12528966bd0
+
+	measure 'Quantità - Fatturato - QOQ' = [Quantità - Fatturato] - [Quantità - Fatturato - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: ec3dbf53-5b70-4bd7-8c0e-934e9a749b94
+
+	measure 'Importo (no omaggi) - Fatturato - QOQ' = [Importo (no omaggi) - Fatturato] - [Importo (no omaggi) - Fatturato - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: d8a71e9e-617c-4a8c-bc1f-a334f20b9809
+
+	measure 'Costo medio - Fatturato - QOQ' = [Costo medio - Fatturato] - [Costo medio - Fatturato - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: f4826807-3a23-43ad-89f1-8e7a52f35bbe
+
+	measure 'Costo medio progressivo - Fatturato - QOQ' = [Costo medio progressivo - Fatturato] - [Costo medio progressivo - Fatturato - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: d42afda5-02bd-4305-9fbb-89a6bfaec1b3
+
+	measure 'Costo movimento - Fatturato - QOQ' = [Costo movimento - Fatturato] - [Costo movimento - Fatturato - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: ddf00739-3df7-403e-b755-12022f608f68
+
+	measure 'Costo standard - Fatturato - QOQ' = [Costo standard - Fatturato] - [Costo standard - Fatturato - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 13d10f62-e4c7-48b8-b907-eb5cd27df317
+
+	measure 'Importo unitario - Fatturato - QOQ' = [Importo unitario - Fatturato] - [Importo unitario - Fatturato - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: daf3e2a8-3f9a-4dd2-98bd-997d88a20baa
+
+	measure 'Costo unitario standard - Fatturato - QOQ' = [Costo unitario standard - Fatturato] - [Costo unitario standard - Fatturato - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 6bb78175-2bef-48f8-a93a-59cb4b9e533d
+
+	measure 'Costo unitario medio - Fatturato - QOQ' = [Costo unitario medio - Fatturato] - [Costo unitario medio - Fatturato - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 908ea7ef-b221-4afd-8662-d77347b0413f
+
+	measure 'Costo unitario medio progressivo - Fatturato - QOQ' = [Costo unitario medio progressivo - Fatturato] - [Costo unitario medio progressivo - Fatturato - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 99a166d1-8afc-4bc0-89a4-7168ebbdaaaa
+
+	measure 'Costo unitario movimento - Fatturato - QOQ' = [Costo unitario movimento - Fatturato] - [Costo unitario movimento - Fatturato - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: a7f1f848-265e-405d-a24f-f87152aeff19
+
+	measure 'Margine costo movimento - Fatturato - QOQ' = [Margine costo movimento - Fatturato] - [Margine costo movimento - Fatturato - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 789bbdc9-5c0f-4e9e-804c-d9f06d775204
+
+	measure 'Margine costo medio progressivo - Fatturato - QOQ' = [Margine costo medio progressivo - Fatturato] - [Margine costo medio progressivo - Fatturato - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: f751e7d5-c36e-4ff5-84a5-0440913dd576
+
+	measure 'Margine costo medio - Fatturato - QOQ' = [Margine costo medio - Fatturato] - [Margine costo medio - Fatturato - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: fdbbe179-f3f9-420d-b9a2-0616d030a357
+
+	measure 'Margine costo standard - Fatturato - QOQ' = [Margine costo standard - Fatturato] - [Margine costo standard - Fatturato - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: d500ca2a-8b25-42eb-862b-0a1395a15d1c
+
+	measure 'Provvigione - Fatturato - QOQ' = [Provvigione - Fatturato] - [Provvigione - Fatturato - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 483f4a12-1786-4fa0-adf4-ffe3e8c1a041
+
+	measure 'Provvigione unitaria - Fatturato - QOQ' = [Provvigione unitaria - Fatturato] - [Provvigione unitaria - Fatturato - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: b230c30d-62a3-4cc9-aa3c-42322b3e0dde
+
+	measure 'Quantità - Fatturato - QOQ%' = DIVIDE ( [Quantità - Fatturato - QOQ], [Quantità - Fatturato - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 5629ad38-8f65-47eb-8752-d5700940975c
+
+	measure 'Importo (no omaggi) - Fatturato - QOQ%' = DIVIDE ( [Importo (no omaggi) - Fatturato - QOQ], [Importo (no omaggi) - Fatturato - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: a1153a2e-b7b2-4326-8f78-e61ccc8428fc
+
+	measure 'Costo medio - Fatturato - QOQ%' = DIVIDE ( [Costo medio - Fatturato - QOQ], [Costo medio - Fatturato - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: d0bd4a39-4406-4dcb-94ca-aa1a297dedc2
+
+	measure 'Costo medio progressivo - Fatturato - QOQ%' =
+			DIVIDE (
+			    [Costo medio progressivo - Fatturato - QOQ],
+			    [Costo medio progressivo - Fatturato - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: dab96d52-8bfc-4665-b535-c9ed14765672
+
+	measure 'Costo movimento - Fatturato - QOQ%' =
+			DIVIDE (
+			    [Costo movimento - Fatturato - QOQ],
+			    [Costo movimento - Fatturato - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: ca08089c-ec02-4e7a-affa-90807944596d
+
+	measure 'Costo standard - Fatturato - QOQ%' = DIVIDE ( [Costo standard - Fatturato - QOQ], [Costo standard - Fatturato - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 32d2e681-3c9e-449e-a6bb-822ef17a32ad
+
+	measure 'Importo unitario - Fatturato - QOQ%' =
+			DIVIDE (
+			    [Importo unitario - Fatturato - MOM],
+			    [Importo unitario - Fatturato - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 6ae5de51-a112-4c6c-a285-29558d76b71a
+
+	measure 'Costo unitario standard - Fatturato - QOQ%' =
+			DIVIDE (
+			    [Costo unitario standard - Fatturato - MOM],
+			    [Costo unitario standard - Fatturato - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 1e1b875d-cc05-41d2-86f9-e352482b1532
+
+	measure 'Costo unitario medio - Fatturato - QOQ%' =
+			DIVIDE (
+			    [Costo unitario medio - Fatturato - MOM],
+			    [Costo unitario medio - Fatturato - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: ab96438d-3743-4b03-bc81-99194fc7f64b
+
+	measure 'Costo unitario medio progressivo - Fatturato - QOQ%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Fatturato - MOM],
+			    [Costo unitario medio progressivo - Fatturato - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 53ad5edb-38c8-4e44-9e7b-19ed083f5bbb
+
+	measure 'Costo unitario movimento - Fatturato - QOQ%' =
+			DIVIDE (
+			    [Costo unitario movimento - Fatturato - MOM],
+			    [Costo unitario movimento - Fatturato - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: be27edbb-476c-47f6-9f6c-5e494b1ec0ee
+
+	measure 'Margine costo movimento - Fatturato - QOQ%' =
+			DIVIDE (
+			    [Margine costo movimento - Fatturato - QOQ],
+			    [Margine costo movimento - Fatturato - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 252f208d-a487-43b9-b5b4-f8fa58c81736
+
+	measure 'Margine costo medio progressivo - Fatturato - QOQ%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Fatturato - QOQ],
+			    [Margine costo medio progressivo - Fatturato - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 8c7c694e-c832-4bff-90f3-b184e6865e9e
+
+	measure 'Margine costo medio - Fatturato - QOQ%' =
+			DIVIDE (
+			    [Margine costo medio - Fatturato - QOQ],
+			    [Margine costo medio - Fatturato - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 3150cf11-5931-4824-be19-1cf0f5cbfaee
+
+	measure 'Margine costo standard - Fatturato - QOQ%' =
+			DIVIDE (
+			    [Margine costo standard - Fatturato - QOQ],
+			    [Margine costo standard - Fatturato - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 252491ef-e861-4b09-941d-505408640eb1
+
+	measure 'Provvigione - Fatturato - QOQ%' = DIVIDE ( [Provvigione - Fatturato - QOQ], [Provvigione - Fatturato - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 80aff6f3-1dfa-429b-ace3-25348ac85e7e
+
+	measure 'Provvigione unitaria - Fatturato - QOQ%' =
+			DIVIDE (
+			    [Provvigione unitaria - Fatturato - QOQ],
+			    [Provvigione unitaria - Fatturato - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: de853534-9a44-417b-bc73-9633d9caa583
+
+	measure 'Quantità omaggi - Fatturato' =
+			
+			CALCULATE (
+			    [Quantità omaggi - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: d67d4c35-fcb9-4ede-af9a-73acd379d124
+
+		changedProperty = FormatString
+
+	measure 'Importo omaggi - Fatturato' =
+			
+			CALCULATE (
+			    [Importo omaggi - Generale],
+			    'Tipi movimento'[Flag rilevanza fatturato] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 53d903db-de2e-421b-9f57-d10ddbc46288
+
+		changedProperty = FormatString
+
+	column Z_Dummy
+		dataType: string
+		isHidden
+		lineageTag: f12dd0ea-11f2-4325-8035-aec097443260
+		summarizeBy: none
+		sourceColumn: Z_Dummy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fatturato-780e0e65-482e-45bc-9e43-da7c348b550c = m
+		mode: import
+		queryGroup: Misure
+		source =
+				let
+				    Origine = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Z_Dummy = _t])
+				in
+				    Origine
+
+	annotation PBI_Id = 1f9295d0-1ffc-4cc4-8ba5-e6e33a0e598b
+
+	annotation LinkedQueryName = Fatturato
+
+	annotation PBI_QueryRelationships = {"columnCount":0,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":[],"ColumnCount":0,"KeyColumnNames":[],"ColumnIdentities":[],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,409 @@
+expression 'Connessione - Server eSOLVER' = "WTCNB0021\SISTEMI1" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: c337a9af-c4da-4d79-beb2-9ca42e2a99c0
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navigazione
+
+expression 'Connessione - Database eSOLVER' = "ESOLVER42" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: f687e309-0829-4005-8038-b1e14a97b057
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Indicare la data dalla quale caricare i dati. La data deve essere indicato nella forma "gg/mm/aaaa" (Esempio: 01/01/2019).
+/// Questo parametro ha effetto solamente se si è effettuata la scelta ''Data specifica' per il precedente parametro 'Metodo filtro Data DA'.
+expression 'Filtro - Data DA' = #date(2022, 1, 1) meta [IsParameterQuery=true, Type="Date", IsParameterQueryRequired=false]
+	lineageTag: 102b20f6-4afc-49ea-91f7-3e9d6cce41e3
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Date
+
+	annotation PBI_NavigationStepName = Navigazione
+
+/// Indicare la data fino alla quale caricare i dati. La data deve essere indicata nella forma "gg/mm/aaaa" (Esempio: 31/12/2022)
+expression 'Filtro - Data A' = null meta [IsParameterQuery=true, Type="Date", IsParameterQueryRequired=false]
+	lineageTag: 28ca1e3f-d862-4b95-9d78-33672c52f9b6
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Null
+
+	annotation PBI_NavigationStepName = Navigazione
+
+/// Permette di definire se e come applicare i filtri sulle ditte (gruppi). Questo parametro è integrato dal parametro successivo.
+expression 'Filtro - Metodo filtro ditte' = "Presenti in elenco" meta [IsParameterQuery=true, List={"Presenti in elenco", "Non presenti in elenco", "Non filtrare"}, DefaultValue="Non filtrare", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: f761a536-c7ca-462c-a2e4-6e3248ffa18f
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Indicare una o più ditte (codici dei gruppi) sui quali elaborare le analisi. In base a quanto indicato nel parametro precedente, l'elenco serve alternativamente per includere o escludere valori oppure non ha effetto.
+/// Per indicare più di un gruppo è necessario elencarli tutti utilizzando il carattere ";"come separatore.
+/// Es. XX;XS;MM;S1;...
+expression 'Filtro - Elenco ditte' = "XS;RM" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=false]
+	lineageTag: 980e5c35-5193-4dcd-8c78-7618713184fe
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Permette di portare sull'analisi delle informazioni aggiuntive legate ai documenti di origine a discapito di: tempo di caricamento e dimensione dell'analisi. Es. commessa di riga e sua relativa dimensione, numero documento, data documento, ...
+expression 'Dettagli aggiuntivi: informazioni dei documenti' = "Attiva" meta [IsParameterQuery=true, List={"Attiva", "Disattiva"}, DefaultValue="Disattiva", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: b3e3f8c2-2c77-44b1-9917-11c90b64e0dd
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Permette di portare sull'analisi informazioni aggiuntive legate ai campi utente impostati sulle righe documento a discapito di: tempo di caricamento e dimensione dell'analisi. Es. campo utente 1, campo utente 2, ..., campo utente 30.
+expression 'Dettagli aggiuntivi: campi utente di riga documento' = "Disattiva" meta [IsParameterQuery=true, List={"Attiva", "Disattiva"}, DefaultValue="Disattiva", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 7ac5b861-5249-4a04-81fe-d412c79156a7
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+expression Gruppi =
+		let
+		    Origine = if #"Filtro - Elenco ditte" <> null then "'" & Replacer.ReplaceText(Replacer.ReplaceText(#"Filtro - Elenco ditte", " ", ""), ";", "', '") & "'" else ""
+		in
+		    Origine
+	lineageTag: 525900d7-c35a-4bef-ba78-089394849c2f
+	queryGroup: 'Parametri\Parametri utente trattati'
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Text
+
+expression Server =
+		let
+		    Origine = #"Connessione - Server eSOLVER"
+		in
+		    Origine
+	lineageTag: 71b3368c-73ff-469d-a0b5-26ce03559cb5
+	queryGroup: 'Parametri\Parametri utente trattati'
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Text
+
+expression Database =
+		let
+		    Origine = #"Connessione - Database eSOLVER"
+		in
+		    Origine
+	lineageTag: ab9961a9-b7c4-44ae-a922-b1dad1b9d41a
+	queryGroup: 'Parametri\Parametri utente trattati'
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Text
+
+expression DataDa = ```
+		let
+		    DataElab = Date.From(DateTimeZone.SwitchZone(DateTimeZone.FixedLocalNow(),1)),
+		    DataDA = 
+		        if #"Metodo filtro Data DA" = "Numero mesi precedenti" then
+		            let 
+		                MesiPrec = if #"Filtro - Numero mesi precedenti" <> null then #"Filtro - Numero mesi precedenti" else 0,
+		                DataDA = Date.StartOfMonth(Date.AddMonths(DataElab, - MesiPrec))
+		            in         
+		                DataDA    
+		        else    
+		            let
+		                DataDA =  if #"Filtro - Data DA" <> null then  #"Filtro - Data DA" else Date.StartOfMonth(DataElab)
+		            in
+		                DataDA,
+		
+		    DataDAText = "'" & Date.ToText(DataDA, "YYYY-MM-DD") & "'"
+		in
+		    DataDAText
+		```
+	lineageTag: fdcc9dbf-f554-45a1-8c9b-8a71db690d83
+	queryGroup: 'Parametri\Parametri utente trattati'
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Text
+
+expression DataA = ```
+		let
+		    DataElab = Date.From(DateTimeZone.SwitchZone(DateTimeZone.FixedLocalNow(),1)),
+		    DataA = 
+		        if #"Metodo filtro Data A" = "Numero mesi successivi" then
+		            let 
+		                MesiSucc = if #"Filtro - Numero mesi successivi" <> null then #"Filtro - Numero mesi successivi" else 0,
+		                DataA = Date.EndOfMonth(Date.AddMonths(DataElab, MesiSucc))
+		            in         
+		                DataA    
+		        else    
+		            let
+		                DataA =  if #"Filtro - Data A" <> null then  #"Filtro - Data A" else Date.EndOfMonth(DataElab)
+		            in
+		                DataA,
+		
+		    DataAText = "'" & Date.ToText(DataA, "YYYY-MM-DD") & "'"
+		in
+		    DataAText
+		```
+	lineageTag: bfcd2e37-a961-4374-a476-d4655dab18e8
+	queryGroup: 'Parametri\Parametri utente trattati'
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Text
+
+expression VersioneModello = ```
+		let 
+		    Origine = "2.01.127"
+		in
+		    Origine
+		```
+	lineageTag: 7dc4cbc6-6ef7-41e8-83a8-f3b35623ba22
+	queryGroup: 'Parametri\Parametri utente trattati'
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Text
+
+/// Definisce la visibilità dell'agente rispetto alle vendite eseguite da altri agenti. L'impostazione è valida per tutti gli account mappati con il ruolo di "Agente".
+/// 
+/// Visibili) L'agente vede tutte le vendite anche se fatte da altri agenti.
+/// Non visibili) L'agente vede unicamente le vendite nelle quali ha avuto un ruolo attivo (lui stesso o un agente di cui lui è capoarea).
+/// 
+/// Attenzione: la limitazione delle vendite non limita anche la visibilità degli attributi di dimensioni collegate (es. i clienti di altri agenti) che sarebbero comunque visibili.
+expression 'Agenti - Visibilità vendite di altri agenti' = "Non visibili" meta [IsParameterQuery=true, List={"Visibili", "Non visibili"}, DefaultValue="Visibili", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 35a62e52-2af4-4912-80e1-d71cb2de6826
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Definisce la visibilità dell'agente rispetto ai clienti assegnati ad altri agenti. L'impostazione è valida per tutti gli account mappati con il ruolo di "Agente".
+/// 
+/// Visibili) L'agente vede tutti i clienti anche se assegnati ad altri agenti.
+/// Non visibili) L'agente vede unicamente i clienti assegnati a lui o ad agenti dei quali è capoarea. Le vendite saranno filtrate di conseguenza.
+/// 
+/// Attenzione: la limitazione dei clienti non limita anche la visualizzazione degli attributi delle altre dimensioni (es. gli articoli).
+expression 'Agenti - Visibilità clienti di altri agenti' = "Non visibili" meta [IsParameterQuery=true, List={"Visibili", "Non visibili"}, DefaultValue="Visibili", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: b242cd8e-c53c-45a4-a84b-396d0aae13b4
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Indicare il mese di inzio del calendario mobile. La selezione impatta sul calendario e sul set di misure specifiche.
+expression 'Filtro - Mese inizio calendario mobile' = "Gennaio" meta [IsParameterQuery=true, List={"Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"}, DefaultValue="Gennaio", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 57f7795b-c2e3-448e-b73f-606a1d09727a
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navigazione
+
+/// Permette di scegliere la modalità di definizione del filtro Data Da, ovvero per imputazione del numero di mesi precedenti alla data di elaborazione  (data inizio mese) oppure per imputazione di  una specifica data.
+expression 'Metodo filtro Data DA' = "Data specifica" meta [IsParameterQuery=true, List={"Numero mesi precedenti", "Data specifica"}, DefaultValue="Numero mesi precedenti", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 3c1339c5-797d-4052-8c41-daaf3a2fc66d
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Indicare il numero di mesi precedenti alla data di elaborazione da includere nel caricamento dei dati. Il filtro sulla data è esteso dal primo giorno del mese.
+/// Questo parametro ha effetto solamente se si è effettuata la scelta 'Numero mesi precedenti' per il precedente parametro 'Metodo filtro Data DA'.
+expression 'Filtro - Numero mesi precedenti' = 0 meta [IsParameterQuery=true, Type="Number", IsParameterQueryRequired=false]
+	lineageTag: 8139be4e-0159-4dad-86c5-9463866d88bc
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Number
+
+/// Permette di scegliere la modalità di definizione del filtro Data A, ovvero per imputazione del numero di mesi successivi alla data di elaborazione  (data fine mese) oppure per imputazione di  una specifica data.
+expression 'Metodo filtro Data A' = "Numero mesi successivi" meta [IsParameterQuery=true, List={"Numero mesi successivi", "Data specifica"}, DefaultValue="Numero mesi successivi", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: a68e34a5-9199-48cd-937b-e8e994a53da7
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Indicare i numero di mesi successivi alla data di elaborazione da includere nel caricamento dei dati. Il filtro sulla data è esteso all'ultimo giorno del mese.
+/// Questo parametro ha effetto solamente se si è effettuata la scelta 'Numero mesi successivi' per il precedente parametro 'Metodo filtro Data A'.
+expression 'Filtro - Numero mesi successivi' = 0 meta [IsParameterQuery=true, Type="Number", IsParameterQueryRequired=false]
+	lineageTag: 862a103a-3eef-49c0-9bae-8dd32d911152
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Number
+
+/// Definisce se l'importo utilizzato nelle rappresentazioni, nelle misure derivate (es. margine e importo unitario) e richiamato nelle declinazioni temporali (es. importo anno precedente), deve comprendere o meno le spese di piede.
+/// 
+/// Qualunque sia la selezione, l'importo delle spese di piede è comunque utilizzabile esponendo la specifica misura o richiamandola per creare nuove misure.
+expression 'Importo - Aggiungi spese di piede' = "No" meta [IsParameterQuery=true, List={"Sì", "No"}, DefaultValue="No", Type="Any", IsParameterQueryRequired=true]
+	lineageTag: a6d75b29-87eb-4945-87d2-88ae45b54f20
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Definisce se l'importo utilizzato nelle rappresentazioni, nelle misure derivate (es. margine e importo unitario) e richiamato nelle declinazioni temporali (es. importo anno precedente), deve sottrarre o meno gli sconti incondizionati.
+/// 
+/// Qualunque sia la selezione, l'importo degli sconti incondizionati è comunque utilizzabile esponendo la specifica misura o richiamandola per creare nuove misure.
+expression 'Importo - Sottrai sconti incondizionati' = "No" meta [IsParameterQuery=true, List={"Sì", "No"}, DefaultValue="No", Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 320fbd1c-6ec1-49de-bf33-1076b1466525
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Definisce se l'importo utilizzato nelle rappresentazioni, nelle misure derivate (es. margine e importo unitario) e richiamato nelle declinazioni temporali (es. importo anno precedente), deve sottrarre o meno gli sconti di pagamento.
+/// 
+/// Qualunque sia la selezione, l'importo degli sconti di pagamento è comunque utilizzabile esponendo la specifica misura o richiamandola per creare nuove misure.
+expression 'Importo - Sottrai sconti di pagamento' = "No" meta [IsParameterQuery=true, List={"Sì", "No"}, DefaultValue="No", Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 83455c6c-10b8-4f5f-8af4-ef337961492e
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Definisce se l'importo utilizzato nelle rappresentazioni, nelle misure derivate (es. margine e importo unitario) e richiamato nelle declinazioni temporali (es. importo anno precedente), deve sottrarre o meno tale componente.
+/// 
+/// Qualunque sia la selezione, l'importo delle provvigioni è comunque utilizzabile esponendo la specifica misura o richiamandola per creare nuove misure.
+expression 'Importo - Sottrai provvigioni' = "No" meta [IsParameterQuery=true, List={"Sì", "No"}, DefaultValue="No", Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 68b158e5-edb8-4dce-8a40-b62b4300ccd0
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Determina l'inclusione (Sì) o l'esclusione (No) delle righe ordine annullate
+expression 'Filtro - Considera righe ordine annullate (Sì/No)' = "No" meta [IsParameterQuery=true, List={"Sì", "No"}, DefaultValue="Sì", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: e7e5bd70-893d-4795-a8d1-78a6a5dac66b
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+expression MeseInizioMobile = ```
+		let 
+		    Origine = #table (
+		        type table [#"Mese - nome" = Text.Type, #"Mese - numero" = Int64.Type],
+		        {   
+		          	{"Gennaio", 1},
+		            {"Febbraio", 2},
+		            {"Marzo", 3},
+		            {"Aprile", 4},
+		            {"Maggio", 5},
+		            {"Giugno", 6},
+		            {"Luglio", 7},
+		            {"Agosto", 8},
+		            {"Settembre", 9},
+		            {"Ottobre", 10},
+		            {"Novembre", 11},
+		            {"Dicembre", 12}
+		        }
+		    ),
+		    #"Filtrate righe" = Table.SelectRows(Origine, each [#"Mese - nome"] = #"Filtro - Mese inizio calendario mobile"),
+		    #"Rimosse altre colonne" = Table.SelectColumns(#"Filtrate righe",{"Mese - numero"}),
+		    #"Mese inizio mobile" = Table.FirstValue(#"Rimosse altre colonne")
+		in
+		    #"Mese inizio mobile"
+		```
+	lineageTag: f913440a-c9df-4ced-a30c-b576e1f5d2c6
+	queryGroup: 'Parametri\Parametri utente trattati'
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Number
+
+/// Definisce la visibilità dell'agente rispetto ai clienti di spedizione assegnati ad altri agenti. L'impostazione è valida per tutti gli account mappati con il ruolo di "Agente".
+/// 
+/// Visibili) L'agente vede tutti i clienti di spedizione, anche se assegnati ad altri agenti.
+/// Non visibili) L'agente vede unicamente i clienti di spedizione assegnati a lui o ad agenti dei quali è capoarea. Le vendite saranno filtrate di conseguenza.
+/// 
+/// Attenzione: la limitazione dei clienti di spedizione non limita anche la visualizzazione degli attributi delle altre dimensioni (es. gli articoli).
+expression 'Agenti - Visibilità clienti di spedizione di altri agenti' = "Non visibili" meta [IsParameterQuery=true, List={"Visibili", "Non visibili"}, DefaultValue="Visibili", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: d7b9172c-0d4b-4026-a4c0-24d12d968c20
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Indicare quali ruoli agente includere nell'analisi
+/// (1=venditore - 2 = capo area - 3 = mediatore - 4=segnalatore)
+/// Per indicare più di un gruppo è necessario elencarli tutti utilizzando il carattere ";"come separatore.
+/// Es. 1;2;..
+expression 'Filtro - Ruoli Agente' = "1;2;3;4" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=false]
+	lineageTag: fef38012-779c-4ff5-8290-44af31127adc
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+/// Indicare quali tipi articolo includere nell'analisi
+/// (0=Materia prima - 1=Semilavorato - 2=Kit - 3=Prodotto finito )
+/// Per indicare più di un gruppo è necessario elencarli tutti utilizzando il carattere ";"come separatore.
+/// Es. PF;MP;...
+expression 'Filtro - Tipo articolo' = "0;1;2;3" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=false]
+	lineageTag: d01b1325-ac7d-4722-82a2-d77fb9fefe17
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+expression RuoliAgenti =
+		let
+		    Origine = if #"Filtro - Ruoli Agente" <> null then "" & Replacer.ReplaceText(Replacer.ReplaceText(#"Filtro - Ruoli Agente", " ", ""), ";", ", ") & "" else ""
+		in
+		    Origine
+	lineageTag: 1e1f39c1-955f-45e4-999b-565676331e4c
+	queryGroup: 'Parametri\Parametri utente trattati'
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Text
+
+expression TipiArticolo =
+		let
+		    Origine = if #"Filtro - Tipo articolo" <> null then "" & Replacer.ReplaceText(Replacer.ReplaceText(#"Filtro - Tipo articolo", " ", ""), ";", ", ") & "" else ""
+		in
+		    Origine
+	lineageTag: 34e4f35f-7ec5-4b4f-b50e-543d71b94c5e
+	queryGroup: 'Parametri\Parametri utente trattati'
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Text
+
+/// Indicare una o più classi statistiche da considerare  nelle analisi. 
+/// Per indicare più di una classe statistica è necessario elencarli tutti utilizzando il carattere ";"come separatore.
+/// Es. V50;V51;V52;...
+expression 'Filtro - Elenco classi statistiche' = "V50;V51;V52;V53;V54;V63;V86" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=false]
+	lineageTag: 1665416f-c34a-41ba-911d-10e5dce7ef21
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+expression ClassiStatistiche =
+		let
+		    Origine = if #"Filtro - Elenco classi statistiche" <> null then "'" & Replacer.ReplaceText(Replacer.ReplaceText(#"Filtro - Elenco classi statistiche", " ", ""), ";", "', '") & "'" else ""
+		in
+		    Origine
+	lineageTag: e186df5f-a312-4c3b-8a8f-7a24d0e667f0
+	queryGroup: 'Parametri\Parametri utente trattati'
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Text
+
+/// Indicare quali tipi documento includere nell'analisi per l'ordinato
+/// Per indicare più di un tipo documento è necessario elencarli tutti utilizzando il carattere ";"come separatore.
+/// Es. 600;601;...
+expression 'Filtro - Tipo documento' = "600;601;602;603;614;617;618;626" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=false]
+	lineageTag: c4f0f03c-4ed1-4a9d-92b8-3a102bb740e3
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+
+expression TipiDocumento =
+		let
+		    Origine = if #"Filtro - Tipo documento" <> null then "" & Replacer.ReplaceText(Replacer.ReplaceText(#"Filtro - Tipo documento", " ", ""), ";", ", ") & "" else ""
+		in
+		    Origine
+	lineageTag: 1594ac0c-857e-41bc-8c6a-6d971b64421a
+	queryGroup: 'Parametri\Parametri utente trattati'
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Text
+
+/// Scelta campo da considerare come data ordine
+expression 'Ordini - Data ordine' = "Data Documento" meta [IsParameterQuery=true, List={"Data Documento", "Data Registrazione"}, DefaultValue="Data Registrazione", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: e14d112a-cd80-4f58-9431-75b0e0339a4d
+	queryGroup: 'Parametri\Parametri utente'
+
+	annotation PBI_ResultType = Text
+

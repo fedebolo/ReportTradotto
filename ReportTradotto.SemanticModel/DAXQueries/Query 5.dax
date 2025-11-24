@@ -1,0 +1,3 @@
+EVALUATE
+Vendite order by 
+--FILTER(Vendite, Vendite[K_DataRegistraz]>TODAY())

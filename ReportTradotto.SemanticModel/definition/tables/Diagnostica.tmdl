@@ -1,0 +1,54 @@
+table Diagnostica
+	isHidden
+	lineageTag: 5cfd5e36-8470-4ab9-8ced-60afa6f889d2
+
+	column 'Ultimo reload'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 914da9ec-9742-4850-8653-c39b3d306d5c
+		summarizeBy: none
+		sourceColumn: Ultimo reload
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Versione modello'
+		dataType: string
+		lineageTag: 5ff4f555-a9b2-4377-b372-600513b1deb4
+		summarizeBy: none
+		sourceColumn: Versione modello
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Calendario mobile - Mese inizio'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1c28dd7a-a91c-41a3-9111-563dbb2f9211
+		summarizeBy: sum
+		sourceColumn: Calendario mobile - Mese inizio
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Diagnostica-b111b111-87cc-4ce6-a15d-9076069cd06f = m
+		mode: import
+		source = ```
+				let
+				    Origine = #table (
+				        type table [Ultimo reload = DateTimeZone.Type, Versione modello = Text.Type, #"Calendario mobile - Mese inizio" = Int64.Type],
+				        {   
+				            {
+				            DateTimeZone.SwitchZone(DateTimeZone.FixedLocalNow(),1), VersioneModello, MeseInizioMobile
+				            }
+				        }
+				    )
+				in
+				    Origine
+				```
+
+	annotation PBI_Id = 018807b1-d131-4cee-a339-c06088c44c16
+
+	annotation LinkedQueryName = Diagnostica
+
+	annotation PBI_QueryRelationships = {"columnCount":2,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Diagnostica/Origine.{Ultimo reload,0}","Section1/Diagnostica/Origine.{Versione modello,1}"],"ColumnCount":2,"KeyColumnNames":[],"ColumnIdentities":["Section1/Diagnostica/Origine.{Ultimo reload,0}","Section1/Diagnostica/Origine.{Versione modello,1}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,518 @@
+table Generale
+	lineageTag: 16cf9a71-e2b2-4d6a-8e7a-64417fb9a731
+
+	measure 'Costo medio - Generale' = SUM ( 'Vendite'[Costo medio] )
+		displayFolder: Generale
+		lineageTag: 9da38895-6f05-4fa6-bcad-61047c1806b2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Costo medio progressivo - Generale' = SUM ( 'Vendite'[Costo medio progressivo] )
+		formatString: #,0
+		displayFolder: Generale
+		lineageTag: 0e75ea1d-244b-45fb-9d74-14cef8cb049f
+
+	measure 'Costo movimento - Generale' = SUM ( 'Vendite'[Costo movimento] )
+		formatString: #,0
+		displayFolder: Generale
+		lineageTag: 79465684-0ab9-4360-a866-dbcbec1c12ff
+
+	measure 'Costo standard - Generale' = SUM ( 'Vendite'[Costo standard] )
+		formatString: #,0
+		displayFolder: Generale
+		lineageTag: a894641d-4e99-4cfb-b299-b63636a4376f
+
+	measure 'Costo unitario medio - Generale' = DIVIDE ( [Costo medio - Generale], [Quantità - Generale] )
+		formatString: #,0.00
+		displayFolder: Generale
+		lineageTag: 3231d3fa-52dd-48f9-a107-535bc386768f
+
+	measure 'Costo unitario medio progressivo - Generale' = DIVIDE ( [Costo medio progressivo - Generale], [Quantità - Generale] )
+		formatString: #,0.00
+		displayFolder: Generale
+		lineageTag: 74b63fb9-1bc1-4edd-9cda-ee3a44636936
+
+	measure 'Costo unitario movimento - Generale' = DIVIDE ( [Costo movimento - Generale], [Quantità - Generale] )
+		formatString: #,0.00
+		displayFolder: Generale
+		lineageTag: ee156012-ce4a-468a-874d-558f9d4c58ba
+
+	measure 'Costo unitario standard - Generale' = DIVIDE ( [Costo standard - Generale], [Quantità - Generale] )
+		formatString: #,0.00
+		displayFolder: Generale
+		lineageTag: cc512bab-725a-45ec-8a08-0210fa285bef
+
+	measure 'Importo (no omaggi) - Generale' =
+			
+			CALCULATE([Importo_2 - Generale] - [Importo omaggi - Generale])
+		formatString: #,0
+		displayFolder: Generale
+		lineageTag: ded6d55f-3dd5-4290-8ffb-a644cc92bc8d
+
+	measure 'Importo_1 - Generale' = SUM ( Vendite[Importo totale] )
+		formatString: #,0
+		isHidden
+		displayFolder: Generale
+		lineageTag: a3cc1110-cdc3-416e-8a20-283a8ab39187
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Importo lordo - Generale' = SUM ( Vendite[Importo lordo totale] )
+		displayFolder: Generale
+		lineageTag: 6c0d59f9-5a11-4296-a7ef-f4e6d04096f8
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importo sconti di riga - Generale' = [Importo lordo - Generale] - [Importo - Generale]
+		displayFolder: Generale
+		lineageTag: 75e391d2-084b-4a7b-b5d7-51484506d7a1
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importo sconti incondizionati - Generale' = SUM ( Vendite[Importo sconti incondizionati totale] )
+		formatString: #,0
+		displayFolder: Generale
+		lineageTag: 6808fc53-225e-4038-a366-6b2fd6f6b69b
+
+		changedProperty = FormatString
+
+	measure 'Importo sconti pagamento - Generale' = SUM ( Vendite[Importo sconto pagamento totale] )
+		formatString: #,0
+		displayFolder: Generale
+		lineageTag: 63cc8290-703d-4aba-bbe7-f98e510328a9
+
+		changedProperty = FormatString
+
+	measure 'Importo spese piede - Generale' = SUM ( Vendite[Importo spese piede totale] )
+		displayFolder: Generale
+		lineageTag: b0ff6f9a-713e-4eb8-ad40-658369497e71
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importo unitario - Generale' = DIVIDE ( [Importo (no omaggi) - Generale], [Quantità - Generale] )
+		formatString: #,0.00
+		displayFolder: Generale
+		lineageTag: 0190d2ae-72d3-4285-a5a8-9c7d5b41f362
+
+	measure 'Margine costo medio - Generale' = [Importo (no omaggi) - Generale] - [Costo medio - Generale]
+		formatString: #,0
+		displayFolder: Generale
+		lineageTag: 3a77cc26-d393-466b-8bf6-4a3ecdc0a0d6
+
+	measure 'Margine costo medio progressivo - Generale' = [Importo (no omaggi) - Generale] - [Costo medio progressivo - Generale]
+		formatString: #,0
+		displayFolder: Generale
+		lineageTag: de0d0442-ebd4-4b22-92d6-d195967af659
+
+	measure 'Margine costo movimento - Generale' = [Importo (no omaggi) - Generale] - [Costo movimento - Generale]
+		formatString: #,0
+		displayFolder: Generale
+		lineageTag: b2d1fbba-1462-4cec-b073-54a77100f21d
+
+	measure 'Margine costo standard - Generale' = [Importo (no omaggi) - Generale] - [Costo standard - Generale]
+		formatString: #,0
+		displayFolder: Generale
+		lineageTag: 5be88739-3bd7-48a3-832b-a82cba7f8bff
+
+	measure 'Provvigione - Generale' = SUM ( 'Vendite per agente'[Importo provvigione UdC] )
+		formatString: #,0
+		displayFolder: Generale
+		lineageTag: 5fd9f9c8-cf63-4134-a256-9cdfd67d4954
+
+	measure 'Provvigione unitaria - Generale' = DIVIDE ( [Provvigione - Generale], [Quantità - Generale] )
+		formatString: #,0.00
+		displayFolder: Generale
+		lineageTag: badb53bd-b05a-4498-a538-0fdbcc8974ec
+
+	measure 'Quantità - Generale' = SUM ( 'Vendite'[Quantità] )
+		formatString: #,0
+		displayFolder: Generale
+		lineageTag: 708d91fb-3d04-4ff8-914b-8f67332504a0
+
+	measure 'Sconti di riga % - Generale' = DIVIDE ( [Importo sconti di riga - Generale], [Importo lordo - Generale] )
+		displayFolder: Generale
+		lineageTag: f1648ae1-9edc-483f-8ce8-e292a0a230d0
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Costo medio - Residuo' =
+			
+			CALCULATE (
+			    SUMX (
+			        'Vendite',
+			        'Vendite'[Costo medio] * 'Vendite'[Percentuale residua quantità]
+			    ),
+			    'Situazione saldo movimento'[Situazione saldo movimento] = "Non saldato"
+			)
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: 80e252bb-2c0f-47fd-ab98-47a6dc08fe82
+
+	measure 'Costo medio progressivo - Residuo' =
+			
+			CALCULATE (
+			    SUMX (
+			        Vendite,
+			        'Vendite'[Costo medio progressivo] * 'Vendite'[Percentuale residua quantità]
+			    ),
+			    'Situazione saldo movimento'[Situazione saldo movimento] = "Non saldato"
+			)
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: 72ad31bf-933b-463d-8778-26c199b960fc
+
+	measure 'Costo movimento - Residuo' =
+			
+			CALCULATE (
+			    SUMX (
+			        vendite,
+			        'Vendite'[Costo movimento] * 'Vendite'[Percentuale residua quantità]
+			    ),
+			    'Situazione saldo movimento'[Situazione saldo movimento] = "Non saldato"
+			)
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: ca61c5fa-a9bf-41f2-a584-7c79fc6a2dd3
+
+	measure 'Costo standard - Residuo' =
+			
+			CALCULATE (
+			    SUMX (
+			        vendite,
+			        'Vendite'[Costo standard] * 'Vendite'[Percentuale residua quantità]
+			    ),
+			    'Situazione saldo movimento'[Situazione saldo movimento] = "Non saldato"
+			)
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: b2c259bf-86ad-4493-ae24-d14faa06f08e
+
+	measure 'Costo unitario medio - Residuo' = DIVIDE ( [Costo medio - Residuo], [Quantità - Residuo] )
+		formatString: #,0.00
+		displayFolder: Residuo
+		lineageTag: 6e9d3516-3e05-4c18-9d8e-6465c0b4f81c
+
+	measure 'Costo unitario medio progressivo - Residuo' = DIVIDE ( [Costo medio progressivo - Residuo], [Quantità - Residuo] )
+		formatString: #,0.00
+		displayFolder: Residuo
+		lineageTag: 898306a2-673a-4368-952c-a06549b3679b
+
+	measure 'Costo unitario movimento - Residuo' = DIVIDE ( [Costo movimento - Residuo], [Quantità - Residuo] )
+		formatString: #,0.00
+		displayFolder: Residuo
+		lineageTag: a9e2895f-8666-41b3-aeea-2453c687b45e
+
+	measure 'Costo unitario standard - Residuo' = DIVIDE ( [Costo standard - Residuo], [Quantità - Residuo] )
+		formatString: #,0.00
+		displayFolder: Residuo
+		lineageTag: fa5f74f7-87a2-471e-b833-7a991110ff70
+
+	measure 'Importo (no omaggi) - Residuo' =
+			
+			CALCULATE([Importo_2 - Residuo] - [Importo omaggi - Residuo])
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: 9b70da3f-0f85-4040-ac36-14ad43f2875e
+
+	measure 'Importo_1 - Residuo' =
+			
+			CALCULATE (
+			    SUMX (
+			        'Vendite',
+			        'Vendite'[Importo totale] * 'Vendite'[Percentuale residua importo]
+			    ),
+			    'Situazione saldo movimento'[Situazione saldo movimento] = "Non saldato"
+			)
+		formatString: #,0
+		isHidden
+		displayFolder: Residuo
+		lineageTag: 39ae49b4-fb72-4916-9972-60ee747d0e33
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Importo lordo - Residuo' =
+			
+			CALCULATE (
+			    SUMX (
+			        vendite,
+			        Vendite[Importo lordo totale] * 'Vendite'[Percentuale residua importo]
+			    ),
+			    'Situazione saldo movimento'[Situazione saldo movimento] = "Non saldato"
+			)
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: 75085cb3-70fd-4125-9207-f777de5c066b
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Importo provvigioni - Residuo' =
+			
+			CALCULATE (
+			    SUMX (
+			        'Vendite per agente',
+			        [Importo Residuo / Importo ordinato - %] * [Provvigione - Ordinato]
+			    ),
+			    'Situazione saldo movimento'[Situazione saldo movimento] = "Non saldato"
+			)
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: 999b7255-f0c8-4113-a464-60bf78eff8bb
+
+		changedProperty = FormatString
+
+	measure 'Importo Residuo / Importo ordinato - %' = DIVIDE ( [Importo_1 - Residuo], [Importo_1 - Ordinato] )
+		displayFolder: Residuo
+		lineageTag: 97c49e3d-e9b8-4f81-8b3e-b0684be7855e
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importo sconti di riga - Residuo' = [Importo lordo - Residuo] - [Importo - Residuo]
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: 5820628e-8cfa-45b7-9d58-4fd8383b99ea
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Importo sconti incondizionati - Residuo' =
+			
+			CALCULATE (
+			    SUMX (
+			        Vendite,
+			        Vendite[Importo sconti incondizionati totale] * 'Vendite'[Percentuale residua importo]
+			    ),
+			    'Situazione saldo movimento'[Situazione saldo movimento] = "Non saldato"
+			)
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: e18b1a09-a41a-4253-be67-7a07b751243e
+
+		changedProperty = FormatString
+
+	measure 'Importo sconti pagamento - Residuo' =
+			
+			CALCULATE (
+			    SUMX (
+			        Vendite,
+			        Vendite[Importo sconto pagamento totale] * 'Vendite'[Percentuale residua importo]
+			    ),
+			    'Situazione saldo movimento'[Situazione saldo movimento] = "Non saldato"
+			)
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: 8f2ad4f1-926d-49ef-8f59-ab74ed364365
+
+		changedProperty = FormatString
+
+	measure 'Importo spese piede - Residuo' =
+			
+			CALCULATE (
+			    SUMX (
+			        Vendite,
+			        Vendite[Importo spese piede totale] * 'Vendite'[Percentuale residua importo]
+			    ),
+			    'Situazione saldo movimento'[Situazione saldo movimento] = "Non saldato"
+			)
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: 2b035060-ad8a-440e-b3bf-a9fa791adbf4
+
+		changedProperty = FormatString
+
+	measure 'Importo unitario - Residuo' = DIVIDE ( [Importo (no omaggi) - Residuo], [Quantità - Residuo] )
+		formatString: #,0.00
+		displayFolder: Residuo
+		lineageTag: 7544b46b-7361-41d3-ad54-e53a241f7dc7
+
+	measure 'Margine costo medio - Residuo' = [Importo (no omaggi) - Residuo] - [Costo medio - Residuo]
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: c0bc17d1-f940-4b85-a0a9-b8ddc0b51a3c
+
+	measure 'Margine costo medio progressivo - Residuo' = [Importo (no omaggi) - Residuo] - [Costo medio progressivo - Residuo]
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: e97787b2-ae91-4bfc-bee3-c705ae004086
+
+	measure 'Margine costo movimento - Residuo' = [Importo (no omaggi) - Residuo] - [Costo movimento - Residuo]
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: b95efa4a-4015-46e6-a245-ce8b0e3aac6b
+
+	measure 'Margine costo standard - Residuo' = [Importo (no omaggi) - Residuo] - [Costo standard - Residuo]
+		formatString: #,0
+		displayFolder: Residuo
+		lineageTag: 1d586107-8b47-418c-9472-4c82f8f81c26
+
+	measure 'Quantità - Residuo' =
+			
+			CALCULATE (
+			    SUMX (
+			        'Vendite',
+			        'Vendite'[Quantità] * 'Vendite'[Percentuale residua quantità]
+			    ),
+			    'Situazione saldo movimento'[Situazione saldo movimento] = "Non saldato"
+			)
+		displayFolder: Residuo
+		lineageTag: e182ced8-f69c-4ba2-a80c-08f57c9db680
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sconti di riga % - Residuo' = DIVIDE ( [Importo sconti di riga - Residuo], [Importo lordo - Residuo] )
+		formatString: #,0.00%;-#,0.00%;#,0.00%
+		displayFolder: Residuo
+		lineageTag: c901be93-e1b1-4007-b863-907860e97be5
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Importo_2 - Generale' = ```
+			VAR SpesePiede =
+			    SELECTEDVALUE ( Parametri[Importo - Aggiungi spese di piede] )
+			VAR ScontiIncond =
+			    SELECTEDVALUE ( Parametri[Importo - Sottrai sconti incondizionati] )
+			VAR ScontiPag =
+			    SELECTEDVALUE ( Parametri[Importo - Sottrai sconti di pagamento] )
+			VAR Provvigioni =
+			    SELECTEDVALUE ( Parametri[Importo - Sottrai provvigioni] )
+			RETURN
+			    [Importo_1 - Generale] 
+			    + [Importo spese piede - Generale] * SpesePiede 
+			    - [Importo sconti incondizionati - Generale] * ScontiIncond 
+			    - [Importo sconti pagamento - Generale] * ScontiPag 
+			    - [Provvigione - Generale] * Provvigioni
+			```
+		isHidden
+		displayFolder: Generale
+		lineageTag: fdc8e462-19cb-42d7-8490-d6b8544e343e
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importo omaggi - Generale' =
+			
+			CALCULATE(
+			    [Importo_2 - Generale],
+			    'Tipi riga'[Tipo riga - Codice] = 4
+			)
+		displayFolder: Generale
+		lineageTag: 11eef094-110b-4caf-8476-046b67b6b8eb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Quantità omaggi - Generale' =
+			
+			CALCULATE(
+			    [Quantità - Generale],
+			    'Tipi riga'[Tipo riga - Codice] = 4
+			)
+		displayFolder: Generale
+		lineageTag: a671420d-525c-4fd8-8c1c-1b67c82a0ce3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importo_2 - Residuo' = ```
+			VAR SpesePiede =
+			    SELECTEDVALUE ( Parametri[Importo - Aggiungi spese di piede] )
+			VAR ScontiIncond =
+			    SELECTEDVALUE ( Parametri[Importo - Sottrai sconti incondizionati] )
+			VAR ScontiPag =
+			    SELECTEDVALUE ( Parametri[Importo - Sottrai sconti di pagamento] )
+			VAR Provvigioni =
+			    SELECTEDVALUE ( Parametri[Importo - Sottrai provvigioni] )
+			RETURN
+			    [Importo_1 - Residuo] 
+			    + [Importo spese piede - Residuo] * SpesePiede 
+			    - [Importo sconti incondizionati - Residuo] * ScontiIncond 
+			    - [Importo sconti pagamento - Residuo] * ScontiPag 
+			    - [Importo provvigioni - Residuo] * Provvigioni
+			```
+		isHidden
+		displayFolder: Residuo
+		lineageTag: a3aca072-d0e4-4e7a-b86d-11f6b7bacef3
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Quantità omaggi - Residuo' =
+			
+			CALCULATE(
+			    [Quantità - Residuo],
+			    'Tipi riga'[Tipo riga - Codice] = 4
+			)
+		displayFolder: Residuo
+		lineageTag: 80235fde-eb0b-4634-8696-4bbc32341b84
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importo - Generale' = [Importo_2 - Generale]
+		displayFolder: Generale
+		lineageTag: a31437b0-55f5-47bf-9763-340d4d8b8e47
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importo omaggi - Residuo' =
+			
+			CALCULATE(
+			    [Importo_2 - Residuo],
+			    'Tipi riga'[Tipo riga - Codice] = 4
+			)
+		displayFolder: Residuo
+		lineageTag: b217d606-751a-4c5d-b0c0-fbb46982bf5a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importo - Residuo' = [Importo_2 - Residuo]
+		displayFolder: Residuo
+		lineageTag: 584387ed-17e0-44d1-ad2c-efafddf6745e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Z_Dummy
+		dataType: string
+		isHidden
+		lineageTag: 805a6a23-be07-47a5-9219-952d7d68067c
+		summarizeBy: none
+		sourceColumn: Z_Dummy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Generale-67737b97-ef8a-4259-895d-b73a58a457c1 = m
+		mode: import
+		queryGroup: Misure
+		source =
+				let
+				    Origine = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Z_Dummy = _t])
+				in
+				    Origine
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,3 @@
+EVALUATE
+
+FILTER('Articoli in lingua', 'Articoli in lingua'[K_CodArtVar]="XS_ANTICIPO_")

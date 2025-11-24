@@ -1,0 +1,98 @@
+table 'Tipologie documenti'
+	lineageTag: 2326d1da-a072-44f0-85d8-40a950605398
+
+	column K_GruClaTipDoc
+		dataType: string
+		isHidden
+		lineageTag: f0d0a438-9711-4c74-be52-0fce9823e2ed
+		summarizeBy: none
+		sourceColumn: K_GruClaTipDoc
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Documento - Gruppo'
+		dataType: string
+		lineageTag: 570f334d-f6e7-4647-95a7-793c7367aa4e
+		summarizeBy: none
+		sourceColumn: Documento - Gruppo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Documento - Classe'
+		dataType: string
+		lineageTag: 785dcc76-a209-4386-924f-9ee2fe422cf4
+		summarizeBy: none
+		sourceColumn: Documento - Classe
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Documento - Tipo'
+		dataType: string
+		lineageTag: 6aa16ab5-8df4-4766-9d72-1305711b9faa
+		summarizeBy: none
+		sourceColumn: Documento - Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tipologie documenti-f1fcc950-3758-4912-b14f-f2b16bcb329e' = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " WHERE DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " WHERE DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoIN2 = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " AND Codice IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN2 = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " AND Codice NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				        SELECT
+				             K_GruClaTipDoc AS [K_GruClaTipDoc]
+				            ,GruppoDoc AS [Documento - Gruppo]
+				            ,ClasseDoc AS [Documento - Classe]
+				            ,TipoDoc AS [Documento - Tipo]
+				
+				        FROM 
+				            [dbo].[ESBI_TIPOLDOC] WITH (NOLOCK)"
+				
+				        & StringaFiltroGruppoIN
+				        & StringaFiltroGruppoNOTIN
+				        & "
+				
+				        --Inizio union per estrarre le tipologie documento che non gestiscono il tipo (gruppo DMS)
+				        /*
+				        UNION
+				
+				        SELECT
+							T1.K_Gruppo+'_'+V.K_GruClaDoc+'_0' as [K_GruClaTipDoc]
+				            ,V.GruppoDoc AS [Documento - Gruppo]
+							,V.ClasseDoc AS [Documento - Classe] 
+							,'' AS [Documento - Tipo]
+				        FROM ESBI_GRUCLADOC as V
+				        LEFT OUTER JOIN SIBI_V_GRUPPI AS [T1]
+				            ON (1 = 1)
+						WHERE V.CodGruppoDoc='DMS'
+				        "
+				        & StringaFiltroGruppoIN2
+				        & StringaFiltroGruppoNOTIN2
+				        & ";
+				        */        
+				        --Fine union per estrarre le tipologie documento che non gestiscono il tipo (gruppo DMS)
+				
+				    "
+				    ,CreateNavigationProperties=false])
+				in
+				    Origine
+				```
+
+	annotation PBI_Id = d3e27428-4729-4172-a038-afe49ea7d7cd
+
+	annotation LinkedQueryName = Tipologie documenti
+
+	annotation PBI_QueryRelationships = {"columnCount":4,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Tipologie documenti/Origine.{K_GruClaTipDoc,0}","Section1/Tipologie documenti/Origine.{Documento - Gruppo,1}","Section1/Tipologie documenti/Origine.{Documento - Classe,2}","Section1/Tipologie documenti/Origine.{Documento - Tipo,3}"],"ColumnCount":4,"KeyColumnNames":[],"ColumnIdentities":["Section1/Tipologie documenti/Origine.{K_GruClaTipDoc,0}","Section1/Tipologie documenti/Origine.{Documento - Gruppo,1}","Section1/Tipologie documenti/Origine.{Documento - Classe,2}","Section1/Tipologie documenti/Origine.{Documento - Tipo,3}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

@@ -1,0 +1,6 @@
+//Benvenuti nella visualizzazione query DAX. Per altre informazioni sulle query DAX, vedere https://aka.ms/dax-queries.
+// Fare clic con il pulsante destro del mouse su tabelle, colonne o misure nel riquadro dati per accedere alle query rapide oppure chiedere aiuto a Copilot per la scrittura di DAX.
+
+// Selezionare "Esegui" per provare questa query DAX di esempio.
+EVALUATE
+    DISTINCT('Articoli / Servizi'[Articolo - Tipo])

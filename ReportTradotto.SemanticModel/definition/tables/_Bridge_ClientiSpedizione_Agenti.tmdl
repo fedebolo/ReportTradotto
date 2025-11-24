@@ -1,0 +1,67 @@
+table _Bridge_ClientiSpedizione_Agenti
+	isHidden
+	lineageTag: 2c13305d-9e28-44bb-9b05-aa7e7823eb93
+
+	column K_CodCli
+		dataType: string
+		isHidden
+		lineageTag: f0d954bc-45c1-4058-a794-b46fa85d0db8
+		summarizeBy: none
+		sourceColumn: K_CodCli
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgenteRuolo
+		dataType: string
+		isHidden
+		lineageTag: 048c6f7b-56fc-4b4b-b8b4-b6609ef346fe
+		summarizeBy: none
+		sourceColumn: K_CodAgenteRuolo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Condiz. comm. (Cliente sped.) - Agente principale/secondario'
+		dataType: string
+		isHidden
+		lineageTag: b79c7ef0-d075-4153-9480-910e05787de1
+		summarizeBy: none
+		sourceColumn: Condiz. comm. (Cliente sped.) - Agente principale/secondario
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgente
+		dataType: string
+		lineageTag: acc25dc2-78e1-47fe-9366-96ffb3596b2f
+		summarizeBy: none
+		sourceColumn: K_CodAgente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ditta
+		dataType: string
+		lineageTag: 343376d9-c575-42ae-a9d7-601715730f77
+		summarizeBy: none
+		sourceColumn: Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Bridge_ClientiSpedizione_Agenti-763634e5-6dc9-4e60-9218-ef098997c7ac = m
+		mode: import
+		queryGroup: Dimensioni
+		source =
+				let
+				    Origine = _Bridge_ClientiIntestatari_Agenti,
+				    Specializzazione_Nome_Breve = Table.TransformColumnNames(Origine, each Text.Replace(_, "(Cliente)", "(Cliente sped.)"))
+				in
+				    Specializzazione_Nome_Breve
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

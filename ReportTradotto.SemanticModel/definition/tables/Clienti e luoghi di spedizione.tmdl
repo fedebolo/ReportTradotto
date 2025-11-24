@@ -1,0 +1,621 @@
+table 'Clienti e luoghi di spedizione'
+	lineageTag: 0ab840e2-b4cc-46e6-8f02-2cc83f748a47
+
+	column K_CodCli
+		dataType: string
+		isHidden
+		lineageTag: 9250334a-47e8-4c17-b702-be9b4be94c07
+		summarizeBy: none
+		sourceColumn: K_CodCli
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodCliInd
+		dataType: string
+		isHidden
+		lineageTag: 54bcef10-49bc-4538-8638-0a3599fa7f5d
+		summarizeBy: none
+		sourceColumn: K_CodCliInd
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione'
+		dataType: string
+		lineageTag: 99943192-0673-4225-947e-1bb0a0e568c2
+		summarizeBy: none
+		sourceColumn: Cliente spedizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione'
+		dataType: string
+		lineageTag: 04e127cf-15d8-476b-a8f6-f726000d1fb7
+		summarizeBy: none
+		sourceColumn: Luogo spedizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Ditta'
+		dataType: string
+		lineageTag: 7863ef1b-eea6-4c5c-bfdd-10d387838e6c
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Codice'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5bee53ea-41b5-4d0c-9ace-b9e209a5af2d
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Codice
+
+		annotation SummarizationSetBy = User
+
+	column 'Cliente spedizione - Descrizione'
+		dataType: string
+		lineageTag: 492f61d2-466c-4511-ac64-ecd59a94c996
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - CAP'
+		dataType: string
+		lineageTag: a5aca14e-38ba-4a65-b4e9-23f46d7bae1a
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - CAP
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Località'
+		dataType: string
+		lineageTag: cb30e598-13c1-4419-a0cc-0d7426aabb00
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Località
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Codice provincia'
+		dataType: string
+		lineageTag: 5a9e8888-a29a-457f-a9d6-ba18ced36bcb
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Codice provincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Descrizione provincia'
+		dataType: string
+		lineageTag: c4a269fe-c0e7-40f4-b926-b88f16f630cb
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Descrizione provincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Codice regione'
+		dataType: string
+		lineageTag: c05e8959-c92e-4308-92d7-75c6771140f8
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Codice regione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Descrizione regione'
+		dataType: string
+		lineageTag: 27b7c37f-7ee1-440a-9b4d-5b40a52275ba
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Descrizione regione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Codice stato'
+		dataType: string
+		lineageTag: 61fdee38-bbdd-4956-8799-58f225c2a69b
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Codice stato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Descrizione stato'
+		dataType: string
+		lineageTag: 39d80368-01ed-42c9-8a04-0736222dc6a4
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Descrizione stato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Codice zona (A)'
+		dataType: string
+		lineageTag: cfa2ad3b-4a6d-4686-b71c-c84c5d7c409c
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Codice zona (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Descrizione zona (A)'
+		dataType: string
+		lineageTag: ed2def0c-68b6-4d26-bfd1-55bf72d73452
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Descrizione zona (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Codice classe contabile (A)'
+		dataType: string
+		lineageTag: 6f5dcd7c-645a-4557-9b7c-7b18517d1bda
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Codice classe contabile (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Descrizione classe contabile (A)'
+		dataType: string
+		lineageTag: 6f188f6a-858c-4bef-a571-43e6ed77b3e3
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Descrizione classe contabile (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Classe contabile (A)'
+		dataType: string
+		lineageTag: 6db4613d-908b-402b-8c02-05ce477b7cbd
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Classe contabile (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Codice classe affidamento (A)'
+		dataType: string
+		lineageTag: 95fc37eb-9fd5-4cb4-a02e-275516371dd5
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Codice classe affidamento (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Descrizione classe affidamento (A)'
+		dataType: string
+		lineageTag: 17d740eb-b7e1-42b6-b5f7-b75a680e38da
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Descrizione classe affidamento (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Classe affidamento (A)'
+		dataType: string
+		lineageTag: 3e928b92-a6f8-4554-b933-65a0f512653b
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Classe affidamento (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Codice categoria (A)'
+		dataType: string
+		lineageTag: 01dfda5a-4f87-4398-83b6-d3a73a783c67
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Codice categoria (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Descrizione categoria (A)'
+		dataType: string
+		lineageTag: 392f7990-139a-455d-a3ff-85f2ecbc0989
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Descrizione categoria (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Categoria (A)'
+		dataType: string
+		lineageTag: a35ed4d0-ef8c-413d-aa7f-c21ab2fb6790
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Categoria (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Codice tipologia commerciale (A)'
+		dataType: string
+		lineageTag: ebbd66ee-dacc-4266-a5a9-dd67a58b0b6a
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Codice tipologia commerciale (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Descrizione tipologia commerciale (A)'
+		dataType: string
+		lineageTag: 6470c290-03f2-452d-a590-814189e3a9c0
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Descrizione tipologia commerciale (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Tipologia commerciale (A)'
+		dataType: string
+		lineageTag: 83684971-8649-4c5c-a84d-2e77fe0087ef
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Tipologia commerciale (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Data inizio validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: aaffc77d-2e20-46bd-bb9f-93ff00038881
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Data inizio validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Data fine validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dafaf39d-9af7-4d89-aecb-f0907ba25c8e
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Data fine validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Valido in data estrazione'
+		dataType: string
+		lineageTag: 3135c001-f095-46e3-acad-aafe2b25a6e1
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Valido in data estrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Zona (A)'
+		dataType: string
+		lineageTag: 05bfe145-34fb-4261-8f2f-bf5ef8822f45
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Zona (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Codice'
+		dataType: int64
+		formatString: 0
+		lineageTag: 015f0539-8498-438f-8c9a-e994739b2e48
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Codice
+
+		annotation SummarizationSetBy = User
+
+	column 'Luogo spedizione - CAP'
+		dataType: string
+		lineageTag: 288cabad-d084-4264-98dd-2e4dc8619ecb
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - CAP
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Località'
+		dataType: string
+		lineageTag: 336d953c-2da7-47a4-a54d-7f035cd4d341
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Località
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Codice provincia'
+		dataType: string
+		lineageTag: 00983b4e-81cf-4a63-92bb-25369027b953
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Codice provincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Codice stato'
+		dataType: string
+		lineageTag: 193ea33c-4a99-41f3-8f5f-cad3228dd72f
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Codice stato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Data inizio validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ec2fdeae-566a-40e5-9958-90b68aae3e24
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Data inizio validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Data fine validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 695d3bca-65bd-4e08-ba77-d40e82593d21
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Data fine validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Valido in data estrazione'
+		dataType: string
+		lineageTag: 272b7d35-67a3-4059-811d-cbe97dbbc897
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Valido in data estrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Descrizione provincia'
+		dataType: string
+		lineageTag: b56b518e-0f2f-40ae-a3bd-6e1ccded09c6
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Descrizione provincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Descrizione regione'
+		dataType: string
+		lineageTag: 63d01708-4007-460e-830e-7a1d2786dd6c
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Descrizione regione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Descrizione stato'
+		dataType: string
+		lineageTag: 5e2d7a08-3032-4d22-a0f4-f71e154f8d8e
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Descrizione stato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Posizione (comune, provincia, regione, stato)'
+		dataType: string
+		lineageTag: 1fc60079-0dbe-4833-9424-ceb9f43cb348
+		dataCategory: Place
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Posizione (comune, provincia, regione, stato)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Posizione (provincia, regione, stato)'
+		dataType: string
+		lineageTag: 91f513fa-cc27-49c7-b48d-ba40fa5f6a0b
+		dataCategory: County
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Posizione (provincia, regione, stato)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Posizione (regione, stato)'
+		dataType: string
+		lineageTag: 09db2819-333e-4390-85bf-6488ff3ad7c0
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Posizione (regione, stato)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Posizione (stato)'
+		dataType: string
+		lineageTag: afc713db-768f-4e46-87c6-5320eebdc48b
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Posizione (stato)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Posizione (comune, provincia, regione, stato)'
+		dataType: string
+		lineageTag: 7c1d4372-e196-4d93-bf68-9906c033a601
+		dataCategory: Place
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Posizione (comune, provincia, regione, stato)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Posizione (provincia, regione, stato)'
+		dataType: string
+		lineageTag: 4cd65e87-6b3d-4ef5-9cae-7f608728a17d
+		dataCategory: County
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Posizione (provincia, regione, stato)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Posizione (regione, stato)'
+		dataType: string
+		lineageTag: 61e040d7-0590-4675-adb0-678aa052b357
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Posizione (regione, stato)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Posizione (stato)'
+		dataType: string
+		lineageTag: b61c25b5-2bc4-4472-83be-25f542ebe431
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Posizione (stato)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Luogo spedizione - Descrizione'
+		dataType: string
+		lineageTag: 26c5029b-a626-46f4-915a-c8fc8d7e7414
+		summarizeBy: none
+		sourceColumn: Luogo spedizione - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Importo classe affidamento (A)'
+		dataType: double
+		lineageTag: f5f5bdbf-bebf-4472-80da-f509efbb80d3
+		summarizeBy: sum
+		sourceColumn: Cliente spedizione - Importo classe affidamento (A)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Cliente spedizione - Valuta importo classe affidamento (A)'
+		dataType: string
+		lineageTag: f7672d46-fe62-434f-b6b0-91a6c38e4a79
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Valuta importo classe affidamento (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Codice capogruppo (A)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4221dea1-b876-49ed-a860-e8f664851e48
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Codice capogruppo (A)
+
+		annotation SummarizationSetBy = User
+
+	column 'Cliente spedizione - Descrizione capogruppo (A)'
+		dataType: string
+		lineageTag: a13913d4-312a-4c4d-ad8a-51b0d500854d
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Descrizione capogruppo (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Capogruppo (A)'
+		dataType: string
+		lineageTag: 2b886376-6752-40d6-9ac1-496abeb937ad
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Capogruppo (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Codice listino prioritario (A)'
+		dataType: string
+		lineageTag: c6633ce3-f3b0-4d00-9853-f155fbec10f4
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Codice listino prioritario (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente spedizione - Descrizione listino prioritario (A)'
+		dataType: string
+		lineageTag: 5c5d9a3c-8c45-45fd-a26c-af97710aa39a
+		summarizeBy: none
+		sourceColumn: Cliente spedizione - Descrizione listino prioritario (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Cliente spedizione - Gerarchia territoriale'
+		lineageTag: 226d75cf-6a2a-46ec-b549-fb403613be31
+
+		level 'Cliente spedizione - Posizione (stato)'
+			lineageTag: d0087600-c83a-4886-8033-282dc9ae224f
+			column: 'Cliente spedizione - Posizione (stato)'
+
+		level 'Cliente spedizione - Posizione (regione, stato)'
+			lineageTag: 853c58fe-848b-47a9-adb8-7ca1b7a75d46
+			column: 'Cliente spedizione - Posizione (regione, stato)'
+
+		level 'Cliente spedizione - Posizione (provincia, regione, stato)'
+			lineageTag: 188676f1-68a1-4785-8a19-15909b47a0a8
+			column: 'Cliente spedizione - Posizione (provincia, regione, stato)'
+
+		level 'Cliente spedizione - Posizione (comune, provincia, regione, stato)'
+			lineageTag: 45d10b05-7ace-413c-8734-344dedba2072
+			column: 'Cliente spedizione - Posizione (comune, provincia, regione, stato)'
+
+	partition 'Clienti e luoghi di spedizione-326cedbd-173c-4010-91da-1b92007add73' = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " AND DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " AND DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				        SELECT
+				             K_CodIntestatarioInd AS [K_CodCliInd]
+				            ,K_CodIntestatario AS [K_CodCli]
+				            ,DBGruppo AS [Cliente spedizione - Ditta]
+				            ,CodIntestatario AS [Cliente spedizione - Codice]
+				            ,DesIntestatario AS [Cliente spedizione - Descrizione]
+				            ,Intestatario AS [Cliente spedizione]
+				            ,Cap AS [Cliente spedizione - CAP]
+				            ,Localita AS [Cliente spedizione - Località]
+				            ,CodProvincia AS [Cliente spedizione - Codice provincia]
+				            ,DesProvincia AS [Cliente spedizione - Descrizione provincia]
+				            ,CodRegione AS [Cliente spedizione - Codice regione]
+				            ,DesRegione AS [Cliente spedizione - Descrizione regione]
+				            ,CodStato AS [Cliente spedizione - Codice stato]
+				            ,DesStato AS [Cliente spedizione - Descrizione stato]
+				            ,CodZona AS [Cliente spedizione - Codice zona (A)]
+				            ,DesZona AS [Cliente spedizione - Descrizione zona (A)]
+				            ,CodClasseContabile AS [Cliente spedizione - Codice classe contabile (A)]
+				            ,DesClasseContabile AS [Cliente spedizione - Descrizione classe contabile (A)]
+				            ,ClasseContabile AS [Cliente spedizione - Classe contabile (A)]
+				            ,CodClasseAffidamento AS [Cliente spedizione - Codice classe affidamento (A)]
+				            ,DesClasseAffidamento AS [Cliente spedizione - Descrizione classe affidamento (A)]
+				            ,ClasseAffidamento AS [Cliente spedizione - Classe affidamento (A)]
+				            ,CodCategIntest AS [Cliente spedizione - Codice categoria (A)]
+				            ,DesCategintest AS [Cliente spedizione - Descrizione categoria (A)]
+				            ,CategIntest AS [Cliente spedizione - Categoria (A)]
+				            ,CodTipologiaCommerc AS [Cliente spedizione - Codice tipologia commerciale (A)]
+				            ,DesTipologiaCommerc AS [Cliente spedizione - Descrizione tipologia commerciale (A)]
+				            ,TipologiaCommerc AS [Cliente spedizione - Tipologia commerciale (A)]
+				            ,DataInizioValidita AS [Cliente spedizione - Data inizio validità]
+				            ,DataFineValidita AS [Cliente spedizione - Data fine validità]
+				            ,ValidoInDataEstraz AS [Cliente spedizione - Valido in data estrazione]
+				            ,Zona AS [Cliente spedizione - Zona (A)]
+				            ,IndNumProgr AS [Luogo spedizione - Codice]
+				            ,IndCap AS [Luogo spedizione - CAP]
+				            ,IndLocalita AS [Luogo spedizione - Località]
+				            ,IndProvincia AS [Luogo spedizione - Codice provincia]
+				            ,IndCodStato AS [Luogo spedizione - Codice stato]
+				            ,IndDataInizioValidit AS [Luogo spedizione - Data inizio validità]
+				            ,IndDataFineValidita AS [Luogo spedizione - Data fine validità]
+				            ,IndValidoInDataEstr AS [Luogo spedizione - Valido in data estrazione]
+				            ,IndDesProvincia AS [Luogo spedizione - Descrizione provincia]
+				            ,IndDesRegione AS [Luogo spedizione - Descrizione regione]
+				            ,IndDesStato AS [Luogo spedizione - Descrizione stato]
+				            ,AreaGeoCPRS AS [Cliente spedizione - Posizione (comune, provincia, regione, stato)]
+				            ,AreaGeoPRS AS [Cliente spedizione - Posizione (provincia, regione, stato)]
+				            ,AreaGeoRS AS [Cliente spedizione - Posizione (regione, stato)]
+				            ,AreaGeoS AS [Cliente spedizione - Posizione (stato)]
+				            ,IndAreaGeoCPRS AS [Luogo spedizione - Posizione (comune, provincia, regione, stato)]
+				            ,IndAreaGeoPRS AS [Luogo spedizione - Posizione (provincia, regione, stato)]
+				            ,IndAreaGeoRS AS [Luogo spedizione - Posizione (regione, stato)]
+				            ,IndAreaGeoS AS [Luogo spedizione - Posizione (stato)]
+				            ,IndDesIntestatario AS [Luogo spedizione - Descrizione]
+				            ,IndIntestatario AS [Luogo spedizione]
+				            ,ImpAffidamentoValuta AS [Cliente spedizione - Importo classe affidamento (A)]
+				            ,CodValuta AS [Cliente spedizione - Valuta importo classe affidamento (A)]
+				            ,CodIntestCapogruppo AS [Cliente spedizione - Codice capogruppo (A)]
+				            ,DesIntestCapogruppo AS [Cliente spedizione - Descrizione capogruppo (A)]
+				            ,IntestCapogruppo AS [Cliente spedizione - Capogruppo (A)]
+				            ,CodListPrioritario AS [Cliente spedizione - Codice listino prioritario (A)]
+				            ,DesListPrioritario AS [Cliente spedizione - Descrizione listino prioritario (A)]
+				
+				        FROM 
+				            [dbo].[ESBI_INTESTATARI_IND] WITH (NOLOCK) 
+				        
+				        WHERE 
+				            TipoAnagrafica = 1"
+				
+				        & StringaFiltroGruppoIN
+				        & StringaFiltroGruppoNOTIN
+				        & ";
+				    "
+				    ,CreateNavigationProperties=false])
+				in
+				    Origine
+				```
+
+	annotation PBI_Id = a5d2ac65-51b7-4b4d-89e8-71fbcd75ecfa
+
+	annotation LinkedQueryName = Clienti e luoghi di spedizione
+
+	annotation PBI_QueryRelationships = {"columnCount":57,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Clienti e luoghi di spedizione/Origine.{K_CodCliInd,0}","Section1/Clienti e luoghi di spedizione/Origine.{K_CodCli,1}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Ditta,2}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice,3}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione,4}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione,5}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - CAP,6}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Località,7}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice provincia,8}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione provincia,9}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice regione,10}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione regione,11}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice stato,12}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione stato,13}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice zona (A),14}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione zona (A),15}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice classe contabile (A),16}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione classe contabile (A),17}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Classe contabile (A),18}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice classe affidamento (A),19}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione classe affidamento (A),20}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Classe affidamento (A),21}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice categoria (A),22}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione categoria (A),23}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Categoria (A),24}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice tipologia commerciale (A),25}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione tipologia commerciale (A),26}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Tipologia commerciale (A),27}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Data inizio validità,28}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Data fine validità,29}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Valido in data estrazione,30}","Section1/Clienti e luoghi di spedizione/Origine.{K_Agente1,31}","Section1/Clienti e luoghi di spedizione/Origine.{K_Agente2,32}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Zona (A),33}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Codice,34}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - CAP,35}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Località,36}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Codice provincia,37}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Codice stato,38}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Data inizio validità,39}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Data fine validità,40}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Valido in data estrazione,41}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Descrizione provincia,42}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Descrizione regione,43}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Descrizione stato,44}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Posizione (comune, provincia, regione, stato),45}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Posizione (provincia, regione, stato),46}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Posizione (regione, stato),47}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Posizione (stato),48}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Posizione (comune, provincia, regione, stato),49}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Posizione (provincia, regione, stato),50}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Posizione (regione, stato),51}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Posizione (stato),52}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Descrizione,53}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione,54}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Importo classe affidamento (A),55}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Valuta importo classe affidamento (A),56}"],"ColumnCount":57,"KeyColumnNames":[],"ColumnIdentities":["Section1/Clienti e luoghi di spedizione/Origine.{K_CodCliInd,0}","Section1/Clienti e luoghi di spedizione/Origine.{K_CodCli,1}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Ditta,2}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice,3}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione,4}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione,5}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - CAP,6}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Località,7}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice provincia,8}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione provincia,9}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice regione,10}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione regione,11}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice stato,12}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione stato,13}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice zona (A),14}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione zona (A),15}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice classe contabile (A),16}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione classe contabile (A),17}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Classe contabile (A),18}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice classe affidamento (A),19}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione classe affidamento (A),20}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Classe affidamento (A),21}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice categoria (A),22}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione categoria (A),23}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Categoria (A),24}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Codice tipologia commerciale (A),25}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Descrizione tipologia commerciale (A),26}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Tipologia commerciale (A),27}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Data inizio validità,28}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Data fine validità,29}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Valido in data estrazione,30}","Section1/Clienti e luoghi di spedizione/Origine.{K_Agente1,31}","Section1/Clienti e luoghi di spedizione/Origine.{K_Agente2,32}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Zona (A),33}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Codice,34}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - CAP,35}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Località,36}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Codice provincia,37}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Codice stato,38}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Data inizio validità,39}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Data fine validità,40}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Valido in data estrazione,41}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Descrizione provincia,42}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Descrizione regione,43}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Descrizione stato,44}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Posizione (comune, provincia, regione, stato),45}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Posizione (provincia, regione, stato),46}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Posizione (regione, stato),47}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Posizione (stato),48}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Posizione (comune, provincia, regione, stato),49}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Posizione (provincia, regione, stato),50}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Posizione (regione, stato),51}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Posizione (stato),52}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione - Descrizione,53}","Section1/Clienti e luoghi di spedizione/Origine.{Luogo spedizione,54}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Importo classe affidamento (A),55}","Section1/Clienti e luoghi di spedizione/Origine.{Cliente spedizione - Valuta importo classe affidamento (A),56}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

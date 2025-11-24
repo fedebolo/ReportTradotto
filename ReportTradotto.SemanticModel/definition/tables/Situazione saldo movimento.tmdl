@@ -1,0 +1,33 @@
+table 'Situazione saldo movimento'
+	lineageTag: 789a7a79-8f7a-4b9a-b927-ce4bc7d47514
+
+	column K_SituazioneSaldo
+		dataType: string
+		isHidden
+		lineageTag: eba7d0a3-9a8e-4cb4-bc0f-5bc652f36ddf
+		summarizeBy: none
+		sourceColumn: K_SituazioneSaldo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Situazione saldo movimento'
+		dataType: string
+		lineageTag: b37362e2-e04d-47f6-8919-70dfc1553ba2
+		summarizeBy: none
+		sourceColumn: Situazione saldo movimento
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Situazione saldo movimento-93a6b30c-bc35-4a2f-8073-3b7bdfecb828' = m
+		mode: import
+		queryGroup: Dimensioni
+		source =
+				let
+				    Origine = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlDSUQpOzElJLMlXitWJVjIE8v3y8xSKYWKxAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [K_SituazioneSaldo = _t, #"Situazione saldo movimento" = _t])
+				in
+				    Origine
+
+	annotation PBI_ResultType = Table
+

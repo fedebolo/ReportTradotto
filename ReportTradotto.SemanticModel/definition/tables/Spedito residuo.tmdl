@@ -1,0 +1,1783 @@
+table 'Spedito residuo'
+	lineageTag: b58147b7-bef3-4c4b-b12b-3b5162d94651
+
+	measure 'Costo medio - Spedito residuo' =
+			
+			CALCULATE (
+			    [Costo medio - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 10c0add8-11bf-4b9b-8619-e12d9d0200dd
+
+	measure 'Costo medio progressivo - Spedito residuo' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 37957870-c68f-4a24-a687-944d8221efa5
+
+	measure 'Costo movimento - Spedito residuo' =
+			
+			CALCULATE (
+			    [Costo movimento - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: aa21bc56-b2ab-4776-80b2-d8f7bff2d2c1
+
+	measure 'Costo standard - Spedito residuo' =
+			
+			CALCULATE (
+			    [Costo standard - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: d7cd47c6-25a6-40ec-b287-abc217923ad2
+
+	measure 'Costo unitario medio - Spedito residuo' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: fd70b641-b5a9-4daa-ad6e-814e19ec2b66
+
+	measure 'Costo unitario medio progressivo - Spedito residuo' =
+			
+			CALCULATE (
+			    [costo unitario medio progressivo - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: 331c5571-4206-489d-9372-d2b7bae07bbb
+
+	measure 'Costo unitario movimento - Spedito residuo' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: 726ae64d-f1df-4dd7-840a-be3954748dc3
+
+	measure 'Costo unitario standard - Spedito residuo' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: 13a303f0-9990-4aee-b0e6-0225a856e7b2
+
+	measure 'Importo (no omaggi) - Spedito residuo' =
+			
+			CALCULATE (
+			    [Importo (no omaggi) - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 671dcb68-8d5a-4300-8cb3-fb79b4ffbc87
+
+	measure 'Importo - Spedito residuo' =
+			
+			CALCULATE (
+			    [Importo - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: b54e52e2-65b4-48b9-aacc-e87c53a7b910
+
+		changedProperty = FormatString
+
+	measure 'Importo lordo - Spedito residuo' =
+			
+			CALCULATE (
+			    [Importo lordo - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: a6b16ec1-34ee-4e9f-9788-b3e598dccf56
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Importo sconti di riga - Spedito residuo' =
+			
+			CALCULATE (
+			    [Importo sconti di riga - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 188635b8-483e-4946-a4da-f7abdea0cdb5
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Importo sconti incondizionati - Spedito residuo' =
+			
+			CALCULATE (
+			    [Importo sconti incondizionati - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 623adc2e-c116-42a0-8a14-33d66dc03624
+
+		changedProperty = FormatString
+
+	measure 'Importo sconti pagamento - Spedito residuo' =
+			
+			CALCULATE (
+			    [Importo sconti pagamento - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: de99c1a8-034a-4017-8860-f7c5c8972798
+
+		changedProperty = FormatString
+
+	measure 'Importo spese piede - Spedito residuo' =
+			
+			CALCULATE (
+			    [Importo spese piede - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: a4b1d126-b91e-4223-a01f-9b2471381746
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Importo unitario - Spedito residuo' =
+			
+			CALCULATE (
+			    [Importo unitario - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: d5ad95be-af65-40a8-b324-b91446287343
+
+	measure 'Margine costo medio - Spedito residuo' =
+			
+			CALCULATE (
+			    [Margine costo medio - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: e6ccfdd4-9816-4882-aedc-69110b11a847
+
+	measure 'Margine costo medio progressivo - Spedito residuo' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 378cf019-07fe-46fc-a885-aed14df66485
+
+	measure 'Margine costo movimento - Spedito residuo' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: c085d17f-6a78-4f81-8868-660b7cca91af
+
+	measure 'Margine costo standard - Spedito residuo' =
+			
+			CALCULATE (
+			    [Margine costo standard - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 2216dec3-2f8c-49a2-9b1c-146ff7ee20ce
+
+	measure 'Quantità - Spedito residuo' =
+			
+			CALCULATE (
+			    [Quantità - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: e5f84369-9fe4-4608-9d17-2ef8207ed48d
+
+	measure 'Sconti di riga % - Spedito residuo' =
+			
+			CALCULATE (
+			    [Sconti di riga % - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0.00%;-#,0.00%;#,0.00%
+		displayFolder: Corrente
+		lineageTag: a85bcab7-ea71-4c2b-a5dd-58113561a6b2
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Importo spedito residuo / Importo spedito - %' = DIVIDE ( [Importo - Spedito residuo], [Importo - Spedito] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Corrente
+		lineageTag: faaac184-760a-4e8f-b0ad-287920cf1273
+
+		changedProperty = FormatString
+
+	measure 'Importo provvigioni - Spedito residuo' =
+			
+			CALCULATE (
+			    SUMX (
+			        'Vendite per agente',
+			        [Importo spedito residuo / Importo spedito - %] * [Provvigione - Generale]
+			    ),
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 7781ceb3-21bc-4279-bc6f-5737ae7b838a
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Costo medio - Spedito residuo - PM' =
+			
+			CALCULATE (
+			    [Costo medio - Spedito residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: e3a02bda-305c-4be3-a5c6-017047d8f437
+
+	measure 'Costo medio progressivo - Spedito residuo - PM' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Spedito residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 7baafe5b-a78d-4e03-b612-d05b98ee8393
+
+	measure 'Costo movimento - Spedito residuo - PM' =
+			
+			CALCULATE (
+			    [Costo movimento - Spedito residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 94b49bc4-300e-4f65-810e-60a2410f007e
+
+	measure 'Costo standard - Spedito residuo - PM' =
+			
+			CALCULATE (
+			    [Costo standard - Spedito residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: fcc1f09e-c3b8-49c4-9ae6-a89d536b42b9
+
+	measure 'Quantità - Spedito residuo - PM' = CALCULATE ( [Quantità - Spedito residuo], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: f44fde9e-bfa8-4e12-b3b8-2c895dcf4bc7
+
+	measure 'Importo (no omaggi) - Spedito residuo - PM' = CALCULATE ( [Importo (no omaggi) - Spedito residuo], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 7bfddfb0-48c2-41eb-9989-0521d103b647
+
+	measure 'Costo unitario standard - Spedito residuo - PM' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Spedito residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 45e40139-be7c-4317-afc4-08e67cf08e18
+
+	measure 'Costo unitario medio - Spedito residuo - PM' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Spedito residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 252ebfa9-f769-4882-8674-d80aacf9d65a
+
+	measure 'Costo unitario medio progressivo - Spedito residuo - PM' =
+			
+			CALCULATE (
+			    [Costo unitario medio progressivo - Spedito residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 6d24e6c0-c7dc-4306-84cf-642c6706a424
+
+	measure 'Costo unitario movimento - Spedito residuo - PM' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Spedito residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: e702e1ef-0d62-4500-8e2d-827ab29db49e
+
+	measure 'Importo unitario - Spedito residuo - PM' =
+			
+			CALCULATE (
+			    [Importo unitario - Spedito residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 4d1c5612-69c9-41fb-b281-f34ad700b094
+
+	measure 'Margine costo movimento - Spedito residuo - PM' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Spedito residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 20cd4be9-f3fc-473e-bddb-cfa8920c3440
+
+	measure 'Margine costo medio progressivo - Spedito residuo - PM' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Spedito residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 0a0c47e6-cad2-4fea-ba1e-fe12646b02a1
+
+	measure 'Margine costo medio - Spedito residuo - PM' =
+			
+			CALCULATE (
+			    [Margine costo medio - Spedito residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 1562a201-1125-4196-a1af-4f8ddf8a2b99
+
+	measure 'Margine costo standard - Spedito residuo - PM' =
+			
+			CALCULATE (
+			    [Margine costo standard - Spedito residuo],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: e32907b4-aef5-4207-bedd-0b8ca0dc0f07
+
+	measure 'Costo medio - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Costo medio - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: e8a78c8d-92ba-4666-b843-65ab2c9713d6
+
+	measure 'Costo medio progressivo - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 9b3fdb5d-bd2e-47cf-a784-df4c39e25f47
+
+	measure 'Costo movimento - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Costo movimento - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 297adecd-9157-45e6-bf75-4de8f4828463
+
+	measure 'Costo standard - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Costo standard - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 9fc56bd1-c448-41a2-bde4-5030a2877bbf
+
+	measure 'Quantità - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Quantità - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 918af3a1-e00e-4455-b4bb-c71f131e3567
+
+	measure 'Importo (no omaggi) - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Importo (no omaggi) - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 26160ef2-4ce2-40ab-85f7-4d1e42d4baa2
+
+	measure 'Costo unitario standard - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: 5ad131cf-57de-455d-8f29-d7c7ae99ab50
+
+	measure 'Costo unitario medio - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: a0282228-b491-425a-a3ef-b9a9eb8671bc
+
+	measure 'Costo unitario medio progressivo - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Costo unitario medio progressivo - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: 546b6829-b6be-40e3-b815-ad8df721e7ab
+
+	measure 'Costo unitario movimento - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: 3814294a-eb97-47a9-811d-6e85bf0da45d
+
+	measure 'Importo unitario - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Importo unitario - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: da0b1cd7-4394-4fc5-8779-e3b90349364c
+
+	measure 'Margine costo movimento - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 67677833-d21f-4ce2-b010-f41f91cac832
+
+	measure 'Margine costo medio progressivo - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 65f2f37e-d0a8-4982-9cf3-149d182bc976
+
+	measure 'Margine costo medio - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Margine costo medio - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: fae45209-d67d-412f-86f4-bfc02c580e76
+
+	measure 'Margine costo standard - Spedito residuo - PY' =
+			
+			CALCULATE (
+			    [Margine costo standard - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 4bea2bf4-576b-4f9c-9dc4-4332d6443dca
+
+	measure 'Costo medio - Spedito residuo - YTD' = TOTALYTD ( [Costo medio - Spedito residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 70ab3993-d303-4712-b582-b899ef9d515f
+
+	measure 'Costo medio progressivo - Spedito residuo - YTD' = TOTALYTD ( [Costo medio progressivo - Spedito residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 1a555b6c-387b-451a-a6a8-f822fca32c4a
+
+	measure 'Costo movimento - Spedito residuo - YTD' = TOTALYTD ( [Costo movimento - Spedito residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 42c81303-15da-4420-b644-2806fa91d67f
+
+	measure 'Costo standard - Spedito residuo - YTD' = TOTALYTD ( [Costo standard - Spedito residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: d3ea80f1-13cc-44b7-8d7f-a7b16ac6afb1
+
+	measure 'Quantità - Spedito residuo - YTD' = TOTALYTD ( [Quantità - Spedito residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 42ad3a57-8ecb-4e2b-ac82-5e3bb533ffd7
+
+	measure 'Importo (no omaggi) - Spedito residuo - YTD' = TOTALYTD ( [Importo (no omaggi) - Spedito residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 5365c059-bb82-4a25-a85f-04efdd735f6f
+
+	measure 'Costo unitario standard - Spedito residuo - YTD' = TOTALYTD ( [Costo unitario standard - Spedito residuo], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 4f8e968c-7743-4e38-8045-2fcd174a4b9a
+
+	measure 'Costo unitario medio - Spedito residuo - YTD' = TOTALYTD ( [Costo unitario medio - Spedito residuo], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: a65ee5b4-7c95-4a5f-a129-484a39bbdb72
+
+	measure 'Costo unitario medio progressivo - Spedito residuo - YTD' =
+			TOTALYTD (
+			    [Costo unitario medio progressivo - Spedito residuo],
+			    Calendario[Data]
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: b75a69d8-7bad-4758-9ec9-33c438d7bf92
+
+	measure 'Costo unitario movimento - Spedito residuo - YTD' = TOTALYTD ( [Costo unitario movimento - Spedito residuo], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 38713999-4fb9-4a60-aaae-47e0e1fb8469
+
+	measure 'Importo unitario - Spedito residuo - YTD' = TOTALYTD ( [Importo unitario - Spedito residuo], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 6c46011d-2f11-4407-ba47-8abec97cc393
+
+	measure 'Margine costo movimento - Spedito residuo - YTD' = TOTALYTD ( [Margine costo movimento - Spedito residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 7e4e90f2-6c44-4dc3-8282-ecb481e92da7
+
+	measure 'Margine costo medio progressivo - Spedito residuo - YTD' =
+			TOTALYTD (
+			    [Margine costo medio progressivo - Spedito residuo],
+			    Calendario[Data]
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: b8d1178f-af10-4afe-a006-997d590f8398
+
+	measure 'Margine costo medio - Spedito residuo - YTD' = TOTALYTD ( [Margine costo medio - Spedito residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 3d3286c4-9568-4f80-bb55-dd9462fc10e9
+
+	measure 'Margine costo standard - Spedito residuo - YTD' = TOTALYTD ( [Margine costo standard - Spedito residuo], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: c290cb47-7c1a-46d0-9345-829d1d07f69b
+
+	measure 'Costo medio - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Costo medio - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: b9a4fe23-d503-42b1-9d3d-94c6a69840d8
+
+	measure 'Costo medio progressivo - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Costo medio progressivo - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 2021434f-7370-4341-9917-3cb89a936ddc
+
+	measure 'Costo movimento - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Costo movimento - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 7b544ef2-dfe3-47b7-9d7c-32bbcfa3ec77
+
+	measure 'Costo standard - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Costo standard - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 570f32d0-4d61-4ead-9e8c-aff2534d4be3
+
+	measure 'Quantità - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Quantità - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 7a47e41f-2ced-4666-8941-c5d8cca89723
+
+	measure 'Importo (no omaggi) - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Importo (no omaggi) - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 8f185e32-947d-4c07-a511-31e5b98cb06b
+
+	measure 'Costo unitario standard - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Costo unitario standard - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: eaccf786-cdac-41d6-afda-abe58bc43b1f
+
+	measure 'Costo unitario medio - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Costo unitario medio - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: e2469bb8-78fa-4839-ae65-b3a9f3020a93
+
+	measure 'Costo unitario medio progressivo - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Costo unitario medio progressivo - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: b0fcc482-3fab-4c3b-b2f1-ab5532a40fa3
+
+	measure 'Costo unitario movimento - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Costo unitario movimento - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: b4a682f7-dd20-4672-8ca1-5bfc1be2fe7c
+
+	measure 'Importo unitario - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Importo unitario - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: a2a93429-a70a-480c-9d46-cdc119d6ea0e
+
+	measure 'Margine costo movimento - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Margine costo movimento - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 039386f8-2f9d-4ff9-8a6d-9dc3916e1545
+
+	measure 'Margine costo medio progressivo - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Margine costo medio progressivo - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 38a92f7d-0af9-4ba0-8222-16a86437aab8
+
+	measure 'Margine costo medio - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Margine costo medio - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 8baf1e05-f51d-430f-be58-58a241102fc7
+
+	measure 'Margine costo standard - Spedito residuo - PYTD' =
+			TOTALYTD (
+			    [Margine costo standard - Spedito residuo],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 749edca5-dc34-4b23-b882-b6ba5e7b2f13
+
+	measure 'Costo medio - Spedito residuo - YOY' = [Costo medio - Spedito residuo] - [Costo medio - Spedito residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 9d46302f-f71f-4267-93d1-da96ca4f221e
+
+	measure 'Costo medio progressivo - Spedito residuo - YOY' = [Costo medio progressivo - Spedito residuo] - [Costo medio progressivo - Spedito residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 65fd8580-5a21-46da-8a98-7f56151d2fda
+
+	measure 'Costo movimento - Spedito residuo - YOY' = [Costo movimento - Spedito residuo] - [Costo movimento - Spedito residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: d84a2400-0066-4556-a90f-1fd87340ca90
+
+	measure 'Costo standard - Spedito residuo - YOY' = [Costo standard - Spedito residuo] - [Costo standard - Spedito residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: c5444b24-f0bb-4ba0-9e7b-ec55a96aa140
+
+	measure 'Quantità - Spedito residuo - YOY' = [Quantità - Spedito residuo] - [Quantità - Spedito residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: f0b9ef6f-7e58-4ffa-931e-35a4ea333ee6
+
+	measure 'Importo (no omaggi) - Spedito residuo - YOY' = [Importo (no omaggi) - Spedito residuo] - [Importo (no omaggi) - Spedito residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 3c9588ac-d18f-46e4-a90c-034debb2f809
+
+	measure 'Costo unitario standard - Spedito residuo - YOY' = [Costo unitario standard - Spedito residuo] - [Costo unitario standard - Spedito residuo - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: a7b81916-2e31-45c3-b7b8-f45b1fca4ea3
+
+	measure 'Costo unitario medio - Spedito residuo - YOY' = [Costo unitario medio - Spedito residuo] - [Costo unitario medio - Spedito residuo - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: f21b0b52-dc34-495e-9587-818a1f3d5ae5
+
+	measure 'Costo unitario medio progressivo - Spedito residuo - YOY' = [Costo unitario medio progressivo - Spedito residuo] - [Costo unitario medio progressivo - Spedito residuo - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: dd45e630-9e3c-46c6-a5a9-fa38c8220b55
+
+	measure 'Costo unitario movimento - Spedito residuo - YOY' = [Costo unitario movimento - Spedito residuo] - [Costo unitario movimento - Spedito residuo - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 55c283be-c8fa-4447-af09-27b1b605dcab
+
+	measure 'Importo unitario - Spedito residuo - YOY' = [Importo unitario - Spedito residuo] - [Importo unitario - Spedito residuo - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 23888d10-5840-468a-855c-3ea674f7a6f0
+
+	measure 'Margine costo movimento - Spedito residuo - YOY' = [Margine costo movimento - Spedito residuo] - [Margine costo movimento - Spedito residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 7777192c-8e19-4d49-90a8-691b8eb51515
+
+	measure 'Margine costo medio progressivo - Spedito residuo - YOY' = [Margine costo medio progressivo - Spedito residuo] - [Margine costo medio progressivo - Spedito residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 5df9fdc9-7114-45c9-88a5-39ed89949346
+
+	measure 'Margine costo medio - Spedito residuo - YOY' = [Margine costo medio - Spedito residuo] - [Margine costo medio - Spedito residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 65d23d07-e46c-4f54-8df7-19fed2ff5cfe
+
+	measure 'Margine costo standard - Spedito residuo - YOY' = [Margine costo standard - Spedito residuo] - [Margine costo standard - Spedito residuo - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: e586c913-e87c-45a2-828b-013c8c788dce
+
+	measure 'Costo medio - Spedito residuo - YOY%' =
+			DIVIDE (
+			    [Costo medio - Spedito residuo - YOY],
+			    [Costo medio - Spedito residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 640d7c8d-9aaf-4b53-a7ce-3940314b9dc8
+
+	measure 'Costo medio progressivo - Spedito residuo - YOY%' =
+			DIVIDE (
+			    [Costo medio progressivo - Spedito residuo - YOY],
+			    [Costo medio progressivo - Spedito residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: f9ed8e58-0fd8-42ef-a8b2-0f4286cb8daa
+
+	measure 'Costo movimento - Spedito residuo - YOY%' =
+			DIVIDE (
+			    [Costo movimento - Spedito residuo - YOY],
+			    [Costo movimento - Spedito residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 962ff5a4-a017-4c5d-8325-f4be385ec097
+
+	measure 'Costo standard - Spedito residuo - YOY%' =
+			DIVIDE (
+			    [Costo standard - Spedito residuo - YOY],
+			    [Costo standard - Spedito residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 14eb216c-13a2-40e0-8772-c99d3a12d4f6
+
+	measure 'Quantità - Spedito residuo - YOY%' = DIVIDE ( [Quantità - Spedito residuo - YOY], [Quantità - Spedito residuo - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 7c612aa7-a742-4658-9313-c1da98dad3fe
+
+	measure 'Importo (no omaggi) - Spedito residuo - YOY%' = DIVIDE ( [Importo (no omaggi) - Spedito residuo - YOY], [Importo (no omaggi) - Spedito residuo - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 5343a005-d220-4898-a66b-8a082fe5f1b1
+
+	measure 'Costo unitario standard - Spedito residuo - YOY%' =
+			DIVIDE (
+			    [Costo unitario standard - Spedito residuo - YOY],
+			    [Costo unitario standard - Spedito residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 7abbe130-1890-4600-9568-620a167de615
+
+	measure 'Costo unitario medio - Spedito residuo - YOY%' =
+			DIVIDE (
+			    [Costo unitario medio - Spedito residuo - YOY],
+			    [Costo unitario medio - Spedito residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: eb186aaa-3b30-4d5a-a2b5-be477dfde29d
+
+	measure 'Costo unitario medio progressivo - Spedito residuo - YOY%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Spedito residuo - YOY],
+			    [Costo unitario medio progressivo - Spedito residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 893e9da6-7000-4ecc-a46a-09e758a0b94f
+
+	measure 'Costo unitario movimento - Spedito residuo - YOY%' =
+			DIVIDE (
+			    [Costo unitario movimento - Spedito residuo - YOY],
+			    [Costo unitario movimento - Spedito residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: a0ec6ce6-5bd0-41ab-9c2b-553e7f5b0e69
+
+	measure 'Importo unitario - Spedito residuo - YOY%' =
+			DIVIDE (
+			    [Importo unitario - Spedito residuo - YOY],
+			    [Importo unitario - Spedito residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: bac6b967-f23a-44d5-b3dc-3d3e30a87f82
+
+	measure 'Margine costo movimento - Spedito residuo - YOY%' =
+			DIVIDE (
+			    [Margine costo movimento - Spedito residuo - YOY],
+			    [Margine costo movimento - Spedito residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: dedd4bfd-ba29-4a61-9bfb-a5314249d0b6
+
+	measure 'Margine costo medio progressivo - Spedito residuo - YOY%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Spedito residuo - YOY],
+			    [Margine costo medio progressivo - Spedito residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: b13d200a-672c-4f3b-9b1e-70b28a7f4909
+
+	measure 'Margine costo medio - Spedito residuo - YOY%' =
+			DIVIDE (
+			    [Margine costo medio - Spedito residuo - YOY],
+			    [Margine costo medio - Spedito residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 6d2a38a5-e050-457c-a761-82339bfaf2a9
+
+	measure 'Margine costo standard - Spedito residuo - YOY%' =
+			DIVIDE (
+			    [Margine costo standard - Spedito residuo - YOY],
+			    [Margine costo standard - Spedito residuo - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 95da374b-8f41-4539-a94f-682db70eef56
+
+	measure 'Costo medio - Spedito residuo - YOYTD' = [Costo medio - Spedito residuo - YTD] - [Costo medio - Spedito residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 4bb246dc-c9e3-4a09-a7f9-cf814e0ed6d4
+
+	measure 'Costo medio progressivo - Spedito residuo - YOYTD' = [Costo medio progressivo - Spedito residuo - YTD] - [Costo medio progressivo - Spedito residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 289e2d12-f751-4e47-a382-f91753196967
+
+	measure 'Costo movimento - Spedito residuo - YOYTD' = [Costo movimento - Spedito residuo - YTD] - [Costo movimento - Spedito residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 9b944195-9042-47af-88a7-c47be0f3b1f0
+
+	measure 'Costo standard - Spedito residuo - YOYTD' = [Costo standard - Spedito residuo - YTD] - [Costo standard - Spedito residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 96020a0e-4590-4adc-8121-a29ac24fa7b1
+
+	measure 'Quantità - Spedito residuo - YOYTD' = [Quantità - Spedito residuo - YTD] - [Quantità - Spedito residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 9f4984c5-409b-4471-8221-3795b826cfc4
+
+	measure 'Importo (no omaggi) - Spedito residuo - YOYTD' = [Importo (no omaggi) - Spedito residuo - YTD] - [Importo (no omaggi) - Spedito residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 3ceaf16f-3094-4623-acdd-f61b3339282b
+
+	measure 'Costo unitario standard - Spedito residuo - YOYTD' = [Costo unitario standard - Spedito residuo - YTD] - [Costo unitario standard - Spedito residuo - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: a0822514-00dc-4921-b361-bd0acf6638ca
+
+	measure 'Costo unitario medio - Spedito residuo - YOYTD' = [Costo unitario medio - Spedito residuo - YTD] - [Costo unitario medio - Spedito residuo - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: fdb6c16b-e64a-4664-98ea-9092c296cca7
+
+	measure 'Costo unitario medio progressivo - Spedito residuo - YOYTD' = [Costo unitario medio progressivo - Spedito residuo - YTD] - [Costo unitario medio progressivo - Spedito residuo - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 3539046d-f973-4966-b038-8bd131265c9c
+
+	measure 'Costo unitario movimento - Spedito residuo - YOYTD' = [Costo unitario movimento - Spedito residuo - YTD] - [Costo unitario movimento - Spedito residuo - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 136f41c3-157b-4177-b429-7fe289ee11f9
+
+	measure 'Importo unitario - Spedito residuo - YOYTD' = [Importo unitario - Spedito residuo - YTD] - [Importo unitario - Spedito residuo - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 18deeb8e-df4c-41e1-b85f-a45af1fe0b37
+
+	measure 'Margine costo movimento - Spedito residuo - YOYTD' = [Margine costo movimento - Spedito residuo - YTD] - [Margine costo movimento - Spedito residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: f0700ab0-2cce-41f4-b0b2-8692ab3f8338
+
+	measure 'Margine costo medio progressivo - Spedito residuo - YOYTD' = [Margine costo medio progressivo - Spedito residuo - YTD] - [Margine costo medio progressivo - Spedito residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 039ec5a6-5cb9-4582-9a03-31bbc31ed9ce
+
+	measure 'Margine costo medio - Spedito residuo - YOYTD' = [Margine costo medio - Spedito residuo - YTD] - [Margine costo medio - Spedito residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 69262392-8c07-4ff4-b624-c3826d512eb4
+
+	measure 'Margine costo standard - Spedito residuo - YOYTD' = [Margine costo standard - Spedito residuo - YTD] - [Margine costo standard - Spedito residuo - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 60a0e8c2-ca3c-45f5-b3f6-5cd1bc848087
+
+	measure 'Costo medio - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo medio - Spedito residuo - YOYTD],
+			    [Costo medio - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 3f6263d1-cd3b-4b48-8ba7-6de35b871f9c
+
+	measure 'Costo medio progressivo - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo medio progressivo - Spedito residuo - YOYTD],
+			    [Costo medio progressivo - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 2b5bf717-1367-4821-ad79-7d4184a1e80c
+
+	measure 'Costo movimento - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo movimento - Spedito residuo - YOYTD],
+			    [Costo movimento - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: b239a1c0-b033-4805-902d-43796c09626d
+
+	measure 'Costo standard - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo standard - Spedito residuo - YOYTD],
+			    [Costo standard - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: e07ff677-ffb2-442f-b8ce-5a83d66f59a0
+
+	measure 'Quantità - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Quantità - Spedito residuo - YOYTD],
+			    [Quantità - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 1327551b-231a-41ed-b119-7a966835d68d
+
+	measure 'Importo (no omaggi) - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Importo (no omaggi) - Spedito residuo - YOYTD],
+			    [Importo (no omaggi) - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 89279100-dc33-4cfc-83a0-4d2cbccbe1f9
+
+	measure 'Costo unitario standard - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario standard - Spedito residuo - YOYTD],
+			    [Costo unitario standard - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 58482231-42d5-4ee1-be29-5582e8ba8de5
+
+	measure 'Costo unitario medio - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario medio - Spedito residuo - YOYTD],
+			    [Costo unitario medio - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: e3bed20c-4524-4165-b713-4105bed6663c
+
+	measure 'Costo unitario medio progressivo - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Spedito residuo - YOYTD],
+			    [Costo unitario medio progressivo - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: b8f27946-7b47-4dff-a099-931b88b05b08
+
+	measure 'Costo unitario movimento - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario movimento - Spedito residuo - YOYTD],
+			    [Costo unitario movimento - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 734fde27-8165-4d0e-80cd-beb29d676bdb
+
+	measure 'Importo unitario - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Importo unitario - Spedito residuo - YOYTD],
+			    [Importo unitario - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 3322f047-32fa-4a26-854f-3aba26c24471
+
+	measure 'Margine costo movimento - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Margine costo movimento - Spedito residuo - YOYTD],
+			    [Margine costo movimento - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: a3dc769b-3425-4f7d-890c-71489305c812
+
+	measure 'Margine costo medio progressivo - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Spedito residuo - YOYTD],
+			    [Margine costo medio progressivo - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: d89d5e41-5a92-4c5d-ac45-c08bc8eb79ec
+
+	measure 'Margine costo medio - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Margine costo medio - Spedito residuo - YOYTD],
+			    [Margine costo medio - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: e18487f9-2331-4e99-93f4-ef0ef351cc0d
+
+	measure 'Margine costo standard - Spedito residuo - YOYTD%' =
+			DIVIDE (
+			    [Margine costo standard - Spedito residuo - YOYTD],
+			    [Margine costo standard - Spedito residuo - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: cb3299cb-3a35-4c0d-9483-ae1124e9d524
+
+	measure 'Costo medio - Spedito residuo - MOM' = [Costo medio - Spedito residuo] - [Costo medio - Spedito residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 7a7c25ee-d6be-454d-8e57-3f3885438d99
+
+	measure 'Costo medio progressivo - Spedito residuo - MOM' = [Costo medio progressivo - Spedito residuo] - [Costo medio progressivo - Spedito residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: ca30d692-5f2a-4c75-9e56-91be7bd53053
+
+	measure 'Costo movimento - Spedito residuo - MOM' = [Costo movimento - Spedito residuo] - [Costo movimento - Spedito residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: dfeec6ea-6e6c-45b2-842e-be4638966186
+
+	measure 'Costo standard - Spedito residuo - MOM' = [Costo standard - Spedito residuo] - [Costo standard - Spedito residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: d7192ef4-8745-40f9-be59-a33a2e143147
+
+	measure 'Quantità - Spedito residuo - MOM' = [Quantità - Spedito residuo] - [Quantità - Spedito residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: d0712d14-9c77-439c-a6bc-953151fbce61
+
+	measure 'Importo (no omaggi) - Spedito residuo - MOM' = [Importo (no omaggi) - Spedito residuo] - [Importo (no omaggi) - Spedito residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 8593d7ba-24f0-4d84-9940-deb5dcb57d24
+
+	measure 'Costo unitario standard - Spedito residuo - MOM' = [Costo unitario standard - Spedito residuo] - [Costo unitario standard - Spedito residuo - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: f0f19d34-e551-4a32-b5c7-f3c08854214a
+
+	measure 'Costo unitario medio - Spedito residuo - MOM' = [Costo unitario medio - Spedito residuo] - [Costo unitario medio - Spedito residuo - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 78361bb2-b921-4897-9a8c-0ab99a6ce78b
+
+	measure 'Costo unitario medio progressivo - Spedito residuo - MOM' = [Costo unitario medio progressivo - Spedito residuo] - [Costo unitario medio progressivo - Spedito residuo - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: f8aa1ccb-2ef4-4810-b348-3b7ebb9c6e97
+
+	measure 'Costo unitario movimento - Spedito residuo - MOM' = [Costo unitario movimento - Spedito residuo] - [Costo unitario movimento - Spedito residuo - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 4ee7090c-bb74-4587-99b8-b26883c275df
+
+	measure 'Importo unitario - Spedito residuo - MOM' = [Importo unitario - Spedito residuo] - [Importo unitario - Spedito residuo - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 451dfeca-bfd9-4916-a600-8d3af6e9aa9d
+
+	measure 'Margine costo movimento - Spedito residuo - MOM' = [Margine costo movimento - Spedito residuo] - [Margine costo movimento - Spedito residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 8e627904-b369-4500-9e99-e066f1961966
+
+	measure 'Margine costo medio progressivo - Spedito residuo - MOM' = [Margine costo medio progressivo - Spedito residuo] - [Margine costo medio progressivo - Spedito residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 76c00af9-d509-48ea-afb3-553b33b735f0
+
+	measure 'Margine costo medio - Spedito residuo - MOM' = [Margine costo medio - Spedito residuo] - [Margine costo medio - Spedito residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 2d60e9f1-196b-4dae-b042-9b4c729cb295
+
+	measure 'Margine costo standard - Spedito residuo - MOM' = [Margine costo standard - Spedito residuo] - [Margine costo standard - Spedito residuo - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 7e4bd604-a63d-4fea-bdca-e444ce2e3cb4
+
+	measure 'Costo medio - Spedito residuo - MOM%' =
+			DIVIDE (
+			    [Costo medio - Spedito residuo - MOM],
+			    [Costo medio - Spedito residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: b2461aba-31eb-439f-b972-581cdaff93bc
+
+	measure 'Costo medio progressivo - Spedito residuo - MOM%' =
+			DIVIDE (
+			    [Costo medio progressivo - Spedito residuo - MOM],
+			    [Costo medio progressivo - Spedito residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 87f04f0f-7fb2-4754-9303-d21aa61b4b82
+
+	measure 'Costo movimento - Spedito residuo - MOM%' =
+			DIVIDE (
+			    [Costo movimento - Spedito residuo - MOM],
+			    [Costo movimento - Spedito residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: b9d33e55-8646-41de-afbb-f19ac4d8ca82
+
+	measure 'Costo standard - Spedito residuo - MOM%' =
+			DIVIDE (
+			    [Costo standard - Spedito residuo - MOM],
+			    [Costo standard - Spedito residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 0204f7bd-7022-4772-81a6-5e2c872a5161
+
+	measure 'Quantità - Spedito residuo - MOM%' = DIVIDE ( [Quantità - Spedito residuo - MOM], [Quantità - Spedito residuo - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 8a484705-e473-4c36-806f-1d8872fc8e68
+
+	measure 'Importo (no omaggi) - Spedito residuo - MOM%' = DIVIDE ( [Importo (no omaggi) - Spedito residuo - MOM], [Importo (no omaggi) - Spedito residuo - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 678aa37b-3d34-4902-b9c1-1956c487be77
+
+	measure 'Costo unitario standard - Spedito residuo - MOM%' =
+			DIVIDE (
+			    [Costo unitario standard - Spedito residuo - MOM],
+			    [Costo unitario standard - Spedito residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 3c9835c6-fd98-4df6-8278-4576e6cffdd9
+
+	measure 'Costo unitario medio - Spedito residuo - MOM%' =
+			DIVIDE (
+			    [Costo unitario medio - Spedito residuo - MOM],
+			    [Costo unitario medio - Spedito residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 1c3c2643-da3f-4a7e-abd7-89e4f95f029c
+
+	measure 'Costo unitario medio progressivo - Spedito residuo - MOM%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Spedito residuo - MOM],
+			    [Costo unitario medio progressivo - Spedito residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: bf5e26b6-a48a-43c1-b6c2-6f2297abe86e
+
+	measure 'Costo unitario movimento - Spedito residuo - MOM%' =
+			DIVIDE (
+			    [Costo unitario movimento - Spedito residuo - MOM],
+			    [Costo unitario movimento - Spedito residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: f13cac55-ed0c-4cac-8815-a54a110d59e2
+
+	measure 'Importo unitario - Spedito residuo - MOM%' =
+			DIVIDE (
+			    [Importo unitario - Spedito residuo - MOM],
+			    [Importo unitario - Spedito residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 8a3c37cd-f995-4dc8-96a2-eccbaa30cd80
+
+	measure 'Margine costo movimento - Spedito residuo - MOM%' =
+			DIVIDE (
+			    [Margine costo movimento - Spedito residuo - MOM],
+			    [Margine costo movimento - Spedito residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 3c1a1d22-1284-4c05-990d-612d8c5c0bfd
+
+	measure 'Margine costo medio progressivo - Spedito residuo - MOM%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Spedito residuo - MOM],
+			    [Margine costo medio progressivo - Spedito residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: fb125ded-5b32-4623-9f5f-9d1e5d660d06
+
+	measure 'Margine costo medio - Spedito residuo - MOM%' =
+			DIVIDE (
+			    [Margine costo medio - Spedito residuo - MOM],
+			    [Margine costo medio - Spedito residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 700897f0-985f-491f-9219-2e69a5158caf
+
+	measure 'Margine costo standard - Spedito residuo - MOM%' =
+			DIVIDE (
+			    [Margine costo standard - Spedito residuo - MOM],
+			    [Margine costo standard - Spedito residuo - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 86bfdaa8-44b8-40a0-bc51-2e8484451b41
+
+	measure 'Quantità - Spedito residuo - PQ' = CALCULATE ( [Quantità - Spedito residuo], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 588d56c1-9479-40c6-a00d-8156d9422140
+
+	measure 'Costo medio - Spedito residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo medio - Spedito residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: e25927f5-5e8a-4c69-bbda-b6febb3edfaa
+
+	measure 'Costo medio progressivo - Spedito residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Spedito residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 4859a714-d7fa-4607-84bc-38233507d85f
+
+	measure 'Costo movimento - Spedito residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo movimento - Spedito residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 280f22c8-60b1-44ef-97a8-b685db7f8728
+
+	measure 'Costo standard - Spedito residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo standard - Spedito residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: e08a8d48-8149-4281-8c1a-d19f3f672dae
+
+	measure 'Importo (no omaggi) - Spedito residuo - PQ' = CALCULATE ( [Importo (no omaggi) - Spedito residuo], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 0ff6145d-e0d1-4fb5-9d6e-01d7c9a32523
+
+	measure 'Costo unitario standard - Spedito residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Spedito residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 714c28cf-8028-4eea-9bd5-ca84048145a4
+
+	measure 'Costo unitario medio - Spedito residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Spedito residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: ae77c916-bfc2-4b44-be06-e658d2506eac
+
+	measure 'Costo unitario medio progressivo - Spedito residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario medio progressivo - Spedito residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 8c5de1a5-0b28-476f-8817-077af52d5828
+
+	measure 'Costo unitario movimento - Spedito residuo - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Spedito residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 259cd3e3-06ac-46c9-8898-96d394e47da9
+
+	measure 'Importo unitario - Spedito residuo - PQ' =
+			
+			CALCULATE (
+			    [Importo unitario - Spedito residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: ac0408e6-93b8-4f07-8804-a7513762af4b
+
+	measure 'Margine costo movimento - Spedito residuo - PQ' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Spedito residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: d161fe62-553f-42c7-a7ac-1edb8a593644
+
+	measure 'Margine costo medio progressivo - Spedito residuo - PQ' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Spedito residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 49e95970-b09f-4d04-8740-0a4b37acf55e
+
+	measure 'Margine costo medio - Spedito residuo - PQ' =
+			
+			CALCULATE (
+			    [Margine costo medio - Spedito residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: f656080d-a274-48a3-84c4-b89ca26dce47
+
+	measure 'Margine costo standard - Spedito residuo - PQ' =
+			
+			CALCULATE (
+			    [Margine costo standard - Spedito residuo],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 4b9a89f5-8d40-478c-a5a7-44a90ff92097
+
+	measure 'Quantità - Spedito residuo - QOQ' = [Quantità - Spedito residuo] - [Quantità - Spedito residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 6eb3620b-f76d-40f5-a16d-e7c771fde92f
+
+	measure 'Costo medio - Spedito residuo - QOQ' = [Costo medio - Spedito residuo] - [Costo medio - Spedito residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: d2633947-1b47-43be-ad20-5ea896cc5f38
+
+	measure 'Costo medio progressivo - Spedito residuo - QOQ' = [Costo medio progressivo - Spedito residuo] - [Costo medio progressivo - Spedito residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 4e93dfac-b9f1-49dc-93df-6957451c443f
+
+	measure 'Costo movimento - Spedito residuo - QOQ' = [Costo movimento - Spedito residuo] - [Costo movimento - Spedito residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 92a64088-208a-44dc-ac2b-c19d56445448
+
+	measure 'Costo standard - Spedito residuo - QOQ' = [Costo standard - Spedito residuo] - [Costo standard - Spedito residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: eb06b59f-ffaa-4ec7-8c4c-562a3673456a
+
+	measure 'Importo (no omaggi) - Spedito residuo - QOQ' = [Importo (no omaggi) - Spedito residuo] - [Importo (no omaggi) - Spedito residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: ba29b5f2-e998-4600-8daa-3f75d56f3673
+
+	measure 'Costo unitario standard - Spedito residuo - QOQ' = [Costo unitario standard - Spedito residuo] - [Costo unitario standard - Spedito residuo - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: f087556f-eb8a-445d-8a49-16e8a6e5118e
+
+	measure 'Costo unitario medio - Spedito residuo - QOQ' = [Costo unitario medio - Spedito residuo] - [Costo unitario medio - Spedito residuo - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 38d9edcb-f176-4f57-9010-6941b4f5d395
+
+	measure 'Costo unitario medio progressivo - Spedito residuo - QOQ' = [Costo unitario medio progressivo - Spedito residuo] - [Costo unitario medio progressivo - Spedito residuo - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 783dc3d2-8e20-415b-ad84-64a2a38d73e6
+
+	measure 'Costo unitario movimento - Spedito residuo - QOQ' = [Costo unitario movimento - Spedito residuo] - [Costo unitario movimento - Spedito residuo - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 3b7b055f-6b2b-4dfc-98b2-8327b156a114
+
+	measure 'Importo unitario - Spedito residuo - QOQ' = [Importo unitario - Spedito residuo] - [Importo unitario - Spedito residuo - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: f946572a-a2db-4911-b10e-e19ca1cc7f66
+
+	measure 'Margine costo movimento - Spedito residuo - QOQ' = [Margine costo movimento - Spedito residuo] - [Margine costo movimento - Spedito residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: d2cc50cf-b03d-4b90-90a7-7e8816da9a10
+
+	measure 'Margine costo medio progressivo - Spedito residuo - QOQ' = [Margine costo medio progressivo - Spedito residuo] - [Margine costo medio progressivo - Spedito residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 1d313ecd-0fe9-474d-941a-a84f9af68dc5
+
+	measure 'Margine costo medio - Spedito residuo - QOQ' = [Margine costo medio - Spedito residuo] - [Margine costo medio - Spedito residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 8247b731-00d8-46d6-ac5b-72a662b54663
+
+	measure 'Margine costo standard - Spedito residuo - QOQ' = [Margine costo standard - Spedito residuo] - [Margine costo standard - Spedito residuo - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: e60f3016-9aac-4d79-97bf-317e5e749501
+
+	measure 'Quantità - Spedito residuo - QOQ%' = DIVIDE ( [Quantità - Spedito residuo - QOQ], [Quantità - Spedito residuo - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 1d178ad0-5f7e-4eb7-ae8a-7f8b115b1b61
+
+	measure 'Costo medio - Spedito residuo - QOQ%' =
+			DIVIDE (
+			    [Costo medio - Spedito residuo - QOQ],
+			    [Costo medio - Spedito residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 0eb6b472-1cdd-45ff-af28-098d93088dbf
+
+	measure 'Costo medio progressivo - Spedito residuo - QOQ%' =
+			DIVIDE (
+			    [Costo medio progressivo - Spedito residuo - QOQ],
+			    [Costo medio progressivo - Spedito residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 78aa9a36-8844-4104-bb17-fe421c9543ac
+
+	measure 'Costo movimento - Spedito residuo - QOQ%' =
+			DIVIDE (
+			    [Costo movimento - Spedito residuo - QOQ],
+			    [Costo movimento - Spedito residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 1a657009-d688-45d9-b4a0-5620d3a24383
+
+	measure 'Costo standard - Spedito residuo - QOQ%' =
+			DIVIDE (
+			    [Costo standard - Spedito residuo - QOQ],
+			    [Costo standard - Spedito residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: be091537-6293-41cd-ba10-3740f22c7288
+
+	measure 'Importo (no omaggi) - Spedito residuo - QOQ%' = DIVIDE ( [Importo (no omaggi) - Spedito residuo - QOQ], [Importo (no omaggi) - Spedito residuo - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 781b870d-dccf-4008-bb69-70fd8e7b47e3
+
+	measure 'Costo unitario standard - Spedito residuo - QOQ%' =
+			DIVIDE (
+			    [Costo unitario standard - Spedito residuo - MOM],
+			    [Costo unitario standard - Spedito residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 1dc739c3-14fa-4115-a8cf-13143382e153
+
+	measure 'Costo unitario medio - Spedito residuo - QOQ%' =
+			DIVIDE (
+			    [Costo unitario medio - Spedito residuo - MOM],
+			    [Costo unitario medio - Spedito residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: b275051a-1154-45e1-bd36-a71afd3c64ab
+
+	measure 'Costo unitario medio progressivo - Spedito residuo - QOQ%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Spedito residuo - MOM],
+			    [Costo unitario medio progressivo - Spedito residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: dc2613dd-f3e3-481e-a1c9-8f9c953899bf
+
+	measure 'Costo unitario movimento - Spedito residuo - QOQ%' =
+			DIVIDE (
+			    [Costo unitario movimento - Spedito residuo - MOM],
+			    [Costo unitario movimento - Spedito residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 8f910b96-e40d-4dde-a8cf-aeb72b7b7238
+
+	measure 'Importo unitario - Spedito residuo - QOQ%' =
+			DIVIDE (
+			    [Importo unitario - Spedito residuo - MOM],
+			    [Importo unitario - Spedito residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 10228e20-03a5-4d30-8ff2-a5d4aac8c227
+
+	measure 'Margine costo movimento - Spedito residuo - QOQ%' =
+			DIVIDE (
+			    [Margine costo movimento - Spedito residuo - QOQ],
+			    [Margine costo movimento - Spedito residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 46a1cb05-c7ec-4a8f-9c88-bb07e0d9e340
+
+	measure 'Margine costo medio progressivo - Spedito residuo - QOQ%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Spedito residuo - QOQ],
+			    [Margine costo medio progressivo - Spedito residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 950fc6e1-9949-4f74-b594-a49035b12672
+
+	measure 'Margine costo medio - Spedito residuo - QOQ%' =
+			DIVIDE (
+			    [Margine costo medio - Spedito residuo - QOQ],
+			    [Margine costo medio - Spedito residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 0cdaa314-1d82-4b63-a88a-4a728bf6f800
+
+	measure 'Margine costo standard - Spedito residuo - QOQ%' =
+			DIVIDE (
+			    [Margine costo standard - Spedito residuo - QOQ],
+			    [Margine costo standard - Spedito residuo - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: e2b11e71-3914-425c-bf62-4a4a8cb4e1e8
+
+	measure 'Importo omaggi - Spedito residuo' =
+			
+			CALCULATE (
+			    [Importo omaggi - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		displayFolder: Corrente
+		lineageTag: 114f59ea-1f55-44ae-a6a3-2729cc01e311
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Quantità omaggi - Spedito residuo' =
+			
+			CALCULATE (
+			    [Quantità omaggi - Residuo],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		displayFolder: Corrente
+		lineageTag: 5d7501f5-4851-4d0e-a319-b7756fc33d22
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Z_Dummy
+		dataType: string
+		isHidden
+		lineageTag: 0a7e4a13-4fb9-475f-9c6d-2abd33547ec8
+		summarizeBy: none
+		sourceColumn: Z_Dummy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Spedito residuo-b951b082-6a41-4510-a690-d10090dee53d' = m
+		mode: import
+		queryGroup: Misure
+		source =
+				let
+				    Origine = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Z_Dummy = _t])
+				in
+				    Origine
+
+	annotation PBI_Id = b3d06a10-b37e-4e00-bb75-dadb9a7a07cb
+
+	annotation LinkedQueryName = Spedito residuo
+
+	annotation PBI_QueryRelationships = {"columnCount":0,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":[],"ColumnCount":0,"KeyColumnNames":[],"ColumnIdentities":[],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

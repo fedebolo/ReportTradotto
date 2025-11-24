@@ -1,0 +1,43 @@
+table 'Classi ABC'
+	lineageTag: b1fcd1c0-d348-4ba3-90fa-ee1ab36b7d97
+
+	column 'ABC - Classe'
+		dataType: string
+		lineageTag: d79c851c-4871-4381-9115-3851ecdbeeb9
+		summarizeBy: none
+		sourceColumn: ABC - Classe
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ABC - Limite inferiore'
+		dataType: double
+		lineageTag: e973fd23-bc94-4a0d-ae9f-29c74efc0124
+		summarizeBy: none
+		sourceColumn: ABC - Limite inferiore
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'ABC - Limite superiore'
+		dataType: double
+		lineageTag: bcde1161-6ec4-411f-95b4-224a07c6ec1d
+		summarizeBy: none
+		sourceColumn: ABC - Limite superiore
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Classi ABC-70ecb053-5b09-4f79-8e9c-5b520c9ca004' = m
+		mode: import
+		queryGroup: Dimensioni
+		source =
+				let
+				    Origine = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WclTSUTIAYR1zpVidaCUnKBtEWoJFnKFsHSVDHUOl2FgA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"ABC - Classe" = _t, #"ABC - Limite inferiore" = _t, #"ABC - Limite superiore" = _t]),
+				    #"Modificato tipo" = Table.TransformColumnTypes(Origine,{{"ABC - Limite inferiore", type number}, {"ABC - Limite superiore", type number}})
+				in
+				    #"Modificato tipo"
+
+	annotation PBI_ResultType = Table
+

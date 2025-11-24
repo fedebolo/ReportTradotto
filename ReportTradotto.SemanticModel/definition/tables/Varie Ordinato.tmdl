@@ -1,0 +1,582 @@
+table 'Varie Ordinato'
+	lineageTag: e546d755-9d34-4791-9bee-63a1f888a738
+
+	measure 'Articoli con ordinato' =
+			
+			VAR VenditeFatturate =
+			    CALCULATETABLE (
+			        'Vendite',
+			        'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			    )
+			RETURN
+			    COUNTROWS (
+			        SUMMARIZE ( VenditeFatturate, 'Articoli / Servizi'[Articolo - Descrizione] )
+			    )
+		formatString: #,0
+		lineageTag: e29f4fdf-5dbf-4648-a1b9-c2db2a8bd29d
+
+	measure 'Clienti con ordinato' =
+			VAR VenditeFatturate =
+			    CALCULATETABLE (
+			        'Vendite',
+			            'Tipi movimento'[Flag rilevanza ordinato] = "Sì"
+			    )
+			RETURN
+			    COUNTROWS (
+			        SUMMARIZE ( VenditeFatturate, 'Clienti intestatari'[Cliente - Descrizione] )
+			    )
+		formatString: #,0
+		lineageTag: 124fbfb7-4eb9-4815-9ffe-48c7f3feedc3
+
+	measure 'Data primo ordine' = ```
+			
+			CALCULATE(MIN(Vendite[K_DataRegistraz]),'Tipi movimento'[Flag rilevanza ordinato]="Sì")
+			
+			```
+		formatString: Short Date
+		lineageTag: 40317832-9fcb-4f03-9f67-9636345e8e23
+
+	measure 'Data ultimo ordine' = ```
+			CALCULATE(MAX(Vendite[K_DataRegistraz]),'Tipi movimento'[Flag rilevanza ordinato]="Sì")
+			
+			```
+		formatString: Short Date
+		lineageTag: 42a977d0-a9d6-4015-adca-030a8556aa85
+
+	measure 'Nuovi articoli (per ordinato)' =
+			VAR DataRiferimento =
+			    MIN ( Calendario[Data] )
+			VAR ArticoliConOrdiniNelPeriodo =
+			    SUMMARIZE (
+			        CALCULATETABLE (
+			            Vendite,
+			            'Tipi movimento'[Flag rilevanza ordinato] = "Sì",
+			            NOT ISBLANK ( 'Articoli / Servizi'[Articolo - Descrizione] )
+			        ),
+			        'Articoli / Servizi'[Articolo - Descrizione]
+			    )
+			VAR ArticoliConOrdiniNeiPeriodiPrecedenti =
+			    SUMMARIZE (
+			        CALCULATETABLE (
+			            Vendite,
+			            'Tipi movimento'[Flag rilevanza ordinato] = "Sì",
+			            NOT ISBLANK ( 'Articoli / Servizi'[Articolo - Descrizione] ),
+			            ALL ( Calendario ),
+			            Calendario[Data] < DataRiferimento
+			        ),
+			        'Articoli / Servizi'[Articolo - Descrizione]
+			    )
+			RETURN
+			    CALCULATE (
+			        COUNTROWS (
+			            EXCEPT ( ArticoliConOrdiniNelPeriodo, ArticoliConOrdiniNeiPeriodiPrecedenti )
+			        )
+			    )
+		formatString: 0
+		lineageTag: fed523ff-2b0c-4ef0-bd85-f0c66976afb5
+
+	measure 'Nuovi articoli su base mensile (per ordinato)' = SUMX ( VALUES ( Calendario[Mese/anno] ), [Nuovi articoli (per ordinato)] )
+		formatString: 0
+		lineageTag: a205bd7f-3610-4b20-bd18-d26b649bd42f
+
+	measure 'Nuovi clienti (per ordinato)' =
+			VAR DataRiferimento =
+			    MIN ( Calendario[Data] )
+			VAR ClientiConOrdiniNelPeriodo =
+			    SUMMARIZE (
+			        CALCULATETABLE (
+			            Vendite,
+			            'Tipi movimento'[Flag rilevanza ordinato] = "Sì",
+			            NOT ISBLANK ( 'Clienti intestatari'[Cliente - Descrizione] )
+			        ),
+			        'Clienti intestatari'[Cliente - Descrizione]
+			    )
+			VAR ClientiConOrdiniNeiPeriodiPrecedenti =
+			    SUMMARIZE (
+			        CALCULATETABLE (
+			            Vendite,
+			            'Tipi movimento'[Flag rilevanza ordinato] = "Sì",
+			            NOT ISBLANK ( 'Clienti intestatari'[Cliente - Descrizione] ),
+			            ALL ( Calendario ),
+			            Calendario[Data] < DataRiferimento
+			        ),
+			        'Clienti intestatari'[Cliente - Descrizione]
+			    )
+			RETURN
+			    CALCULATE (
+			        COUNTROWS (
+			            EXCEPT ( ClientiConOrdiniNelPeriodo, ClientiConOrdiniNeiPeriodiPrecedenti )
+			        )
+			    )
+		formatString: 0
+		lineageTag: 4a294206-bbf8-4455-b553-bfd516b5c996
+
+	measure 'Nuovi clienti su base mensile (per ordinato)' = SUMX ( VALUES ( Calendario[Mese/anno] ), [Nuovi clienti (per ordinato)] )
+		formatString: 0
+		lineageTag: 2cf1a760-2233-4961-8a1c-47e14be03a4c
+
+	measure 'ABC Categoria clienti - Importo (no omaggi) Cum. - Ordinato' = ```
+			
+			--Parte di misura eseguita per l'esposizione di Classe-CategoriaCliente
+			VAR TabSelezioneTutteCategorie =
+			    ALLSELECTED('Categorie clienti'[Categoria cliente - Descrizione])
+			VAR ImportoTutteCategorie =
+			    ADDCOLUMNS ( TabSelezioneTutteCategorie, "@Importo", CALCULATE([ABC Categoria clienti - Importo (no omaggi) - Ordinato],ALL('Classi ABC')))
+			VAR ImportoCategorie =
+			    FILTER ( ImportoTutteCategorie, NOT ISBLANK ( [@Importo] ) )
+			    
+			VAR ImportoCategoriaCorrente = [ABC Categoria clienti - Importo (no omaggi) - Ordinato]
+			VAR CategoriaCorrente =
+			    SELECTEDVALUE('Categorie clienti'[Categoria cliente - Descrizione] )
+			VAR TabImportiInferioriCategoriaCorrete =
+			    FILTER ( ImportoCategorie, [@Importo] > ImportoCategoriaCorrente && NOT ISBLANK(ImportoCategoriaCorrente) )
+			
+			VAR TabImportiPariCategoriaCorrete =
+			    FILTER (
+			        ImportoCategorie,
+			        [@Importo] = ImportoCategoriaCorrente
+			            && ISONORAFTER( 'Categorie clienti'[Categoria cliente - Descrizione], CategoriaCorrente, DESC )
+			            && NOT ISBLANK([@Importo])
+			    )
+			    
+			VAR TabImportoCumulClienti = 
+			    UNION ( TabImportiInferioriCategoriaCorrete, TabImportiPariCategoriaCorrete )
+			VAR ImportoCumulatoCategoria =
+			    SUMX ( TabImportoCumulClienti, [@Importo]  )
+			
+			-----------------------------------------------------------------------------------------------------------------------------------
+			
+			--Parte di misura eseguita per l'esposizione di Classe
+			VAR TabSelezioneTutteClassi =
+			    ALL('Classi ABC')
+			VAR ImportoTutteClassi =
+			    ADDCOLUMNS ( TabSelezioneTutteClassi, "@Importo",[ABC clienti - Importo (no omaggi) - Ordinato])
+			VAR ImportoClassi =
+			    FILTER ( ImportoTutteClassi, NOT ISBLANK ( [@Importo] ) )
+			    
+			VAR ImportoClasseCorrente = [ABC clienti - Importo (no omaggi) - Ordinato]
+			
+			VAR TabImportiInferioriClasseCorrente =
+			    FILTER ( ImportoClassi, [@Importo] >= ImportoClasseCorrente && NOT ISBLANK(ImportoClasseCorrente) )
+			
+			VAR ImportoCumulatoClassi =
+			    SUMX ( TabImportiInferioriClasseCorrente, [@Importo]  )
+			
+			
+			RETURN
+			    IF(ISFILTERED('Categorie clienti'),ImportoCumulatoCategoria, ImportoCumulatoClassi)
+			```
+		formatString: #,0
+		lineageTag: 068756d7-d895-4e4f-9443-41fc5387beb1
+
+	measure 'ABC Categoria clienti - Importo (no omaggi) - Ordinato' = ```
+			
+			VAR ImportoPerCategoriaClienti =                                                    -- Per salvare l'importo fatturato per articolo (Importo utilizzato per costruire l'analisi ABC)
+			    ADDCOLUMNS (
+			        ALLSELECTED ('Categorie clienti'[Categoria cliente - Descrizione]),         -- Dimensione oggetto di analisi, da inserire anche come asse nell'oggetto grafico (es. Matrice) 
+			        "@Importo", [Importo (no omaggi) - Ordinato]       
+			    )
+			
+			VAR ImportoTotale =                                                                 -- Per salvare l'importo totale (da rapportare all'importo cumulato per la creazione delle classi di analisi)
+			    CALCULATE ([Importo (no omaggi) - Ordinato] , ALLSELECTED ( 'Categorie clienti' ) )
+			
+			VAR CumulataPctPerCategoriaClienti =                                                -- Costruzione degli importi cumulati per importo decrescente
+			    ADDCOLUMNS (
+			        ImportoPerCategoriaClienti,
+			        "@CumulataPct",
+			            VAR ImportoCorrente = [@Importo]
+			            VAR TabImportoCumulato =
+			                FILTER ( ImportoPerCategoriaClienti, [@Importo] >= ImportoCorrente )
+			            VAR ImportoCumulato =
+			                SUMX ( TabImportoCumulato, [@Importo] )
+			            RETURN
+			                DIVIDE ( ImportoCumulato, ImportoTotale )
+			    )
+			VAR CategoriaClientiInClassi =                                                             --Join tra classi ABC e percentuale dell'importo cumulato su totale
+			    FILTER (
+			        CROSSJOIN ( CumulataPctPerCategoriaClienti, 'Classi ABC' ),
+			        [@CumulataPct] >= 'Classi ABC'[ABC - Limite inferiore]
+			            && [@CumulataPct] < 'Classi ABC'[ABC - Limite superiore]
+			    )
+			VAR Risultato =
+			    CALCULATE (                                     
+			        [Importo (no omaggi) - Ordinato],                      
+			        KEEPFILTERS ( CategoriaClientiInClassi )
+			    )
+			RETURN
+			Risultato                                                                           -- La logica dovrebbe essere la stessa su tutte le altre misure
+			
+			//Per replicare la misura su altri assi o su altri importi è necessario modificare l'asse di analisi (sia sulla misura che sull'esposizione - es. Clienti) e la misura oggetto di analisi (es. Importo - Ordinato)
+			```
+		formatString: #,0
+		lineageTag: 34a70b40-25c5-47e4-aba9-968919f22d79
+
+	measure 'ABC Categoria clienti - Importo (no omaggi) Cum.% - Ordinato' =
+			
+			VAR ImportoTot =
+			    CALCULATE ( [Importo (no omaggi) - Ordinato], ALLSELECTED('Categorie clienti'),ALL('Classi ABC') )
+			VAR PercentualeCumulata =
+			    DIVIDE ( [ABC Categoria clienti - Importo (no omaggi) Cum. - Ordinato], ImportoTot )
+			RETURN
+			    PercentualeCumulata
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 5c9037a4-2b0e-4fdc-b975-c876861741f0
+
+	measure 'ABC Clienti - Importo (no omaggi) - Ordinato' = ```
+			
+			VAR ImportoPerClienti =                                     -- Per salvare l'importo fatturato per articolo (Importo utilizzato per costruire l'analisi ABC)
+			    ADDCOLUMNS (
+			        ALLSELECTED ('Clienti intestatari'[Cliente]),       -- Dimensione oggetto di analisi, da inserire anche come asse nell'oggetto grafico (es. Matrice) 
+			        "@Importo", [Importo (no omaggi) - Ordinato]       
+			    )
+			
+			VAR ImportoTotale =                                         -- Per salvare l'importo totale (da rapportare all'importo cumulato per la creazione delle classi di analisi)
+			    CALCULATE ([Importo (no omaggi) - Ordinato] , ALLSELECTED ( 'Clienti intestatari' ) )
+			
+			VAR CumulataPctPerClienti =                                 -- Costruzione degli importi cumulati per importo decrescente
+			    ADDCOLUMNS (
+			        ImportoPerClienti,
+			        "@CumulataPct",
+			            VAR ImportoCorrente = [@Importo]
+			            VAR TabImportoCumulato =
+			                FILTER ( ImportoPerClienti, [@Importo] >= ImportoCorrente )
+			            VAR ImportoCumulato =
+			                SUMX ( TabImportoCumulato, [@Importo] )
+			            RETURN
+			                DIVIDE ( ImportoCumulato, ImportoTotale )
+			    )
+			VAR DimensioneInClassi =                                    --Join tra classi ABC e percentuale dell'importo cumulato su totale
+			    FILTER (
+			        CROSSJOIN ( CumulataPctPerClienti, 'Classi ABC' ),
+			        [@CumulataPct] >= 'Classi ABC'[ABC - Limite inferiore]
+			            && [@CumulataPct] < 'Classi ABC'[ABC - Limite superiore]
+			    )
+			VAR Risultato =
+			    CALCULATE (                                     
+			        [Importo (no omaggi) - Ordinato],                      
+			        KEEPFILTERS ( DimensioneInClassi )
+			    )
+			RETURN
+			    Risultato                                               -- La logica dovrebbe essere la stessa su tutte le altre misure
+			
+			
+			```
+		lineageTag: 3e8ba11d-6580-4080-9c53-d0c1f2830f15
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'ABC Clienti - Importo (no omaggi) Cum. - Ordinato' = ```
+			
+			--Parte di misura eseguita per l'esposizione di Classe-Cliente
+			VAR TabSelezioneTuttiClienti =
+			    ALLSELECTED('Clienti intestatari'[Cliente])
+			VAR ImportoTuttiClienti =
+			    ADDCOLUMNS ( TabSelezioneTuttiClienti, "@Importo", CALCULATE([ABC clienti - Importo (no omaggi) - Ordinato],ALL('Classi ABC')))
+			VAR ImportoClienti =
+			    FILTER ( ImportoTuttiClienti, NOT ISBLANK ( [@Importo] ) )
+			    
+			VAR ImportoClienteCorrente = [ABC clienti - Importo (no omaggi) - Fatturato]
+			VAR RagSocClienteCorrente =
+			    SELECTEDVALUE('Clienti intestatari'[Cliente] )
+			VAR TabImportiInferioriClienteCorrente =
+			    FILTER ( ImportoClienti, [@Importo] > ImportoClienteCorrente && NOT ISBLANK(ImportoClienteCorrente) )
+			
+			VAR TabImportoPariClienteCorrente =
+			    FILTER (
+			        ImportoClienti,
+			        [@Importo] = ImportoClienteCorrente
+			            && ISONORAFTER( 'Clienti intestatari'[Cliente], RagSocClienteCorrente, DESC )
+			    )
+			    
+			VAR TabImportoClienti = 
+			    UNION ( TabImportiInferioriClienteCorrente, TabImportoPariClienteCorrente )
+			VAR ImportoCumulatoClienti =
+			    SUMX ( TabImportoClienti, [@Importo]  )
+			
+			-----------------------------------------------------------------------------------------------------------------------------------
+			
+			--Parte di misura eseguita per l'esposizione di Classe
+			VAR TabSelezioneTutteClassi =
+			    ALL('Classi ABC')
+			VAR ImportoTutteClassi =
+			    ADDCOLUMNS ( TabSelezioneTutteClassi, "@Importo",[ABC clienti - Importo (no omaggi) - Ordinato])
+			VAR ImportoClassi =
+			    FILTER ( ImportoTutteClassi, NOT ISBLANK ( [@Importo] ) )
+			    
+			VAR ImportoClasseCorrente = [ABC clienti - Importo (no omaggi) - Ordinato]
+			
+			VAR TabImportiInferioriClasseCorrente =
+			    FILTER ( ImportoClassi, [@Importo] >= ImportoClasseCorrente && NOT ISBLANK(ImportoClasseCorrente) )
+			
+			VAR ImportoCumulatoClassi =
+			    SUMX ( TabImportiInferioriClasseCorrente, [@Importo]  )
+			
+			
+			RETURN
+			    IF(ISFILTERED('Clienti intestatari'),ImportoCumulatoClienti, ImportoClasseCorrente)
+			```
+		lineageTag: 8aabf96a-38d4-4c69-afa1-085b5c58779a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'ABC Clienti - Importo (no omaggi) Cum.% - Ordinato' =
+			
+			VAR ImportoTot =
+			    CALCULATE ( [Importo (no omaggi) - Ordinato], ALLSELECTED('Clienti intestatari'),ALL('Classi ABC'))
+			VAR PercentualeCumulata =
+			    DIVIDE ( [ABC Clienti - Importo (no omaggi) Cum. - Ordinato], ImportoTot )
+			RETURN
+			    PercentualeCumulata
+		lineageTag: 571473e9-a7f0-44e6-8ae5-bd0ae15956db
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Giorni trascorsi da ultimo ordine' = ```
+			
+			MINX(
+			    CALCULATETABLE(Vendite,'Tipi movimento'[Flag rilevanza ordinato]="Sì"),
+			    DATEDIFF(Vendite[K_DataRegistraz],TODAY(),DAY)
+			)
+			
+			```
+		formatString: 0
+		lineageTag: f474e4a1-a89e-42e7-8111-2c51cc8af479
+
+	measure 'Numero di ordini' = CALCULATE(DISTINCTCOUNT(Vendite[K_IdDocumento]),'Tipi movimento'[Flag rilevanza ordinato]="Sì")
+		formatString: 0
+		lineageTag: fb1b6ecf-e948-42ce-a250-0111e1a0d00a
+
+	measure 'Giorni medi di ordine' =
+			
+			DIVIDE(
+			    DATEDIFF([Data primo ordine],[Data ultimo ordine],DAY) + 1,
+			    [Numero di ordini]
+			)
+		lineageTag: 1fdff352-c5fd-4273-ad2d-1ba3998d8ca8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Situazione clienti abituali ordinato' =
+			
+			SWITCH(
+			    TRUE(),
+			    [Giorni trascorsi da ultimo ordine] = BLANK() || [Giorni medi di ordine] = BLANK(), BLANK(),
+			    [Giorni trascorsi da ultimo ordine]<=[Giorni medi di ordine]*1.20,"🟢",
+			    [Giorni trascorsi da ultimo ordine]<=[Giorni medi di ordine]*2,"🟡",
+			    "🔴"
+			)
+		lineageTag: 7c2ea720-defb-4df5-9ea5-a00f095a0bd7
+
+	measure 'Situazione clienti abituali ordinato colore' =
+			
+			SWITCH(
+			    TRUE(),
+			    [Giorni trascorsi da ultimo ordine] = BLANK() || [Giorni medi di ordine] = BLANK(), "",
+			    [Giorni trascorsi da ultimo ordine]<=[Giorni medi di ordine]*1.20,"Consolidato",
+			    [Giorni trascorsi da ultimo ordine]<=[Giorni medi di ordine]*2,"A medio rischio perdita",
+			    "Ad alto rischio perdita"
+			)
+		lineageTag: bca87750-ce1e-4e9b-ab11-327caf8c9e77
+
+	measure 'ABC Sconti clienti - Importo (no omaggi) - Ordinato' = ```
+			
+			VAR ImportoPerCategoriaClienti =                                                    -- Per salvare l'importo fatturato per articolo (Importo utilizzato per costruire l'analisi ABC)
+			    ADDCOLUMNS (
+			        ALLSELECTED ('Categorie sconti'[Categoria sconti cliente - Descrizione]),         -- Dimensione oggetto di analisi, da inserire anche come asse nell'oggetto grafico (es. Matrice) 
+			        "@Importo", [Importo (no omaggi) - Ordinato]       
+			    )
+			
+			VAR ImportoTotale =                                                                 -- Per salvare l'importo totale (da rapportare all'importo cumulato per la creazione delle classi di analisi)
+			    CALCULATE ([Importo (no omaggi) - Ordinato] , ALLSELECTED ( 'Categorie sconti' ) )
+			
+			VAR CumulataPctPerCategoriaClienti =                                                -- Costruzione degli importi cumulati per importo decrescente
+			    ADDCOLUMNS (
+			        ImportoPerCategoriaClienti,
+			        "@CumulataPct",
+			            VAR ImportoCorrente = [@Importo]
+			            VAR TabImportoCumulato =
+			                FILTER ( ImportoPerCategoriaClienti, [@Importo] >= ImportoCorrente )
+			            VAR ImportoCumulato =
+			                SUMX ( TabImportoCumulato, [@Importo] )
+			            RETURN
+			                DIVIDE ( ImportoCumulato, ImportoTotale )
+			    )
+			VAR CategoriaClientiInClassi =                                                             --Join tra classi ABC e percentuale dell'importo cumulato su totale
+			    FILTER (
+			        CROSSJOIN ( CumulataPctPerCategoriaClienti, 'Classi ABC' ),
+			        [@CumulataPct] >= 'Classi ABC'[ABC - Limite inferiore]
+			            && [@CumulataPct] < 'Classi ABC'[ABC - Limite superiore]
+			    )
+			VAR Risultato =
+			    CALCULATE (                                     
+			        [Importo (no omaggi) - Ordinato],                      
+			        KEEPFILTERS ( CategoriaClientiInClassi )
+			    )
+			RETURN
+			Risultato                                                                           -- La logica dovrebbe essere la stessa su tutte le altre misure
+			
+			//Per replicare la misura su altri assi o su altri importi è necessario modificare l'asse di analisi (sia sulla misura che sull'esposizione - es. Clienti) e la misura oggetto di analisi (es. Importo - Ordinato)
+			```
+		lineageTag: 762e113d-b7f1-4af5-bbbd-a12cf06707f4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'ABC Sconti clienti - Importo (no omaggi) Cum. - Ordinato' = ```
+			
+			--Parte di misura eseguita per l'esposizione di Classe-CategoriaScontiCliente
+			VAR TabSelezioneTutteCategorie =
+			    ALLSELECTED('Categorie sconti'[Categoria sconti cliente - Descrizione])
+			VAR ImportoTutteCategorie =
+			    ADDCOLUMNS ( TabSelezioneTutteCategorie, "@Importo", CALCULATE([ABC Sconti clienti - Importo (no omaggi) - Ordinato],ALL('Classi ABC')))
+			VAR ImportoCategorie =
+			    FILTER ( ImportoTutteCategorie, NOT ISBLANK ( [@Importo] ) )
+			    
+			VAR ImportoCategoriaCorrente = [ABC Sconti clienti - Importo (no omaggi) - Ordinato]
+			VAR CategoriaCorrente =
+			    SELECTEDVALUE('Categorie sconti'[Categoria sconti cliente - Descrizione] )
+			VAR TabImportiInferioriCategoriaCorrete =
+			    FILTER ( ImportoCategorie, [@Importo] > ImportoCategoriaCorrente && NOT ISBLANK(ImportoCategoriaCorrente) )
+			
+			VAR TabImportiPariCategoriaCorrete =
+			    FILTER (
+			        ImportoCategorie,
+			        [@Importo] = ImportoCategoriaCorrente
+			            && ISONORAFTER( 'Categorie sconti'[Categoria sconti cliente - Descrizione], CategoriaCorrente, DESC )
+			            && NOT ISBLANK([@Importo])
+			    )
+			    
+			VAR TabImportoCumulClienti = 
+			    UNION ( TabImportiInferioriCategoriaCorrete, TabImportiPariCategoriaCorrete )
+			VAR ImportoCumulatoCategoria =
+			    SUMX ( TabImportoCumulClienti, [@Importo]  )
+			
+			-----------------------------------------------------------------------------------------------------------------------------------
+			
+			--Parte di misura eseguita per l'esposizione di Classe
+			VAR TabSelezioneTutteClassi =
+			    ALL('Classi ABC')
+			VAR ImportoTutteClassi =
+			    ADDCOLUMNS ( TabSelezioneTutteClassi, "@Importo",[ABC Clienti - Importo (no omaggi) - Ordinato])
+			VAR ImportoClassi =
+			    FILTER ( ImportoTutteClassi, NOT ISBLANK ( [@Importo] ) )
+			    
+			VAR ImportoClasseCorrente = [ABC Clienti - Importo (no omaggi) - Ordinato]
+			
+			VAR TabImportiInferioriClasseCorrente =
+			    FILTER ( ImportoClassi, [@Importo] >= ImportoClasseCorrente && NOT ISBLANK(ImportoClasseCorrente) )
+			
+			VAR ImportoCumulatoClassi =
+			    SUMX ( TabImportiInferioriClasseCorrente, [@Importo]  )
+			
+			
+			RETURN
+			    IF(ISFILTERED('Categorie sconti'),ImportoCumulatoCategoria, ImportoCumulatoClassi)
+			```
+		lineageTag: 7012b761-cfa0-4b58-b441-91df3f907be7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'ABC Sconti clienti - Importo (no omaggi) Cum.% - Ordinato' =
+			
+			VAR ImportoTot =
+			    CALCULATE ( [Importo (no omaggi) - Ordinato], ALLSELECTED('Categorie sconti'),ALL('Classi ABC') )
+			VAR PercentualeCumulata =
+			    DIVIDE ( [ABC Sconti clienti - Importo (no omaggi) Cum. - Ordinato], ImportoTot )
+			RETURN
+			    PercentualeCumulata
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 624736c0-b77f-4590-9554-a13be93b87cf
+
+	measure 'Sconti Clienti - Importo (no omaggi) - Ordinato' = ```
+			
+			VAR ImportoPerClienti =                                     -- Per salvare l'importo fatturato per articolo (Importo utilizzato per costruire l'analisi ABC)
+			    ADDCOLUMNS (
+			        ALLSELECTED ('Clienti intestatari'[Cliente]),       -- Dimensione oggetto di analisi, da inserire anche come asse nell'oggetto grafico (es. Matrice) 
+			        "@Importo", [Importo (no omaggi) - Ordinato]       
+			    )
+			
+			VAR ImportoTotale =                                         -- Per salvare l'importo totale (da rapportare all'importo cumulato per la creazione delle classi di analisi)
+			    CALCULATE ([Importo (no omaggi) - Ordinato] , ALLSELECTED ( 'Clienti intestatari' ) )
+			
+			VAR CumulataPctPerClienti =                                 -- Costruzione degli importi cumulati per importo decrescente
+			    ADDCOLUMNS (
+			        ImportoPerClienti,
+			        "@CumulataPct",
+			            VAR ImportoCorrente = [@Importo]
+			            VAR TabImportoCumulato =
+			                FILTER ( ImportoPerClienti, [@Importo] >= ImportoCorrente )
+			            VAR ImportoCumulato =
+			                SUMX ( TabImportoCumulato, [@Importo] )
+			            RETURN
+			                DIVIDE ( ImportoCumulato, ImportoTotale )
+			    )
+			VAR DimensioneInClassi =                                    --Join tra classi ABC e percentuale dell'importo cumulato su totale
+			    FILTER (
+			        CROSSJOIN ( CumulataPctPerClienti, 'Classi ABC' ),
+			        [@CumulataPct] >= 'Classi ABC'[ABC - Limite inferiore]
+			            && [@CumulataPct] < 'Classi ABC'[ABC - Limite superiore]
+			    )
+			VAR Risultato =
+			    CALCULATE (                                     
+			        [Importo (no omaggi) - Ordinato],                      
+			        KEEPFILTERS ( DimensioneInClassi )
+			    )
+			RETURN
+			    Risultato                                               -- La logica dovrebbe essere la stessa su tutte le altre misure
+			
+			
+			```
+		lineageTag: 15614616-7c71-46de-b547-e0b443747651
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'ABC Categoria clienti - Importo (no omaggi) Categoria % - Ordinato' =
+			
+			VAR ImportoTot =
+			    CALCULATE ( [Importo (no omaggi) - Ordinato], ALLSELECTED('Categorie clienti'),ALL('Classi ABC') )
+			VAR PercentualeCumulata =
+			    DIVIDE ( [ABC Categoria clienti - Importo (no omaggi) - Ordinato], ImportoTot )
+			RETURN
+			    PercentualeCumulata
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 0041ae75-bccb-4ac1-aba9-c3d86739636a
+
+	measure 'ABC Sconti clienti - Importo (no omaggi) Cat.Sconto% - Ordinato' =
+			
+			VAR ImportoTot =
+			    CALCULATE ( [Importo (no omaggi) - Ordinato], ALLSELECTED('Categorie sconti'),ALL('Classi ABC') )
+			VAR PercentualeCumulata =
+			    DIVIDE ( [ABC Sconti clienti - Importo (no omaggi) - Ordinato], ImportoTot )
+			RETURN
+			    PercentualeCumulata
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 3659c712-bead-4b3e-b0d7-c901210c5067
+
+	measure 'Situazione clienti abituali ordinato colore EN' =
+			
+			SWITCH(
+			    TRUE(),
+			    [Giorni trascorsi da ultimo ordine] = BLANK() || [Giorni medi di ordine] = BLANK(), "",
+			    [Giorni trascorsi da ultimo ordine]<=[Giorni medi di ordine]*1.20,"Consolidated",
+			    [Giorni trascorsi da ultimo ordine]<=[Giorni medi di ordine]*2,"At medium risk of loss",
+			    "At high risk of loss"
+			)
+		lineageTag: 254d7d0f-bdfe-42ec-b6fd-7c0c06542749
+
+	column z_Dummy
+		isHidden
+		formatString: 0
+		lineageTag: d830cca0-8c8a-4e61-83ea-64b751741372
+		summarizeBy: sum
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Varie Ordinato' = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = fe9bd2b1225b4ff2a1b05cded6a3438d
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

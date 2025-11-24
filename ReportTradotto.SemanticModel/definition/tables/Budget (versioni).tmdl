@@ -1,0 +1,95 @@
+table 'Budget (versioni)'
+	lineageTag: c4e6b252-2b90-489e-a435-28bdd36e5e46
+
+	column K_CodBudget
+		dataType: string
+		isHidden
+		lineageTag: 03258f8b-d2e7-4943-8c8e-569b7bf2fd2d
+		summarizeBy: none
+		sourceColumn: K_CodBudget
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Budget - Ditta'
+		dataType: string
+		lineageTag: 2f68eace-0225-49a2-8cff-80b7ed46ec31
+		summarizeBy: none
+		sourceColumn: Budget - Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Budget - Codice'
+		dataType: string
+		lineageTag: 2d51f513-5015-492b-b3fb-fb5cb3d6583d
+		summarizeBy: none
+		sourceColumn: Budget - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Budget - Descrizione'
+		dataType: string
+		lineageTag: 642da680-82a9-4282-b209-35dc0e2ff7ab
+		summarizeBy: none
+		sourceColumn: Budget - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Budget - Periodo analisi Da'
+		dataType: int64
+		formatString: 0
+		lineageTag: e23f31d6-bbec-454e-b61a-3a3a962669b9
+		summarizeBy: none
+		sourceColumn: Budget - Periodo analisi Da
+
+		annotation SummarizationSetBy = User
+
+	column 'Budget - Periodo analisi A'
+		dataType: int64
+		formatString: 0
+		lineageTag: 59a3ea78-03e3-4293-a629-18058c81469f
+		summarizeBy: none
+		sourceColumn: Budget - Periodo analisi A
+
+		annotation SummarizationSetBy = User
+
+	partition 'Budget (versioni)-131aac39-4fae-44c0-aa16-43bccbb0868e' = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " WHERE bdg.DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " WHERE bdg.DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				SELECT 
+					K_CodBudget AS [K_CodBudget]
+				    ,bdg.DBGruppo AS [Budget - Ditta]
+				    ,bdg.CodBudget AS [Budget - Codice]
+				    ,bdg.DesBudget AS [Budget - Descrizione] 
+				    ,bdg.PeriodoAnalisiDa AS [Budget - Periodo analisi Da]
+				    ,bdg.PeriodoAnalisiA AS [Budget - Periodo analisi A]
+				FROM 
+				    [dbo].[ESBI_BDG_STAT] bdg WITH (NOLOCK)
+				"
+				
+				        & StringaFiltroGruppoIN
+				        & StringaFiltroGruppoNOTIN
+				        & ";
+				    "
+				    ,CreateNavigationProperties=false])
+				in 
+				    Origine
+				```
+
+	annotation PBI_Id = ea7c7c97-d7c6-4349-b447-c21116ca9e65
+
+	annotation LinkedQueryName = Budget (versioni)
+
+	annotation PBI_QueryRelationships = {"columnCount":6,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Budget (versioni)/Origine.{K_CodBudget,0}","Section1/Budget (versioni)/Origine.{Budget - Ditta,1}","Section1/Budget (versioni)/Origine.{Budget - Codice,2}","Section1/Budget (versioni)/Origine.{Budget - Descrizione,3}","Section1/Budget (versioni)/Origine.{Budget - Periodo analisi Da,4}","Section1/Budget (versioni)/Origine.{Budget - Periodo analisi A,5}"],"ColumnCount":6,"KeyColumnNames":[],"ColumnIdentities":["Section1/Budget (versioni)/Origine.{K_CodBudget,0}","Section1/Budget (versioni)/Origine.{Budget - Ditta,1}","Section1/Budget (versioni)/Origine.{Budget - Codice,2}","Section1/Budget (versioni)/Origine.{Budget - Descrizione,3}","Section1/Budget (versioni)/Origine.{Budget - Periodo analisi Da,4}","Section1/Budget (versioni)/Origine.{Budget - Periodo analisi A,5}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

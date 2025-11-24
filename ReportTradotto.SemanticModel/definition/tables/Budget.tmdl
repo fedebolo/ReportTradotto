@@ -1,0 +1,273 @@
+table Budget
+	lineageTag: 8af0a495-e262-4f83-8721-450846060941
+
+	measure 'Quantità - BDG' =
+			
+			CALCULATE (
+			    [Quantità - Generale],
+			    USERELATIONSHIP ( 'Vendite'[K_CodBudget], 'Budget (versioni)'[K_CodBudget] ),
+			    'Tipi movimento'[Flag rilevanza budget] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 225713a5-6d9c-480c-94e7-7637b5e02f8b
+
+	measure 'Importo - BDG' =
+			
+			CALCULATE (
+			    [Importo_1 - Generale],
+			    USERELATIONSHIP ( 'Vendite'[K_CodBudget], 'Budget (versioni)'[K_CodBudget] ),
+			    'Tipi movimento'[Flag rilevanza budget] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 20fc3e0b-8f11-4835-bfac-a6437820f895
+
+	measure 'Quantità - BDG - PM' = CALCULATE ( [Quantità - BDG], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: ec605d02-83ad-4676-a90a-5400d7eaa224
+
+	measure 'Importo - BDG - PM' = CALCULATE ( [Importo - BDG], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: cdcd3f59-528a-4c57-b873-9e2ce1f0a360
+
+	measure 'Quantità - BDG - PY' = CALCULATE ( [Quantità - BDG], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 2049eda0-e6ba-4881-b698-1fb123e5bde4
+
+	measure 'Importo - BDG - PY' = CALCULATE ( [Importo - BDG], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: f297852b-3cad-4471-9ee3-0ba19dc60b6d
+
+	measure 'Quantità - BDG - YTD' = TOTALYTD ( [Quantità - BDG], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: d8266a57-13f7-41f5-a618-f72d10c36ef8
+
+	measure 'Importo - BDG - YTD' = TOTALYTD ( [Importo - BDG], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: e78cdb40-52d6-45f2-a426-3f47f022a430
+
+	measure 'Quantità - BDG - PYTD' = TOTALYTD ( [Quantità - BDG], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 5fb1de71-4084-46dd-afcd-00f926e1b4cd
+
+	measure 'Importo - BDG - PYTD' = TOTALYTD ( [Importo - BDG], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: fe330bc6-2aa1-4e4b-9dd5-726573f94c15
+
+	measure 'Quantità - BDG - YOY' = [Quantità - BDG] - [Quantità - BDG - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 80dd0cb2-67c2-4b60-b6fb-5a1c66671fe0
+
+	measure 'Importo - BDG - YOY' = [Importo - BDG] - [Importo - BDG - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 2717d86e-f686-4479-83a6-0f89757d4bc5
+
+	measure 'Quantità - BDG - YOY%' = DIVIDE ( [Quantità - BDG - YOY], [Quantità - BDG - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: dd77772b-96de-438c-84a4-25bf731e1a46
+
+	measure 'Importo - BDG - YOY%' = DIVIDE ( [Importo - BDG - YOY], [Importo - BDG - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: efb811ee-5146-4003-aa3e-845ffc7d746d
+
+	measure 'Quantità - BDG - YOYTD' = [Quantità - BDG - YTD] - [Quantità - BDG - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: e97fea4f-3f1c-435b-bf91-720f0ad69a88
+
+	measure 'Importo - BDG - YOYTD' = [Importo - BDG - YTD] - [Importo - BDG - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 6e5a9dfe-f644-4603-b4cf-0f64bd147eb9
+
+	measure 'Quantità - BDG - YOYTD%' = DIVIDE ( [Quantità - BDG - YOYTD], [Quantità - BDG - PYTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: e0d7f89f-6a34-4b98-9e4f-88f0e419976c
+
+	measure 'Importo - BDG - YOYTD%' = DIVIDE ( [Importo - BDG - YOYTD], [Importo - BDG - PYTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: b802417a-8b83-4ea7-836e-422a9df49ce1
+
+	measure 'Quantità - BDG - MOM' = [Quantità - BDG] - [Quantità - BDG - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: fe0051b5-6b3b-493e-9df5-dce700b952f8
+
+	measure 'Importo - BDG - MOM' = [Importo - BDG] - [Importo - BDG - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 58081c67-c5f4-4940-835e-1819e7458849
+
+	measure 'Quantità - BDG - MOM%' = DIVIDE ( [Quantità - BDG - MOM], [Quantità - BDG - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 032ac815-bb5f-4f25-864f-2d2c3a2d0caf
+
+	measure 'Importo - BDG - MOM%' = DIVIDE ( [Importo - BDG - MOM], [Importo - BDG - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: a693bd88-49f1-490e-ae6c-5fce4b4839b7
+
+	measure 'Importo unitario - BDG' =
+			
+			CALCULATE (
+			    [Importo unitario - Generale],
+			    USERELATIONSHIP ( 'Vendite'[K_CodBudget], 'Budget (versioni)'[K_CodBudget] ),
+			    'Tipi movimento'[Flag rilevanza budget] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: 0125be2a-a286-4889-a9e0-64eea1185818
+
+	measure 'Importo unitario - BDG - PM' = CALCULATE ( [Importo unitario - BDG], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 12d9e4e2-72ff-42ec-a598-9644188b35d2
+
+	measure 'Importo unitario - BDG - PY' = CALCULATE ( [Importo unitario - BDG], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: 1bc63b74-3bd4-485b-8738-2dc0e95a394e
+
+	measure 'Importo unitario - BDG - YTD' = TOTALYTD ( [Importo unitario - BDG], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: eaf5cf8e-2d0f-48f4-8f75-c844e14faed3
+
+	measure 'Importo unitario - BDG - PYTD' = TOTALYTD ( [Importo unitario - BDG], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: c4ce6b7c-835c-4aca-8885-dd03a0ca9809
+
+	measure 'Importo unitario - BDG - YOY' = [Importo unitario - BDG] - [Importo unitario - BDG - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 567b806f-4472-427a-99ac-0c7bcf1d3389
+
+	measure 'Importo unitario - BDG - YOY%' = DIVIDE ( [Importo unitario - BDG - YOY], [Importo unitario - BDG - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 972b1f1d-0148-4b27-8863-ee9e1309f09d
+
+	measure 'Importo unitario - BDG - YOYTD' = [Importo unitario - BDG - YTD] - [Importo unitario - BDG - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: bc1883af-b443-4df3-9f47-c572594d1d9e
+
+	measure 'Importo unitario - BDG - YOYTD%' = DIVIDE ( [Importo unitario - BDG - YOYTD], [Importo unitario - BDG - PYTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 7aa3ad55-54dd-4d3c-bce9-ffc3d2ddbe5b
+
+	measure 'Importo unitario - BDG - MOM' = [Importo unitario - BDG] - [Importo unitario - BDG - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 659199c5-f169-4c25-9235-ec07119df7e3
+
+	measure 'Importo unitario - BDG - MOM%' = DIVIDE ( [Importo unitario - BDG - MOM], [Importo unitario - BDG - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: edff7900-6a7d-4f34-85e0-16474a63d149
+
+	measure 'Quantità - BDG - PQ' = CALCULATE ( [Quantità - BDG], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 84503d85-6a52-48ff-9ada-bfd50c6fe4c1
+
+	measure 'Importo - BDG - PQ' = CALCULATE ( [Importo - BDG], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: c76301df-5ff8-4682-8ac8-e06dcb054953
+
+	measure 'Quantità - BDG - QOQ' = [Quantità - BDG] - [Quantità - BDG - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 1e636564-1501-41e5-a657-06cd2212bf9d
+
+	measure 'Importo - BDG - QOQ' = [Importo - BDG] - [Importo - BDG - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 12f61e49-f618-4936-9e91-c2f12e0c140a
+
+	measure 'Quantità - BDG - QOQ%' = DIVIDE ( [Quantità - BDG - QOQ], [Quantità - BDG - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 698ad702-e775-4b90-a9af-3b85c286cd15
+
+	measure 'Importo - BDG - QOQ%' = DIVIDE ( [Importo - BDG - QOQ], [Importo - BDG - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 52b2d0c1-b623-4d99-a92c-e498c3e48a15
+
+	measure 'Importo unitario - BDG - PQ' = CALCULATE ( [Importo unitario - BDG], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: de72920b-3350-495c-8440-284d182a9b40
+
+	measure 'Importo unitario - BDG - QOQ' = [Importo unitario - BDG] - [Importo unitario - BDG - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 615693d3-c789-4046-8dae-ea0d437c58c3
+
+	measure 'Importo unitario - BDG - QOQ%' = DIVIDE ( [Importo unitario - BDG - MOM], [Importo unitario - BDG - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 3da6bcb3-74e7-444c-a665-ce9a9cc308ca
+
+	measure 'Xls Importo - BDG' =
+			CALCULATE(SUM( Target[Target]), Target[Date]<=EOMONTH(Today(),0), 'Agenti (Clienti)'[K_CodAgente]<>Blank() )
+			/*SUM ( Target[Target])*/
+		displayFolder: Corrente
+		lineageTag: 25f44878-49be-4e0f-9af9-b3c3d2c629ce
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avanzamento sul target val massimo' = MAX(Budget[Xls Importo - BDG],Ordinato[Importo (no omaggi) - Ordinato])
+		displayFolder: Corrente
+		lineageTag: 4272dc90-19e8-430e-a006-fada7c091cc1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Z_Dummy
+		dataType: string
+		isHidden
+		lineageTag: 12108fb8-b4f8-4d51-a4d2-e7c30614b098
+		summarizeBy: none
+		sourceColumn: Z_Dummy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Budget-65284ecd-8cdb-4ad7-80b2-10464537bc53 = m
+		mode: import
+		queryGroup: Misure
+		source =
+				let
+				    Origine = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Z_Dummy = _t])
+				in
+				    Origine
+
+	annotation PBI_Id = 104869cd-95b6-46f9-a9c7-3ccd9ad2c290
+
+	annotation LinkedQueryName = Budget
+
+	annotation PBI_QueryRelationships = {"columnCount":0,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":[],"ColumnCount":0,"KeyColumnNames":[],"ColumnIdentities":[],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,39 @@
+table 'Stati gestionali'
+	lineageTag: 3084d0bf-ea64-41eb-ac98-32db682e9d41
+
+	column K_StatoGestionale
+		dataType: string
+		isHidden
+		lineageTag: 395face3-4499-45eb-8920-ab4702180fe9
+		summarizeBy: none
+		sourceColumn: K_StatoGestionale
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Stato gestionale'
+		dataType: string
+		lineageTag: ec87c89b-f687-45c5-bed6-64f092638bfc
+		summarizeBy: none
+		sourceColumn: Stato gestionale
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Stati gestionali-9e4890c9-740a-4747-a59f-a6343fe94e4f' = m
+		mode: import
+		queryGroup: Dimensioni
+		source =
+				let
+				    Origine = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlDSUXJJTcvMyyzJLMtXitWJVjIECgUU5ZeVZRbnF2UCxWIB", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [K_StatoGestionale = _t, #"Stato gestionale" = _t])
+				in
+				    Origine
+
+	annotation PBI_Id = 20b2285d-21e1-4ece-a8c8-d873f0d350d6
+
+	annotation LinkedQueryName = Stati gestionali
+
+	annotation PBI_QueryRelationships = {"columnCount":2,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Stati gestionali/Origine.{K_StatoGestionale,0}","Section1/Stati gestionali/Origine.{Stato gestionale,1}"],"ColumnCount":2,"KeyColumnNames":[],"ColumnIdentities":["Section1/Stati gestionali/Origine.{K_StatoGestionale,0}","Section1/Stati gestionali/Origine.{Stato gestionale,1}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

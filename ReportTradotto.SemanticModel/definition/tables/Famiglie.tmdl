@@ -1,0 +1,104 @@
+table Famiglie
+	lineageTag: 4b4ff844-e978-4e02-a745-eb659f0ab24c
+
+	column K_CodFamiglia
+		dataType: string
+		isHidden
+		lineageTag: 2bb6aeea-5067-47c9-80a4-3d32fdd78d12
+		summarizeBy: none
+		sourceColumn: K_CodFamiglia
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Famiglia - Ditta'
+		dataType: string
+		lineageTag: 7ed119b7-b6f5-4207-a26a-5a7ca4f95368
+		summarizeBy: none
+		sourceColumn: Famiglia - Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Famiglia - Codice'
+		dataType: string
+		lineageTag: 864c578d-d451-44f0-8374-31e7b894b91e
+		summarizeBy: none
+		sourceColumn: Famiglia - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Famiglia - Descrizione'
+		dataType: string
+		lineageTag: 46ad79e1-3457-4c89-b487-7b2e1f7fddb8
+		summarizeBy: none
+		sourceColumn: Famiglia - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Famiglia - Data inizio validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 83e52a3f-d059-4194-a204-1bc79448a8c3
+		summarizeBy: none
+		sourceColumn: Famiglia - Data inizio validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Famiglia - Data fine validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9f3f2463-2716-40e9-912d-9ecc4ea6109a
+		summarizeBy: none
+		sourceColumn: Famiglia - Data fine validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Famiglia - Valida in data estrazione'
+		dataType: string
+		lineageTag: 66ef9138-c0d9-496f-b510-0b6461f7353f
+		summarizeBy: none
+		sourceColumn: Famiglia - Valida in data estrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Famiglie-70c19371-5d00-4072-be42-8d163c538593 = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " WHERE DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " WHERE DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				        SELECT
+				             K_CodFamiglia AS [K_CodFamiglia]
+				            ,DBGruppo AS [Famiglia - Ditta]
+				            ,CodFamiglia AS [Famiglia - Codice]
+				            ,DesFamiglia AS [Famiglia - Descrizione]
+				            ,DataInizioValidita AS [Famiglia - Data inizio validità]
+				            ,DataFineValidita AS [Famiglia - Data fine validità]
+				            ,ValidoInDataEstraz AS [Famiglia - Valida in data estrazione]
+				        
+				        FROM 
+				            [dbo].[ESBI_FAM] WITH (NOLOCK)"
+				
+				        & StringaFiltroGruppoIN
+				        & StringaFiltroGruppoNOTIN
+				        & ";
+				    "
+				    ,CreateNavigationProperties=false])
+				in 
+				    Origine
+				```
+
+	annotation PBI_Id = 39660352-58d2-4ca2-9764-ae7da3c48fe5
+
+	annotation LinkedQueryName = Famiglie
+
+	annotation PBI_QueryRelationships = {"columnCount":7,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Famiglie/Origine.{K_CodFamiglia,0}","Section1/Famiglie/Origine.{Famiglia - Ditta,1}","Section1/Famiglie/Origine.{Famiglia - Codice,2}","Section1/Famiglie/Origine.{Famiglia - Descrizione,3}","Section1/Famiglie/Origine.{Famiglia - Data inizio validità,4}","Section1/Famiglie/Origine.{Famiglia - Data fine validità,5}","Section1/Famiglie/Origine.{Famiglia - Valida in data estrazione,6}"],"ColumnCount":7,"KeyColumnNames":[],"ColumnIdentities":["Section1/Famiglie/Origine.{K_CodFamiglia,0}","Section1/Famiglie/Origine.{Famiglia - Ditta,1}","Section1/Famiglie/Origine.{Famiglia - Codice,2}","Section1/Famiglie/Origine.{Famiglia - Descrizione,3}","Section1/Famiglie/Origine.{Famiglia - Data inizio validità,4}","Section1/Famiglie/Origine.{Famiglia - Data fine validità,5}","Section1/Famiglie/Origine.{Famiglia - Valida in data estrazione,6}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

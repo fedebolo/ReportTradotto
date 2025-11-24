@@ -1,0 +1,87 @@
+table Target
+	lineageTag: d94fe326-833d-42c3-9925-0eae9e1cf205
+
+	column 'Ditta - Codice'
+		dataType: string
+		lineageTag: ba2ccba7-b425-4d23-889a-74a4217376e5
+		summarizeBy: none
+		sourceColumn: Ditta - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: f04f6528-1180-40c5-b223-3d0952f7ef49
+		summarizeBy: none
+		sourceColumn: Date
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Agente (Cliente) - Codice'
+		dataType: string
+		lineageTag: c5b9f411-7a1a-4066-b5b9-0c8691ebd347
+		summarizeBy: none
+		sourceColumn: Agente (Cliente) - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	column Target
+		dataType: double
+		formatString: #,0
+		lineageTag: 09496853-b8ed-4f9d-8a7e-2ddc3611f02c
+		summarizeBy: sum
+		sourceColumn: Target
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column Articolo
+		dataType: string
+		lineageTag: d990bf2f-f8b6-468f-b6d7-c4ffa56442d1
+		summarizeBy: none
+		sourceColumn: Articolo
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgenteRuolo
+		dataType: string
+		lineageTag: d98c198b-518f-4b7b-b06e-5c292dbcf66c
+		summarizeBy: none
+		sourceColumn: K_CodAgenteRuolo
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodAgente
+		dataType: string
+		lineageTag: d096dcbc-7b00-4609-9f0e-929d41c584cb
+		summarizeBy: none
+		sourceColumn: K_CodAgente
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Target = m
+		mode: import
+		source =
+				let
+				    Origine = Excel.Workbook(File.Contents("\\WTCVMFS01.WTC.LNET\azienda\REPORTBI\Traduzione\excel\Target commerciale per BI.xlsx"), null, true),
+				    Target_Sheet = Origine{[Item="Target",Kind="Sheet"]}[Data],
+				    #"Intestazioni alzate di livello" = Table.PromoteHeaders(Target_Sheet, [PromoteAllScalars=true]),
+				    #"Rimosse altre colonne" = Table.SelectColumns(#"Intestazioni alzate di livello",{"Ditta - Codice", "Date", "Agente (Cliente) - Codice", "Target", "Articolo"}),
+				    #"Data estratta" = Table.TransformColumns(#"Rimosse altre colonne",{}),
+				    #"Modificato tipo" = Table.TransformColumnTypes(#"Data estratta",{{"Target", type number}}),
+				    #"Modificato tipo1" = Table.TransformColumnTypes(#"Modificato tipo",{{"Agente (Cliente) - Codice", type text}}),
+				    #"Aggiunta colonna personalizzata" = Table.AddColumn(#"Modificato tipo1", "K_CodAgenteRuolo", each [#"Ditta - Codice"]&"_"&[#"Agente (Cliente) - Codice"]&"_1"),
+				    #"Aggiunta colonna personalizzata1" = Table.AddColumn(#"Aggiunta colonna personalizzata", "K_CodAgente", each [#"Ditta - Codice"]&"_"&[#"Agente (Cliente) - Codice"])
+				in
+				    #"Aggiunta colonna personalizzata1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

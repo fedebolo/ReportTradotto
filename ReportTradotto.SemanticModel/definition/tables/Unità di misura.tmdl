@@ -1,0 +1,80 @@
+table 'Unità di misura'
+	lineageTag: 990b922f-14d3-4e30-90cd-c0781635d50e
+
+	column K_CodUnitaMisura
+		dataType: string
+		isHidden
+		lineageTag: 3dc4feac-a134-44b3-875f-5104f10f5199
+		summarizeBy: none
+		sourceColumn: K_CodUnitaMisura
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unità di misura - UdM base'
+		dataType: string
+		lineageTag: 30b64034-15d6-42cb-bf1f-d3ab0e3d1306
+		summarizeBy: none
+		sourceColumn: Unità di misura - UdM base
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unità di misura - Descrizione UdM base'
+		dataType: string
+		lineageTag: 8543d2b4-ffcf-405d-a061-ff27fc8fb237
+		summarizeBy: none
+		sourceColumn: Unità di misura - Descrizione UdM base
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unità di misura - Codice UdM base'
+		dataType: string
+		lineageTag: b59b98a0-f5c6-4296-97db-348717a85420
+		summarizeBy: none
+		sourceColumn: Unità di misura - Codice UdM base
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unità di misura'
+		dataType: string
+		lineageTag: 1fdf5493-d5f6-42b6-924f-66370bbaca40
+		summarizeBy: none
+		sourceColumn: Unità di misura
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unità di misura - Descrizione'
+		dataType: string
+		lineageTag: 7e7a737d-d508-4d71-aafb-f20e6d80218a
+		summarizeBy: none
+		sourceColumn: Unità di misura - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unità di misura - Codice'
+		dataType: string
+		lineageTag: dda717f3-f14c-4547-b719-01df960b1a0b
+		summarizeBy: none
+		sourceColumn: Unità di misura - Codice
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Unità di misura-943de46e-aa5f-44c4-94ea-78ccf42af794' = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    Origine = Sql.Database("WTCNB0021\SISTEMI1", "ESOLVER42", [Query="#(lf)        SELECT#(lf)            K_CodUnitaMisura AS [K_CodUnitaMisura]#(lf)            ,UnitaDiMisuraBase AS [Unità di misura - UdM base]#(lf)            ,DesUnitaMisuraBase AS [Unità di misura - Descrizione UdM base]#(lf)            ,CodUnitaMisuraBase AS [Unità di misura - Codice UdM base]#(lf)            ,UnitaDiMisura AS [Unità di misura]#(lf)            ,DesUnitaMisura AS [Unità di misura - Descrizione]#(lf)            ,CodUnitaMisura AS [Unità di misura - Codice]#(lf)#(lf)        FROM #(lf)            [dbo].[ESBI_UDM] WITH (NOLOCK)#(lf)        ;#(lf)    ", CreateNavigationProperties=false])
+				in 
+				    Origine
+				```
+
+	annotation PBI_Id = 9c7b5cc7-6f5b-407e-a8d0-2c2407a34ba1
+
+	annotation LinkedQueryName = Unità di misura
+
+	annotation PBI_QueryRelationships = {"columnCount":7,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Unità di misura/Origine.{K_CodUnitaMisura,0}","Section1/Unità di misura/Origine.{Unità di misura - UdM base,1}","Section1/Unità di misura/Origine.{Unità di misura - Descrizione UdM base,2}","Section1/Unità di misura/Origine.{Unità di misura - Codice UdM base,3}","Section1/Unità di misura/Origine.{Unità di misura,4}","Section1/Unità di misura/Origine.{Unità di misura - Descrizione,5}","Section1/Unità di misura/Origine.{Unità di misura - Codice,6}"],"ColumnCount":7,"KeyColumnNames":[],"ColumnIdentities":["Section1/Unità di misura/Origine.{K_CodUnitaMisura,0}","Section1/Unità di misura/Origine.{Unità di misura - UdM base,1}","Section1/Unità di misura/Origine.{Unità di misura - Descrizione UdM base,2}","Section1/Unità di misura/Origine.{Unità di misura - Codice UdM base,3}","Section1/Unità di misura/Origine.{Unità di misura,4}","Section1/Unità di misura/Origine.{Unità di misura - Descrizione,5}","Section1/Unità di misura/Origine.{Unità di misura - Codice,6}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

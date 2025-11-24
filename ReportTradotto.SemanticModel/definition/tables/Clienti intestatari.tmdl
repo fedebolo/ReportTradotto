@@ -1,0 +1,497 @@
+table 'Clienti intestatari'
+	lineageTag: ef9d4c50-c948-497c-b3c1-4b65d7382ef3
+
+	column K_CodCli
+		dataType: string
+		isHidden
+		lineageTag: 59684cd4-725b-4aa8-84ef-f0fb8b414cd0
+		summarizeBy: none
+		sourceColumn: K_CodCli
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Ditta'
+		dataType: string
+		lineageTag: b39f652c-a4a8-46b4-bfd1-deafc95b04ac
+		summarizeBy: none
+		sourceColumn: Cliente - Ditta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Codice'
+		dataType: int64
+		formatString: 0
+		lineageTag: b0e75c19-277d-4cd6-9a68-216831e11ee5
+		summarizeBy: none
+		sourceColumn: Cliente - Codice
+
+		annotation SummarizationSetBy = User
+
+	column 'Cliente - Descrizione'
+		dataType: string
+		lineageTag: 041b85fd-b74e-4a95-b1d8-43f9cfde6051
+		summarizeBy: none
+		sourceColumn: Cliente - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - CAP'
+		dataType: string
+		lineageTag: 344e539f-b3ef-43ae-be83-47ee7d65e542
+		summarizeBy: none
+		sourceColumn: Cliente - CAP
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Località'
+		dataType: string
+		lineageTag: af08eb3e-2319-463b-a826-918324498c0e
+		summarizeBy: none
+		sourceColumn: Cliente - Località
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Codice provincia'
+		dataType: string
+		lineageTag: 245450ac-0d4e-4a96-b497-ecdb92b58b43
+		summarizeBy: none
+		sourceColumn: Cliente - Codice provincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Descrizione provincia'
+		dataType: string
+		lineageTag: 4e26754d-eb31-484f-b1b9-10e49f17b3c5
+		summarizeBy: none
+		sourceColumn: Cliente - Descrizione provincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Codice regione'
+		dataType: string
+		lineageTag: 581eece5-0b91-4d98-a578-dd09dbf24321
+		summarizeBy: none
+		sourceColumn: Cliente - Codice regione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Descrizione regione'
+		dataType: string
+		lineageTag: d4d24689-9bc4-408a-a99d-861e694d1f43
+		summarizeBy: none
+		sourceColumn: Cliente - Descrizione regione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Codice stato'
+		dataType: string
+		lineageTag: a0f44171-2b94-47db-a064-9234405fe065
+		summarizeBy: none
+		sourceColumn: Cliente - Codice stato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Descrizione stato'
+		dataType: string
+		lineageTag: 82eba81a-ef93-4722-8709-a7dd56f6c957
+		summarizeBy: none
+		sourceColumn: Cliente - Descrizione stato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Codice zona (A)'
+		dataType: string
+		lineageTag: 7263f85a-cc46-4104-b75a-9284375d73c2
+		summarizeBy: none
+		sourceColumn: Cliente - Codice zona (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Descrizione zona (A)'
+		dataType: string
+		lineageTag: 4f273215-bc73-447d-b0a6-b7ad14754840
+		summarizeBy: none
+		sourceColumn: Cliente - Descrizione zona (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Codice classe contabile (A)'
+		dataType: string
+		lineageTag: 8728a319-a7e7-462f-bb13-f55077b1581c
+		summarizeBy: none
+		sourceColumn: Cliente - Codice classe contabile (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Descrizione classe contabile (A)'
+		dataType: string
+		lineageTag: 17ecce97-c3e3-4e4a-98a8-d57711db7777
+		summarizeBy: none
+		sourceColumn: Cliente - Descrizione classe contabile (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Classe contabile (A)'
+		dataType: string
+		lineageTag: 47f61b44-2e6f-4b5c-8ae0-79e0bb01fa5e
+		summarizeBy: none
+		sourceColumn: Cliente - Classe contabile (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Codice classe affidamento (A)'
+		dataType: string
+		lineageTag: 5d5059c5-e124-4007-b060-1507725d98c4
+		summarizeBy: none
+		sourceColumn: Cliente - Codice classe affidamento (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Descrizione classe affidamento (A)'
+		dataType: string
+		lineageTag: f516f5d8-f985-44fd-8817-526fc56c7781
+		summarizeBy: none
+		sourceColumn: Cliente - Descrizione classe affidamento (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Classe affidamento (A)'
+		dataType: string
+		lineageTag: 9b7372ec-d06b-4b9b-bd22-e5dbe9233744
+		summarizeBy: none
+		sourceColumn: Cliente - Classe affidamento (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Codice categoria (A)'
+		dataType: string
+		lineageTag: 8f6889dd-b378-426d-ab90-736702113941
+		summarizeBy: none
+		sourceColumn: Cliente - Codice categoria (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Descrizione categoria (A)'
+		dataType: string
+		lineageTag: d5a1d4e6-8706-4fc4-a3e3-0ec4770237be
+		summarizeBy: none
+		sourceColumn: Cliente - Descrizione categoria (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Categoria (A)'
+		dataType: string
+		lineageTag: 9afb75b6-5e4d-4f1a-aba0-e965bda78c0f
+		summarizeBy: none
+		sourceColumn: Cliente - Categoria (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Codice tipologia commerciale (A)'
+		dataType: string
+		lineageTag: 979f3ec2-bf0b-4876-bfcc-00b29f84b76b
+		summarizeBy: none
+		sourceColumn: Cliente - Codice tipologia commerciale (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Descrizione tipologia commerciale (A)'
+		dataType: string
+		lineageTag: d253eb26-32a7-46b9-9184-9b1ace1c3d66
+		summarizeBy: none
+		sourceColumn: Cliente - Descrizione tipologia commerciale (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Tipologia commerciale (A)'
+		dataType: string
+		lineageTag: aba49263-cbf4-49e9-9795-66bf068a5166
+		summarizeBy: none
+		sourceColumn: Cliente - Tipologia commerciale (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Data inizio validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 239fb2b4-8000-4c5d-bf34-2ea73afc4098
+		summarizeBy: none
+		sourceColumn: Cliente - Data inizio validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Data fine validità'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 90d4837e-49a5-4aad-aefe-af63ef2c7c36
+		summarizeBy: none
+		sourceColumn: Cliente - Data fine validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Valido in data estrazione'
+		dataType: string
+		lineageTag: abff3ef1-199e-47c3-89f0-f9fd5499d098
+		summarizeBy: none
+		sourceColumn: Cliente - Valido in data estrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Zona (A)'
+		dataType: string
+		lineageTag: 37c7a191-d47a-407b-897a-66a9412bd985
+		summarizeBy: none
+		sourceColumn: Cliente - Zona (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Posizione (comune, provincia, regione, stato)'
+		dataType: string
+		lineageTag: cf1c1ffd-040e-4a74-9e3a-e6234f1d0de0
+		dataCategory: Place
+		summarizeBy: none
+		sourceColumn: Cliente - Posizione (comune, provincia, regione, stato)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Posizione (provincia, regione, stato)'
+		dataType: string
+		lineageTag: ff552eef-1840-44e3-8e0e-3523c4e65b1e
+		dataCategory: County
+		summarizeBy: none
+		sourceColumn: Cliente - Posizione (provincia, regione, stato)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Posizione (regione, stato)'
+		dataType: string
+		lineageTag: e0a3a5b4-441a-4539-8d14-23fe18c12ea2
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: Cliente - Posizione (regione, stato)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Posizione (stato)'
+		dataType: string
+		lineageTag: 8642f547-cfdf-4855-9cf2-52628d73037d
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Cliente - Posizione (stato)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Importo classe affidamento (A)'
+		dataType: double
+		lineageTag: f6ad333f-3a24-4567-9bd0-5709d63592af
+		summarizeBy: sum
+		sourceColumn: Cliente - Importo classe affidamento (A)
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Cliente - Valuta importo classe affidamento (A)'
+		dataType: string
+		lineageTag: 2d1bc935-bcbc-45bc-8587-aad03a5ce33d
+		summarizeBy: none
+		sourceColumn: Cliente - Valuta importo classe affidamento (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cliente
+		dataType: string
+		lineageTag: 71f6fffe-d97c-4e16-8e8e-81ec3ae5c821
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Codice capogruppo (A)'
+		dataType: int64
+		formatString: 0
+		lineageTag: b495faee-4f03-42a5-92f4-f4c2c55bf46a
+		summarizeBy: none
+		sourceColumn: Cliente - Codice capogruppo (A)
+
+		annotation SummarizationSetBy = User
+
+	column 'Cliente - Descrizione capogruppo (A)'
+		dataType: string
+		lineageTag: fe4a1002-cffe-4f01-b6e8-10160c6d70c9
+		summarizeBy: none
+		sourceColumn: Cliente - Descrizione capogruppo (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Capogruppo (A)'
+		dataType: string
+		lineageTag: 19764f7b-d1ef-4383-8813-2a9d250b97b4
+		summarizeBy: none
+		sourceColumn: Cliente - Capogruppo (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Codice listino prioritario (A)'
+		dataType: string
+		lineageTag: 34cddb34-b9de-4df5-a425-a84c11a5bf35
+		summarizeBy: none
+		sourceColumn: Cliente - Codice listino prioritario (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Descrizione listino prioritario (A)'
+		dataType: string
+		lineageTag: 1b72346d-ca63-4742-9d49-12852581db28
+		summarizeBy: none
+		sourceColumn: Cliente - Descrizione listino prioritario (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Categoria sconti (A)'
+		dataType: string
+		lineageTag: 796f3fef-bf4f-4bd9-af9a-64e0d8d3c695
+		summarizeBy: none
+		sourceColumn: Cliente - Categoria sconti (A)
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodCategScontiCliente
+		dataType: string
+		lineageTag: 2845d191-726e-42d0-8ce7-c008e1d9f6a5
+		summarizeBy: none
+		sourceColumn: K_CodCategScontiCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Tipo'
+		dataType: string
+		lineageTag: 19779788-cc73-4d27-a863-3b656f76b150
+		summarizeBy: none
+		sourceColumn: Cliente - Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente - Tipo EN' = SWITCH('Clienti intestatari'[Cliente - Tipo], "Effettivo", "Actual","Potential")
+		lineageTag: db4215a8-5e7d-46d3-aab7-e5186c1ffdb5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Cliente - Gerarchia territoriale'
+		lineageTag: 88003209-3393-47e5-9eea-dd901c1b7c5f
+
+		level 'Cliente - Posizione (stato)'
+			lineageTag: fd68febd-0dd1-4bac-a450-03ef6b46c351
+			column: 'Cliente - Posizione (stato)'
+
+		level 'Cliente - Posizione (regione, stato)'
+			lineageTag: 92ddcc23-f9b3-4b08-bc7d-b414656bc9ec
+			column: 'Cliente - Posizione (regione, stato)'
+
+		level 'Cliente - Posizione (provincia, regione, stato)'
+			lineageTag: e91395d8-cd22-41f3-aeec-d8f722ca0e91
+			column: 'Cliente - Posizione (provincia, regione, stato)'
+
+		level 'Cliente - Posizione (comune, provincia, regione, stato)'
+			lineageTag: 898179c4-968b-48fd-9761-0cd8e79fe79e
+			column: 'Cliente - Posizione (comune, provincia, regione, stato)'
+
+	partition 'Clienti intestatari-07796acb-f856-4519-8a49-34a3ef22312c' = m
+		mode: import
+		queryGroup: Dimensioni
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " AND DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " AND DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    Origine = Sql.Database(Server, Database, [Query= 
+				    "
+				        SELECT
+				             K_CodIntestatario AS [K_CodCli]
+				            ,DBGruppo AS [Cliente - Ditta]
+				            ,CodIntestatario AS [Cliente - Codice]
+				            ,DesIntestatario AS [Cliente - Descrizione]
+				            ,Intestatario AS [Cliente]
+				            ,Cap AS [Cliente - CAP]
+				            ,Localita AS [Cliente - Località]
+				            ,ESBI_INTESTATARI.CodProvincia AS [Cliente - Codice provincia]
+				            ,ESBI_INTESTATARI.DesProvincia AS [Cliente - Descrizione provincia]
+				            ,CodRegione AS [Cliente - Codice regione]
+							,CASE WHEN ESBI_INTESTATARI.DesRegione='' or ESBI_INTESTATARI.DesRegione is NULL THEN RegioniDaComuni.DesRegione ELSE ESBI_INTESTATARI.DesRegione END  AS [Cliente - Descrizione regione]
+				            ,[ESBI_INTESTATARI].CodStato AS [Cliente - Codice stato]
+				            ,DesStato AS [Cliente - Descrizione stato]
+				            ,CodZona AS [Cliente - Codice zona (A)]
+				            ,DesZona AS [Cliente - Descrizione zona (A)]
+				            ,CodClasseContabile AS [Cliente - Codice classe contabile (A)]
+				            ,DesClasseContabile AS [Cliente - Descrizione classe contabile (A)]
+				            ,ClasseContabile AS [Cliente - Classe contabile (A)]
+				            ,CodClasseAffidamento AS [Cliente - Codice classe affidamento (A)]
+				            ,DesClasseAffidamento AS [Cliente - Descrizione classe affidamento (A)]
+				            ,ClasseAffidamento AS [Cliente - Classe affidamento (A)]
+				            ,CodCategIntest AS [Cliente - Codice categoria (A)]
+				            ,DesCategintest AS [Cliente - Descrizione categoria (A)]
+				            ,CategIntest AS [Cliente - Categoria (A)]
+				            ,CodTipologiaCommerc AS [Cliente - Codice tipologia commerciale (A)]
+				            ,DesTipologiaCommerc AS [Cliente - Descrizione tipologia commerciale (A)]
+				            ,TipologiaCommerc AS [Cliente - Tipologia commerciale (A)]
+				            ,DataInizioValidita AS [Cliente - Data inizio validità]
+				            ,DataFineValidita AS [Cliente - Data fine validità]
+				            ,ValidoInDataEstraz AS [Cliente - Valido in data estrazione]
+				            ,Zona AS [Cliente - Zona (A)]
+				            ,AreaGeoCPRS AS [Cliente - Posizione (comune, provincia, regione, stato)]
+				            ,AreaGeoPRS AS [Cliente - Posizione (provincia, regione, stato)]
+				            ,AreaGeoRS AS [Cliente - Posizione (regione, stato)]
+				            ,AreaGeoS AS [Cliente - Posizione (stato)]
+				            ,ImpAffidamentoValuta AS [Cliente - Importo classe affidamento (A)]
+				            ,CodValuta AS [Cliente - Valuta importo classe affidamento (A)]
+				            ,CodIntestCapogruppo AS [Cliente - Codice capogruppo (A)]
+				            ,DesIntestCapogruppo AS [Cliente - Descrizione capogruppo (A)]
+				            ,IntestCapogruppo AS [Cliente - Capogruppo (A)]
+				            ,CodListPrioritario AS [Cliente - Codice listino prioritario (A)]
+				            ,DesListPrioritario AS [Cliente - Descrizione listino prioritario (A)]
+							,CodCategoriaSconti AS [Cliente - Categoria sconti (A)]
+				            ,DBGruppo+'_'+CodCategoriaSconti AS [K_CodCategScontiCliente]
+							,CASE WHEN TipoAnagrafica=1 THEN 'Effettivo' ELSE 'Potenziale' END AS [Cliente - Tipo]
+				        FROM 
+				            [dbo].[ESBI_INTESTATARI] WITH (NOLOCK) 
+				            LEFT OUTER JOIN
+							(
+				                SELECT Comuni.CodStato, Comuni.CodProvincia, Province.Descrizione AS DesProvincia, Regioni.Descrizione AS DesRegione FROM Comuni
+							    INNER JOIN Regioni ON 
+							    Comuni.CodStato=Regioni.CodStato 
+							    AND Comuni.CodRegione=Regioni.CodRegione
+							    LEFT OUTER JOIN Province ON 
+							    Comuni.CodStato=Province.CodStato 
+							    AND Comuni.CodProvincia=Province.CodProvincia
+							    GROUP BY Comuni.CodStato
+							    , Comuni.CodProvincia
+							    , Province.Descrizione
+							    , Regioni.Descrizione
+				            ) AS RegioniDaComuni
+							ON [ESBI_INTESTATARI].CodStato=RegioniDaComuni.CodStato
+							AND [ESBI_INTESTATARI].CodProvincia=RegioniDaComuni.CodProvincia        
+				        WHERE 
+				            (TipoAnagrafica = 1
+				            OR TipoAnagrafica=6)"
+				
+				        & StringaFiltroGruppoIN
+				        & StringaFiltroGruppoNOTIN
+				        & ";
+				    "
+				    ,CreateNavigationProperties=false])
+				in
+				    Origine
+				```
+
+	annotation PBI_Id = 1abee896-1567-4423-a185-f33b09290f2c
+
+	annotation LinkedQueryName = Clienti intestatari
+
+	annotation PBI_QueryRelationships = {"columnCount":39,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Clienti intestatari/Origine.{K_CodCli,0}","Section1/Clienti intestatari/Origine.{Cliente - Ditta,1}","Section1/Clienti intestatari/Origine.{Cliente - Codice,2}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione,3}","Section1/Clienti intestatari/Origine.{Cliente,4}","Section1/Clienti intestatari/Origine.{Cliente - CAP,5}","Section1/Clienti intestatari/Origine.{Cliente - Località,6}","Section1/Clienti intestatari/Origine.{Cliente - Codice provincia,7}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione provincia,8}","Section1/Clienti intestatari/Origine.{Cliente - Codice regione,9}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione regione,10}","Section1/Clienti intestatari/Origine.{Cliente - Codice stato,11}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione stato,12}","Section1/Clienti intestatari/Origine.{Cliente - Codice zona (A),13}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione zona (A),14}","Section1/Clienti intestatari/Origine.{Cliente - Codice classe contabile (A),15}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione classe contabile (A),16}","Section1/Clienti intestatari/Origine.{Cliente - Classe contabile (A),17}","Section1/Clienti intestatari/Origine.{Cliente - Codice classe affidamento (A),18}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione classe affidamento (A),19}","Section1/Clienti intestatari/Origine.{Cliente - Classe affidamento (A),20}","Section1/Clienti intestatari/Origine.{Cliente - Codice categoria (A),21}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione categoria (A),22}","Section1/Clienti intestatari/Origine.{Cliente - Categoria (A),23}","Section1/Clienti intestatari/Origine.{Cliente - Codice tipologia commerciale (A),24}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione tipologia commerciale (A),25}","Section1/Clienti intestatari/Origine.{Cliente - Tipologia commerciale (A),26}","Section1/Clienti intestatari/Origine.{Cliente - Data inizio validità,27}","Section1/Clienti intestatari/Origine.{Cliente - Data fine validità,28}","Section1/Clienti intestatari/Origine.{Cliente - Valido in data estrazione,29}","Section1/Clienti intestatari/Origine.{K_Agente1,30}","Section1/Clienti intestatari/Origine.{K_Agente2,31}","Section1/Clienti intestatari/Origine.{Cliente - Zona (A),32}","Section1/Clienti intestatari/Origine.{Cliente - Posizione (comune, provincia, regione, stato),33}","Section1/Clienti intestatari/Origine.{Cliente - Posizione (provincia, regione, stato),34}","Section1/Clienti intestatari/Origine.{Cliente - Posizione (regione, stato),35}","Section1/Clienti intestatari/Origine.{Cliente - Posizione (stato),36}","Section1/Clienti intestatari/Origine.{Cliente - Importo classe affidamento (A),37}","Section1/Clienti intestatari/Origine.{Cliente - Valuta importo classe affidamento (A),38}"],"ColumnCount":39,"KeyColumnNames":[],"ColumnIdentities":["Section1/Clienti intestatari/Origine.{K_CodCli,0}","Section1/Clienti intestatari/Origine.{Cliente - Ditta,1}","Section1/Clienti intestatari/Origine.{Cliente - Codice,2}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione,3}","Section1/Clienti intestatari/Origine.{Cliente,4}","Section1/Clienti intestatari/Origine.{Cliente - CAP,5}","Section1/Clienti intestatari/Origine.{Cliente - Località,6}","Section1/Clienti intestatari/Origine.{Cliente - Codice provincia,7}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione provincia,8}","Section1/Clienti intestatari/Origine.{Cliente - Codice regione,9}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione regione,10}","Section1/Clienti intestatari/Origine.{Cliente - Codice stato,11}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione stato,12}","Section1/Clienti intestatari/Origine.{Cliente - Codice zona (A),13}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione zona (A),14}","Section1/Clienti intestatari/Origine.{Cliente - Codice classe contabile (A),15}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione classe contabile (A),16}","Section1/Clienti intestatari/Origine.{Cliente - Classe contabile (A),17}","Section1/Clienti intestatari/Origine.{Cliente - Codice classe affidamento (A),18}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione classe affidamento (A),19}","Section1/Clienti intestatari/Origine.{Cliente - Classe affidamento (A),20}","Section1/Clienti intestatari/Origine.{Cliente - Codice categoria (A),21}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione categoria (A),22}","Section1/Clienti intestatari/Origine.{Cliente - Categoria (A),23}","Section1/Clienti intestatari/Origine.{Cliente - Codice tipologia commerciale (A),24}","Section1/Clienti intestatari/Origine.{Cliente - Descrizione tipologia commerciale (A),25}","Section1/Clienti intestatari/Origine.{Cliente - Tipologia commerciale (A),26}","Section1/Clienti intestatari/Origine.{Cliente - Data inizio validità,27}","Section1/Clienti intestatari/Origine.{Cliente - Data fine validità,28}","Section1/Clienti intestatari/Origine.{Cliente - Valido in data estrazione,29}","Section1/Clienti intestatari/Origine.{K_Agente1,30}","Section1/Clienti intestatari/Origine.{K_Agente2,31}","Section1/Clienti intestatari/Origine.{Cliente - Zona (A),32}","Section1/Clienti intestatari/Origine.{Cliente - Posizione (comune, provincia, regione, stato),33}","Section1/Clienti intestatari/Origine.{Cliente - Posizione (provincia, regione, stato),34}","Section1/Clienti intestatari/Origine.{Cliente - Posizione (regione, stato),35}","Section1/Clienti intestatari/Origine.{Cliente - Posizione (stato),36}","Section1/Clienti intestatari/Origine.{Cliente - Importo classe affidamento (A),37}","Section1/Clienti intestatari/Origine.{Cliente - Valuta importo classe affidamento (A),38}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

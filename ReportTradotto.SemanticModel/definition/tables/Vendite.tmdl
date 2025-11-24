@@ -1,0 +1,1071 @@
+table Vendite
+	lineageTag: e3120dfb-b8bf-4d48-9376-8ee2d6a6408d
+
+	column K_IdDocumento
+		dataType: string
+		isHidden
+		lineageTag: d9279457-2195-49ce-adb9-247accb5a38b
+		summarizeBy: none
+		sourceColumn: K_IdDocumento
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_DataRegistraz
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: e9c8772f-ff9a-46ce-b731-4a1556e0072a
+		summarizeBy: none
+		sourceColumn: K_DataRegistraz
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_DataConsegnaOrdine
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 1b28f524-66a4-4597-8807-2c9058f23088
+		summarizeBy: none
+		sourceColumn: K_DataConsegnaOrdine
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodCli
+		dataType: string
+		isHidden
+		lineageTag: 6f61ac12-542e-4f21-a987-19f62c08611d
+		summarizeBy: none
+		sourceColumn: K_CodCli
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodCliCuiFatt
+		dataType: string
+		isHidden
+		lineageTag: 85dcce14-3fd4-4be3-9d86-142183b44221
+		summarizeBy: none
+		sourceColumn: K_CodCliCuiFatt
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodCliCuiSped
+		dataType: string
+		isHidden
+		lineageTag: dccfcb32-977e-4188-902e-9d134da2f3ba
+		summarizeBy: none
+		sourceColumn: K_CodCliCuiSped
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodDivisione
+		dataType: string
+		isHidden
+		lineageTag: 340bb473-d532-4be0-a63d-e1ca5bf54dfd
+		summarizeBy: none
+		sourceColumn: K_CodDivisione
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodMagazzino
+		dataType: string
+		isHidden
+		lineageTag: 78749167-9e58-421f-bc19-68365272832b
+		summarizeBy: none
+		sourceColumn: K_CodMagazzino
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodBudget
+		dataType: string
+		isHidden
+		lineageTag: 0c97170f-fc17-44f7-a67e-f30464b31ef8
+		summarizeBy: none
+		sourceColumn: K_CodBudget
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodPromozione
+		dataType: string
+		isHidden
+		lineageTag: e48f043b-1618-4712-95f1-0529b6bdc7c5
+		summarizeBy: none
+		sourceColumn: K_CodPromozione
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Costo movimento'
+		dataType: double
+		isHidden
+		lineageTag: d746a57d-140a-49fa-95f8-05dead903577
+		summarizeBy: none
+		sourceColumn: Costo movimento
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Costo medio'
+		dataType: double
+		isHidden
+		lineageTag: e074af41-03aa-475a-9ece-149f71456c91
+		summarizeBy: none
+		sourceColumn: Costo medio
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Costo medio progressivo'
+		dataType: double
+		isHidden
+		lineageTag: 30bad07f-be04-4d69-800a-0f7651106f13
+		summarizeBy: none
+		sourceColumn: Costo medio progressivo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Costo standard'
+		dataType: double
+		isHidden
+		lineageTag: c919f502-5926-4f76-8ca5-bcbdce3bcc64
+		summarizeBy: none
+		sourceColumn: Costo standard
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column K_CodDitta
+		dataType: string
+		isHidden
+		lineageTag: d76eb261-5359-466d-845a-80803b5bcfd7
+		summarizeBy: none
+		sourceColumn: K_CodDitta
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodClassifStat
+		dataType: string
+		isHidden
+		lineageTag: a09aa448-6570-4eb4-b672-d8d60eadc19e
+		summarizeBy: none
+		sourceColumn: K_CodClassifStat
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodCentroImputazione
+		dataType: string
+		isHidden
+		lineageTag: a806e480-7dce-4a16-a5e4-5e1a73e5ff3b
+		summarizeBy: none
+		sourceColumn: K_CodCentroImputazione
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodZona
+		dataType: string
+		isHidden
+		lineageTag: b2032c78-0170-4168-ad9b-c7ed0f110256
+		summarizeBy: none
+		sourceColumn: K_CodZona
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodCategCliente
+		dataType: string
+		isHidden
+		lineageTag: df7f1253-dcd6-473b-b2b4-d9e810255c38
+		summarizeBy: none
+		sourceColumn: K_CodCategCliente
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodMacroFamiglia
+		dataType: string
+		isHidden
+		lineageTag: d663e558-4435-4996-bdf0-18008270e51a
+		summarizeBy: none
+		sourceColumn: K_CodMacroFamiglia
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodFamiglia
+		dataType: string
+		isHidden
+		lineageTag: ddb98bf1-d407-4bc2-9ea7-52a1bd5165e6
+		summarizeBy: none
+		sourceColumn: K_CodFamiglia
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodMarca
+		dataType: string
+		isHidden
+		lineageTag: 653e6748-2dfe-4006-850b-e5dfb9cb6d5c
+		summarizeBy: none
+		sourceColumn: K_CodMarca
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodClasseMerceologica
+		dataType: string
+		isHidden
+		lineageTag: 3daf1cce-a8aa-4c80-b7e8-7a492dc6e1ae
+		summarizeBy: none
+		sourceColumn: K_CodClasseMerceologica
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodTipologiaComm
+		dataType: string
+		isHidden
+		lineageTag: ca0ca1d8-70fe-4c97-a40c-8bb07fa4926d
+		summarizeBy: none
+		sourceColumn: K_CodTipologiaComm
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodClasseAffidamento
+		dataType: string
+		isHidden
+		lineageTag: 75609a66-2f3c-4406-b46d-4077f6798f03
+		summarizeBy: none
+		sourceColumn: K_CodClasseAffidamento
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_MovimentoStatistico
+		dataType: string
+		isHidden
+		lineageTag: a723879c-334f-494b-b200-766f3cd45aef
+		summarizeBy: none
+		sourceColumn: K_MovimentoStatistico
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Importo totale'
+		dataType: double
+		isHidden
+		lineageTag: 66376566-9657-4100-9297-1e099fad6ef0
+		summarizeBy: sum
+		sourceColumn: Importo totale
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column K_CodCliIndCuiSped
+		dataType: string
+		isHidden
+		lineageTag: 7aca56a8-2cff-421c-b711-64ab294d3259
+		summarizeBy: none
+		sourceColumn: K_CodCliIndCuiSped
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodCommessa
+		dataType: string
+		isHidden
+		lineageTag: 97b0b20d-b924-4db1-9569-5b7e925a01a6
+		summarizeBy: none
+		sourceColumn: K_CodCommessa
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodArtVar
+		dataType: string
+		isHidden
+		lineageTag: b85c2ea9-1cc0-4ebb-a941-41620d6a9204
+		summarizeBy: none
+		sourceColumn: K_CodArtVar
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodTipoMovimento
+		dataType: string
+		isHidden
+		lineageTag: 1c80588b-18d9-462c-bcd0-dadd692edeea
+		summarizeBy: none
+		sourceColumn: K_CodTipoMovimento
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodClasseContabile
+		dataType: string
+		isHidden
+		lineageTag: e8eb1d37-9121-4288-9967-744b6f0a2161
+		summarizeBy: none
+		sourceColumn: K_CodClasseContabile
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_CodUnitaMisura
+		dataType: string
+		isHidden
+		lineageTag: 77b786ae-8411-469f-b849-eb6fcd7d6514
+		summarizeBy: none
+		sourceColumn: K_CodUnitaMisura
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_GruClaTipDoc
+		dataType: string
+		isHidden
+		lineageTag: 68ab0604-e441-43a1-bd9d-330ae97c75d1
+		summarizeBy: none
+		sourceColumn: K_GruClaTipDoc
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_StatoGestionale
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8535ac48-dae8-417d-9daa-c02e3ee40407
+		summarizeBy: none
+		sourceColumn: K_StatoGestionale
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quantità doc'
+		dataType: double
+		isHidden
+		lineageTag: 4c3cc6b5-6b84-41b5-9c1a-f04dd268a43a
+		summarizeBy: none
+		sourceColumn: Quantità doc
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Quantità
+		dataType: double
+		isHidden
+		lineageTag: fabbd73b-7b61-4ed3-9dd4-ebea00a8b49a
+		summarizeBy: none
+		sourceColumn: Quantità
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column K_CodConto
+		dataType: string
+		isHidden
+		lineageTag: 213f781c-7a87-45ea-b55a-2028e31ff52d
+		summarizeBy: none
+		sourceColumn: K_CodConto
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_TipoRiga
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4cf3198c-adf0-4033-9eaa-9eb00a55b6ee
+		summarizeBy: none
+		sourceColumn: K_TipoRiga
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Importo spese piede totale'
+		dataType: double
+		isHidden
+		lineageTag: 9f800580-7f42-42de-ad9b-ea5dc8b63744
+		summarizeBy: none
+		sourceColumn: Importo spese piede totale
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importo sconti incondizionati totale'
+		dataType: double
+		isHidden
+		lineageTag: 9afcdae7-be1a-4fd2-8e84-cfa3655eeb0a
+		summarizeBy: none
+		sourceColumn: Importo sconti incondizionati totale
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importo sconto pagamento totale'
+		dataType: double
+		isHidden
+		lineageTag: 45377bdc-4ddd-4158-921f-cb24da27fa00
+		summarizeBy: none
+		sourceColumn: Importo sconto pagamento totale
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importo lordo totale'
+		dataType: double
+		isHidden
+		lineageTag: 5018bc5b-c9d3-492c-9890-138e0c256f71
+		summarizeBy: none
+		sourceColumn: Importo lordo totale
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column K_IdListVers
+		dataType: string
+		isHidden
+		lineageTag: 379a6b3e-eb42-4d91-9136-3e9fbdcd730e
+		summarizeBy: none
+		sourceColumn: K_IdListVers
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_RigaOrdAnnullata
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e1b59300-f700-4554-973e-d3822a8d6594
+		summarizeBy: none
+		sourceColumn: K_RigaOrdAnnullata
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column K_CondPag
+		dataType: string
+		isHidden
+		lineageTag: 297a53da-cf0a-48a0-855a-138c0b2c1fcb
+		summarizeBy: none
+		sourceColumn: K_CondPag
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_NonSaldato
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9a7d42ac-b0de-4f5d-98eb-e9e3a5dd0d78
+		summarizeBy: none
+		sourceColumn: K_NonSaldato
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Percentuale residua importo'
+		dataType: double
+		isHidden
+		lineageTag: b3486396-6d4a-48a8-91d1-a76b6b8e4645
+		summarizeBy: none
+		sourceColumn: Percentuale residua importo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Percentuale residua quantità'
+		dataType: double
+		isHidden
+		lineageTag: 5f58f483-031e-4710-a49f-1014d76e7234
+		summarizeBy: none
+		sourceColumn: Percentuale residua quantità
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importo onere accessorio 1'
+		dataType: double
+		isHidden
+		lineageTag: ec42744f-fc00-4b1a-b6f1-fdd9770078f5
+		summarizeBy: none
+		sourceColumn: Importo onere accessorio 1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importo onere accessorio 2'
+		dataType: double
+		isHidden
+		lineageTag: 0efc16f4-879d-4a9e-a56c-fc3fbb310f6e
+		summarizeBy: none
+		sourceColumn: Importo onere accessorio 2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importo onere accessorio 3'
+		dataType: double
+		isHidden
+		lineageTag: c9b2044f-b4f3-4282-9dd7-58c63a14a2e0
+		summarizeBy: none
+		sourceColumn: Importo onere accessorio 3
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importo residuo'
+		dataType: double
+		isHidden
+		lineageTag: 7c612515-40a4-4dfc-9e64-0dcf5723daf8
+		summarizeBy: none
+		sourceColumn: Importo residuo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Quantità residua'
+		dataType: double
+		isHidden
+		lineageTag: e9758043-2581-4855-a4d1-03d8ff80a3ca
+		summarizeBy: none
+		sourceColumn: Quantità residua
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column K_DataRegistraz_2
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 289ae886-deea-4874-ae27-1db677ef4ff2
+		summarizeBy: none
+		sourceColumn: K_DataRegistraz_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Documento - Tipo'
+		dataType: int64
+		formatString: 0
+		lineageTag: d80d845b-90b7-4bf1-85b1-951300601e21
+		summarizeBy: none
+		sourceColumn: Documento - Tipo
+
+		annotation SummarizationSetBy = User
+
+	column 'Documento - CodClasseStatistica'
+		dataType: string
+		lineageTag: c0a56491-4f50-43db-858d-493f0ec91dbb
+		summarizeBy: none
+		sourceColumn: Documento - CodClasseStatistica
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'New Quantità spedito residuo'
+		dataType: double
+		lineageTag: 6d0d9e6b-30b5-40fa-9353-ceb5c7ef6795
+		summarizeBy: sum
+		sourceColumn: New Quantità spedito residuo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'New Importo spedito residuo'
+		dataType: double
+		lineageTag: 0488e0df-5858-4b23-ae81-2f05bc5f0f36
+		summarizeBy: sum
+		sourceColumn: New Importo spedito residuo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Documento - Numero registrazione'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ba29063-85c5-4611-8a0d-fcdebcace29b
+		summarizeBy: sum
+		sourceColumn: Documento - Numero registrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Documento - Riferimento registrazione'
+		dataType: string
+		lineageTag: 63e3cc60-2e90-49bb-aa26-d415c149a3fb
+		summarizeBy: none
+		sourceColumn: Documento - Riferimento registrazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Documento - Numero documento'
+		dataType: string
+		lineageTag: faf4934a-238d-4501-9260-5b5f63946faa
+		summarizeBy: none
+		sourceColumn: Documento - Numero documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Documento - Operatore ultima variazione'
+		dataType: string
+		lineageTag: 8767c9ef-bf33-4780-b0c2-e42735940511
+		summarizeBy: none
+		sourceColumn: Documento - Operatore ultima variazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Documento - Numero progressivo riga'
+		dataType: double
+		lineageTag: 401e20a2-dd47-4601-af3f-f1b9d7cf99ed
+		summarizeBy: sum
+		sourceColumn: Documento - Numero progressivo riga
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Documento - Flag DdT/MfT da fatturare'
+		dataType: int64
+		formatString: 0
+		lineageTag: f33023fe-cf93-4a56-a6ab-5d3062b415b8
+		summarizeBy: sum
+		sourceColumn: Documento - Flag DdT/MfT da fatturare
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Documento - Flag riga bloccata per evasione/fatturazione'
+		dataType: int64
+		formatString: 0
+		lineageTag: 82478a74-99bf-4300-803a-f713614cdc0b
+		summarizeBy: sum
+		sourceColumn: Documento - Flag riga bloccata per evasione/fatturazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Documento - Riferimento riga'
+		dataType: string
+		lineageTag: 43dd28fe-8df1-4306-90ec-8cf756449ab5
+		summarizeBy: none
+		sourceColumn: Documento - Riferimento riga
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Documento - Gruppo-ClasseStatistica'
+		dataType: string
+		lineageTag: 85da5ec0-7678-437c-986f-e1bc4ef278e4
+		summarizeBy: none
+		sourceColumn: Documento - Gruppo-ClasseStatistica
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Documento - Riferimento testata'
+		dataType: string
+		lineageTag: baad124c-2460-4ac6-b3ee-60b3c78fdd89
+		summarizeBy: none
+		sourceColumn: Documento - Riferimento testata
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Documento - Saldato'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7872e8fe-7225-4f1d-b118-11255205da86
+		summarizeBy: sum
+		sourceColumn: Documento - Saldato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Preventivo - Data Fine Validità'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 98bf3f2a-ac97-4d1a-bb42-93d7fead9fb0
+		summarizeBy: none
+		sourceColumn: Preventivo - Data Fine Validità
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Preventivo - Data accettazione'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: e27cc08f-af82-462f-8b52-a3c71c17b3fc
+		summarizeBy: none
+		sourceColumn: Preventivo - Data accettazione
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sconto 1 - categoria' = IF(ISBLANK(RELATED('Categorie sconti'[PercSconto1])),0,RELATED('Categorie sconti'[PercSconto1]))
+		lineageTag: c66206fa-543f-42d1-8bae-dfc813922bdb
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Sconto 2 - categoria' = RELATED('Categorie sconti'[PercSconto2])
+		lineageTag: 5bf52a4b-084d-4774-b3f5-b84f921b3e93
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importo Sconto da categoria' =
+			Vendite[Importo lordo totale]*(Vendite[Sconto 1 - categoria]/100)+
+			(Vendite[Importo lordo totale]-(Vendite[Importo lordo totale]*(Vendite[Sconto 1 - categoria]/100)))*(Vendite[Sconto 2 - categoria]/100)
+			/*=S4*(S2/100)+(S4-(S4*(S2/100)))*(T2/100)*/
+		lineageTag: 79155c12-278b-45e0-8e82-0ea5d933bbda
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Sezione Budget'
+		dataType: string
+		lineageTag: f59f6f67-13ee-421f-8e9f-89cd847320eb
+		summarizeBy: none
+		sourceColumn: Sezione Budget
+
+		annotation SummarizationSetBy = Automatic
+
+	column GruppoDoc
+		dataType: string
+		lineageTag: ad275482-d617-4655-88c7-c392979c0d54
+		summarizeBy: none
+		sourceColumn: GruppoDoc
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Vendite-fd8addcc-d2b2-48d2-bbe8-b775026d958a = m
+		mode: import
+		source = ```
+				let
+				    StringaFiltroGruppoIN = if #"Filtro - Metodo filtro ditte" = "Presenti in elenco" then " AND ESBI_MOVSTAT2.DBGruppo IN (" & Gruppi & ")" else "",
+				    StringaFiltroGruppoNOTIN = if #"Filtro - Metodo filtro ditte" = "Non presenti in elenco" then " AND ESBI_MOVSTAT2.DBGruppo NOT IN (" & Gruppi & ")" else "",
+				    StringaFiltroRigheOrdAnnullate = if #"Filtro - Considera righe ordine annullate (Sì/No)" = "No" then " AND K_RigaOrdAnnullata <> 1" else "",
+				    StringaKCodCommessa = if #"Dettagli aggiuntivi: informazioni dei documenti" = "Disattiva" then "null" else "K_CodCommessa",
+				    InizioRigheDoc = if #"Dettagli aggiuntivi: informazioni dei documenti" = "Disattiva" then "/*" else "",
+				    FineRigheDoc = if #"Dettagli aggiuntivi: informazioni dei documenti" = "Disattiva" then "*/" else "",
+				    InizioCampiUtente = if #"Dettagli aggiuntivi: campi utente di riga documento" = "Disattiva" then "/*" else "",
+				    FineCampiUtente = if #"Dettagli aggiuntivi: campi utente di riga documento" = "Disattiva" then "*/" else "",
+				    CampoDataOrdine = if #"Ordini - Data ordine" = "Data Documento" then "qDocumenti.DataOriginale" else "K_DataRegistraz",
+				    Origine = Sql.Database(Server, Database, [Query=
+				    "
+					SELECT * FROM
+				    (
+				        SELECT  
+				
+						-- Chiavi
+				            K_CodDitta AS [K_CodDitta]
+				            ,ESBI_MOVSTAT2.K_IdDocumento AS [K_IdDocumento]
+				            ,K_MovimentoStatistic AS [K_MovimentoStatistico]
+				            ,"&CampoDataOrdine&" [K_DataRegistraz]
+				            ,K_DataRegistraz [K_DataRegistraz_2]
+							,qDocumenti.CodTipoDoc [Documento - Tipo]
+				            ,K_DataConsegnaOrdine AS [K_DataConsegnaOrdine]
+				            ,K_CodCli AS [K_CodCli]
+				            ,K_CodCliCuiFatt AS [K_CodCliCuiFatt]
+				            ,K_CodCliCuiSped AS [K_CodCliCuiSped]
+				            ,K_CodCliIndCuiSped AS [K_CodCliIndCuiSped]
+				            ,K_CodClassifStat AS [K_CodClassifStat] 
+							,TRIM(SUBSTRING(K_CodClassifStat,4,3)) as [Documento - CodClasseStatistica]
+							,qDocumenti.GruppoDoc+'-'+TRIM(SUBSTRING(K_CodClassifStat,4,3)) as [Documento - Gruppo-ClasseStatistica]
+				            ,K_CodCentroImputazio AS [K_CodCentroImputazione] 
+				            ,K_CodDivisione AS [K_CodDivisione]
+				            ,K_CodMagazzino AS [K_CodMagazzino]
+				            ,K_CodZona AS [K_CodZona] 
+				            ,K_CodBudget AS [K_CodBudget]
+				            ,K_CodCategCliente AS [K_CodCategCliente] 
+				            ,K_CodMacroFamiglia AS [K_CodMacroFamiglia] 
+				            ,K_CodFamiglia AS [K_CodFamiglia] 
+				            ,K_CodMarca AS [K_CodMarca] 
+				            ,K_CodClasseMerceolog AS [K_CodClasseMerceologica] 
+				            ,K_CodTipologiaComm AS [K_CodTipologiaComm] 
+				            ,K_CodClasseAffidamen AS [K_CodClasseAffidamento] 
+				            ,K_CodPromozione AS [K_CodPromozione]
+				            ,K_CodArtVar AS [K_CodArtVar]
+				            ,CONVERT(VARCHAR(10),K_CodTipoMovimento) + '_' + CONVERT(Varchar(2),MovimDaFattAccomp) AS [K_CodTipoMovimento] 
+				            ,K_CodClasseContabile AS [K_CodClasseContabile]
+				            ,K_CodUnitaMisura AS [K_CodUnitaMisura]
+				            ,K_GruClaTipDoc AS [K_GruClaTipDoc]
+				            ,K_StatoGestionale AS [K_StatoGestionale]
+				            ,K_CodConto AS [K_CodConto]
+				            ,TipoRiga AS [K_TipoRiga]
+				            ,K_IdListVers AS [K_IdListVers]
+				            ,K_RigaOrdAnnullata AS [K_RigaOrdAnnullata]
+				            ,K_CondPag AS [K_CondPag]
+							,FlagNonSaldato as [K_NonSaldato]
+				
+				        -- Implementazione delle percentuali di residuo 
+							,PercResImp as [Percentuale residua importo]
+							,PercResQta as [Percentuale residua quantità]
+				
+				        -- Estrazione degli importi e delle quantità di residuo
+				            ,ImportoResiduo as [Importo residuo]
+				            ,QuantitaResidua as [Quantità residua]
+				
+				
+						--Fatturato - Ordinato - Residuo - Budget
+				            ,Quantita AS [Quantità]
+							,Quantitadoc AS [Quantità doc]
+							,ImportoTotale AS [Importo totale]
+				
+						--Costi (Costi unitari * Quantità)
+				            ,CostoMovimento AS [Costo movimento]
+							,CostoStandard AS [Costo standard]
+							,CostoMedio AS [Costo medio]
+				            ,CostoMedioPrg AS [Costo medio progressivo]
+				
+						--Importo oneri accessori
+							,ImportoOnereRip1 as [Importo onere accessorio 1]
+							,ImportoOnereRip2 as [Importo onere accessorio 2]
+							,ImportoOnereRip3 as [Importo onere accessorio 3]
+				
+				        --Spese, sconti, provvigioni
+				            ,ImpSpesePiedeTot AS [Importo spese piede totale]
+				            ,ImpScontiIncondTot AS [Importo sconti incondizionati totale]
+				            ,ImpScontoPagTot AS [Importo sconto pagamento totale]
+				
+				        
+				        --Importi non utilizzati nel modello perchè già presenti con provenienza dalle vendite per agente
+				            --,ImpProvvCalcTot AS [Importo provvigione calcolata totale]
+				
+				        --Importi lordi
+				            ,ImpLordoScTotale AS [Importo lordo totale]
+				
+				        --VISTA PER DATI SPEDIZIONI
+							, CASE WHEN Quantita=0 THEN 0 ELSE T4.QtDaSpedUmMag END as [New Quantità spedito residuo]
+							, CASE WHEN Quantita=0 THEN 0 ELSE T4.QtDaSpedUmMag*(ImportoTotale/Quantita) END as [New Importo spedito residuo]
+				        --VISTA PER DATI SPEDIZIONI
+				
+				
+				        "& InizioRigheDoc &"
+				        --Informazioni aggiuntive del documento o della riga documento
+				            ,NumRegistraz AS [Documento - Numero registrazione]
+				            ,RifRegistrazDoc AS [Documento - Riferimento registrazione]
+				            ,NumDocOriginale AS [Documento - Numero documento]
+				            ,FirmaUltVarOperatore AS [Documento - Operatore ultima variazione]
+				            ,NumProgrRiga AS [Documento - Numero progressivo riga]
+				            ,FlagDdtMftDaFatt AS [Documento - Flag DdT/MfT da fatturare]
+				            ,FlagBloccaFatt AS [Documento - Flag riga bloccata per evasione/fatturazione]
+							,RiferimentoRiga as [Documento - Riferimento riga]
+							,RiferimentoTestata as [Documento - Riferimento testata]
+							,OrdDdtSaldato as [Documento - Saldato]
+							,PrevDataFineValid as [Preventivo - Data Fine Validità]
+				            ,DataAccettPreventivo as [Preventivo - Data accettazione]
+				        "& FineRigheDoc &"
+				        
+				        ," & StringaKCodCommessa & " AS [K_CodCommessa]
+				        
+				        "& InizioCampiUtente &"
+				        --Campi utente
+				            ,ValoreCampo1 AS [Campo utente 1]
+				            ,ValoreCampo2 AS [Campo utente 2]
+				            ,ValoreCampo3 AS [Campo utente 3]
+				            ,ValoreCampo4 AS [Campo utente 4]
+				            ,ValoreCampo5 AS [Campo utente 5]
+				            ,ValoreCampo6 AS [Campo utente 6]
+				            ,ValoreCampo7 AS [Campo utente 7]
+				            ,ValoreCampo8 AS [Campo utente 8]
+				            ,ValoreCampo9 AS [Campo utente 9]
+				            ,ValoreCampo10 AS [Campo utente 10]
+				            ,ValoreCampo11 AS [Campo utente 11]
+				            ,ValoreCampo12 AS [Campo utente 12]
+				            ,ValoreCampo13 AS [Campo utente 13]
+				            ,ValoreCampo14 AS [Campo utente 14]
+				            ,ValoreCampo15 AS [Campo utente 15]
+				            ,ValoreCampo16 AS [Campo utente 16]
+				            ,ValoreCampo17 AS [Campo utente 17]
+				            ,ValoreCampo18 AS [Campo utente 18]
+				            ,ValoreCampo19 AS [Campo utente 19]
+				            ,ValoreCampo20 AS [Campo utente 20]
+				            ,ValoreCampo21 AS [Campo utente 21]
+				            ,ValoreCampo22 AS [Campo utente 22]
+				            ,ValoreCampo23 AS [Campo utente 23]
+				            ,ValoreCampo24 AS [Campo utente 24]
+				            ,ValoreCampo25 AS [Campo utente 25]
+				            ,ValoreCampo26 AS [Campo utente 26]
+				            ,ValoreCampo27 AS [Campo utente 27]
+				            ,ValoreCampo28 AS [Campo utente 28]
+				            ,ValoreCampo29 AS [Campo utente 29]
+				            ,ValoreCampo30 AS [Campo utente 30]
+				        "& FineCampiUtente &"
+				        , '' as [Sezione Budget]
+						,qDocumenti.GruppoDoc
+				        FROM 
+				            ESBI_MOVSTAT2
+				            /*JOIN PER Data Documento->*/
+							INNER JOIN
+							( SELECT 
+								ISNULL(DocElencoGen.DBGruppo, '') + '_' + CONVERT(VARCHAR(255), ISNULL(DocElencoGen.IdDocumento, 0)) as K_IdDocumento
+								, CASE WHEN YEAR(DataOriginale)=1800 THEN DataRegistrazione ELSE DataOriginale END AS DataOriginale
+				                , CodTipoDoc, GruppoDoc, Riferimento as RiferimentoTestata, OrdDdtSaldato
+								, case when GruppoDoc='OPV' and year(DocUniTestata.PrevDataFineValid)=1800 then DATEFROMPARTS(YEAR(DataOriginale), 12, 31) else DocUniTestata.PrevDataFineValid end as PrevDataFineValid
+				                , DocUniTestata.DataAccettPreventivo
+								FROM 
+								DocElencoGen
+								LEFT OUTER JOIN
+								DocUniTestata
+								ON DocElencoGen.DBGruppo=DocUniTestata.DBGruppo
+								AND DocElencoGen.IdDocumento=DocUniTestata.IdDocumento
+							) AS qDocumenti
+							ON ESBI_MOVSTAT2.K_IdDocumento=qDocumenti.K_IdDocumento
+							/*<-JOIN PER Data Documento*/
+				            /*JOIN PER DATI SPEDIZIONI->*/
+				            left join 
+						    (SELECT IdDocumento, IdRigaDoc, QtDaSpedUmMag from [dbo].[ESV_SITRIGAORD]
+				            WHERE ImpUdc<>0
+				            ) as T4 
+						    ON ESBI_MOVSTAT2.IdDocumento = T4.IdDocumento AND ESBI_MOVSTAT2.IdRigaDoc = T4.IdRigaDoc
+				            /*<-VISTA PER DATI SPEDIZIONI->*/
+				
+				            WHERE
+							MacroAmbito = 'Vendite'	
+							AND TipoRiga NOT IN (5,6)
+				            AND qDocumenti.DataOriginale BETWEEN { D " & DataDa & " } AND { D " & DataA & " }"
+				            & StringaFiltroGruppoIN
+				            & StringaFiltroGruppoNOTIN
+				            & StringaFiltroRigheOrdAnnullate
+				            & "
+				    )qSelect
+				/*
+					WHERE 
+					(
+						/*PRENDO Fatture di vendita, DDT e Ordini di vendita solo per le classi statistiche indicate nella scheda tecnica, prendo invece tutti i prevendivi validi e con importo superiore o uguale a 1000 euro che non hanno indicazione di classificazione statistica*/
+							( qSelect.[Documento - CodClasseStatistica] IN (
+																						SELECT ContAlfanumerico FROM SchedeTecValAmm
+																						WHERE
+																						DBGruppo IN (" & Gruppi & ")
+																						AND IdEtichetta=9
+																						AND CodTipoSchedaTecnica='CODVEN')
+							AND (qSelect.GruppoDoc='ORV' AND qSelect.[Documento - Tipo] IN (
+																						SELECT ContNumerico FROM SchedeTecValAmm
+																						WHERE
+																						DBGruppo IN (" & Gruppi & ")
+																						AND IdEtichetta=10
+																						AND CodTipoSchedaTecnica='CODVEN')
+							OR 
+				            
+				            qSelect.GruppoDoc='DDV' OR qSelect.GruppoDoc='FTV'))
+							OR (qSelect.GruppoDoc='OPV' AND qSelect.[Preventivo - Data Fine Validità]>=GETDATE() AND qSelect.[Importo totale]>=1000)
+								
+					)
+				*/    
+				    ;"
+				    ,CreateNavigationProperties=false])
+				in
+				    Origine
+				```
+
+	annotation PBI_Id = d0abe97f-d6c9-4721-828e-e7dfeb28b00d
+
+	annotation LinkedQueryName = Vendite
+
+	annotation PBI_QueryRelationships = {"columnCount":55,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Vendite/Origine.{K_CodDitta,0}","Section1/Vendite/Origine.{K_IdDocumento,1}","Section1/Vendite/Origine.{K_MovimentoStatistico,2}","Section1/Vendite/Origine.{K_DataRegistraz,3}","Section1/Vendite/Origine.{K_DataConsegnaOrdine,4}","Section1/Vendite/Origine.{K_CodCli,5}","Section1/Vendite/Origine.{K_CodCliCuiFatt,6}","Section1/Vendite/Origine.{K_CodCliCuiSped,7}","Section1/Vendite/Origine.{K_CodCliIndCuiSped,8}","Section1/Vendite/Origine.{K_CodClassifStat,9}","Section1/Vendite/Origine.{K_CodCentroImputazione,10}","Section1/Vendite/Origine.{K_CodDivisione,11}","Section1/Vendite/Origine.{K_CodMagazzino,12}","Section1/Vendite/Origine.{K_CodZona,13}","Section1/Vendite/Origine.{K_CodBudget,14}","Section1/Vendite/Origine.{K_CodCategCliente,15}","Section1/Vendite/Origine.{K_CodMacroFamiglia,16}","Section1/Vendite/Origine.{K_CodFamiglia,17}","Section1/Vendite/Origine.{K_CodMarca,18}","Section1/Vendite/Origine.{K_CodClasseMerceologica,19}","Section1/Vendite/Origine.{K_CodTipologiaComm,20}","Section1/Vendite/Origine.{K_CodClasseAffidamento,21}","Section1/Vendite/Origine.{K_CodPromozione,22}","Section1/Vendite/Origine.{K_CodArtVar,23}","Section1/Vendite/Origine.{K_CodTipoMovimento,24}","Section1/Vendite/Origine.{K_CodClasseContabile,25}","Section1/Vendite/Origine.{K_CodUnitaMisura,26}","Section1/Vendite/Origine.{K_GruClaTipDoc,27}","Section1/Vendite/Origine.{K_StatoGestionale,28}","Section1/Vendite/Origine.{Flag ordinato,29}","Section1/Vendite/Origine.{Flag ordinato non saldato,30}","Section1/Vendite/Origine.{Flag spedito,31}","Section1/Vendite/Origine.{Flag spedito non saldato,32}","Section1/Vendite/Origine.{Flag fatturato,33}","Section1/Vendite/Origine.{Flag budget,34}","Section1/Vendite/Origine.{Quantità,35}","Section1/Vendite/Origine.{Quantità doc,36}","Section1/Vendite/Origine.{Importo totale,37}","Section1/Vendite/Origine.{Costo movimento,38}","Section1/Vendite/Origine.{Costo standard,39}","Section1/Vendite/Origine.{Costo medio,40}","Section1/Vendite/Origine.{Costo medio progressivo,41}","Section1/Vendite/Origine.{Quantità ordinato residuo,42}","Section1/Vendite/Origine.{Importo ordinato residuo,43}","Section1/Vendite/Origine.{Costo movimento ordinato residuo,44}","Section1/Vendite/Origine.{Costo standard ordinato residuo,45}","Section1/Vendite/Origine.{Costo medio ordinato residuo,46}","Section1/Vendite/Origine.{Costo medio progressivo ordinato residuo,47}","Section1/Vendite/Origine.{Quantità spedito residuo,48}","Section1/Vendite/Origine.{Importo spedito residuo,49}","Section1/Vendite/Origine.{Costo movimento spedito residuo,50}","Section1/Vendite/Origine.{Costo standard spedito residuo,51}","Section1/Vendite/Origine.{Costo medio spedito residuo,52}","Section1/Vendite/Origine.{Costo medio progressivo spedito residuo,53}","Section1/Vendite/Origine.{K_CodCommessa,54}"],"ColumnCount":55,"KeyColumnNames":[],"ColumnIdentities":["Section1/Vendite/Origine.{K_CodDitta,0}","Section1/Vendite/Origine.{K_IdDocumento,1}","Section1/Vendite/Origine.{K_MovimentoStatistico,2}","Section1/Vendite/Origine.{K_DataRegistraz,3}","Section1/Vendite/Origine.{K_DataConsegnaOrdine,4}","Section1/Vendite/Origine.{K_CodCli,5}","Section1/Vendite/Origine.{K_CodCliCuiFatt,6}","Section1/Vendite/Origine.{K_CodCliCuiSped,7}","Section1/Vendite/Origine.{K_CodCliIndCuiSped,8}","Section1/Vendite/Origine.{K_CodClassifStat,9}","Section1/Vendite/Origine.{K_CodCentroImputazione,10}","Section1/Vendite/Origine.{K_CodDivisione,11}","Section1/Vendite/Origine.{K_CodMagazzino,12}","Section1/Vendite/Origine.{K_CodZona,13}","Section1/Vendite/Origine.{K_CodBudget,14}","Section1/Vendite/Origine.{K_CodCategCliente,15}","Section1/Vendite/Origine.{K_CodMacroFamiglia,16}","Section1/Vendite/Origine.{K_CodFamiglia,17}","Section1/Vendite/Origine.{K_CodMarca,18}","Section1/Vendite/Origine.{K_CodClasseMerceologica,19}","Section1/Vendite/Origine.{K_CodTipologiaComm,20}","Section1/Vendite/Origine.{K_CodClasseAffidamento,21}","Section1/Vendite/Origine.{K_CodPromozione,22}","Section1/Vendite/Origine.{K_CodArtVar,23}","Section1/Vendite/Origine.{K_CodTipoMovimento,24}","Section1/Vendite/Origine.{K_CodClasseContabile,25}","Section1/Vendite/Origine.{K_CodUnitaMisura,26}","Section1/Vendite/Origine.{K_GruClaTipDoc,27}","Section1/Vendite/Origine.{K_StatoGestionale,28}","Section1/Vendite/Origine.{Flag ordinato,29}","Section1/Vendite/Origine.{Flag ordinato non saldato,30}","Section1/Vendite/Origine.{Flag spedito,31}","Section1/Vendite/Origine.{Flag spedito non saldato,32}","Section1/Vendite/Origine.{Flag fatturato,33}","Section1/Vendite/Origine.{Flag budget,34}","Section1/Vendite/Origine.{Quantità,35}","Section1/Vendite/Origine.{Quantità doc,36}","Section1/Vendite/Origine.{Importo totale,37}","Section1/Vendite/Origine.{Costo movimento,38}","Section1/Vendite/Origine.{Costo standard,39}","Section1/Vendite/Origine.{Costo medio,40}","Section1/Vendite/Origine.{Costo medio progressivo,41}","Section1/Vendite/Origine.{Quantità ordinato residuo,42}","Section1/Vendite/Origine.{Importo ordinato residuo,43}","Section1/Vendite/Origine.{Costo movimento ordinato residuo,44}","Section1/Vendite/Origine.{Costo standard ordinato residuo,45}","Section1/Vendite/Origine.{Costo medio ordinato residuo,46}","Section1/Vendite/Origine.{Costo medio progressivo ordinato residuo,47}","Section1/Vendite/Origine.{Quantità spedito residuo,48}","Section1/Vendite/Origine.{Importo spedito residuo,49}","Section1/Vendite/Origine.{Costo movimento spedito residuo,50}","Section1/Vendite/Origine.{Costo standard spedito residuo,51}","Section1/Vendite/Origine.{Costo medio spedito residuo,52}","Section1/Vendite/Origine.{Costo medio progressivo spedito residuo,53}","Section1/Vendite/Origine.{K_CodCommessa,54}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
+

@@ -1,0 +1,43 @@
+table 'Tipi riga'
+	lineageTag: 9d9a3075-0874-4f8b-9097-ca3202ec7b0c
+
+	column K_TipoRiga
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fa31f178-483d-410d-a520-64c92e80ee9f
+		summarizeBy: none
+		sourceColumn: K_TipoRiga
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Tipo riga - Codice'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9bedb938-695c-4f99-a09f-b7bbe0d57fbe
+		summarizeBy: none
+		sourceColumn: Tipo riga - Codice
+
+		annotation SummarizationSetBy = User
+
+	column 'Tipo riga - Descrizione'
+		dataType: string
+		lineageTag: 8d6bfe8f-0c32-4fb8-87b5-87fd3d968739
+		summarizeBy: none
+		sourceColumn: Tipo riga - Descrizione
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tipi riga-59b0f169-2e15-4733-93fc-dc5702602aa6' = m
+		mode: import
+		queryGroup: Dimensioni
+		source =
+				let
+				    Origine = Sql.Database("WTCNB0021\SISTEMI1", "ESOLVER42", [Query="#(lf)        SELECT#(lf)             K_TipoRiga AS [K_TipoRiga]#(lf)            ,CodTipoRiga AS [Tipo riga - Codice]#(lf)            ,DesTipoRiga AS [Tipo riga - Descrizione]#(lf)#(lf)        FROM #(lf)            [dbo].[ESBI_TIPRIGADOC] WITH (NOLOCK)#(lf)        ;#(lf)    ", CreateNavigationProperties=false])
+				in
+				    Origine
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,2 @@
+EVALUATE
+	FILTER('Articoli / Servizi', 'Articoli / Servizi'[Articolo - Codice]="GENERICO")

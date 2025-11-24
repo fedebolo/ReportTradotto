@@ -1,0 +1,1800 @@
+table Spedito
+	lineageTag: 31fadbbe-2b85-4479-a203-40f23c485c56
+
+	measure 'Costo medio - Spedito' =
+			
+			CALCULATE (
+			    [Costo medio - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: d8b358cb-8523-49a5-8c13-840c654a3afd
+
+	measure 'Costo medio progressivo - Spedito' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 447d015e-b8b0-438c-b04f-ac692cbf575b
+
+	measure 'Costo movimento - Spedito' =
+			
+			CALCULATE (
+			    [Costo movimento - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: ca86cda9-4376-4e30-9e9a-b9b441c13c4d
+
+	measure 'Costo standard - Spedito' =
+			
+			CALCULATE (
+			    [Costo standard - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 8adf9a79-472c-459a-be6f-97892715eb11
+
+	measure 'Costo unitario medio - Spedito' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: 95e75166-f379-4ba1-8fc3-54c978e7df62
+
+	measure 'Costo unitario medio progressivo - Spedito' =
+			
+			CALCULATE (
+			    [costo unitario medio progressivo - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: 79142607-0194-4207-a0df-f46eeb358b91
+
+	measure 'Costo unitario movimento - Spedito' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: ff8300ea-0f0a-4dc8-8acc-60d029aa6442
+
+	measure 'Costo unitario standard - Spedito' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: 11a0275a-f948-4d3e-9998-8fd2fc54b660
+
+	measure 'Importo (no omaggi) - Spedito' =
+			
+			CALCULATE (
+			    [Importo (no omaggi) - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 992b9fcc-e6ea-4513-9ce9-059f9a849e75
+
+	measure 'Importo - Spedito' =
+			
+			CALCULATE (
+			    [Importo - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 3d20f3f7-11a5-428d-9f97-68b514989e20
+
+		changedProperty = FormatString
+
+	measure 'Importo lordo - Spedito' =
+			
+			CALCULATE (
+			    [Importo lordo - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 3aaee258-e014-4157-9241-39da0c000f16
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Importo sconti di riga - Spedito' =
+			
+			CALCULATE (
+			    [Importo sconti di riga - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 49bcc729-c2f6-4717-8aa1-bac169071196
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Importo sconti incondizionati - Spedito' =
+			
+			CALCULATE (
+			    [Importo sconti incondizionati - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 3fc555ad-30d4-43b7-bded-8ae8f346171c
+
+		changedProperty = FormatString
+
+	measure 'Importo sconti pagamento - Spedito' =
+			
+			CALCULATE (
+			    [Importo sconti pagamento - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 5fdb5530-de6c-4546-96c1-975a925508e5
+
+		changedProperty = FormatString
+
+	measure 'Importo spese piede - Spedito' =
+			
+			CALCULATE (
+			    [Importo spese piede - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		displayFolder: Corrente
+		lineageTag: 296fd174-1665-418d-ad98-491f667dccfb
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importo unitario - Spedito' =
+			
+			CALCULATE (
+			    [Importo unitario - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: dc2eaea7-0a8f-4fe4-ae6e-7d3d45732e01
+
+	measure 'Margine costo medio - Spedito' =
+			
+			CALCULATE (
+			    [Margine costo medio - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: f8400ea8-c430-44d7-a68c-3865f04fdb79
+
+	measure 'Margine costo medio progressivo - Spedito' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 158049b2-fe20-46f1-ba11-ac94265425e7
+
+	measure 'Margine costo movimento - Spedito' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 93d10081-ba09-46ca-ac4a-12ef44098d7b
+
+	measure 'Margine costo standard - Spedito' =
+			
+			CALCULATE (
+			    [Margine costo standard - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 4943e188-7fcb-49b6-a8a5-b3e97cd3324e
+
+	measure 'Provvigione - Spedito' =
+			
+			CALCULATE (
+			    [Provvigione - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: c13ac46f-ffe5-4b69-b9bf-f85eb348190d
+
+	measure 'Provvigione unitaria - Spedito' =
+			
+			CALCULATE (
+			    [Provvigione unitaria - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0.00
+		displayFolder: Corrente
+		lineageTag: 8efd18e5-7fba-4275-9c72-4ecdefed7435
+
+	measure 'Quantità - Spedito' =
+			
+			CALCULATE (
+			    [Quantità - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 60df4173-80ca-4344-a6fc-9f218307066d
+
+	measure 'Sconti di riga % - Spedito' =
+			
+			CALCULATE (
+			    [Sconti di riga % - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0.00%;-#,0.00%;#,0.00%
+		displayFolder: Corrente
+		lineageTag: 40ebdac6-0f3c-4690-9065-5949ea066a9b
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+	measure 'Quantità - Spedito - PM' = CALCULATE ( [Quantità - Spedito], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 2b80f0d3-ada8-4d2b-88f2-cdacc14e75da
+
+	measure 'Importo (no omaggi) - Spedito - PM' = CALCULATE ( [Importo (no omaggi) - Spedito], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: d12e2fc4-4b1c-404f-b752-abe4d7c316be
+
+	measure 'Costo medio - Spedito - PM' = CALCULATE ( [Costo medio - Spedito], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: b15a900d-9997-4680-95df-d862f01449a8
+
+	measure 'Costo medio progressivo - Spedito - PM' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Spedito],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: cd34c4f6-ec2c-4ae1-b86d-b71215743c6b
+
+	measure 'Costo movimento - Spedito - PM' = CALCULATE ( [Costo movimento - Spedito], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: ead9c8a5-e173-4dfa-ab74-31e8d80e004d
+
+	measure 'Costo standard - Spedito - PM' = CALCULATE ( [Costo standard - Spedito], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 35ef9220-1e08-4264-9ebc-24c31d702c4d
+
+	measure 'Importo unitario - Spedito - PM' = CALCULATE ( [Importo unitario - Spedito], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: a4c4db10-1d8e-466c-805f-f4523e490198
+
+	measure 'Costo unitario standard - Spedito - PM' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Spedito],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 5e08cd3a-0610-40b9-9f3f-6ad6c4bb375b
+
+	measure 'Costo unitario medio - Spedito - PM' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Spedito],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 5d108ae2-de20-4d4e-a611-24ed639da277
+
+	measure 'Costo unitario medio progressivo - Spedito - PM' =
+			
+			CALCULATE (
+			    [Costo unitario medio progressivo - Spedito],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: 36d272a1-b008-4cc6-8b00-7621b8c73506
+
+	measure 'Costo unitario movimento - Spedito - PM' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Spedito],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: ca50723e-2e82-414b-9da6-846a2b2989f0
+
+	measure 'Margine costo movimento - Spedito - PM' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Spedito],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 5c8c38a4-eb24-45e2-9e1d-46c224d49431
+
+	measure 'Margine costo medio progressivo - Spedito - PM' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Spedito],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 33851cf9-f2b3-49de-b772-4aa19252d094
+
+	measure 'Margine costo medio - Spedito - PM' =
+			
+			CALCULATE (
+			    [Margine costo medio - Spedito],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: e74add0d-321b-4414-b16f-0743ad25504c
+
+	measure 'Margine costo standard - Spedito - PM' =
+			
+			CALCULATE (
+			    [Margine costo standard - Spedito],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: 02edf748-f4b2-4911-9bb6-2a5aefa43b75
+
+	measure 'Provvigione - Spedito - PM' = CALCULATE ( [Provvigione - Spedito], PREVIOUSMONTH ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Mese precedente (PM)
+		lineageTag: cf54d8bc-9150-4a00-9c11-5b4782f5af9a
+
+	measure 'Provvigione unitaria - Spedito - PM' =
+			
+			CALCULATE (
+			    [Provvigione unitaria - Spedito],
+			    PREVIOUSMONTH ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Mese precedente (PM)
+		lineageTag: cc0fbe5e-7828-43aa-bc73-012e12a0f749
+
+	measure 'Quantità - Spedito - PY' = CALCULATE ( [Quantità - Spedito], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 07394d8d-81df-4f79-9ad2-0c7e812769ff
+
+	measure 'Importo (no omaggi) - Spedito - PY' = CALCULATE ( [Importo (no omaggi) - Spedito], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 704db1c2-6b9b-4ea1-a2e6-10fcc99a6648
+
+	measure 'Costo medio - Spedito - PY' = CALCULATE ( [Costo medio - Spedito], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: c5a0fd26-64b0-4981-944d-09e171ad15ce
+
+	measure 'Costo medio progressivo - Spedito - PY' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 9ea71b8d-77ea-41d2-a4f1-5714e9216cce
+
+	measure 'Costo movimento - Spedito - PY' =
+			
+			CALCULATE (
+			    [Costo movimento - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 98ec8931-8cb4-4bd0-b04a-3d79bf2fb2ba
+
+	measure 'Costo standard - Spedito - PY' =
+			
+			CALCULATE (
+			    [Costo standard - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 53a8ad88-9b2c-4eda-ad1e-423bce9c5f75
+
+	measure 'Importo unitario - Spedito - PY' =
+			
+			CALCULATE (
+			    [Importo unitario - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: c08f4651-5cd3-4383-afaf-6622d06953cc
+
+	measure 'Costo unitario standard - Spedito - PY' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: e41bb8f3-1969-45b9-ad79-e0e914ef3e7f
+
+	measure 'Costo unitario medio - Spedito - PY' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: ece815b0-10d9-4cd6-ae9e-37758ba142ba
+
+	measure 'Costo unitario medio progressivo - Spedito - PY' =
+			
+			CALCULATE (
+			    [Costo unitario medio progressivo - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: 983ddb60-c5c0-4e36-b1d6-29d9df963c5e
+
+	measure 'Costo unitario movimento - Spedito - PY' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: ad6d3ec7-12a0-4fa6-b392-2acb78ffd05d
+
+	measure 'Margine costo movimento - Spedito - PY' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 969bd30d-7ef6-47cf-91f6-76ba93114271
+
+	measure 'Margine costo medio progressivo - Spedito - PY' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 8d48ce7e-e9b1-4c10-bbf9-aa7ecc12c038
+
+	measure 'Margine costo medio - Spedito - PY' =
+			
+			CALCULATE (
+			    [Margine costo medio - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 1f74318b-75a7-4736-8afd-d2b444282af3
+
+	measure 'Margine costo standard - Spedito - PY' =
+			
+			CALCULATE (
+			    [Margine costo standard - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 93cff0f6-c314-49a9-9569-e83e3ccb9c3d
+
+	measure 'Provvigione - Spedito - PY' = CALCULATE ( [Provvigione - Spedito], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Anno precedente (PY)
+		lineageTag: 06580231-1b92-4197-bae3-5d27bc5d2a89
+
+	measure 'Provvigione unitaria - Spedito - PY' =
+			
+			CALCULATE (
+			    [Provvigione unitaria - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Anno precedente (PY)
+		lineageTag: 58547ad0-264b-41c9-838b-3ce846d7419c
+
+	measure 'Quantità - Spedito - YTD' = TOTALYTD ( [Quantità - Spedito], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 34a030dd-bc0e-47a0-89e0-10027059e30c
+
+	measure 'Importo (no omaggi) - Spedito - YTD' = TOTALYTD ( [Importo (no omaggi) - Spedito], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 3799b14b-f991-4bdf-99f0-6aad92a6b5d6
+
+	measure 'Costo medio - Spedito - YTD' = TOTALYTD ( [Costo medio - Spedito], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 334b52bb-803c-4560-a85b-41cd3e0be1ea
+
+	measure 'Costo medio progressivo - Spedito - YTD' = TOTALYTD ( [Costo medio progressivo - Spedito], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 8e69a411-26ef-42aa-b96d-7e0564ba6165
+
+	measure 'Costo movimento - Spedito - YTD' = TOTALYTD ( [Costo movimento - Spedito], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 1add110a-8b79-42ff-814c-28ea23812d92
+
+	measure 'Costo standard - Spedito - YTD' = TOTALYTD ( [Costo standard - Spedito], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: f63c938c-ac34-4f87-9e4e-85164f4e8706
+
+	measure 'Importo unitario - Spedito - YTD' = TOTALYTD ( [Importo unitario - Spedito], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 3f0a85eb-4001-4960-8a1b-3bf5f3b2d8f9
+
+	measure 'Costo unitario standard - Spedito - YTD' = TOTALYTD ( [Costo unitario standard - Spedito], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 407f7f56-5759-405b-9148-1ad6e23529ba
+
+	measure 'Costo unitario medio - Spedito - YTD' = TOTALYTD ( [Costo unitario medio - Spedito], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: dfda28a9-babb-4bdb-abb1-14676f5d26ea
+
+	measure 'Costo unitario medio progressivo - Spedito - YTD' = TOTALYTD ( [Costo unitario medio progressivo - Spedito], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: afdd36b6-ecd6-4b29-8307-75ab7c5167ae
+
+	measure 'Costo unitario movimento - Spedito - YTD' = TOTALYTD ( [Costo unitario movimento - Spedito], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 6fc05145-27ce-4c94-81df-64d1b72b0768
+
+	measure 'Margine costo movimento - Spedito - YTD' = TOTALYTD ( [Margine costo movimento - Spedito], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 15eefb8e-09bc-4a0a-a1ab-10f9555b3c51
+
+	measure 'Margine costo medio progressivo - Spedito - YTD' = TOTALYTD ( [Margine costo medio progressivo - Spedito], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 039a82d2-06aa-4429-9aae-539edc4bde2b
+
+	measure 'Margine costo medio - Spedito - YTD' = TOTALYTD ( [Margine costo medio - Spedito], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: a8c67cf9-f4dd-4869-a144-b3ca4daa6de5
+
+	measure 'Margine costo standard - Spedito - YTD' = TOTALYTD ( [Margine costo standard - Spedito], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 168b5a48-af82-45f4-92a7-b5c4f38c5322
+
+	measure 'Provvigione - Spedito - YTD' = TOTALYTD ( [Provvigione - Spedito], Calendario[Data] )
+		formatString: #,0
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: 4bd6f550-0202-4121-9680-39ac34f66936
+
+	measure 'Provvigione unitaria - Spedito - YTD' = TOTALYTD ( [Provvigione unitaria - Spedito], Calendario[Data] )
+		formatString: #,0.00
+		displayFolder: Progressivo anno (YTD)
+		lineageTag: c7fdbda9-1cb7-474b-bc89-75341700e9f3
+
+	measure 'Quantità - Spedito - PYTD' = TOTALYTD ( [Quantità - Spedito], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 0a8eb4f0-6d6d-4d08-ad45-05e47f6fa9d2
+
+	measure 'Importo (no omaggi) - Spedito - PYTD' = TOTALYTD ( [Importo (no omaggi) - Spedito], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 9b792819-738b-490d-b8aa-7586e3a589fc
+
+	measure 'Costo medio - Spedito - PYTD' = TOTALYTD ( [Costo medio - Spedito], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: db1f0f05-1194-4423-bfb3-59fbf0c852f7
+
+	measure 'Costo medio progressivo - Spedito - PYTD' =
+			TOTALYTD (
+			    [Costo medio progressivo - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: f4ed40ea-217b-4cab-acf0-1dfd4e17620e
+
+	measure 'Costo movimento - Spedito - PYTD' =
+			TOTALYTD (
+			    [Costo movimento - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 441899f3-d9a9-4e93-86f0-9adf6b1d6f33
+
+	measure 'Costo standard - Spedito - PYTD' = TOTALYTD ( [Costo standard - Spedito], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 838d0103-72b9-4480-93bd-bfc2b5562ae7
+
+	measure 'Importo unitario - Spedito - PYTD' =
+			TOTALYTD (
+			    [Importo unitario - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 7f88a7cf-d5d7-40c0-aa9c-85cfa8fa63cc
+
+	measure 'Costo unitario standard - Spedito - PYTD' =
+			TOTALYTD (
+			    [Costo unitario standard - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: c02e4d4a-a159-4d63-b1b7-29f1447d95ad
+
+	measure 'Costo unitario medio - Spedito - PYTD' =
+			TOTALYTD (
+			    [Costo unitario medio - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 7b203528-6322-4f5a-bed6-0cb19dc73b8f
+
+	measure 'Costo unitario medio progressivo - Spedito - PYTD' =
+			TOTALYTD (
+			    [Costo unitario medio progressivo - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: d5d5f0c8-68ef-4f52-bc5a-5038279347bc
+
+	measure 'Costo unitario movimento - Spedito - PYTD' =
+			TOTALYTD (
+			    [Costo unitario movimento - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 667539bb-8198-4475-a31b-af1ba8816a85
+
+	measure 'Margine costo movimento - Spedito - PYTD' =
+			TOTALYTD (
+			    [Margine costo movimento - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 23861f2a-4e29-4119-b287-dedfa3f9fe9d
+
+	measure 'Margine costo medio progressivo - Spedito - PYTD' =
+			TOTALYTD (
+			    [Margine costo medio progressivo - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: fdf17311-823a-476e-a732-d7c017ff9a78
+
+	measure 'Margine costo medio - Spedito - PYTD' =
+			TOTALYTD (
+			    [Margine costo medio - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 866978a3-445a-40c6-bc66-4ad83974c26f
+
+	measure 'Margine costo standard - Spedito - PYTD' =
+			TOTALYTD (
+			    [Margine costo standard - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 0f578805-e801-42c1-a39b-820c666f71a6
+
+	measure 'Provvigione - Spedito - PYTD' = TOTALYTD ( [Provvigione - Spedito], SAMEPERIODLASTYEAR ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: c7bf7787-6100-4d72-b4e4-5f8014e4f9ec
+
+	measure 'Provvigione unitaria - Spedito - PYTD' =
+			TOTALYTD (
+			    [Provvigione unitaria - Spedito],
+			    SAMEPERIODLASTYEAR ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Progressivo anno precedente (PYTD)
+		lineageTag: 5a3f4b80-eb76-478a-b2aa-a4807b519293
+
+	measure 'Quantità - Spedito - YOY' = [Quantità - Spedito] - [Quantità - Spedito - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 42c2b2e6-11de-4491-93e9-4d85be88d2b3
+
+	measure 'Importo (no omaggi) - Spedito - YOY' = [Importo (no omaggi) - Spedito] - [Importo (no omaggi) - Spedito - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 100ffa8d-693a-4b8e-8116-4aead429f84d
+
+	measure 'Costo medio - Spedito - YOY' = [Costo medio - Spedito] - [Costo medio - Spedito - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: e5097a14-3771-4aa2-8f4b-2655deb77a43
+
+	measure 'Costo medio progressivo - Spedito - YOY' = [Costo medio progressivo - Spedito] - [Costo medio progressivo - Spedito - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 5165defe-b30e-4b9b-b3c9-ba386e7b2ef5
+
+	measure 'Costo movimento - Spedito - YOY' = [Costo movimento - Spedito] - [Costo movimento - Spedito - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: d7d63ede-11b3-468a-b91d-0f19bfa48396
+
+	measure 'Costo standard - Spedito - YOY' = [Costo standard - Spedito] - [Costo standard - Spedito - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: c73cd43d-d862-407d-b18b-ed3f66e28578
+
+	measure 'Importo unitario - Spedito - YOY' = [Importo unitario - Spedito] - [Importo unitario - Spedito - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: b497272a-b3dd-4a50-b3c1-b173357b274d
+
+	measure 'Costo unitario standard - Spedito - YOY' = [Costo unitario standard - Spedito] - [Costo unitario standard - Spedito - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 040bcf72-55d9-475e-b1f1-0e4580c279b4
+
+	measure 'Costo unitario medio - Spedito - YOY' = [Costo unitario medio - Spedito] - [Costo unitario medio - Spedito - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 77accbfb-e323-438b-afad-39919a40a3c4
+
+	measure 'Costo unitario medio progressivo - Spedito - YOY' = [Costo unitario medio progressivo - Spedito] - [Costo unitario medio progressivo - Spedito - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: c60bd076-a534-417b-8dad-707b631c54b2
+
+	measure 'Costo unitario movimento - Spedito - YOY' = [Costo unitario movimento - Spedito] - [Costo unitario movimento - Spedito - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: a53c4717-01a1-4434-9cbb-14cd63582b4d
+
+	measure 'Margine costo movimento - Spedito - YOY' = [Margine costo movimento - Spedito] - [Margine costo movimento - Spedito - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: ae5ebb80-352e-4fa1-9f9d-692e504d9f49
+
+	measure 'Margine costo medio progressivo - Spedito - YOY' = [Margine costo medio progressivo - Spedito] - [Margine costo medio progressivo - Spedito - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 471ea9eb-d2f2-47fa-984b-d9237a3d4b32
+
+	measure 'Margine costo medio - Spedito - YOY' = [Margine costo medio - Spedito] - [Margine costo medio - Spedito - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: a4a9b78b-f371-44c0-9b86-5c9f2d9dcb6d
+
+	measure 'Margine costo standard - Spedito - YOY' = [Margine costo standard - Spedito] - [Margine costo standard - Spedito - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: fa12737b-3b1b-4401-88fe-691d2cb62c82
+
+	measure 'Provvigione - Spedito - YOY' = [Provvigione - Spedito] - [Provvigione - Spedito - PY]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: 35bf818e-26e9-4cb9-a199-6a31b144ad35
+
+	measure 'Provvigione unitaria - Spedito - YOY' = [Provvigione unitaria - Spedito] - [Provvigione unitaria - Spedito - PY]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente (YOY)
+		lineageTag: a01f6cdb-5f3b-4e0f-9416-6de79222d163
+
+	measure 'Quantità - Spedito - YOY%' = DIVIDE ( [Quantità - Spedito - YOY], [Quantità - Spedito - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 11ab9839-9f7b-44b0-b38f-f9d1c4f6e149
+
+	measure 'Importo (no omaggi) - Spedito - YOY%' = DIVIDE ( [Importo (no omaggi) - Spedito - YOY], [Importo (no omaggi) - Spedito - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 094b2b34-f17e-4738-80bc-0f7466224619
+
+	measure 'Costo medio - Spedito - YOY%' = DIVIDE ( [Costo medio - Spedito - YOY], [Costo medio - Spedito - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 22d7344e-bf0b-4b09-9192-5e2d02a18b1a
+
+	measure 'Costo medio progressivo - Spedito - YOY%' =
+			DIVIDE (
+			    [Costo medio progressivo - Spedito - YOY],
+			    [Costo medio progressivo - Spedito - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 00f27518-2862-4d68-b78b-0350cf06542b
+
+	measure 'Costo movimento - Spedito - YOY%' = DIVIDE ( [Costo movimento - Spedito - YOY], [Costo movimento - Spedito - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: f98e0df1-4cdb-42d8-86b0-1982fa60ca30
+
+	measure 'Costo standard - Spedito - YOY%' = DIVIDE ( [Costo standard - Spedito - YOY], [Costo standard - Spedito - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: f286d5f8-be2b-4f97-a8da-b6abe0b3c9e9
+
+	measure 'Importo unitario - Spedito - YOY%' = DIVIDE ( [Importo unitario - Spedito - YOY], [Importo unitario - Spedito - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: d822372f-1597-4e75-8248-580f5045f55a
+
+	measure 'Costo unitario standard - Spedito - YOY%' =
+			DIVIDE (
+			    [Costo unitario standard - Spedito - YOY],
+			    [Costo unitario standard - Spedito - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 1db477d1-71bc-4be1-a9e6-22a9b718ac23
+
+	measure 'Costo unitario medio - Spedito - YOY%' =
+			DIVIDE (
+			    [Costo unitario medio - Spedito - YOY],
+			    [Costo unitario medio - Spedito - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 9f913a7a-5a40-4a8b-9f28-e9bc27f03b8b
+
+	measure 'Costo unitario medio progressivo - Spedito - YOY%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Spedito - YOY],
+			    [Costo unitario medio progressivo - Spedito - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 621ab58b-54aa-4ea9-a3cf-24b3d7b7912a
+
+	measure 'Costo unitario movimento - Spedito - YOY%' =
+			DIVIDE (
+			    [Costo unitario movimento - Spedito - YOY],
+			    [Costo unitario movimento - Spedito - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 73043929-8c7d-4f51-9bd2-96bc3a69bbdd
+
+	measure 'Margine costo movimento - Spedito - YOY%' =
+			DIVIDE (
+			    [Margine costo movimento - Spedito - YOY],
+			    [Margine costo movimento - Spedito - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 357fa1e2-299b-44b5-87df-c50935f08fee
+
+	measure 'Margine costo medio progressivo - Spedito - YOY%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Spedito - YOY],
+			    [Margine costo medio progressivo - Spedito - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: b1d4303d-5b85-4a6c-b6bf-aa9a7b524c9b
+
+	measure 'Margine costo medio - Spedito - YOY%' =
+			DIVIDE (
+			    [Margine costo medio - Spedito - YOY],
+			    [Margine costo medio - Spedito - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 98b2916e-4acc-4cca-82ee-f20ffad7c4e3
+
+	measure 'Margine costo standard - Spedito - YOY%' =
+			DIVIDE (
+			    [Margine costo standard - Spedito - YOY],
+			    [Margine costo standard - Spedito - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 5a7d12f1-3203-43db-9ba7-caf9df5402fd
+
+	measure 'Provvigione - Spedito - YOY%' = DIVIDE ( [Provvigione - Spedito - YOY], [Provvigione - Spedito - PY] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 7f1050f1-95b4-40cc-8df4-220eef3607d4
+
+	measure 'Provvigione unitaria - Spedito - YOY%' =
+			DIVIDE (
+			    [Provvigione unitaria - Spedito - YOY],
+			    [Provvigione unitaria - Spedito - PY]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente (YOY%)
+		lineageTag: 898d9c48-d529-408f-a128-7d8e51eac826
+
+	measure 'Quantità - Spedito - YOYTD' = [Quantità - Spedito - YTD] - [Quantità - Spedito - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 2b154a94-42ad-4003-8fc7-c0b5d696a51c
+
+	measure 'Importo (no omaggi) - Spedito - YOYTD' = [Importo (no omaggi) - Spedito - YTD] - [Importo (no omaggi) - Spedito - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 13aa90ef-13f3-4aac-a54f-038aa2be9f74
+
+	measure 'Costo medio - Spedito - YOYTD' = [Costo medio - Spedito - YTD] - [Costo medio - Spedito - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: de30fbb1-f921-4fd4-abe8-21fe283cb987
+
+	measure 'Costo medio progressivo - Spedito - YOYTD' = [Costo medio progressivo - Spedito - YTD] - [Costo medio progressivo - Spedito - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: d811a106-4031-4b8e-b295-709d4a992506
+
+	measure 'Costo movimento - Spedito - YOYTD' = [Costo movimento - Spedito - YTD] - [Costo movimento - Spedito - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 623a7a00-7998-4ae4-a44b-dd48c9829e9f
+
+	measure 'Costo standard - Spedito - YOYTD' = [Costo standard - Spedito - YTD] - [Costo standard - Spedito - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 27e8d902-402e-482c-aa6c-de7aac843a46
+
+	measure 'Importo unitario - Spedito - YOYTD' = [Importo unitario - Spedito - YTD] - [Importo unitario - Spedito - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 50b5e9d3-2c8d-4b48-a7eb-24756318185f
+
+	measure 'Costo unitario standard - Spedito - YOYTD' = [Costo unitario standard - Spedito - YTD] - [Costo unitario standard - Spedito - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 70e14feb-6fca-4cb5-87c3-017382a3166a
+
+	measure 'Costo unitario medio - Spedito - YOYTD' = [Costo unitario medio - Spedito - YTD] - [Costo unitario medio - Spedito - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 1a520f53-03a5-493f-befe-0a39241efb30
+
+	measure 'Costo unitario medio progressivo - Spedito - YOYTD' = [Costo unitario medio progressivo - Spedito - YTD] - [Costo unitario medio progressivo - Spedito - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: c91fc99a-845f-4207-9d13-898763e890f9
+
+	measure 'Costo unitario movimento - Spedito - YOYTD' = [Costo unitario movimento - Spedito - YTD] - [Costo unitario movimento - Spedito - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: a08531b8-a329-4d73-999d-fb789225cd3e
+
+	measure 'Margine costo movimento - Spedito - YOYTD' = [Margine costo movimento - Spedito - YTD] - [Margine costo movimento - Spedito - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 1fcc3ee1-f95e-492d-8a11-07fce8607c46
+
+	measure 'Margine costo medio progressivo - Spedito - YOYTD' = [Margine costo medio progressivo - Spedito - YTD] - [Margine costo medio progressivo - Spedito - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 9872af36-3d0b-46bc-9da4-09f02b165c19
+
+	measure 'Margine costo medio - Spedito - YOYTD' = [Margine costo medio - Spedito - YTD] - [Margine costo medio - Spedito - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 889830eb-7f42-4efa-8493-ca99cfd102b5
+
+	measure 'Margine costo standard - Spedito - YOYTD' = [Margine costo standard - Spedito - YTD] - [Margine costo standard - Spedito - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: 504a2349-8770-4d47-bcb9-e1eb976aeec9
+
+	measure 'Provvigione - Spedito - YOYTD' = [Provvigione - Spedito - YTD] - [Provvigione - Spedito - PYTD]
+		formatString: #,0
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: a7777d65-12e2-4a04-a985-22c925f45a48
+
+	measure 'Provvigione unitaria - Spedito - YOYTD' = [Provvigione unitaria - Spedito - YTD] - [Provvigione unitaria - Spedito - PYTD]
+		formatString: #,0.00
+		displayFolder: Variazioni da anno precedente progressive (YOYTD)
+		lineageTag: c1e51992-66c6-4185-b5a8-3fdc38574b16
+
+	measure 'Quantità - Spedito - YOYTD%' = DIVIDE ( [Quantità - Spedito - YOYTD], [Quantità - Spedito - PYTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 605503bd-2111-46f5-b1ec-ad1efd7d82f3
+
+	measure 'Importo (no omaggi) - Spedito - YOYTD%' = DIVIDE ( [Importo (no omaggi) - Spedito - YOYTD], [Importo (no omaggi) - Spedito - PYTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 5af33de8-8e89-431d-b868-9ad2501995bb
+
+	measure 'Costo medio - Spedito - YOYTD%' = DIVIDE ( [Costo medio - Spedito - YOYTD], [Costo medio - Spedito - PYTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 1eb73df1-3e0f-41aa-9550-ec356294cd44
+
+	measure 'Costo medio progressivo - Spedito - YOYTD%' =
+			DIVIDE (
+			    [Costo medio progressivo - Spedito - YOYTD],
+			    [Costo medio progressivo - Spedito - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 60cd3bb4-7295-4a1e-9581-9bcbb44dc1bc
+
+	measure 'Costo movimento - Spedito - YOYTD%' =
+			DIVIDE (
+			    [Costo movimento - Spedito - YOYTD],
+			    [Costo movimento - Spedito - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 90e5ba37-3f45-4a50-8cca-0420ee7c7f72
+
+	measure 'Costo standard - Spedito - YOYTD%' = DIVIDE ( [Costo standard - Spedito - YOYTD], [Costo standard - Spedito - PYTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: deba32ca-b952-458b-a421-b037eab05a93
+
+	measure 'Importo unitario - Spedito - YOYTD%' =
+			DIVIDE (
+			    [Importo unitario - Spedito - YOYTD],
+			    [Importo unitario - Spedito - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 0c4603f7-d4c3-4192-9fef-4eb2f68c98e3
+
+	measure 'Costo unitario standard - Spedito - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario standard - Spedito - YOYTD],
+			    [Costo unitario standard - Spedito - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 4f9eb4fc-9147-410b-bfe6-92aa396ac227
+
+	measure 'Costo unitario medio - Spedito - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario medio - Spedito - YOYTD],
+			    [Costo unitario medio - Spedito - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: f4d20a1f-c208-474a-8379-be983b56b24a
+
+	measure 'Costo unitario medio progressivo - Spedito - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Spedito - YOYTD],
+			    [Costo unitario medio progressivo - Spedito - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: a0854775-2958-4966-bf04-402f107bbf0e
+
+	measure 'Costo unitario movimento - Spedito - YOYTD%' =
+			DIVIDE (
+			    [Costo unitario movimento - Spedito - YOYTD],
+			    [Costo unitario movimento - Spedito - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 968a55a9-eda9-4b67-a51f-73b3d5ff4c72
+
+	measure 'Margine costo movimento - Spedito - YOYTD%' =
+			DIVIDE (
+			    [Margine costo movimento - Spedito - YOYTD],
+			    [Margine costo movimento - Spedito - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 13f7d99f-5943-478b-a75f-11b553b6b190
+
+	measure 'Margine costo medio progressivo - Spedito - YOYTD%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Spedito - YOYTD],
+			    [Margine costo medio progressivo - Spedito - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 078f5940-a606-48fe-b41f-a16c5b33ac01
+
+	measure 'Margine costo medio - Spedito - YOYTD%' =
+			DIVIDE (
+			    [Margine costo medio - Spedito - YOYTD],
+			    [Margine costo medio - Spedito - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: cd52b855-ed3e-4fda-a262-b3cb7883136c
+
+	measure 'Margine costo standard - Spedito - YOYTD%' =
+			DIVIDE (
+			    [Margine costo standard - Spedito - YOYTD],
+			    [Margine costo standard - Spedito - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: ea301a23-0649-48a2-a3c6-b4d7076f0bd2
+
+	measure 'Provvigione - Spedito - YOYTD%' = DIVIDE ( [Provvigione - Spedito - YOYTD], [Provvigione - Spedito - PYTD] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 5a3ff650-6f78-44ad-a566-0633965aeb62
+
+	measure 'Provvigione unitaria - Spedito - YOYTD%' =
+			DIVIDE (
+			    [Provvigione unitaria - Spedito - YOYTD],
+			    [Provvigione unitaria - Spedito - PYTD]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da anno precedente progressive (YOYTD%)
+		lineageTag: 87ab7055-d68b-4f37-a4f8-bc12252cb933
+
+	measure 'Quantità - Spedito - MOM' = [Quantità - Spedito] - [Quantità - Spedito - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 547a7b34-0aba-4b6a-a1ec-d258fbc21fda
+
+	measure 'Importo (no omaggi) - Spedito - MOM' = [Importo (no omaggi) - Spedito] - [Importo (no omaggi) - Spedito - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: ae1f30c0-9d2a-4249-a37b-79f79324b577
+
+	measure 'Costo medio - Spedito - MOM' = [Costo medio - Spedito] - [Costo medio - Spedito - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: b1aaa08b-8487-4330-a549-d56296c6ae91
+
+	measure 'Costo medio progressivo - Spedito - MOM' = [Costo medio progressivo - Spedito] - [Costo medio progressivo - Spedito - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 3025ce15-5925-4549-b30a-d7dc4190a4ba
+
+	measure 'Costo movimento - Spedito - MOM' = [Costo movimento - Spedito] - [Costo movimento - Spedito - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 0b5acd48-bd3a-476e-9828-5783e36ca18d
+
+	measure 'Costo standard - Spedito - MOM' = [Costo standard - Spedito] - [Costo standard - Spedito - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 16395456-8bab-465c-b485-56e796fd4feb
+
+	measure 'Importo unitario - Spedito - MOM' = [Importo unitario - Spedito] - [Importo unitario - Spedito - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 89811dcb-2cfd-4fec-b956-6fec1f9cea6a
+
+	measure 'Costo unitario standard - Spedito - MOM' = [Costo unitario standard - Spedito] - [Costo unitario standard - Spedito - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 3684afdf-3cef-4f83-bd65-1ede598a4285
+
+	measure 'Costo unitario medio - Spedito - MOM' = [Costo unitario medio - Spedito] - [Costo unitario medio - Spedito - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 1096a28a-13aa-4ad0-bad8-e831a6a6f67e
+
+	measure 'Costo unitario medio progressivo - Spedito - MOM' = [Costo unitario medio progressivo - Spedito] - [Costo unitario medio progressivo - Spedito - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: c6c5ed8a-b057-4f9a-8fe2-601e5aa9d23a
+
+	measure 'Costo unitario movimento - Spedito - MOM' = [Costo unitario movimento - Spedito] - [Costo unitario movimento - Spedito - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 65f897c8-8bc2-4218-a1ac-98c2aab2878d
+
+	measure 'Margine costo movimento - Spedito - MOM' = [Margine costo movimento - Spedito] - [Margine costo movimento - Spedito - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 50784b49-4f0b-4633-a42f-4f1257187862
+
+	measure 'Margine costo medio progressivo - Spedito - MOM' = [Margine costo medio progressivo - Spedito] - [Margine costo medio progressivo - Spedito - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 8ede4ef4-d45b-465b-b1c0-f1584757de97
+
+	measure 'Margine costo medio - Spedito - MOM' = [Margine costo medio - Spedito] - [Margine costo medio - Spedito - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: f9110672-2f5a-45ea-9e6f-afb2fdbf4b8d
+
+	measure 'Margine costo standard - Spedito - MOM' = [Margine costo standard - Spedito] - [Margine costo standard - Spedito - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 972e31bf-3000-485e-a55c-2f829c919fe8
+
+	measure 'Provvigione - Spedito - MOM' = [Provvigione - Spedito] - [Provvigione - Spedito - PM]
+		formatString: #,0
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: 1165b565-11f7-475a-8d07-93b3c0941fbd
+
+	measure 'Provvigione unitaria - Spedito - MOM' = [Provvigione unitaria - Spedito] - [Provvigione unitaria - Spedito - PM]
+		formatString: #,0.00
+		displayFolder: Variazioni da mese precedente (MOM)
+		lineageTag: d26bd1e0-0e51-49c3-9fe2-eeadfc91ba55
+
+	measure 'Quantità - Spedito - MOM%' = DIVIDE ( [Quantità - Spedito - MOM], [Quantità - Spedito - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 9a70d13f-7637-4fab-ad8b-19d78a6043d3
+
+	measure 'Importo (no omaggi) - Spedito - MOM%' = DIVIDE ( [Importo (no omaggi) - Spedito - MOM], [Importo (no omaggi) - Spedito - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 265595db-b773-4686-8cf6-7dbdb0d02b0e
+
+	measure 'Costo medio - Spedito - MOM%' = DIVIDE ( [Costo medio - Spedito - MOM], [Costo medio - Spedito - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 6374cd9f-a3f3-43b5-9b93-53665c23df2e
+
+	measure 'Costo medio progressivo - Spedito - MOM%' =
+			DIVIDE (
+			    [Costo medio progressivo - Spedito - MOM],
+			    [Costo medio progressivo - Spedito - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 7f22f3d1-42af-4d3c-b94c-6b33e37fdafb
+
+	measure 'Costo movimento - Spedito - MOM%' = DIVIDE ( [Costo movimento - Spedito - MOM], [Costo movimento - Spedito - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: f1c06c10-0909-44d4-a211-d590678e4854
+
+	measure 'Costo standard - Spedito - MOM%' = DIVIDE ( [Costo standard - Spedito - MOM], [Costo standard - Spedito - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 00125e45-34ca-4cd4-b1fa-3e900403762a
+
+	measure 'Importo unitario - Spedito - MOM%' = DIVIDE ( [Importo unitario - Spedito - MOM], [Importo unitario - Spedito - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 4e568a8e-4842-4821-be83-e739bc29e02b
+
+	measure 'Costo unitario standard - Spedito - MOM%' =
+			DIVIDE (
+			    [Costo unitario standard - Spedito - MOM],
+			    [Costo unitario standard - Spedito - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: bbde776e-bcaa-4e99-a535-b522cf298472
+
+	measure 'Costo unitario medio - Spedito - MOM%' =
+			DIVIDE (
+			    [Costo unitario medio - Spedito - MOM],
+			    [Costo unitario medio - Spedito - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 12ba3727-e088-4120-bcf6-a6c12d7585a2
+
+	measure 'Costo unitario medio progressivo - Spedito - MOM%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Spedito - MOM],
+			    [Costo unitario medio progressivo - Spedito - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: c1ad90ed-536e-40b2-ae3b-c1dca43f6c14
+
+	measure 'Costo unitario movimento - Spedito - MOM%' =
+			DIVIDE (
+			    [Costo unitario movimento - Spedito - MOM],
+			    [Costo unitario movimento - Spedito - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 57f7115d-8dff-4e18-b11f-b5c2c161e63e
+
+	measure 'Margine costo movimento - Spedito - MOM%' =
+			DIVIDE (
+			    [Margine costo movimento - Spedito - MOM],
+			    [Margine costo movimento - Spedito - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 7e2120a0-02bb-4ec1-b6ce-7eb322d155fb
+
+	measure 'Margine costo medio progressivo - Spedito - MOM%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Spedito - MOM],
+			    [Margine costo medio progressivo - Spedito - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: f783ffac-2fe2-4f6a-86da-e832935c294f
+
+	measure 'Margine costo medio - Spedito - MOM%' =
+			DIVIDE (
+			    [Margine costo medio - Spedito - MOM],
+			    [Margine costo medio - Spedito - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 0a532381-e7e5-450d-af41-133a3737b9d2
+
+	measure 'Margine costo standard - Spedito - MOM%' =
+			DIVIDE (
+			    [Margine costo standard - Spedito - MOM],
+			    [Margine costo standard - Spedito - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: d9a4295d-6b07-4479-b163-5fcb9664a892
+
+	measure 'Provvigione - Spedito - MOM%' = DIVIDE ( [Provvigione - Spedito - MOM], [Provvigione - Spedito - PM] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: 1732adab-d7e0-4ef1-af33-63807bd95357
+
+	measure 'Provvigione unitaria - Spedito - MOM%' =
+			DIVIDE (
+			    [Provvigione unitaria - Spedito - MOM],
+			    [Provvigione unitaria - Spedito - PM]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da mese precedente (MOM%)
+		lineageTag: ff83e83a-d63f-46e8-90cf-a0993dd5a22a
+
+	measure 'Quantità - Spedito - PQ' = CALCULATE ( [Quantità - Spedito], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 662cceae-5fc0-45ec-a0cc-53266f7723c1
+
+	measure 'Importo (no omaggi) - Spedito - PQ' = CALCULATE ( [Importo (no omaggi) - Spedito], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: f486153d-f4bf-4661-b542-bb558fc463a6
+
+	measure 'Costo medio - Spedito - PQ' = CALCULATE ( [Costo medio - Spedito], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: b484622b-4ff4-4e10-9176-c165079ac1ee
+
+	measure 'Costo medio progressivo - Spedito - PQ' =
+			
+			CALCULATE (
+			    [Costo medio progressivo - Spedito],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 05e3184d-488f-40d4-9a08-c4c8ee80540f
+
+	measure 'Costo movimento - Spedito - PQ' = CALCULATE ( [Costo movimento - Spedito], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 8adbaecf-0799-4468-9ab5-430ef6e3f2a7
+
+	measure 'Costo standard - Spedito - PQ' = CALCULATE ( [Costo standard - Spedito], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 65ca6816-7fc7-49e0-b483-b398ad60d529
+
+	measure 'Importo unitario - Spedito - PQ' = CALCULATE ( [Importo unitario - Spedito], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 4f64460e-2d1e-48d6-adcb-24eb2c398e95
+
+	measure 'Costo unitario standard - Spedito - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario standard - Spedito],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 64ca8498-d6ea-4b6b-ac78-37acb94f7ff2
+
+	measure 'Costo unitario medio - Spedito - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario medio - Spedito],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 2b47123d-be74-4786-9c85-f20404acb210
+
+	measure 'Costo unitario medio progressivo - Spedito - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario medio progressivo - Spedito],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: faaf9f30-863c-4275-81b8-9cb0fd301481
+
+	measure 'Costo unitario movimento - Spedito - PQ' =
+			
+			CALCULATE (
+			    [Costo unitario movimento - Spedito],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: aa7f057c-b5e1-488d-9993-a8a09a72a9d0
+
+	measure 'Margine costo movimento - Spedito - PQ' =
+			
+			CALCULATE (
+			    [Margine costo movimento - Spedito],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: c6b2f4dc-bbe1-47e0-91f1-89a406fc4840
+
+	measure 'Margine costo medio progressivo - Spedito - PQ' =
+			
+			CALCULATE (
+			    [Margine costo medio progressivo - Spedito],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 1e1cfa5b-ba33-4763-b095-e3b770c07dc9
+
+	measure 'Margine costo medio - Spedito - PQ' =
+			
+			CALCULATE (
+			    [Margine costo medio - Spedito],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: c5bfaf00-6dd2-47ff-9ef4-402d667e4f32
+
+	measure 'Margine costo standard - Spedito - PQ' =
+			
+			CALCULATE (
+			    [Margine costo standard - Spedito],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 13ef5a91-b22c-4683-bc1b-782d5e6b6c53
+
+	measure 'Provvigione - Spedito - PQ' = CALCULATE ( [Provvigione - Spedito], PREVIOUSQUARTER ( Calendario[Data] ) )
+		formatString: #,0
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 176cc7d7-b700-4e7c-8160-3316246953cc
+
+	measure 'Provvigione unitaria - Spedito - PQ' =
+			
+			CALCULATE (
+			    [Provvigione unitaria - Spedito],
+			    PREVIOUSQUARTER ( Calendario[Data] )
+			)
+		formatString: #,0.00
+		displayFolder: Trimestre precedente (PQ)
+		lineageTag: 0f46fab1-f9a0-44fc-8af1-d46db0a08abc
+
+	measure 'Quantità - Spedito - QOQ' = [Quantità - Spedito] - [Quantità - Spedito - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 0f1e7037-5df6-4468-8f20-2018c29e771b
+
+	measure 'Importo (no omaggi) - Spedito - QOQ' = [Importo (no omaggi) - Spedito] - [Importo (no omaggi) - Spedito - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 38d7aedc-9f28-4d1a-b5c5-dc610ff86fc7
+
+	measure 'Costo medio - Spedito - QOQ' = [Costo medio - Spedito] - [Costo medio - Spedito - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: feee0798-e2ee-42a4-8b11-4f23afc956bb
+
+	measure 'Costo medio progressivo - Spedito - QOQ' = [Costo medio progressivo - Spedito] - [Costo medio progressivo - Spedito - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: e88202af-c592-460f-93cf-3f9518b238c2
+
+	measure 'Costo movimento - Spedito - QOQ' = [Costo movimento - Spedito] - [Costo movimento - Spedito - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 1636345c-7ed4-4bb7-b182-537cb5ad1a03
+
+	measure 'Costo standard - Spedito - QOQ' = [Costo standard - Spedito] - [Costo standard - Spedito - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 28f1aa85-c116-47bb-a98c-1ab3b1b4602d
+
+	measure 'Importo unitario - Spedito - QOQ' = [Importo unitario - Spedito] - [Importo unitario - Spedito - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 4a26ac18-0460-49ef-9f12-d9bc8c5cb280
+
+	measure 'Costo unitario standard - Spedito - QOQ' = [Costo unitario standard - Spedito] - [Costo unitario standard - Spedito - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 596fa968-101d-4f79-aeaa-ce07529e3eb9
+
+	measure 'Costo unitario medio - Spedito - QOQ' = [Costo unitario medio - Spedito] - [Costo unitario medio - Spedito - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: e71f17d7-c32e-45dd-8739-2906d4f570dc
+
+	measure 'Costo unitario medio progressivo - Spedito - QOQ' = [Costo unitario medio progressivo - Spedito] - [Costo unitario medio progressivo - Spedito - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: ed9ca05f-d3f9-475a-b35b-21a5aa116961
+
+	measure 'Costo unitario movimento - Spedito - QOQ' = [Costo unitario movimento - Spedito] - [Costo unitario movimento - Spedito - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: c3f941ea-77de-4696-8663-53a63853c1ed
+
+	measure 'Margine costo movimento - Spedito - QOQ' = [Margine costo movimento - Spedito] - [Margine costo movimento - Spedito - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: e88e526b-e434-498d-b3e7-94864063834b
+
+	measure 'Margine costo medio progressivo - Spedito - QOQ' = [Margine costo medio progressivo - Spedito] - [Margine costo medio progressivo - Spedito - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: fb291675-0df7-408d-b92b-be92beeae3ae
+
+	measure 'Margine costo medio - Spedito - QOQ' = [Margine costo medio - Spedito] - [Margine costo medio - Spedito - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 797c676b-211d-4345-ba09-91f984d08108
+
+	measure 'Margine costo standard - Spedito - QOQ' = [Margine costo standard - Spedito] - [Margine costo standard - Spedito - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: f2f4ce2f-16e0-4174-87a6-e51de51c6482
+
+	measure 'Provvigione - Spedito - QOQ' = [Provvigione - Spedito] - [Provvigione - Spedito - PQ]
+		formatString: #,0
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 1438332b-1fdf-4c71-a61e-2d3459e28b68
+
+	measure 'Provvigione unitaria - Spedito - QOQ' = [Provvigione unitaria - Spedito] - [Provvigione unitaria - Spedito - PQ]
+		formatString: #,0.00
+		displayFolder: Variazioni da trimestre precedente (QOQ)
+		lineageTag: 79932bb3-79d4-4ca8-b448-e780ca02ca07
+
+	measure 'Quantità - Spedito - QOQ%' = DIVIDE ( [Quantità - Spedito - QOQ], [Quantità - Spedito - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 7b18cee9-d77f-4121-8f6a-9b74cfcdc9f0
+
+	measure 'Importo (no omaggi) - Spedito - QOQ%' = DIVIDE ( [Importo (no omaggi) - Spedito - QOQ], [Importo (no omaggi) - Spedito - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: e5f40e39-7481-4050-8f6c-2f43b05cb0e4
+
+	measure 'Costo medio - Spedito - QOQ%' = DIVIDE ( [Costo medio - Spedito - QOQ], [Costo medio - Spedito - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: b7ffd1e5-62ff-41e2-9de5-ee8d644bdb55
+
+	measure 'Costo medio progressivo - Spedito - QOQ%' =
+			DIVIDE (
+			    [Costo medio progressivo - Spedito - QOQ],
+			    [Costo medio progressivo - Spedito - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: b99db2d2-1545-4eb6-aaf6-98d50611e88f
+
+	measure 'Costo movimento - Spedito - QOQ%' = DIVIDE ( [Costo movimento - Spedito - QOQ], [Costo movimento - Spedito - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 654f7890-b012-4c97-9ae3-7413410c99e1
+
+	measure 'Costo standard - Spedito - QOQ%' = DIVIDE ( [Costo standard - Spedito - QOQ], [Costo standard - Spedito - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 7217d5db-c014-4eda-9918-2f88fb5b6f27
+
+	measure 'Importo unitario - Spedito - QOQ%' = DIVIDE ( [Importo unitario - Spedito - MOM], [Importo unitario - Spedito - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 7735563e-d6d5-45fa-8fef-c5c6acf2dfef
+
+	measure 'Costo unitario standard - Spedito - QOQ%' =
+			DIVIDE (
+			    [Costo unitario standard - Spedito - MOM],
+			    [Costo unitario standard - Spedito - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: c14a2801-5904-41f7-9beb-eef652f5d2b4
+
+	measure 'Costo unitario medio - Spedito - QOQ%' =
+			DIVIDE (
+			    [Costo unitario medio - Spedito - MOM],
+			    [Costo unitario medio - Spedito - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 4a3d25c9-4bf6-4a46-be68-43f7295a519c
+
+	measure 'Costo unitario medio progressivo - Spedito - QOQ%' =
+			DIVIDE (
+			    [Costo unitario medio progressivo - Spedito - MOM],
+			    [Costo unitario medio progressivo - Spedito - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: dc3e5f02-20b2-4cd4-9aef-fbab7dc1c25b
+
+	measure 'Costo unitario movimento - Spedito - QOQ%' =
+			DIVIDE (
+			    [Costo unitario movimento - Spedito - MOM],
+			    [Costo unitario movimento - Spedito - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 5d736870-1eb4-4dc9-a1c5-6b26ec51aa10
+
+	measure 'Margine costo movimento - Spedito - QOQ%' =
+			DIVIDE (
+			    [Margine costo movimento - Spedito - QOQ],
+			    [Margine costo movimento - Spedito - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 8da50d4f-ba2f-409f-aeec-5709bb2576d2
+
+	measure 'Margine costo medio progressivo - Spedito - QOQ%' =
+			DIVIDE (
+			    [Margine costo medio progressivo - Spedito - QOQ],
+			    [Margine costo medio progressivo - Spedito - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 101eabe4-ac57-4da6-b536-6dbfb15ff6c6
+
+	measure 'Margine costo medio - Spedito - QOQ%' =
+			DIVIDE (
+			    [Margine costo medio - Spedito - QOQ],
+			    [Margine costo medio - Spedito - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: aeee1ad7-d133-4817-a0d9-05e487192384
+
+	measure 'Margine costo standard - Spedito - QOQ%' =
+			DIVIDE (
+			    [Margine costo standard - Spedito - QOQ],
+			    [Margine costo standard - Spedito - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 53f07e3b-8f8b-4fe8-b03c-95e8ec12aec5
+
+	measure 'Provvigione - Spedito - QOQ%' = DIVIDE ( [Provvigione - Spedito - QOQ], [Provvigione - Spedito - PQ] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: fe5a2471-b0e9-4bf9-85c1-1d3d112a6500
+
+	measure 'Provvigione unitaria - Spedito - QOQ%' =
+			DIVIDE (
+			    [Provvigione unitaria - Spedito - QOQ],
+			    [Provvigione unitaria - Spedito - PQ]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Variazioni % da trimestre precedente (QOQ%)
+		lineageTag: 3ca50bfe-012a-4c6e-8c12-674303f08ca9
+
+	measure 'Quantità omaggi - Spedito' =
+			
+			CALCULATE (
+			    [Quantità omaggi - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: be524e66-b8f2-4917-8f78-655ef5901f5f
+
+	measure 'Importo omaggi - Spedito' =
+			
+			CALCULATE (
+			    [Importo omaggi - Generale],
+			    'Tipi movimento'[Flag rilevanza spedito] = "Sì"
+			)
+		formatString: #,0
+		displayFolder: Corrente
+		lineageTag: 43be7ca6-523b-40da-8853-6da29df43afd
+
+		changedProperty = FormatString
+
+	column Z_Dummy
+		dataType: string
+		isHidden
+		lineageTag: ad66c135-4659-487d-bb13-eca207a4072d
+		summarizeBy: none
+		sourceColumn: Z_Dummy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Spedito-9d7ae712-85dc-42d6-968d-a9fbc466b58b = m
+		mode: import
+		queryGroup: Misure
+		source =
+				let
+				    Origine = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Z_Dummy = _t])
+				in
+				    Origine
+
+	annotation PBI_Id = 02ffbda4-0bab-484b-af86-08f6be045c93
+
+	annotation LinkedQueryName = Spedito
+
+	annotation PBI_QueryRelationships = {"columnCount":0,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":[],"ColumnCount":0,"KeyColumnNames":[],"ColumnIdentities":[],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+
