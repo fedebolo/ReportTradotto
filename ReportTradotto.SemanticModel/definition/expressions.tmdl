@@ -358,7 +358,7 @@ expression TipiArticolo =
 
 	annotation PBI_ResultType = Text
 
-/// Indicare una o più classi statistiche da considerare  nelle analisi. 
+/// Indicare una o più classi statistiche da considerare  nelle analisi.
 /// Per indicare più di una classe statistica è necessario elencarli tutti utilizzando il carattere ";"come separatore.
 /// Es. V50;V51;V52;...
 expression 'Filtro - Elenco classi statistiche' = "V50;V51;V52;V53;V54;V63;V86" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=false]

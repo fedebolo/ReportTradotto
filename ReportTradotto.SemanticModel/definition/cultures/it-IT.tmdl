@@ -1,4 +1,43 @@
 cultureInfo it-IT
+	translations
+		model Model
+			table 'Localized Labels'
+				measure 'My Report Title'
+					caption: My Report Title
+				measure 'My Button Caption'
+					caption: My Button Caption
+				measure 'My Visual Title'
+					caption: My Visual Title
+				measure Selezioni
+					caption: Selezioni
+				measure Ditta
+					caption: Ditta
+				measure Anno
+					caption: Anno
+				measure Mese
+					caption: Mese
+				measure 'Data documento'
+					caption: Data documento
+				measure 'Data registrazione'
+					caption: Data registrazione
+				measure 'Capo Area'
+					caption: Capo Area
+				measure Agente
+					caption: Agente
+				measure Zona
+					caption: Zona
+				measure Cliente
+					caption: Cliente
+				measure Effettivo
+					caption: Effettivo
+				measure 'Articolo - Linea di vendita'
+					caption: Articolo - Linea di vendita
+				measure 'Articolo - Macrofamiglia, Famiglia'
+					caption: Articolo - Macrofamiglia, Famiglia
+				measure 'Articolo - Descrizione articolo'
+					caption: Articolo - Descrizione articolo
+				measure 'Articolo - Descrizione variante'
+					caption: Articolo - Descrizione variante
 
 	linguisticMetadata =
 			{
