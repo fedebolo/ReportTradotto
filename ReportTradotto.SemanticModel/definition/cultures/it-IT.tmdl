@@ -38,10 +38,30 @@ cultureInfo it-IT
 					caption: Articolo - Descrizione articolo
 				measure 'Articolo - Descrizione variante'
 					caption: Articolo - Descrizione variante
+				measure Sintesi
+					caption: Sintesi
+				measure Oridnato
+					caption: Oridnato
+				measure Portafoglio
+					caption: Portafoglio
+				measure Fatturato
+					caption: Fatturato
+				measure 'Data primo target'
+					caption: Data primo target
+				measure 'Data ultimo target'
+					caption: Data ultimo target
+				measure 'Andamento ordinato e target'
+					caption: Andamento ordinato e target
+				measure 'Avanzamento sul target'
+					caption: Avanzamento sul target
+				measure Target
+					caption: Target
+				measure 'Dettaglio Pipeline'
+					caption: Dettaglio Pipeline
 
 	linguisticMetadata =
 			{
-			  "Version": "3.5.0",
+			  "Version": "4.1.0",
 			  "Language": "en-US",
 			  "Entities": {
 			    "vendite": {
@@ -10762,16 +10782,6 @@ cultureInfo it-IT
 			        },
 			        {
 			          "neighborhood": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "area": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -53153,16 +53163,6 @@ cultureInfo it-IT
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
-			        },
-			        {
-			          "Capo area - Codice": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -53206,16 +53206,6 @@ cultureInfo it-IT
 			          "agente (cliente) ruolo e agente": {
 			            "State": "Generated",
 			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "Ruolo": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -56293,16 +56283,6 @@ cultureInfo it-IT
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
-			        },
-			        {
-			          "Numero registrazione": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -57518,16 +57498,6 @@ cultureInfo it-IT
 			          "importo (no omaggi) fatturato": {
 			            "State": "Generated",
 			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "Fatturato": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -60691,16 +60661,6 @@ cultureInfo it-IT
 			            },
 			            "Weight": 0.9
 			          }
-			        },
-			        {
-			          "Capo Area - Descrizione": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -62408,16 +62368,6 @@ cultureInfo it-IT
 			            },
 			            "Weight": 0.9
 			          }
-			        },
-			        {
-			          "Importo - BDG": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -62533,16 +62483,6 @@ cultureInfo it-IT
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "Data primo target": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -62756,7 +62696,7 @@ cultureInfo it-IT
 			          }
 			        },
 			        {
-			          "Scostamento %": {
+			          "% Scostamento da target": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -62766,7 +62706,7 @@ cultureInfo it-IT
 			          }
 			        },
 			        {
-			          "% Scostamento da target": {
+			          "Scostamento %": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -65983,6 +65923,4065 @@ cultureInfo it-IT
 			          }
 			        }
 			      ]
+			    },
+			    "localized_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "localized label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "localized sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "localized tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "localized decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "localized name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.571
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.unused": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "unused"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "unused": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "idle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "vacant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "unemployed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "unexploited": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fallow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "new": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "fresh": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "pristine": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.my_report_title": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "My Report Title"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "my report title": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "my information title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "my commentary title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "my description title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "my presentation title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "my statement title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "my report designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "my forecast title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "my account title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "my article title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "my narrative title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.my_button_caption": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "My Button Caption"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "my button caption": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "my button slogan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "my button description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "my button legend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "my button header": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "my button footer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "my key caption": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "my switch caption": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "my button subtitle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "my knob caption": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "my button title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.my_visual_title": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "My Visual Title"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "my visual title": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "my visual designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "my visual name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "my visual award": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "my visual call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "my visual heading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "my visual label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.selezioni": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Selezioni"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "selezioni": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.ditta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Ditta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ditta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.anno": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Anno"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "anno": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.mese": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Mese"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "mese": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.data_documento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Data documento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "data documento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information documento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact documento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info documento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic documento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document documento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure documento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record documento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.data_registrazione": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Data registrazione"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "data registrazione": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information registrazione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact registrazione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info registrazione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic registrazione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document registrazione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure registrazione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record registrazione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.capo_area": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Capo Area"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "capo area": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "area": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "capo region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "capo locale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "capo locality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "capo neighbourhood": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "locale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "locality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "neighbourhood": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "capo district": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "capo continent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.agente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Agente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "agente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.zona": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Zona"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "zona": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.effettivo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Effettivo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "effettivo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.articolo__linea_di_vendita": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Articolo - Linea di vendita"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "articolo - linea di vendita": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "articolo linea di vendita": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.articolo__macrofamiglia_famiglia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Articolo - Macrofamiglia, Famiglia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "articolo - macrofamiglia, famiglia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "articolo macrofamiglia, famiglia": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.articolo__descrizione_articolo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Articolo - Descrizione articolo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "articolo - descrizione articolo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "articolo descrizione articolo": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.articolo__descrizione_variante": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Articolo - Descrizione variante"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "articolo - descrizione variante": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "articolo descrizione variante": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.sintesi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Sintesi"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "sintesi": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.oridnato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Oridnato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "oridnato": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.portafoglio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Portafoglio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "portafoglio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.fatturato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Fatturato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "fatturato": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.data_primo_target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Data primo target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "data primo target": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data primo focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "data primo goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "data primo objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "information primo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact primo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info primo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic primo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document primo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure primo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record primo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.data_ultimo_target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Data ultimo target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "data ultimo target": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data ultimo focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "data ultimo goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "data ultimo objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "information ultimo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact ultimo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info ultimo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic ultimo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document ultimo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure ultimo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record ultimo target": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.andamento_ordinato_e_target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Andamento ordinato e target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "andamento ordinato e target": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "andamento ordinato e focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "andamento ordinato e goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "andamento ordinato e objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.avanzamento_sul_target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Avanzamento sul target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "avanzamento sul target": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "avanzamento sul focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "avanzamento sul goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "avanzamento sul objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "target": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "localized_label.dettaglio_pipeline": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Localized Labels",
+			          "ConceptualProperty": "Dettaglio Pipeline"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "dettaglio pipeline": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dettaglio conduit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dettaglio tube": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "dettaglio cylinder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "dettaglio channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "dettaglio duct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "dettaglio pipe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "translated localized label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "translated localized sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "translated localized tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "translated localized decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "translated localized name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.604
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.unused": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "unused"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "unused": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "idle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "vacant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "unemployed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "unexploited": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fallow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "new": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "fresh": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "pristine": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.my_report_title_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "My Report Title Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "my report title label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "my information title label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "my commentary title label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "my description title label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "my presentation title label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "my statement title label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "my report designation label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "my report title sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "my forecast title label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "my account title label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "my article title label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.my_button_caption_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "My Button Caption Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "my button caption label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "my button caption sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "my button caption tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "my button caption decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "my button caption name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "my button slogan label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "my button description label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "my button legend label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "my button header label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "my button footer label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "my key caption label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.my_visual_title_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "My Visual Title Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "my visual title label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "my visual designation label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "my visual title sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "my visual name label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "my visual award label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "my visual call label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "my visual heading label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "my visual label label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "my visual title tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "my visual title decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "my visual title name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.selezioni_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Selezioni Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "selezioni label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "selezioni sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "selezioni tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "selezioni decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "selezioni name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.ditta_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Ditta Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ditta label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ditta sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ditta tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "ditta decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "ditta name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.anno_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Anno Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "anno label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "anno sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "anno tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "anno decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "anno name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.mese_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Mese Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mese label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mese sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mese tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mese decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mese name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.data_documento_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Data documento Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data documento label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data documento sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "data documento tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "data documento decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "information documento label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact documento label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info documento label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic documento label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "data documento name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.604
+			          }
+			        },
+			        {
+			          "document documento label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure documento label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.data_registrazione_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Data registrazione Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data registrazione label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data registrazione sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "data registrazione tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "data registrazione decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "information registrazione label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact registrazione label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info registrazione label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic registrazione label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "data registrazione name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.604
+			          }
+			        },
+			        {
+			          "document registrazione label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure registrazione label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.capo_area_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Capo Area Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "capo area label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "area label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "capo area sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "area sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "capo area tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "capo area decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "area tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "area decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "capo region label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.agente_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Agente Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "agente label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "agente sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "agente tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "agente decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "agente name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.zona_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Zona Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "zona label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "zona sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "zona tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "zona decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "zona name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.cliente_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Cliente Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cliente label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cliente sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cliente tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "cliente decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "cliente name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.effettivo_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Effettivo Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "effettivo label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "effettivo sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "effettivo tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "effettivo decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "effettivo name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.articolo__linea_di_vendita_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Articolo - Linea di vendita Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "articolo - linea di vendita label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "articolo linea di vendita label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "articolo linea di vendita sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "articolo linea di vendita tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "articolo linea di vendita decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "articolo linea di vendita name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.629
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.articolo__macrofamiglia_famiglia_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Articolo - Macrofamiglia, Famiglia Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "articolo - macrofamiglia, famiglia label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "articolo macrofamiglia, famiglia label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "articolo macrofamiglia, famiglia sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "articolo macrofamiglia, famiglia tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "articolo macrofamiglia, famiglia decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "articolo macrofamiglia, famiglia name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.629
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.articolo__descrizione_articolo_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Articolo - Descrizione articolo Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "articolo - descrizione articolo label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "articolo descrizione articolo label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "articolo - descrizione articolo sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "articolo descrizione articolo sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "articolo - descrizione articolo tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "articolo - descrizione articolo decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "articolo descrizione articolo tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "articolo descrizione articolo decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "articolo - descrizione articolo name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "articolo descrizione articolo name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.articolo__descrizione_variante_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Articolo - Descrizione variante Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "articolo - descrizione variante label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "articolo descrizione variante label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "articolo - descrizione variante sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "articolo descrizione variante sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "articolo - descrizione variante tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "articolo - descrizione variante decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "articolo descrizione variante tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "articolo descrizione variante decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "articolo - descrizione variante name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "articolo descrizione variante name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.sintesi_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Sintesi Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sintesi label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sintesi sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sintesi tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "sintesi decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "sintesi name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.oridnato_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Oridnato Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "oridnato label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "oridnato sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "oridnato tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "oridnato decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "oridnato name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.portafoglio_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Portafoglio Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "portafoglio label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "portafoglio sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "portafoglio tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "portafoglio decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "portafoglio name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.fatturato_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Fatturato Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fatturato label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fatturato sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "fatturato tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "fatturato decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "fatturato name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.data_primo_target_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Data primo target Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data primo target label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data primo target sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "data primo target tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "data primo target decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "data primo target name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "information primo target label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact primo target label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info primo target label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic primo target label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document primo target label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure primo target label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.data_ultimo_target_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Data ultimo target Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data ultimo target label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data ultimo target sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "data ultimo target tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "data ultimo target decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "data ultimo target name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "information ultimo target label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact ultimo target label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info ultimo target label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic ultimo target label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document ultimo target label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure ultimo target label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.andamento_ordinato_e_target_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Andamento ordinato e target Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "andamento ordinato e target label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "andamento ordinato e target sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "andamento ordinato e target tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "andamento ordinato e target decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "andamento ordinato e target name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "andamento ordinato e focus label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "andamento ordinato e goal label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "andamento ordinato e objective label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.avanzamento_sul_target_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Avanzamento sul target Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avanzamento sul target label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "avanzamento sul target sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "avanzamento sul target tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "avanzamento sul target decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "avanzamento sul target name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "avanzamento sul focus label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "avanzamento sul goal label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "avanzamento sul objective label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.target_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Target Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "target label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "target sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "target tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "target decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "target name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "focus label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "goal label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "objective label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "translated_localized_label.dettaglio_pipeline_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Localized Labels",
+			          "ConceptualProperty": "Dettaglio Pipeline Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dettaglio pipeline label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dettaglio pipeline sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "dettaglio pipeline tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "dettaglio pipeline decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "dettaglio pipeline name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.604
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -67966,6 +71965,24 @@ cultureInfo it-IT
 			        }
 			      ]
 			    },
+			    "target_has_bridge_clienti_intestatari_agenti": {
+			      "Binding": {
+			        "ConceptualEntity": "Target"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "target": {
+			          "Target": {
+			            "Entity": "target"
+			          }
+			        },
+			        "bridge_clienti_intestatari_agenti": {
+			          "Target": {
+			            "Entity": "bridge_clienti_intestatari_agenti"
+			          }
+			        }
+			      }
+			    },
 			    "target_has_calendario": {
 			      "Binding": {
 			        "ConceptualEntity": "Target"
@@ -68057,24 +72074,6 @@ cultureInfo it-IT
 			          "ID": "articoli___servizis_have_targets"
 			        }
 			      ]
-			    },
-			    "bridge_clienti_intestatari_agenti_has_target": {
-			      "Binding": {
-			        "ConceptualEntity": "_Bridge_ClientiIntestatari_Agenti"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "bridge_clienti_intestatari_agenti": {
-			          "Target": {
-			            "Entity": "bridge_clienti_intestatari_agenti"
-			          }
-			        },
-			        "target": {
-			          "Target": {
-			            "Entity": "target"
-			          }
-			        }
-			      }
 			    },
 			    "bridge_clienti_intestatari_agenti_has_agenti_clienti": {
 			      "Binding": {
@@ -69625,6 +73624,930 @@ cultureInfo it-IT
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "magazzinis_have_vendites"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_dettaglio_pipeline_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.dettaglio_pipeline_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.dettaglio_pipeline_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.dettaglio_pipeline_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_dettaglio_pipeline_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_target_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.target_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.target_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.target_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_target_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_avanzamento_sul_target_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.avanzamento_sul_target_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.avanzamento_sul_target_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.avanzamento_sul_target_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_avanzamento_sul_target_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_andamento_ordinato_e_target_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.andamento_ordinato_e_target_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.andamento_ordinato_e_target_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.andamento_ordinato_e_target_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_andamento_ordinato_e_target_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_data_ultimo_target_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.data_ultimo_target_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.data_ultimo_target_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.data_ultimo_target_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_data_ultimo_target_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_data_primo_target_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.data_primo_target_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.data_primo_target_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.data_primo_target_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_data_primo_target_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_fatturato_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.fatturato_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.fatturato_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.fatturato_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_fatturato_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_portafoglio_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.portafoglio_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.portafoglio_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.portafoglio_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_portafoglio_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_oridnato_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.oridnato_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.oridnato_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.oridnato_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_oridnato_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_sintesi_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.sintesi_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.sintesi_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.sintesi_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_sintesi_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_articolo__descrizione_variante_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.articolo__descrizione_variante_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.articolo__descrizione_variante_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.articolo__descrizione_variante_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_articolo__descrizione_variante_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_articolo__descrizione_articolo_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.articolo__descrizione_articolo_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.articolo__descrizione_articolo_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.articolo__descrizione_articolo_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_articolo__descrizione_articolo_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_articolo__macrofamiglia_famiglia_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.articolo__macrofamiglia_famiglia_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.articolo__macrofamiglia_famiglia_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.articolo__macrofamiglia_famiglia_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_articolo__macrofamiglia_famiglia_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_articolo__linea_di_vendita_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.articolo__linea_di_vendita_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.articolo__linea_di_vendita_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.articolo__linea_di_vendita_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_articolo__linea_di_vendita_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_effettivo_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.effettivo_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.effettivo_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.effettivo_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_effettivo_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_cliente_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.cliente_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.cliente_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.cliente_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_cliente_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_zona_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.zona_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.zona_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.zona_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_zona_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_agente_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.agente_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.agente_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.agente_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_agente_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_capo_area_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.capo_area_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.capo_area_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.capo_area_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_capo_area_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_data_registrazione_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.data_registrazione_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.data_registrazione_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.data_registrazione_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_data_registrazione_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_data_documento_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.data_documento_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.data_documento_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.data_documento_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_data_documento_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_mese_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.mese_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.mese_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.mese_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_mese_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_anno_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.anno_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.anno_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.anno_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_anno_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_ditta_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.ditta_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.ditta_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.ditta_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_ditta_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_selezioni_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.selezioni_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.selezioni_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.selezioni_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_selezioni_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_my_visual_title_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.my_visual_title_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.my_visual_title_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.my_visual_title_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_my_visual_title_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_my_button_caption_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.my_button_caption_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.my_button_caption_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.my_button_caption_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_my_button_caption_label"
+			        }
+			      ]
+			    },
+			    "translated_localized_label_has_my_report_title_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.my_report_title_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.my_report_title_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Object": {
+			              "Role": "translated_localized_label.my_report_title_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_have_my_report_title_label"
 			        }
 			      ]
 			    },
@@ -130991,6 +135914,51 @@ cultureInfo it-IT
 			        }
 			      ]
 			    },
+			    "translated_localized_label_in_capo_area_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Localized Labels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_localized_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label"
+			          }
+			        },
+			        "translated_localized_label.capo_area_label": {
+			          "Target": {
+			            "Entity": "translated_localized_label.capo_area_label"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "translated_localized_label.capo_area_label"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "translated_localized_label"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "translated_localized_label.capo_area_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_localized_labels_are_in_capo_area_label"
+			        }
+			      ]
+			    },
 			    "agenti_clienti_spedizione_in_agente_cliente_sped___desrizione_capo_area": {
 			      "Binding": {
 			        "ConceptualEntity": "Agenti (Clienti spedizione)"
@@ -132226,6 +137194,11 @@ cultureInfo it-IT
 			          "ID": "agente_cliente_sped___L2_are_in_agente_cliente_sped___L3"
 			        }
 			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.0.0"
 			    }
 			  }
 			}

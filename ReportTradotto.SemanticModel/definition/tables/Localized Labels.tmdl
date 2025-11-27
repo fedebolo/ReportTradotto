@@ -74,6 +74,46 @@ table 'Localized Labels'
 		isHidden
 		lineageTag: d391d333-b1c0-42d0-9e4a-0e20a7f6e5c9
 
+	measure Sintesi = 0
+		isHidden
+		lineageTag: af464973-f5f3-4106-8108-857eb0e50e0e
+
+	measure Oridnato = 0
+		isHidden
+		lineageTag: 01386b57-4046-4ceb-8ef5-63ff31b0f004
+
+	measure Portafoglio = 0
+		isHidden
+		lineageTag: de8066d2-4ce3-47d0-9ebb-458fad1ec693
+
+	measure Fatturato = 0
+		isHidden
+		lineageTag: 665f7d80-b849-4c25-a8e8-070e797f1820
+
+	measure 'Data primo target' = 0
+		isHidden
+		lineageTag: 7bc5af57-b4da-43b2-b155-b8344dc5a175
+
+	measure 'Data ultimo target' = 0
+		isHidden
+		lineageTag: efafc7f2-f960-4442-b084-068642367c1c
+
+	measure 'Andamento ordinato e target' = 0
+		isHidden
+		lineageTag: 45316be7-7c97-4f66-8869-ca11b0f71ebf
+
+	measure 'Avanzamento sul target' = 0
+		isHidden
+		lineageTag: 0273c9cd-1421-4cf7-b147-3e4c2e9d1b13
+
+	measure Target = 0
+		isHidden
+		lineageTag: 2ee0f8dc-8b02-40f5-969a-abd18ced7efa
+
+	measure 'Dettaglio Pipeline' = 0
+		isHidden
+		lineageTag: 1d81d23a-9b23-491f-8c56-262d82688023
+
 	column unused
 		isHidden
 		displayFolder: unused

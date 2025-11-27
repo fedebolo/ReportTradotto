@@ -5206,6 +5206,26 @@ cultureInfo en-US
 					caption: Article - Article Description
 				measure 'Articolo - Descrizione variante'
 					caption: Article - Variant Description
+				measure Sintesi
+					caption: Synthesis
+				measure Oridnato
+					caption: Ordered
+				measure Portafoglio
+					caption: Wallet
+				measure Fatturato
+					caption: Turnover
+				measure 'Data primo target'
+					caption: First Target Date
+				measure 'Data ultimo target'
+					caption: Last Target Date
+				measure 'Andamento ordinato e target'
+					caption: Orderly And Target Trend
+				measure 'Avanzamento sul target'
+					caption: Progress On The Target
+				measure Target
+					caption: Target
+				measure 'Dettaglio Pipeline'
+					caption: Pipeline Detail
 
 	linguisticMetadata = <LinguisticMetadata><LinguisticSchema Language="en-US" DynamicImprovement="HighConfidence" xmlns="http://schemas.microsoft.com/sqlserver/2016/01/linguisticschema" /></LinguisticMetadata>
 
