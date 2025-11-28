@@ -42,7 +42,7 @@ table Varie
 		lineageTag: 32dd582d-1291-4a2f-8c79-8dcea452e3f5
 
 	measure 'Data e ora ultimo reload' = VALUES ( 'Diagnostica'[Ultimo reload] )
-		formatString: General Date
+		formatString: Short Date
 		lineageTag: b6f8ee14-7751-45e8-8ae0-748b375d8b8a
 
 	measure 'Clienti con fatturato' =

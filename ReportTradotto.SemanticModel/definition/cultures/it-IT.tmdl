@@ -54,8 +54,6 @@ cultureInfo it-IT
 					caption: Andamento ordinato e target
 				measure 'Avanzamento sul target'
 					caption: Avanzamento sul target
-				measure Target
-					caption: Target
 				measure 'Dettaglio Pipeline'
 					caption: Dettaglio Pipeline
 
@@ -67407,55 +67405,6 @@ cultureInfo it-IT
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.739
-			          }
-			        }
-			      ]
-			    },
-			    "localized_label.target": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Localized Labels",
-			          "ConceptualProperty": "Target"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "target": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "focus": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "goal": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "objective": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
 			          }
 			        }
 			      ]

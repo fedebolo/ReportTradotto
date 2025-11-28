@@ -4207,6 +4207,12 @@ cultureInfo en-US
 				measure 'Avanzamento sul target val massimo'
 					caption: Progress On The Maximum Target
 					displayFolder: Current
+				measure Misura
+					caption: Measure
+					displayFolder: Current
+				measure Target
+					caption: Target
+					displayFolder: Current
 			table Varie
 				caption: Various
 				measure 'Data prima vendita'
@@ -5222,8 +5228,6 @@ cultureInfo en-US
 					caption: Orderly And Target Trend
 				measure 'Avanzamento sul target'
 					caption: Progress On The Target
-				measure Target
-					caption: Target
 				measure 'Dettaglio Pipeline'
 					caption: Pipeline Detail
 

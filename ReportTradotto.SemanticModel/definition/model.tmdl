@@ -42,7 +42,7 @@ annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
 
 annotation PBIDesktopVersion = 2.142.928.0 (25.04)+de52df9f0bb74ad93a80d89c52d63fe6d07e0e1b
 
-annotation TranslationsBuilder = Version:2.2-Updated:2025-11-27
+annotation TranslationsBuilder = Version:2.2-Updated:2025-11-28
 
 ref table Vendite
 ref table 'Articoli / Servizi'

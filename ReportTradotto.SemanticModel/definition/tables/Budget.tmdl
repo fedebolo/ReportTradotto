@@ -243,6 +243,18 @@ table Budget
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure Misura
+		displayFolder: Corrente
+		lineageTag: 617c325f-de83-4b49-8205-be3dfca0c755
+
+		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
+
+	measure Target = Budget[Xls Importo - BDG]
+		displayFolder: Corrente
+		lineageTag: 5cc2fc04-99cd-44d4-b957-ba2a1d2e90b4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Z_Dummy
 		dataType: string
 		isHidden

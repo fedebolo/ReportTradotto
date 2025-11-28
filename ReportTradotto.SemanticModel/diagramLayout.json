@@ -723,16 +723,15 @@
         },
         {
           "location": {
-            "x": 5145.7355919465781,
-            "y": 510.7128561039608
+            "x": 6467.4532519186587,
+            "y": 0
           },
           "nodeIndex": "Translated Localized Labels",
-          "nodeLineageTag": "eef0a3f2-aa99-44e8-8658-a1f7f82b61b1",
           "size": {
-            "height": 569.54124259745186,
+            "height": 300,
             "width": 234
           },
-          "zIndex": 60
+          "zIndex": 0
         }
       ],
       "name": "All tables",

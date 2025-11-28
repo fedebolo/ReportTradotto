@@ -106,10 +106,6 @@ table 'Localized Labels'
 		isHidden
 		lineageTag: 0273c9cd-1421-4cf7-b147-3e4c2e9d1b13
 
-	measure Target = 0
-		isHidden
-		lineageTag: 2ee0f8dc-8b02-40f5-969a-abd18ced7efa
-
 	measure 'Dettaglio Pipeline' = 0
 		isHidden
 		lineageTag: 1d81d23a-9b23-491f-8c56-262d82688023
