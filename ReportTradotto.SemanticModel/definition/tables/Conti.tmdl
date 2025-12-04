@@ -188,9 +188,45 @@ table Conti
 		queryGroup: Dimensioni
 		source =
 				let
-				    Origine = Sql.Database("WTCNB0021\SISTEMI1", "ESOLVER42", [Query="#(lf)        SELECT#(lf)             K_CodConto AS [K_CodConto]#(lf)            ,CodPdc AS [Piano dei conti - Codice]#(lf)            ,CodConto AS [Conto - Codice]#(lf)            ,CodContoL1 AS [Conto - Codice L1]#(lf)            ,CodContoL2 AS [Conto - Codice L2]#(lf)            ,CodContoL3 AS [Conto - Codice L3]#(lf)            ,CodContoL4 AS [Conto - Codice L4]#(lf)            ,DesContoL1 AS [Conto - Descrizione L1]#(lf)            ,DesContoL2 AS [Conto - Descrizione L2]#(lf)            ,DesContoL3 AS [Conto - Descrizione L3]#(lf)            ,DesContoL4 AS [Conto - Descrizione L4]#(lf)            ,ContoL1 AS [Conto L1]#(lf)            ,ContoL2 AS [Conto L2]#(lf)            ,ContoL3 AS [Conto L3]#(lf)            ,ContoL4 AS [Conto L4]#(lf)            ,DesContoPartit AS [Conto - Tipo partitario]#(lf)            ,DesSezione AS [Conto - Sezione]#(lf)            ,DesTipoConto AS [Conto - SP/CE]#(lf)            ,DesConto AS [Conto - Descrizione]#(lf)            ,Conto AS [Conto]#(lf)#(lf)        FROM #(lf)            [dbo].[ESBI_PDC_PIVOT] WITH (NOLOCK)#(lf)        ;#(lf)    ", CreateNavigationProperties=false])
+				    Origine =
+				        Sql.Database(
+				            "WTCNB1023\SISTEMI",
+				            "ESOLVER42",
+				            [
+				                Query =
+				"
+				SELECT
+				      K_CodConto          AS [K_CodConto]
+				    , CodPdc              AS [Piano dei conti - Codice]
+				    , CodConto            AS [Conto - Codice]
+				    , CodContoL1          AS [Conto - Codice L1]
+				    , CodContoL2          AS [Conto - Codice L2]
+				    , CodContoL3          AS [Conto - Codice L3]
+				    , CodContoL4          AS [Conto - Codice L4]
+				    , DesContoL1          AS [Conto - Descrizione L1]
+				    , DesContoL2          AS [Conto - Descrizione L2]
+				    , DesContoL3          AS [Conto - Descrizione L3]
+				    , DesContoL4          AS [Conto - Descrizione L4]
+				    , ContoL1             AS [Conto L1]
+				    , ContoL2             AS [Conto L2]
+				    , ContoL3             AS [Conto L3]
+				    , ContoL4             AS [Conto L4]
+				    , DesContoPartit      AS [Conto - Tipo partitario]
+				    , DesSezione          AS [Conto - Sezione]
+				    , DesTipoConto        AS [Conto - SP/CE]
+				    , DesConto            AS [Conto - Descrizione]
+				    , Conto               AS [Conto]
+				FROM
+				    dbo.ESBI_PDC_PIVOT WITH (NOLOCK)
+				;
+				",
+				                CreateNavigationProperties = false
+				            ]
+				        )
 				in
 				    Origine
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
 

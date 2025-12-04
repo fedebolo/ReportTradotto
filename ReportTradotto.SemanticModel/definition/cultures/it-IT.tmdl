@@ -56,6 +56,8 @@ cultureInfo it-IT
 					caption: Avanzamento sul target
 				measure 'Dettaglio Pipeline'
 					caption: Dettaglio Pipeline
+				measure 'Seleziona la lingua:'
+					caption: Seleziona la lingua:
 
 	linguisticMetadata =
 			{
@@ -42607,16 +42609,6 @@ cultureInfo it-IT
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
-			        },
-			        {
-			          "Riferimento testata": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -69754,124 +69746,18 @@ cultureInfo it-IT
 			        }
 			      ]
 			    },
-			    "translated_localized_label.target_label": {
+			    "articoli_in_lingua.codice_lingua": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Translated Localized Labels",
-			          "ConceptualProperty": "Target Label"
+			          "ConceptualEntity": "Articoli in lingua",
+			          "ConceptualProperty": "Codice Lingua"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "target label": {
+			          "codice lingua": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "label": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "target sticker": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "sticker": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "target tag": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "target decal": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "tag": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "decal": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "target name tag": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.589
-			          }
-			        },
-			        {
-			          "focus label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "goal label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "objective label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
 			          }
 			        }
 			      ]
@@ -69931,75 +69817,156 @@ cultureInfo it-IT
 			          }
 			        }
 			      ]
+			    },
+			    "budget.misura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Budget",
+			          "ConceptualProperty": "Misura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "misura": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "budget.target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Budget",
+			          "ConceptualProperty": "Target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "target": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "translated_descrizione": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Descrizione"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "translated descrizione": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "translated_descrizione.translated_descrizione": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Descrizione",
+			          "ConceptualProperty": "Translated Descrizione"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "translated descrizione": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "translated descrizione name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Seleziona la lingua": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "translated_descrizione.campi_di_translated_descrizione": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Descrizione",
+			          "ConceptualProperty": "Campi di Translated Descrizione"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "campi di translated descrizione": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "translated_descrizione.ordine_di_translated_descrizione": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Translated Descrizione",
+			          "ConceptualProperty": "Ordine di Translated Descrizione"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ordine di translated descrizione": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "agenti_clienti_spedizione_agenti_clienti_sped___gerarchia_has_agente_cliente_sped___L3": {
-			      "Binding": {
-			        "ConceptualEntity": "Agenti (Clienti spedizione)"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia": {
-			          "Target": {
-			            "Entity": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia"
-			          }
-			        },
-			        "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia.agente_cliente_sped___L3": {
-			          "Target": {
-			            "Entity": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia.agente_cliente_sped___L3"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia"
-			            },
-			            "Object": {
-			              "Role": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia.agente_cliente_sped___L3"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "agenti_clienti_sped___gerarchias_have_agente_cliente_sped___L3"
-			        }
-			      ]
-			    },
-			    "agenti_clienti_spedizione_agenti_clienti_sped___gerarchia_has_agente_cliente_sped___L4": {
-			      "Binding": {
-			        "ConceptualEntity": "Agenti (Clienti spedizione)"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia": {
-			          "Target": {
-			            "Entity": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia"
-			          }
-			        },
-			        "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia.agente_cliente_sped___L4": {
-			          "Target": {
-			            "Entity": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia.agente_cliente_sped___L4"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia"
-			            },
-			            "Object": {
-			              "Role": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia.agente_cliente_sped___L4"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "agenti_clienti_sped___gerarchias_have_agente_cliente_sped___L4"
-			        }
-			      ]
-			    },
 			    "agenti_clienti_spedizione_agenti_clienti_sped___gerarchia_has_agente_cliente_sped___L5": {
 			      "Binding": {
 			        "ConceptualEntity": "Agenti (Clienti spedizione)"
@@ -73576,6 +73543,118 @@ cultureInfo it-IT
 			        }
 			      ]
 			    },
+			    "translated_descrizione_has_translated_descrizione": {
+			      "Binding": {
+			        "ConceptualEntity": "Translated Descrizione"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "translated_descrizione": {
+			          "Target": {
+			            "Entity": "translated_descrizione"
+			          }
+			        },
+			        "translated_descrizione.translated_descrizione": {
+			          "Target": {
+			            "Entity": "translated_descrizione.translated_descrizione"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "translated_descrizione"
+			            },
+			            "Object": {
+			              "Role": "translated_descrizione.translated_descrizione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_descriziones_have_translated_descriziones"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "translated_descrizione"
+			            },
+			            "Name": {
+			              "Role": "translated_descrizione.translated_descrizione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "translated_descriziones_are_names_IDs_of_translated_descriziones"
+			        }
+			      ]
+			    },
+			    "budget_has_target": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget": {
+			          "Target": {
+			            "Entity": "budget"
+			          }
+			        },
+			        "budget.target": {
+			          "Target": {
+			            "Entity": "budget.target"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget"
+			            },
+			            "Object": {
+			              "Role": "budget.target"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budgets_have_target"
+			        }
+			      ]
+			    },
+			    "budget_has_misura": {
+			      "Binding": {
+			        "ConceptualEntity": "Budget"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "budget": {
+			          "Target": {
+			            "Entity": "budget"
+			          }
+			        },
+			        "budget.misura": {
+			          "Target": {
+			            "Entity": "budget.misura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "budget"
+			            },
+			            "Object": {
+			              "Role": "budget.misura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budgets_have_misura"
+			        }
+			      ]
+			    },
 			    "translated_localized_label_has_dettaglio_pipeline_label": {
 			      "Binding": {
 			        "ConceptualEntity": "Translated Localized Labels"
@@ -73609,20 +73688,20 @@ cultureInfo it-IT
 			        }
 			      ]
 			    },
-			    "translated_localized_label_has_target_label": {
+			    "articoli_in_lingua_has_codice_lingua": {
 			      "Binding": {
-			        "ConceptualEntity": "Translated Localized Labels"
+			        "ConceptualEntity": "Articoli in lingua"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "translated_localized_label": {
+			        "articoli_in_lingua": {
 			          "Target": {
-			            "Entity": "translated_localized_label"
+			            "Entity": "articoli_in_lingua"
 			          }
 			        },
-			        "translated_localized_label.target_label": {
+			        "articoli_in_lingua.codice_lingua": {
 			          "Target": {
-			            "Entity": "translated_localized_label.target_label"
+			            "Entity": "articoli_in_lingua.codice_lingua"
 			          }
 			        }
 			      },
@@ -73630,15 +73709,15 @@ cultureInfo it-IT
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "translated_localized_label"
+			              "Role": "articoli_in_lingua"
 			            },
 			            "Object": {
-			              "Role": "translated_localized_label.target_label"
+			              "Role": "articoli_in_lingua.codice_lingua"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "translated_localized_labels_have_target_label"
+			          "ID": "articoli_in_lingua_have_codice_linguae"
 			        }
 			      ]
 			    },
@@ -136844,6 +136923,72 @@ cultureInfo it-IT
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "agenti_clienti_spedizione_are_sped_on_agente_cliente_sped___data_inizio_validità"
+			        }
+			      ]
+			    },
+			    "agenti_clienti_spedizione_agenti_clienti_sped___gerarchia_has_agente_cliente_sped___L4": {
+			      "Binding": {
+			        "ConceptualEntity": "Agenti (Clienti spedizione)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia": {
+			          "Target": {
+			            "Entity": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia"
+			          }
+			        },
+			        "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia.agente_cliente_sped___L4": {
+			          "Target": {
+			            "Entity": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia.agente_cliente_sped___L4"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia"
+			            },
+			            "Object": {
+			              "Role": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia.agente_cliente_sped___L4"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "agenti_clienti_sped___gerarchias_have_agente_cliente_sped___L4"
+			        }
+			      ]
+			    },
+			    "agenti_clienti_spedizione_agenti_clienti_sped___gerarchia_has_agente_cliente_sped___L3": {
+			      "Binding": {
+			        "ConceptualEntity": "Agenti (Clienti spedizione)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia": {
+			          "Target": {
+			            "Entity": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia"
+			          }
+			        },
+			        "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia.agente_cliente_sped___L3": {
+			          "Target": {
+			            "Entity": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia.agente_cliente_sped___L3"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia"
+			            },
+			            "Object": {
+			              "Role": "agenti_clienti_spedizione.agenti_clienti_sped___gerarchia.agente_cliente_sped___L3"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "agenti_clienti_sped___gerarchias_have_agente_cliente_sped___L3"
 			        }
 			      ]
 			    },

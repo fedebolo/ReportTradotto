@@ -204,3 +204,9 @@ relationship d197dae1-771f-4549-7970-6db46b197e99
 	fromColumn: Target.K_CodAgente
 	toColumn: _Bridge_ClientiIntestatari_Agenti.K_CodAgente
 
+relationship 9daefc0a-5b8d-5ae9-fd63-162dc2f831d1
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Lingua.LanguageId
+	toColumn: 'Translated Descrizione'.LanguageId
+

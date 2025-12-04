@@ -1,206 +1,206 @@
 table 'Translated Localized Labels'
-	lineageTag: d12c185c-ebbb-4087-9db3-2d72860c3a4c
+	lineageTag: 50a5babf-56fb-45c7-ac14-f63e6c11b53b
 
 	measure 'My Report Title Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "My Report Title",
 			   "My Report Title"
 			)
-		lineageTag: 3f0dc965-a442-461d-ba93-8f48b81f62c4
+		lineageTag: 33c53d87-cfd5-4e1c-99f5-c20246f0d52c
 
 	measure 'My Button Caption Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "My Button Caption",
 			   "My Button Caption"
 			)
-		lineageTag: 8424af90-8036-4380-9db8-b9bfe50aaf33
+		lineageTag: 03a93dc5-98af-47dd-a1e0-02c896aef268
 
 	measure 'My Visual Title Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "My Visual Title",
 			   "My Visual Title"
 			)
-		lineageTag: f2c28411-f967-4a89-95cb-4dd23e5de725
+		lineageTag: 3713db3d-0e5c-43cd-acb0-6ecf1287cb0a
 
 	measure 'Selezioni Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Selections",
 			   "Selezioni"
 			)
-		lineageTag: b5db3b32-bc09-486a-94f1-a6d46fc28825
+		lineageTag: 343c9e97-fdad-4e32-9b76-9792f4e6108e
 
 	measure 'Ditta Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Firm",
 			   "Ditta"
 			)
-		lineageTag: 546112da-5842-4ef8-9a4b-5f663d155ee2
+		lineageTag: d8179ded-992f-4319-b4f5-ea1a935e1bff
 
 	measure 'Anno Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Year",
 			   "Anno"
 			)
-		lineageTag: b8b683cd-fe5b-4166-acb6-4a55d22bf2ef
+		lineageTag: 29e1dc81-93d3-4cc4-b8ee-c4b8ea3ec868
 
 	measure 'Mese Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Month",
 			   "Mese"
 			)
-		lineageTag: 044b503a-e419-467e-93c5-54867b2d4d0e
+		lineageTag: 4ea1a63e-11ed-4f2d-b76e-3ec4e6ad53ef
 
 	measure 'Data documento Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Document Date",
 			   "Data documento"
 			)
-		lineageTag: eb628ce4-00f3-4070-98c9-b6d66aa4f947
+		lineageTag: 8c85e5bc-a11a-4d02-a516-2ab9af171073
 
 	measure 'Data registrazione Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Registration Date",
 			   "Data registrazione"
 			)
-		lineageTag: 5894ef9d-f43c-4af6-9c84-ae34fe703f9a
+		lineageTag: 2d3c3a14-4c61-4322-8875-66b1a7e10e3f
 
 	measure 'Capo Area Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Area Manager",
 			   "Capo Area"
 			)
-		lineageTag: 2cf0f09f-165b-40a4-8e32-9702d6b20ae5
+		lineageTag: ba4e0221-e3a8-49ce-9e46-684b90d2e892
 
 	measure 'Agente Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Agent",
 			   "Agente"
 			)
-		lineageTag: 30c8883d-2cb9-4f9c-b441-7dfcd925470a
+		lineageTag: 5aaf0a9e-aac0-4beb-a890-1ccf8372ab4e
 
 	measure 'Zona Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Zone",
 			   "Zona"
 			)
-		lineageTag: 95edebf6-50cd-4f05-8f4a-55e78dc799a4
+		lineageTag: 50b5318d-c452-4e0c-8a9a-b9115dca6050
 
 	measure 'Cliente Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Customer",
 			   "Cliente"
 			)
-		lineageTag: 48578ee6-576e-4bc7-bfc7-35ad207a72e3
+		lineageTag: d251db92-a85a-4c80-a13e-dfaa18d4ed5d
 
 	measure 'Effettivo Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Effective",
 			   "Effettivo"
 			)
-		lineageTag: b1eac07f-55d6-4746-905b-1a63d258e94b
+		lineageTag: 6d955317-eccb-4d4b-a166-4bd911dfce82
 
 	measure 'Articolo - Linea di vendita Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Article - Sales Line",
 			   "Articolo - Linea di vendita"
 			)
-		lineageTag: 4e0c1652-1a62-478f-bf8e-5a3d1ede295e
+		lineageTag: 1f03f996-e3c0-4a10-a118-c4de26814e0a
 
 	measure 'Articolo - Macrofamiglia, Famiglia Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Article - Macrofamily, Family",
 			   "Articolo - Macrofamiglia, Famiglia"
 			)
-		lineageTag: b066cdea-9910-4d57-8de7-65c9511dd8dd
+		lineageTag: 3d71dd15-b863-42de-9281-19282308e43c
 
 	measure 'Articolo - Descrizione articolo Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Article - Article Description",
 			   "Articolo - Descrizione articolo"
 			)
-		lineageTag: 10efda53-d6a0-4227-83f8-57b8291d9569
+		lineageTag: 92665bc6-db02-4054-b1f9-860dfc52ed1a
 
 	measure 'Articolo - Descrizione variante Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Article - Variant Description",
 			   "Articolo - Descrizione variante"
 			)
-		lineageTag: 648d7451-b9a5-4c85-8f53-e8ed09453b12
+		lineageTag: 4cd1349f-077e-4eed-ba01-e2aaef5d8fa1
 
 	measure 'Sintesi Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Synthesis",
 			   "Sintesi"
 			)
-		lineageTag: 54cb4c90-ad81-4b3b-8dd5-e00f5afc7e1d
+		lineageTag: ffa32105-2ca4-4af4-ae7b-9ad19e06730e
 
 	measure 'Oridnato Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Ordered",
 			   "Oridnato"
 			)
-		lineageTag: 94f84d9f-1e79-49de-952e-aa48b28e37a9
+		lineageTag: 3491e614-710c-44fd-b29e-b6875a7d6a13
 
 	measure 'Portafoglio Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Wallet",
 			   "Portafoglio"
 			)
-		lineageTag: c2d98694-4d3e-4e51-8907-363f7f9e9a22
+		lineageTag: 178140de-c47c-49b9-80c2-954fbb969a42
 
 	measure 'Fatturato Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Turnover",
 			   "Fatturato"
 			)
-		lineageTag: 6be6c641-6f70-44be-901b-9584008f2bc9
+		lineageTag: d87ece31-6e9d-4483-9eed-99cbebd5e8fd
 
 	measure 'Data primo target Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "First Target Date",
 			   "Data primo target"
 			)
-		lineageTag: 7997f8de-7a7c-4827-9428-343bcc1183c4
+		lineageTag: 3aa58814-0c94-4796-ba13-9d308c300b36
 
 	measure 'Data ultimo target Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Last Target Date",
 			   "Data ultimo target"
 			)
-		lineageTag: 15445466-3de3-4f30-a09b-b8cd5e4ad8f5
+		lineageTag: 81d001c3-2086-47df-83cb-cf2327f0b0b8
 
 	measure 'Andamento ordinato e target Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Orderly And Target Trend",
 			   "Andamento ordinato e target"
 			)
-		lineageTag: fe7aec7e-70ac-42e2-951c-e56e98e3bfdb
+		lineageTag: eb06cba6-1cf9-4b52-b003-30e387581c7c
 
 	measure 'Avanzamento sul target Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Progress On The Target",
 			   "Avanzamento sul target"
 			)
-		lineageTag: 0710bada-ea59-460a-ac8a-d1b0cb5b060f
-
-	measure 'Target Label' =
-			SWITCH(USERCULTURE(),
-			   "en-US", "Target",
-			   "Target"
-			)
-		lineageTag: 4a99e1fb-fa87-4501-ae58-6d915292f2b4
+		lineageTag: 8528979c-c314-4f2c-9325-6a2b9ba22f05
 
 	measure 'Dettaglio Pipeline Label' =
 			SWITCH(USERCULTURE(),
 			   "en-US", "Pipeline Detail",
 			   "Dettaglio Pipeline"
 			)
-		lineageTag: 84c815d1-a81a-4eec-9b61-f830233d7b9f
+		lineageTag: 7850c7c5-777e-426c-97aa-edcac923c698
+
+	measure 'Seleziona la lingua: Label' =
+			SWITCH(USERCULTURE(),
+			   "en-US", "Select Language:",
+			   "Seleziona la lingua:"
+			)
+		lineageTag: 6e0b2fec-8b71-4035-9eb0-eb870ff4da9f
 
 	column unused
 		isHidden
 		displayFolder: unused
-		lineageTag: a21f9b02-818b-4626-acac-8ca3834aa31c
+		lineageTag: 9ee3d316-00af-486d-af31-9c8c2175cbc8
 		isNameInferred
 		sourceColumn: [unused]
 

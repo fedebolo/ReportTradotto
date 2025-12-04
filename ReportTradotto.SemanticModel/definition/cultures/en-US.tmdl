@@ -5174,6 +5174,8 @@ cultureInfo en-US
 					caption: Variant In English
 				column 'Articolo - Codice con Variante'
 					caption: Article - Code With Variant
+				column 'Codice Lingua'
+					caption: Language Code
 			table 'Localized Labels'
 				caption: Localized Labels
 				measure 'My Report Title'
@@ -5230,6 +5232,8 @@ cultureInfo en-US
 					caption: Progress On The Target
 				measure 'Dettaglio Pipeline'
 					caption: Pipeline Detail
+				measure 'Seleziona la lingua:'
+					caption: Select Language:
 
 	linguisticMetadata = <LinguisticMetadata><LinguisticSchema Language="en-US" DynamicImprovement="HighConfidence" xmlns="http://schemas.microsoft.com/sqlserver/2016/01/linguisticschema" /></LinguisticMetadata>
 

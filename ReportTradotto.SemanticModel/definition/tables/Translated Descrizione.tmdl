@@ -1,0 +1,57 @@
+table 'Translated Descrizione'
+	lineageTag: 18a50af6-fe99-4868-a9ea-f1e136524e07
+
+	column 'Translated Descrizione'
+		lineageTag: 9bc2f4cd-5942-47c8-96b4-ce88c441a738
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Ordine di Translated Descrizione'
+
+		relatedColumnDetails
+			groupByColumn: 'Campi di Translated Descrizione'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Campi di Translated Descrizione'
+		isHidden
+		lineageTag: 98a37a1f-4bce-43b3-8779-443adf4c92d5
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Ordine di Translated Descrizione'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ordine di Translated Descrizione'
+		isHidden
+		formatString: 0
+		lineageTag: 5bef7622-2e46-4914-9934-a6c35f72ed3c
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column LanguageId
+		isHidden
+		lineageTag: 79bcf007-72c2-408a-8c75-cf96e97a8aae
+		summarizeBy: none
+		sourceColumn: [Value4]
+		sortByColumn: 'Ordine di Translated Descrizione'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Translated Descrizione' = calculated
+		mode: import
+		source =
+				{
+				    ("Variante in inglese", NAMEOF('Articoli in lingua'[Variante in inglese]), 0, "en" ),
+				    ("Articolo - Descrizione", NAMEOF('Articoli / Servizi'[Articolo - Descrizione]), 1, "it")
+				}
+
+	annotation PBI_Id = 7dc98a51863c4892b1de90ccd47cbd98
+

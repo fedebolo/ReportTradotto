@@ -1,0 +1,59 @@
+table Lingua
+	lineageTag: 95280419-a85b-4d1b-bc7c-d3e551b8ecaf
+
+	column Lingua
+		dataType: string
+		lineageTag: d40f6505-3972-45bd-bb52-a6721707a5df
+		summarizeBy: none
+		sourceColumn: Lingua
+
+		annotation SummarizationSetBy = Automatic
+
+	column LanguageId
+		dataType: string
+		lineageTag: 3ef2ed50-d70a-4ffe-995f-628a639d76cf
+		summarizeBy: none
+		sourceColumn: LanguageId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultCulture
+		dataType: string
+		lineageTag: b30366ad-069c-45de-9b19-f0eaddd7a0b6
+		summarizeBy: none
+		sourceColumn: DefaultCulture
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		lineageTag: fda638b2-7ae8-47e0-9272-9d25e31f4aec
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Lingua = m
+		mode: import
+		source =
+				let
+				  LanguagesTable = #table(type table [
+				    Language = text,
+				    LanguageId = text,
+				    DefaultCulture = text,
+				    SortOrder = number
+				  ], {
+				    {"Inglese", "en", "en-US", 0},
+				    {"Italiano", "it", "it-IT", 1}
+				  }),
+				  SortedRows = Table.Sort(LanguagesTable,{{"SortOrder", Order.Ascending}}),
+				  QueryOutput = Table.TransformColumnTypes(SortedRows,{{"SortOrder", Int64.Type}}),
+				    #"Rinominate colonne" = Table.RenameColumns(QueryOutput,{{"Language", "Lingua"}})
+				in
+				  #"Rinominate colonne"
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Table
+

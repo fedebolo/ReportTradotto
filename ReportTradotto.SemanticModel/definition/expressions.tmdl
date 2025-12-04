@@ -1,4 +1,4 @@
-expression 'Connessione - Server eSOLVER' = "WTCNB0021\SISTEMI1" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+expression 'Connessione - Server eSOLVER' = "WTCNB1023\SISTEMI" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: c337a9af-c4da-4d79-beb2-9ca42e2a99c0
 	queryGroup: 'Parametri\Parametri utente'
 

@@ -35,9 +35,28 @@ table 'Tipi riga'
 		queryGroup: Dimensioni
 		source =
 				let
-				    Origine = Sql.Database("WTCNB0021\SISTEMI1", "ESOLVER42", [Query="#(lf)        SELECT#(lf)             K_TipoRiga AS [K_TipoRiga]#(lf)            ,CodTipoRiga AS [Tipo riga - Codice]#(lf)            ,DesTipoRiga AS [Tipo riga - Descrizione]#(lf)#(lf)        FROM #(lf)            [dbo].[ESBI_TIPRIGADOC] WITH (NOLOCK)#(lf)        ;#(lf)    ", CreateNavigationProperties=false])
+				    Origine =
+				        Sql.Database(
+				            "WTCNB1023\SISTEMI",
+				            "ESOLVER42",
+				            [
+				                Query =
+				"
+				SELECT
+				      K_TipoRiga          AS [K_TipoRiga]
+				    , CodTipoRiga         AS [Tipo riga - Codice]
+				    , DesTipoRiga         AS [Tipo riga - Descrizione]
+				FROM
+				    dbo.ESBI_TIPRIGADOC WITH (NOLOCK)
+				;
+				",
+				                CreateNavigationProperties = false
+				            ]
+				        )
 				in
 				    Origine
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
 

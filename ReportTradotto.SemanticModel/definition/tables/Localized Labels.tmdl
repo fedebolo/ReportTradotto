@@ -110,6 +110,10 @@ table 'Localized Labels'
 		isHidden
 		lineageTag: 1d81d23a-9b23-491f-8c56-262d82688023
 
+	measure 'Seleziona la lingua:' = 0
+		isHidden
+		lineageTag: 4c596786-70a1-40c8-8626-7d00374514f0
+
 	column unused
 		isHidden
 		displayFolder: unused

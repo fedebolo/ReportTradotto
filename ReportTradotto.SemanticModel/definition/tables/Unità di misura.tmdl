@@ -63,12 +63,32 @@ table 'Unità di misura'
 	partition 'Unità di misura-943de46e-aa5f-44c4-94ea-78ccf42af794' = m
 		mode: import
 		queryGroup: Dimensioni
-		source = ```
+		source =
 				let
-				    Origine = Sql.Database("WTCNB0021\SISTEMI1", "ESOLVER42", [Query="#(lf)        SELECT#(lf)            K_CodUnitaMisura AS [K_CodUnitaMisura]#(lf)            ,UnitaDiMisuraBase AS [Unità di misura - UdM base]#(lf)            ,DesUnitaMisuraBase AS [Unità di misura - Descrizione UdM base]#(lf)            ,CodUnitaMisuraBase AS [Unità di misura - Codice UdM base]#(lf)            ,UnitaDiMisura AS [Unità di misura]#(lf)            ,DesUnitaMisura AS [Unità di misura - Descrizione]#(lf)            ,CodUnitaMisura AS [Unità di misura - Codice]#(lf)#(lf)        FROM #(lf)            [dbo].[ESBI_UDM] WITH (NOLOCK)#(lf)        ;#(lf)    ", CreateNavigationProperties=false])
-				in 
+				    Origine =
+				        Sql.Database(
+				            "WTCNB1023\SISTEMI",
+				            "ESOLVER42",
+				            [
+				                Query =
+				"
+				SELECT
+				      K_CodUnitaMisura                   AS [K_CodUnitaMisura]
+				    , UnitaDiMisuraBase                  AS [Unità di misura - UdM base]
+				    , DesUnitaMisuraBase                 AS [Unità di misura - Descrizione UdM base]
+				    , CodUnitaMisuraBase                 AS [Unità di misura - Codice UdM base]
+				    , UnitaDiMisura                      AS [Unità di misura]
+				    , DesUnitaMisura                     AS [Unità di misura - Descrizione]
+				    , CodUnitaMisura                     AS [Unità di misura - Codice]
+				FROM
+				    dbo.ESBI_UDM WITH (NOLOCK)
+				;
+				",
+				                CreateNavigationProperties = false
+				            ]
+				        )
+				in
 				    Origine
-				```
 
 	annotation PBI_Id = 9c7b5cc7-6f5b-407e-a8d0-2c2407a34ba1
 
@@ -77,4 +97,6 @@ table 'Unità di misura'
 	annotation PBI_QueryRelationships = {"columnCount":7,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Unità di misura/Origine.{K_CodUnitaMisura,0}","Section1/Unità di misura/Origine.{Unità di misura - UdM base,1}","Section1/Unità di misura/Origine.{Unità di misura - Descrizione UdM base,2}","Section1/Unità di misura/Origine.{Unità di misura - Codice UdM base,3}","Section1/Unità di misura/Origine.{Unità di misura,4}","Section1/Unità di misura/Origine.{Unità di misura - Descrizione,5}","Section1/Unità di misura/Origine.{Unità di misura - Codice,6}"],"ColumnCount":7,"KeyColumnNames":[],"ColumnIdentities":["Section1/Unità di misura/Origine.{K_CodUnitaMisura,0}","Section1/Unità di misura/Origine.{Unità di misura - UdM base,1}","Section1/Unità di misura/Origine.{Unità di misura - Descrizione UdM base,2}","Section1/Unità di misura/Origine.{Unità di misura - Codice UdM base,3}","Section1/Unità di misura/Origine.{Unità di misura,4}","Section1/Unità di misura/Origine.{Unità di misura - Descrizione,5}","Section1/Unità di misura/Origine.{Unità di misura - Codice,6}"],"RelationshipInfo":[]}
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
 

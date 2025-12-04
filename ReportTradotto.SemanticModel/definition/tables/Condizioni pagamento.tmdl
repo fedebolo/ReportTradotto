@@ -65,12 +65,34 @@ table 'Condizioni pagamento'
 	partition 'Condizioni pagamento-03bf1f55-0a05-4308-bd81-845f422ff3c8' = m
 		mode: import
 		queryGroup: Dimensioni
-		source = ```
+		source =
 				let
-				    Origine = Sql.Database("WTCNB0021\SISTEMI1", "ESOLVER42", [Query="#(lf)        SELECT#(lf)             K_CondPag AS [K_CondPag]#(lf)            ,CodCondizPagamento AS [Condizione pagamento - Codice]#(lf)#(tab)        ,DesCondizPagamento AS [Condizione pagamento - Descrizione]#(lf)            ,CondizPagamento AS [Condizione pagamento]#(lf)            ,DataInizioValidita AS [Condizione pagamento - Data inizio validità]#(lf)#(tab)        ,DataFineValidita AS [Condizione pagamento - Data fine validità]#(lf)            ,ValidaInDataEstraz AS [Condizione pagamento - Valida in data estrazione]#(lf)#(lf)        FROM #(lf)            [dbo].[ESBI_CONDPAG] WITH (NOLOCK)#(lf)        ;#(lf)    ", CreateNavigationProperties=false])
-				in 
+				    Origine =
+				        Sql.Database(
+				            "WTCNB1023\SISTEMI",
+				            "ESOLVER42",
+				            [
+				                Query =
+				"
+				SELECT
+				      K_CondPag                  AS [K_CondPag]
+				    , CodCondizPagamento         AS [Condizione pagamento - Codice]
+				    , DesCondizPagamento         AS [Condizione pagamento - Descrizione]
+				    , CondizPagamento            AS [Condizione pagamento]
+				    , DataInizioValidita         AS [Condizione pagamento - Data inizio validità]
+				    , DataFineValidita           AS [Condizione pagamento - Data fine validità]
+				    , ValidaInDataEstraz         AS [Condizione pagamento - Valida in data estrazione]
+				FROM
+				    dbo.ESBI_CONDPAG WITH (NOLOCK)
+				;
+				",
+				                CreateNavigationProperties = false
+				            ]
+				        )
+				in
 				    Origine
-				```
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
 

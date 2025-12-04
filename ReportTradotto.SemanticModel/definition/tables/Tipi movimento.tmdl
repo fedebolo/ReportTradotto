@@ -112,7 +112,53 @@ table 'Tipi movimento'
 		queryGroup: Dimensioni
 		source =
 				let
-				    Origine = Sql.Database("WTCNB0021\SISTEMI1", "ESOLVER42", [Query="#(lf)#(lf)        SELECT#(lf)            CONVERT(VARCHAR(5),K_CodTipoMov) + '_0' AS [K_CodTipoMovimento]#(lf)            ,DesTipoMov AS [Tipo movimento - Descrizione]#(lf)            ,TipoMov AS [Tipo movimento]         #(lf)            ,MacroAmbito as [Tipo movimento - Macro ambito]#(lf)            ,Ambito AS [Tipo movimento - Ambito]#(lf)            ,'No' as [Tipo movimento - Fattura accompagnatoria (Sì/No)]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Spedito' THEN 'Sì' else 'No' END as [Flag rilevanza spedito]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Fatturato' THEN 'Sì' else 'No' END as [Flag rilevanza fatturato]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Preventivo' THEN 'Sì' else 'No' END as [Flag rilevanza preventivo]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Budget' THEN 'Sì' else 'No' END as [Flag rilevanza budget]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Ordinato' THEN 'Sì' else 'No' END as [Flag rilevanza ordinato]#(lf)#(lf)        FROM #(lf)            ESBI_TIPMOVSTAT WITH (NOLOCK)#(lf)        WHERE#(lf)            MacroAmbito = 'Vendite'#(lf)#(lf)        UNION#(lf)#(lf)        SELECT#(lf)            CONVERT(VARCHAR(5),K_CodTipoMov) + '_1' AS [K_CodTipoMovimento]#(lf)            ,DesTipoMov AS [Tipo movimento - Descrizione]#(lf)            ,TipoMov AS [Tipo movimento]         #(lf)            ,MacroAmbito as [Tipo movimento - Macro ambito]#(lf)            ,Ambito AS [Tipo movimento - Ambito]#(lf)            ,'Sì' as [Tipo movimento - Fattura accompagnatoria (Sì/No)]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Fatturato' or Ambito='Spedito' THEN 'Sì' else 'No' END as [Flag rilevanza spedito]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Fatturato' THEN 'Sì' else 'No' END as [Flag rilevanza fatturato]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Preventivo' THEN 'Sì' else 'No' END as [Flag rilevanza preventivo]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Budget' THEN 'Sì' else 'No' END as [Flag rilevanza budget]#(lf)#(tab)#(tab)#(tab),CASE WHEN Ambito='Ordinato' THEN 'Sì' else 'No' END as [Flag rilevanza ordinato]#(lf)            #(lf)        FROM #(lf)            ESBI_TIPMOVSTAT WITH (NOLOCK)#(lf)#(lf)        WHERE#(lf)            MacroAmbito = 'Vendite'#(lf)#(lf)        #(lf)        ;#(lf)    ", CreateNavigationProperties=false])
+				    Origine =
+				        Sql.Database(
+				            "WTCNB1023\SISTEMI",
+				            "ESOLVER42",
+				            [
+				                Query =
+				"
+				SELECT
+				      CONVERT(VARCHAR(5), K_CodTipoMov) + '_0'       AS [K_CodTipoMovimento]
+				    , DesTipoMov                                     AS [Tipo movimento - Descrizione]
+				    , TipoMov                                        AS [Tipo movimento]
+				    , MacroAmbito                                    AS [Tipo movimento - Macro ambito]
+				    , Ambito                                         AS [Tipo movimento - Ambito]
+				    , 'No'                                           AS [Tipo movimento - Fattura accompagnatoria (Sì/No)]
+				    , CASE WHEN Ambito = 'Spedito'    THEN 'Sì' ELSE 'No' END AS [Flag rilevanza spedito]
+				    , CASE WHEN Ambito = 'Fatturato'  THEN 'Sì' ELSE 'No' END AS [Flag rilevanza fatturato]
+				    , CASE WHEN Ambito = 'Preventivo' THEN 'Sì' ELSE 'No' END AS [Flag rilevanza preventivo]
+				    , CASE WHEN Ambito = 'Budget'     THEN 'Sì' ELSE 'No' END AS [Flag rilevanza budget]
+				    , CASE WHEN Ambito = 'Ordinato'   THEN 'Sì' ELSE 'No' END AS [Flag rilevanza ordinato]
+				FROM
+				    ESBI_TIPMOVSTAT WITH (NOLOCK)
+				WHERE
+				    MacroAmbito = 'Vendite'
+				
+				UNION
+				
+				SELECT
+				      CONVERT(VARCHAR(5), K_CodTipoMov) + '_1'       AS [K_CodTipoMovimento]
+				    , DesTipoMov                                     AS [Tipo movimento - Descrizione]
+				    , TipoMov                                        AS [Tipo movimento]
+				    , MacroAmbito                                    AS [Tipo movimento - Macro ambito]
+				    , Ambito                                         AS [Tipo movimento - Ambito]
+				    , 'Sì'                                           AS [Tipo movimento - Fattura accompagnatoria (Sì/No)]
+				    , CASE WHEN Ambito IN ('Fatturato','Spedito') THEN 'Sì' ELSE 'No' END AS [Flag rilevanza spedito]
+				    , CASE WHEN Ambito = 'Fatturato'  THEN 'Sì' ELSE 'No' END AS [Flag rilevanza fatturato]
+				    , CASE WHEN Ambito = 'Preventivo' THEN 'Sì' ELSE 'No' END AS [Flag rilevanza preventivo]
+				    , CASE WHEN Ambito = 'Budget'     THEN 'Sì' ELSE 'No' END AS [Flag rilevanza budget]
+				    , CASE WHEN Ambito = 'Ordinato'   THEN 'Sì' ELSE 'No' END AS [Flag rilevanza ordinato]
+				FROM
+				    ESBI_TIPMOVSTAT WITH (NOLOCK)
+				WHERE
+				    MacroAmbito = 'Vendite'
+				;
+				",
+				                CreateNavigationProperties = false
+				            ]
+				        )
 				in
 				    Origine
 
@@ -123,4 +169,6 @@ table 'Tipi movimento'
 	annotation PBI_QueryRelationships = {"columnCount":3,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Tipi movimento/Origine.{K_CodTipoMovimento,0}","Section1/Tipi movimento/Origine.{Tipo movimento - Descrizione,1}","Section1/Tipi movimento/Origine.{Tipo movimento,2}"],"ColumnCount":3,"KeyColumnNames":[],"ColumnIdentities":["Section1/Tipi movimento/Origine.{K_CodTipoMovimento,0}","Section1/Tipi movimento/Origine.{Tipo movimento - Descrizione,1}","Section1/Tipi movimento/Origine.{Tipo movimento,2}"],"RelationshipInfo":[]}
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigazione
 

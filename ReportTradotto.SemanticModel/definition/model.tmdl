@@ -34,7 +34,7 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation TabularEditor_SerializeOptions = {"IgnoreInferredObjects":false,"IgnoreInferredProperties":false,"IgnoreTimestamps":false,"SplitMultilineStrings":true,"PrefixFilenames":false,"LocalTranslations":false,"LocalPerspectives":false,"LocalRelationships":false,"Levels":[]}
 
-annotation PBI_QueryOrder = ["Vendite","Articoli / Servizi","Clienti intestatari","Clienti e luoghi di spedizione","Agenti (Clienti)","Agenti (Clienti spedizione)","_Bridge_ClientiIntestatari_Agenti","_Bridge_ClientiSpedizione_Agenti","Classi ABC","Divisioni","Budget (versioni)","Magazzini","Promozioni","Vendite per agente","Agenti","Agenti - Account (RLS)","Ditte","Categorie clienti","Classi affidamento","Famiglie","Classificazioni statistiche","Classi merceologiche","Centri imputazione","Marche","Zone","Macrofamiglie","Tipologie commerciali","Commesse","Ordinato","Ordinato residuo","Spedito","Spedito residuo","Fatturato","Budget","Generale","Consuntivo vs Budget","Connessione - Server eSOLVER","Connessione - Database eSOLVER","Filtro - Metodo filtro ditte","Filtro - Elenco ditte","Metodo filtro Data DA","Filtro - Numero mesi precedenti","Filtro - Data DA","Metodo filtro Data A","Filtro - Numero mesi successivi","Filtro - Data A","Filtro - Mese inizio calendario mobile","Filtro - Considera righe ordine annullate (Sì/No)","Importo - Aggiungi spese di piede","Importo - Sottrai sconti incondizionati","Importo - Sottrai sconti di pagamento","Importo - Sottrai provvigioni","Dettagli aggiuntivi: informazioni dei documenti","Dettagli aggiuntivi: campi utente di riga documento","Varie","Diagnostica","Gruppi","Agenti - Agenti visibili (RLS)","Server","Database","DataDa","DataA","VersioneModello","MeseInizioMobile","Agenti - Visibilità vendite di altri agenti","Agenti - Visibilità clienti di altri agenti","Agenti - Visibilità clienti di spedizione di altri agenti","VisibilitaAgenti","Parametri","Unità di misura","Classi contabili","Tipi movimento","Tipologie documenti","Stati gestionali","Conti","Tipi riga","Listini","Stati ordine","Situazione saldo movimento","Condizioni pagamento","Filtro - Ruoli Agente","Filtro - Tipo articolo","RuoliAgenti","TipiArticolo","Categorie sconti","Filtro - Elenco classi statistiche","ClassiStatistiche","Filtro - Tipo documento","TipiDocumento","ArticoliBudget","Target","Articoli in lingua","Ordini - Data ordine"]
+annotation PBI_QueryOrder = ["Vendite","Articoli / Servizi","Clienti intestatari","Clienti e luoghi di spedizione","Agenti (Clienti)","Agenti (Clienti spedizione)","_Bridge_ClientiIntestatari_Agenti","_Bridge_ClientiSpedizione_Agenti","Classi ABC","Divisioni","Budget (versioni)","Magazzini","Promozioni","Vendite per agente","Agenti","Agenti - Account (RLS)","Ditte","Categorie clienti","Classi affidamento","Famiglie","Classificazioni statistiche","Classi merceologiche","Centri imputazione","Marche","Zone","Macrofamiglie","Tipologie commerciali","Commesse","Ordinato","Ordinato residuo","Spedito","Spedito residuo","Fatturato","Budget","Generale","Consuntivo vs Budget","Connessione - Server eSOLVER","Connessione - Database eSOLVER","Filtro - Metodo filtro ditte","Filtro - Elenco ditte","Metodo filtro Data DA","Filtro - Numero mesi precedenti","Filtro - Data DA","Metodo filtro Data A","Filtro - Numero mesi successivi","Filtro - Data A","Filtro - Mese inizio calendario mobile","Filtro - Considera righe ordine annullate (Sì/No)","Importo - Aggiungi spese di piede","Importo - Sottrai sconti incondizionati","Importo - Sottrai sconti di pagamento","Importo - Sottrai provvigioni","Dettagli aggiuntivi: informazioni dei documenti","Dettagli aggiuntivi: campi utente di riga documento","Varie","Diagnostica","Gruppi","Agenti - Agenti visibili (RLS)","Server","Database","DataDa","DataA","VersioneModello","MeseInizioMobile","Agenti - Visibilità vendite di altri agenti","Agenti - Visibilità clienti di altri agenti","Agenti - Visibilità clienti di spedizione di altri agenti","VisibilitaAgenti","Parametri","Unità di misura","Classi contabili","Tipi movimento","Tipologie documenti","Stati gestionali","Conti","Tipi riga","Listini","Stati ordine","Situazione saldo movimento","Condizioni pagamento","Filtro - Ruoli Agente","Filtro - Tipo articolo","RuoliAgenti","TipiArticolo","Categorie sconti","Filtro - Elenco classi statistiche","ClassiStatistiche","Filtro - Tipo documento","TipiDocumento","ArticoliBudget","Target","Articoli in lingua","Ordini - Data ordine","Lingua"]
 
 annotation __TEdtr = 1
 
@@ -42,7 +42,7 @@ annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
 
 annotation PBIDesktopVersion = 2.142.928.0 (25.04)+de52df9f0bb74ad93a80d89c52d63fe6d07e0e1b
 
-annotation TranslationsBuilder = Version:2.2-Updated:2025-11-28
+annotation TranslationsBuilder = Version:2.2-Updated:2025-12-04
 
 ref table Vendite
 ref table 'Articoli / Servizi'
@@ -103,7 +103,9 @@ ref table ArticoliBudget
 ref table Target
 ref table 'Articoli in lingua'
 ref table 'Localized Labels'
+ref table 'Translated Descrizione'
 ref table 'Translated Localized Labels'
+ref table Lingua
 
 ref role Agenti
 ref role Controller

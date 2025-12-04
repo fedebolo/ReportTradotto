@@ -41,13 +41,96 @@ table 'Articoli in lingua'
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Codice Lingua'
+		dataType: int64
+		formatString: 0
+		lineageTag: 12ad10b7-df5a-4346-a877-9ec8515d94e7
+		summarizeBy: none
+		sourceColumn: Codice Lingua
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Articoli in lingua' = m
 		mode: import
 		queryGroup: Dimensioni
 		source = ```
 				let
-				    Origine = Sql.Database("WTCNB0021\SISTEMI1", "ESOLVER42", [Query="#(lf)        SELECT #(lf)        qArtItaliano.K_CodArtVar#(lf)        ,qArtItaliano.CodArticolo+CASE WHEN ISNULL(qArtItaliano.CodVariante, '') <> '' THEN '_'+qArtItaliano.CodVariante ELSE '' END  as [Articolo - Codice con Variante]#(lf)#(lf)        --In Inglese#(lf)        , qArtItaliano.CodArticolo+'_'+ISNULL(qArtItaliano.CodVariante, '')+' - '+ISNULL(qArtInglese.[Articolo - Variante in lingua], qArtItaliano.[Articolo - Variante in italiano]) AS [Articolo e variante in inglese]#(lf)        , CASE WHEN ISNULL(qArtItaliano.CodVariante, '') <> '' THEN qArtItaliano.CodVariante+' - '+ISNULL(qArtInglese.[Articolo - Variante in lingua], qArtItaliano.[Articolo - Variante in italiano]) ELSE '' END as [Codice e descrizione variante in inglese]#(lf)        , ISNULL(qArtInglese.[Articolo - Variante in lingua], qArtItaliano.[Articolo - Variante in italiano]) AS [Variante in inglese]#(lf)        FROM#(lf)        (#(lf)            SELECT #(lf)            Art.DBGruppo#(lf)            , Art.K_CodArtVar#(lf)            , Art.CodArticolo#(lf)            , Art.CodVariante#(lf)            , CASE WHEN ISNULL(Art.CodVariante, '') <> '' THEN Art.CodVariante+' - '+Art.DesArticoloVariante ELSE '' END as [Articolo - Descrizione variante in italiano]#(lf)            , Art.DesArticoloVariante AS [Articolo - Variante in italiano]#(lf)            FROM   dbo.ESBI_ARTVAR AS Art#(lf)        )qArtItaliano#(lf)        LEFT OUTER JOIN#(lf)        (#(lf)            SELECT #(lf)            Art.K_CodArtVar#(lf)            , ISNULL(ArtLin.DesEstesa, Art.DesArticoloVariante) AS [Articolo - Variante in lingua]#(lf)            FROM#(lf)            ESBI_ARTVAR Art#(lf)            LEFT OUTER JOIN#(lf)            ArtDatiInLingua ArtLin#(lf)            ON#(lf)            Art.DBGruppo=ArtLin.DBGruppo#(lf)            AND Art.CodArticolo=ArtLin.CodArt#(lf)            AND Art.CodVariante=ArtLin.VarianteArt#(lf)            LEFT OUTER JOIN#(lf)            CodiciLingua Lin#(lf)            ON ArtLin.DBGruppo=Lin.DBGruppo#(lf)            AND ArtLin.CodLingua=Lin.CodLingua#(lf)            WHERE #(lf)            Lin.SiglaCodifInternaz='EN'#(lf)        )qArtInglese#(lf)        ON qArtItaliano.K_CodArtVar=qArtInglese.K_CodArtVar#(lf)        WHERE qArtItaliano.DBGruppo IN ('XS')#(lf)        AND (qArtItaliano.CodArticolo NOT IN (SELECT ContAlfanumerico FROM SchedeTecValAmm WHERE DBGruppo='XS' AND IdEtichetta=11 AND CodTipoSchedaTecnica='CODVEN'))#(lf)        ;#(lf)    ", CreateNavigationProperties=false])
-				in 
+				    Origine =
+				        Sql.Database(
+				            "WTCNB1023\SISTEMI",
+				            "ESOLVER42",
+				            [
+				                Query = 
+				"
+				SELECT
+				      qArtItaliano.K_CodArtVar
+				    , qArtItaliano.CodArticolo
+				        + CASE WHEN ISNULL(qArtItaliano.CodVariante, '') <> '' 
+				            THEN '_' + qArtItaliano.CodVariante 
+				            ELSE '' END AS [Articolo - Codice con Variante]
+				
+				    -- Inglese
+				    , qArtItaliano.CodArticolo + '_' + ISNULL(qArtItaliano.CodVariante, '') 
+				        + ' - ' + ISNULL(qArtInglese.[Articolo - Variante in lingua], qArtItaliano.[Articolo - Variante in italiano])
+				        AS [Articolo e variante in inglese]
+				
+				    , CASE WHEN ISNULL(qArtItaliano.CodVariante, '') <> '' 
+				        THEN qArtItaliano.CodVariante + ' - ' 
+				             + ISNULL(qArtInglese.[Articolo - Variante in lingua], qArtItaliano.[Articolo - Variante in italiano])
+				        ELSE '' END AS [Codice e descrizione variante in inglese]
+				
+				    , ISNULL(qArtInglese.[Articolo - Variante in lingua], qArtItaliano.[Articolo - Variante in italiano]) 
+				        AS [Variante in inglese]
+				
+				    , qArtInglese.CodLingua AS [Codice Lingua]
+				
+				FROM (
+				        SELECT
+				              Art.DBGruppo
+				            , Art.K_CodArtVar
+				            , Art.CodArticolo
+				            , Art.CodVariante
+				            , CASE WHEN ISNULL(Art.CodVariante, '') <> ''
+				                THEN Art.CodVariante + ' - ' + Art.DesArticoloVariante 
+				                ELSE '' END AS [Articolo - Descrizione variante in italiano]
+				            , Art.DesArticoloVariante AS [Articolo - Variante in italiano]
+				        FROM dbo.ESBI_ARTVAR AS Art
+				    ) qArtItaliano
+				
+				LEFT OUTER JOIN (
+				        SELECT
+				              Art.K_CodArtVar
+				            , ISNULL(ArtLin.DesEstesa, Art.DesArticoloVariante) AS [Articolo - Variante in lingua]
+				            , ArtLin.CodLingua AS CodLingua  
+				
+				        FROM ESBI_ARTVAR Art
+				        LEFT OUTER JOIN ArtDatiInLingua ArtLin
+				            ON Art.DBGruppo = ArtLin.DBGruppo
+				            AND Art.CodArticolo = ArtLin.CodArt
+				            AND Art.CodVariante = ArtLin.VarianteArt
+				        LEFT OUTER JOIN CodiciLingua Lin
+				            ON ArtLin.DBGruppo = Lin.DBGruppo
+				            AND ArtLin.CodLingua = Lin.CodLingua
+				        WHERE Lin.SiglaCodifInternaz = 'EN'
+				    ) qArtInglese
+				    ON qArtItaliano.K_CodArtVar = qArtInglese.K_CodArtVar
+				
+				WHERE qArtItaliano.DBGruppo IN ('XS')
+				    AND (
+				        qArtItaliano.CodArticolo NOT IN (
+				            SELECT ContAlfanumerico
+				            FROM SchedeTecValAmm
+				            WHERE DBGruppo = 'XS'
+				            AND IdEtichetta = 11
+				            AND CodTipoSchedaTecnica = 'CODVEN'
+				        )
+				    );
+				"
+				                ,
+				                CreateNavigationProperties = false
+				            ]
+				        )
+				in
 				    Origine
 				```
 
