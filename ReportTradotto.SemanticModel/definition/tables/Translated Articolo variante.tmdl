@@ -1,0 +1,56 @@
+table 'Translated Articolo variante'
+	lineageTag: 7f96f552-7b10-4794-92a0-283a620b4a76
+
+	column 'Translated Articolo variante'
+		lineageTag: fb751925-9922-4c11-87e2-1c5e8b4b1a40
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Ordine di Translated Articolo variante'
+
+		relatedColumnDetails
+			groupByColumn: 'Campi di Translated Articolo variante'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Campi di Translated Articolo variante'
+		isHidden
+		lineageTag: 60dc0b3c-9ece-4f75-aafe-932dcee915a0
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Ordine di Translated Articolo variante'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ordine di Translated Articolo variante'
+		isHidden
+		formatString: 0
+		lineageTag: 636fbd1d-faaa-4cb7-8a58-4cf00f1572f6
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column LanguageId
+		lineageTag: 86d2b1a5-0821-489b-9fd5-6f358785c27d
+		summarizeBy: none
+		sourceColumn: [Value4]
+		sortByColumn: 'Ordine di Translated Articolo variante'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Translated Articolo variante' = calculated
+		mode: import
+		source =
+				{
+				    ("Articolo e variante in inglese", NAMEOF('Articoli in lingua'[Articolo e variante in inglese]), 0, "en"),
+				    ("Articolo - Descrizione articolo", NAMEOF('Articoli / Servizi'[Articolo - Descrizione articolo]), 1, "it")
+				}
+
+	annotation PBI_Id = 9fd741e4fbb44d848a59e752f71bb06f
+

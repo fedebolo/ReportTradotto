@@ -210,3 +210,9 @@ relationship 9daefc0a-5b8d-5ae9-fd63-162dc2f831d1
 	fromColumn: Lingua.LanguageId
 	toColumn: 'Translated Descrizione'.LanguageId
 
+relationship 8c18fbf1-8d99-1a26-d40e-d372c55f9332
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Translated Articolo variante'.LanguageId
+	toColumn: Lingua.LanguageId
+

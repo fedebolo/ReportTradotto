@@ -1,0 +1,313 @@
+table CalendarioIngleseNumerico
+	lineageTag: 2e83db76-bd8b-4974-a02e-6dc6fc4a8952
+
+	column Date
+		formatString: General Date
+		lineageTag: fe0b8892-ab53-4d79-a198-1dd78d9ba848
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data
+		formatString: General Date
+		lineageTag: 5550406e-8986-4b80-a24d-b5450ec42298
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Data]
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_Data
+		lineageTag: 789b6f0d-37e4-47f7-9758-493de76f8866
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [K_Data]
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_AnnoMese
+		formatString: 0
+		lineageTag: 6575218b-bdac-43c9-8b50-8fded733d76b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [K_AnnoMese]
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_AnnoTrimestre
+		lineageTag: ab4a7b6f-7318-4cfc-8b69-70585d5efb50
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [K_AnnoTrimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column K_Giorno
+		formatString: 0
+		lineageTag: 423d6930-9e4c-4e41-bddf-3e24c7dfa8b7
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [K_Giorno]
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_AnnoSettimana
+		formatString: 0
+		lineageTag: cbce369d-8d96-4f53-bbee-374277af067e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [K_AnnoSettimana]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mese numero'
+		formatString: 0
+		lineageTag: 94dab4ae-1bda-4602-af0a-72c5ef8c5114
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Mese numero]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mese
+		lineageTag: 0b7157ea-eb45-471c-9f87-81ec36ad2c03
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mese]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mese numero/anno'
+		lineageTag: 8a467cf6-2e2f-4864-bbc7-ed9ecce5f5a8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mese numero/anno]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mese/anno
+		lineageTag: e79bcc50-4b60-4652-82bb-6514336cbacd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mese/anno]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		lineageTag: ab758011-e275-4617-bdac-685ebe352d76
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre/anno
+		lineageTag: 144c10d0-ac03-4f3c-b406-10aa7a91606f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trimestre/anno]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anno/trimestre
+		lineageTag: 428a4ae7-d1bd-4804-8f9d-8927fa4734a9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Anno/trimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Settimana
+		formatString: 0
+		lineageTag: e72f498d-ac14-4981-8ff6-d69be44ff151
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Settimana]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Settimana/anno
+		lineageTag: eb1573fd-6f47-4c94-a45f-a514beca7112
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Settimana/anno]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Giorno
+		lineageTag: 10f2c70c-48b2-498d-aff2-4ef4f8008a6e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Giorno]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Anno mobile'
+		formatString: 0
+		lineageTag: 28f75b3e-7a6c-4ccd-b904-429b987cb803
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Anno mobile]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mese mobile'
+		formatString: 0
+		lineageTag: d675caed-ce81-41ec-956c-7f337c8e00c6
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Mese mobile]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mese/anno mobile'
+		lineageTag: 871ac7bf-9471-4143-8214-69c6b81fb673
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mese/anno mobile]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trimestre mobile'
+		lineageTag: 8661a250-4592-40c2-8dc3-050e8e218fdd
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Trimestre mobile]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Trimestre/anno mobile'
+		lineageTag: 99558296-307e-4c66-a238-e002e79c0af6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trimestre/anno mobile]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Anno/trimestre mobile'
+		lineageTag: 5d5471be-b6d7-48cc-b45b-051b4bb10f3e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Anno/trimestre mobile]
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_AnnoMeseMob
+		formatString: 0
+		lineageTag: e252f0a8-5759-403e-9e29-97c413c985e1
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [K_AnnoMeseMob]
+
+		annotation SummarizationSetBy = Automatic
+
+	column K_AnnoTrimestreMob
+		lineageTag: 7940cb36-383f-457b-97af-8a00392eb5b9
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [K_AnnoTrimestreMob]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Mesi trascorsi da ultima data'
+		formatString: 0
+		lineageTag: 696bf5cd-d4b2-4fb4-91d0-fb0607139797
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Mesi trascorsi da ultima data]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Anni trascorsi da ultima data'
+		formatString: 0
+		lineageTag: 30f3fb90-401a-4ad0-a426-cf6817476daa
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Anni trascorsi da ultima data]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data futura (Sì/No)'
+		lineageTag: e6e9ae2c-abba-4007-96e8-e1bcdd0f8cd7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Data futura (Sì/No)]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CalendarioIngleseNumerico = calculated
+		mode: import
+		source = ```
+				
+				VAR MinData = MIN ( 'Vendite'[K_DataRegistraz] )
+				VAR MaxData = MAX ( 'Vendite'[K_DataRegistraz] )
+				VAR DataInizio = DATE ( YEAR ( MinData ), 1, 1 )
+				VAR DataFine = EOMONTH(MaxData,0)
+				VAR UltimoAggiornamento = MAX(Diagnostica[Ultimo reload])
+				VAR UltimoGiornoNonFuturo = MIN(UltimoAggiornamento,DataFine)
+				VAR CalendarioBase = CALENDAR ( DataInizio, DataFine )
+				VAR MeseInizio = SELECTEDVALUE ( Diagnostica[Calendario mobile - Mese inizio] )
+				
+				RETURN
+				    GENERATE (
+				        CalendarioBase,
+				        VAR Data = [Date]
+				        VAR Anno = YEAR ( Data )
+				        VAR Anno100 = Anno * 100
+				        VAR Mese = MONTH ( Data )
+				        VAR Settimana = WEEKNUM ( Data, 2 )
+				        VAR Giorno = WEEKDAY ( Data, 2 )
+				        VAR GiornoDef = WEEKDAY ( Data )
+				
+				        VAR TestAnno = AND( Mese >= MeseInizio, Mese <= 12 ) 
+				        VAR DiffMesi = Mese - MeseInizio
+				        VAR AnnoMob = IF ( TestAnno, Anno, Anno -1 )
+				        VAR AnnoMob100 = AnnoMob * 100
+				        VAR MeseMob = IF ( TestAnno, DiffMesi +1, DiffMesi +12 +1 )
+				        VAR DataMob = DATE ( AnnoMob, MeseMob, 1 )
+				        VAR TrimMob = VALUE( FORMAT ( DataMob, "Q" ))
+				
+				        RETURN
+				            ROW (
+				                "Data", Data,
+				                "K_Data", FORMAT ( Data, "YYYYMMDD" ),
+				                "K_AnnoMese", Anno100 + Mese,
+				                "K_AnnoTrimestre", Anno100 + FORMAT ( Data, "Q" ),
+				                "K_Giorno", Giorno,
+				                "K_AnnoSettimana", Anno100 + Settimana,
+				                "Mese numero", Mese,
+				                "Mese", FORMAT ( Data, "MMM" ),
+				                "Mese numero/anno", FORMAT ( Data, "MM/YYYY" ),
+				                "Mese/anno", FORMAT ( Data, "MMM YYYY" ),
+				                "Trimestre", FORMAT ( Data, "Q" ),
+				                "Trimestre/anno", FORMAT ( Data, "Q" ) & "Q/" & Anno,
+				                "Anno/trimestre", FORMAT ( Data, "YYYY" ) & "/Q" & FORMAT ( Data, "Q" ),
+				                "Settimana", Settimana,
+				                "Settimana/anno", Settimana & "/" & Anno,
+				                "Giorno", FORMAT ( GiornoDef, "DDD" ),
+				                "Anno mobile", AnnoMob,
+				                "Mese mobile", MeseMob,
+				                "Mese/anno mobile", FORMAT ( DataMob, "MM/YYYY" ),
+				                "Trimestre mobile", TrimMob,
+				                "Trimestre/anno mobile", TrimMob & "Q/" & AnnoMob,
+				                "Anno/trimestre mobile", AnnoMob & "/Q" & TrimMob,
+				                "K_AnnoMeseMob", AnnoMob100 + MeseMob,
+				                "K_AnnoTrimestreMob", AnnoMob100 + TrimMob,
+				                "Mesi trascorsi da ultima data", DATEDIFF ( Data, UltimoGiornoNonFuturo, MONTH ),
+				                "Anni trascorsi da ultima data", DATEDIFF ( Data, UltimoGiornoNonFuturo, YEAR ),
+				                "Data futura (Sì/No)", IF ( DATEDIFF ( Data, UltimoGiornoNonFuturo, DAY ) >= 0, "No", "Yes" )
+				            )
+				    )
+				
+				```
+
+	annotation PBI_Id = 062e2d480cae422d8f66edfb373bcd6a
+

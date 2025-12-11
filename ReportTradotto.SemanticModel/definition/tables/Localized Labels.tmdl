@@ -114,6 +114,14 @@ table 'Localized Labels'
 		isHidden
 		lineageTag: 4c596786-70a1-40c8-8626-7d00374514f0
 
+	measure 'Articoli speciali' = 0
+		isHidden
+		lineageTag: 6a6fc9bf-a6b2-45a8-a25e-032e03fb1ffd
+
+	measure 'Clienti speciali' = 0
+		isHidden
+		lineageTag: e02d4c3a-d7d3-4040-a177-b4dc33161094
+
 	column unused
 		isHidden
 		displayFolder: unused

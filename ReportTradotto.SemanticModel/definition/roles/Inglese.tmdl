@@ -1,0 +1,7 @@
+role Inglese
+	modelPermission: read
+
+	tablePermission Lingua = [LanguageId] == "en"
+
+	annotation PBI_Id = 9a547daeb14848c4842cc4cad0315f90
+

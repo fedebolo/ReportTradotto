@@ -58,6 +58,10 @@ cultureInfo it-IT
 					caption: Dettaglio Pipeline
 				measure 'Seleziona la lingua:'
 					caption: Seleziona la lingua:
+				measure 'Articoli speciali'
+					caption: Articoli speciali
+				measure 'Clienti speciali'
+					caption: Clienti speciali
 
 	linguisticMetadata =
 			{

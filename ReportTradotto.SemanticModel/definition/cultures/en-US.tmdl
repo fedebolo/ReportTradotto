@@ -5234,6 +5234,78 @@ cultureInfo en-US
 					caption: Pipeline Detail
 				measure 'Seleziona la lingua:'
 					caption: Select Language:
+				measure 'Articoli speciali'
+					caption: Special Items
+				measure 'Clienti speciali'
+					caption: Special Customers
+			table Lingua
+				caption: Tongue
+				column Lingua
+					caption: Tongue
+				column LanguageId
+					caption: Languageid
+				column DefaultCulture
+					caption: Defaultculture
+				column SortOrder
+					caption: Sortorder
+			table CalendarioIngleseNumerico
+				caption: Calendarenglishnumeric
+				column Date
+					caption: Date
+				column Data
+					caption: Date
+				column K_Data
+					caption: K_Data
+				column K_AnnoMese
+					caption: K_Annomese
+				column K_AnnoTrimestre
+					caption: K_Annotrimestre
+				column K_Giorno
+					caption: K_Giorno
+				column K_AnnoSettimana
+					caption: K_Annosettimana
+				column 'Mese numero'
+					caption: Month Number
+				column Mese
+					caption: Month
+				column 'Mese numero/anno'
+					caption: Month Number/Year
+				column Mese/anno
+					caption: Month/Year
+				column Trimestre
+					caption: Trimester
+				column Trimestre/anno
+					caption: Quarter/Year
+				column Anno/trimestre
+					caption: Year/Quarter
+				column Settimana
+					caption: Week
+				column Settimana/anno
+					caption: Week/Year
+				column Giorno
+					caption: Day
+				column 'Anno mobile'
+					caption: Rolling Year
+				column 'Mese mobile'
+					caption: Floating Month
+				column 'Mese/anno mobile'
+					caption: Rolling Month/Year
+				column 'Trimestre mobile'
+					caption: Rolling Quarter
+				column 'Trimestre/anno mobile'
+					caption: Rolling Quarter/Year
+				column 'Anno/trimestre mobile'
+					caption: Rolling Year/Quarter
+				column K_AnnoMeseMob
+					caption: K_Annomesemob
+				column K_AnnoTrimestreMob
+					caption: K_Annotrimestremob
+				column 'Mesi trascorsi da ultima data'
+					caption: Months Since Last Date
+				column 'Anni trascorsi da ultima data'
+					caption: Years Since Last Date
+				column 'Data futura (Sì/No)'
+					caption: Future Date (Yes/No)
 
 	linguisticMetadata = <LinguisticMetadata><LinguisticSchema Language="en-US" DynamicImprovement="HighConfidence" xmlns="http://schemas.microsoft.com/sqlserver/2016/01/linguisticschema" /></LinguisticMetadata>
 
